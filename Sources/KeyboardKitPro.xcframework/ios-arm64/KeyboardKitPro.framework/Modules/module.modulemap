@@ -1,0 +1,11 @@
+framework module KeyboardKitPro {
+  umbrella header "KeyboardKitPro.h"
+
+  export *
+  module * { export * }
+}
+
+module KeyboardKitPro.Swift {
+    header "KeyboardKitPro-Swift.h"
+    requires objc
+}
