@@ -19,6 +19,26 @@
 
 KeyboardKit Pro extends KeyboardKit with additional functionality.
 
+Calling `setupPro(with:licenseKey:)` will setup these features. You can also use them separately.
+
+### 🏳 Locales
+
+KeyboardKit pro adds support for more locales besides English:
+
+* 🇩🇪 German
+* 🇮🇹 Italian
+* 🇸🇪 Swedish
+
+Calling `setupPro(with:licenseKey:)` will setup these locales. 
+
+### 🔤 Input Sets
+
+KeyboardKit Pro adds input set providers for the above locales.
+
+### 🗯 Callouts
+
+KeyboardKit Pro adds secondary callout action providers for the above locales.
+
 
 ## Installation
 
@@ -31,7 +51,7 @@ git@github.com:KeyboardKit/KeyboardKitPro.git
 
 ## Setup
 
-To setup KeyboardKit Pro, you can use `setupPro(with:)` instead of `setup(with:)`.
+To setup KeyboardKit Pro, you can use `setupPro(with:licenseKey:)` instead of `setup(with:)`.
 
 You can also wire up everything manually.
 

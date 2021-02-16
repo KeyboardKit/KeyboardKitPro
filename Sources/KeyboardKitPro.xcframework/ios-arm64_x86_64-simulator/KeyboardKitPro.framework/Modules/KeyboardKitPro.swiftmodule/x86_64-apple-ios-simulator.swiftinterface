@@ -1,11 +1,30 @@
 // swift-interface-format-version: 1.0
 // swift-compiler-version: Apple Swift version 5.3.2 (swiftlang-1200.0.45 clang-1200.0.32.28)
 // swift-module-flags: -target x86_64-apple-ios14.4-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name KeyboardKitPro
+import Foundation
 import KeyboardKit
 @_exported import KeyboardKitPro
 import Swift
 import SwiftUI
 import UIKit
+public class GermanKeyboardInputSetProvider : KeyboardKit.DeviceSpecificInputSetProvider, KeyboardKit.LocalizedService {
+  public init(device: UIKit.UIDevice = .current)
+  final public let device: UIKit.UIDevice
+  final public let localeKey: Swift.String
+  public func alphabeticInputSet() -> KeyboardKit.AlphabeticKeyboardInputSet
+  public func numericInputSet() -> KeyboardKit.NumericKeyboardInputSet
+  public func symbolicInputSet() -> KeyboardKit.SymbolicKeyboardInputSet
+  @objc deinit
+}
+public class ItalianKeyboardInputSetProvider : KeyboardKit.DeviceSpecificInputSetProvider, KeyboardKit.LocalizedService {
+  public init(device: UIKit.UIDevice = .current)
+  final public let device: UIKit.UIDevice
+  final public let localeKey: Swift.String
+  public func alphabeticInputSet() -> KeyboardKit.AlphabeticKeyboardInputSet
+  public func numericInputSet() -> KeyboardKit.NumericKeyboardInputSet
+  public func symbolicInputSet() -> KeyboardKit.SymbolicKeyboardInputSet
+  @objc deinit
+}
 extension KeyboardInputViewController {
   public func setupPro<Content>(with view: Content, licenseKey: Swift.String) where Content : SwiftUI.View
 }
@@ -15,6 +34,17 @@ public struct EmojiCategoryKeyboardMenu : SwiftUI.View {
     get
   }
   public typealias Body = @_opaqueReturnTypeOf("$s14KeyboardKitPro013EmojiCategoryA4MenuV4bodyQrvp", 0) 🦸
+}
+extension String {
+  public func base64Decoded() -> Swift.String?
+  public func base64Encoded() -> Swift.String?
+}
+@_inheritsConvenienceInitializers public class SwedishSecondaryCalloutActionProvider : KeyboardKit.BaseSecondaryCalloutActionProvider, KeyboardKit.LocalizedService {
+  final public let localeKey: Swift.String
+  override public func secondaryCalloutActions(for action: KeyboardKit.KeyboardAction) -> [KeyboardKit.KeyboardAction]
+  override public func secondaryCalloutActionString(for char: Swift.String) -> Swift.String
+  @objc deinit
+  override public init()
 }
 @available(iOS 14.0, *)
 public struct EmojiCategoryKeyboard : SwiftUI.View {
@@ -36,6 +66,35 @@ open class StandardAutocompleteSuggestionProvider : KeyboardKit.AutocompleteSugg
   public var locale: Foundation.Locale
   public var mode: KeyboardKitPro.StandardAutocompleteSuggestionProvider.Mode
   public func autocompleteSuggestions(for text: Swift.String, completion: (KeyboardKit.AutocompleteResult) -> Swift.Void)
+  @objc deinit
+}
+extension Date {
+  public init(year: Swift.Int, month: Swift.Int, day: Swift.Int, hour: Swift.Int = 0, minute: Swift.Int = 0, second: Swift.Int = 0, calendar: Foundation.Calendar = .current)
+}
+extension StandardSecondaryCalloutActionProvider {
+  public static func pro(for context: KeyboardKit.KeyboardContext, additionalProviders: [KeyboardKit.LocalizedService & KeyboardKit.SecondaryCalloutActionProvider] = []) -> KeyboardKit.StandardSecondaryCalloutActionProvider
+}
+public struct KeyboardKitPro2 {
+}
+extension KeyboardKitPro2 {
+  public static func setup(withLicenseKey key: Swift.String)
+}
+public struct KKPro2 {
+  public func hej()
+}
+extension KKPro2 {
+  public func hoj()
+}
+extension StandardKeyboardInputSetProvider {
+  public static func pro(for context: KeyboardKit.KeyboardContext, additionalProviders: [KeyboardKit.KeyboardInputSetProvider & KeyboardKit.LocalizedService] = []) -> KeyboardKit.StandardKeyboardInputSetProvider
+}
+public class SwedishKeyboardInputSetProvider : KeyboardKit.DeviceSpecificInputSetProvider, KeyboardKit.LocalizedService {
+  public init(device: UIKit.UIDevice = .current)
+  final public let device: UIKit.UIDevice
+  final public let localeKey: Swift.String
+  public func alphabeticInputSet() -> KeyboardKit.AlphabeticKeyboardInputSet
+  public func numericInputSet() -> KeyboardKit.NumericKeyboardInputSet
+  public func symbolicInputSet() -> KeyboardKit.SymbolicKeyboardInputSet
   @objc deinit
 }
 extension KeyboardKitPro.StandardAutocompleteSuggestionProvider.Mode : Swift.Equatable {}
