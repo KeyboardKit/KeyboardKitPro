@@ -17,11 +17,9 @@
 
 ## About KeyboardKit Pro
 
-[KeyboardKit][KeyboardKit] is a Swift library that helps you create custom keyboard extensions for `iOS` and `ipadOS`.
+[KeyboardKit][KeyboardKit] is a Swift library that helps you create custom keyboard extensions for `iOS` and `ipadOS`. 
 
-KeyboardKit Pro extends KeyboardKit with additional functionality that helps you create even better keyboards.
-
-KeyboardKit Pro requires a license key. The pro license includes KeyboardKit Pro and access to pro consultation. 
+KeyboardKit Pro is a license-based extensions that unlocks pro features, such as additional locales. Going pro is also a way to support this project.
 
 For now, pro licenses requests are handled via [e-mail][Email].
 
@@ -68,11 +66,11 @@ If you use a `SystemKeyboard` these locales will be supported right away.
 
 New locales are added by demand. One new locale is offered free of charge for each new pro license.
 
-### 🔤 Input Sets
+### 🔤 More Input Sets
 
 KeyboardKit Pro adds input set providers for the above locales.
 
-### 🗯 Callouts
+### 🗯 Improved Callouts
 
 KeyboardKit Pro adds secondary callout action providers for the above locales.
 
