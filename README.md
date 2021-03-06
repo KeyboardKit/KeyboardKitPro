@@ -17,16 +17,7 @@
 
 ## About KeyboardKit Pro
 
-[KeyboardKit][KeyboardKit] is a Swift library that helps you create custom keyboard extensions for `iOS` and `ipadOS`.  KeyboardKit Pro is a license-based extensions that unlocks pro features, such as additional locales. 
-
-Going pro is also a way to support this project.
-
-
-## Getting a license
-
-KeyboardKit Pro licenses are currently handled via [e-mail][Email]. Pricing depends on project, team size and the number of bundles you register for. 
-
-[Contact us][Email] for more information.
+[KeyboardKit][KeyboardKit] is a Swift library that helps you create custom keyboard extensions for `iOS` and `ipadOS`.  KeyboardKit Pro is a license-based extensions that unlocks pro features, such as additional locales.
 
 
 ## Getting started
@@ -34,12 +25,12 @@ KeyboardKit Pro licenses are currently handled via [e-mail][Email]. Pricing depe
 KeyboardKit Pro can be setup with a single line of code after it has been installed into the library:
 
 * Install and setup KeyboardKit as described [in the main repo][KeyboardKit].
-* Obtain a KeyboardKit Pro license key (for now via [e-mail][Email]).
+* Obtain a KeyboardKit Pro license key (read more below).
 * Install and `import KeyboardKitPro` alongside KeyboardKit as described [Installation].
 * Instead of `setup(with:)`, call `setupPro(withLicenseKey:view:)` to setup Pro features. 
 * You can also call `setupPro(withLicenseKey:)` to setup KeyboardKit Pro without a view.
 
-`IMPORTANT` Failure to call `setupPro` before accessing pro features, or setting it up with an invalid license, will cause the extension to show a warning and crash.
+`IMPORTANT` Failure to call `setupPro` before accessing pro features will cause the extension to show a warning and crash.
 
 
 ## Features
@@ -66,6 +57,13 @@ KeyboardKit Pro adds input set providers for the above locales.
 KeyboardKit Pro adds secondary callout action providers for the above locales.
 
 
+## Licensing
+
+KeyboardKit Pro requires a commercial license. 
+
+More information about pricing and tiers can be found [here][Licenses].
+
+
 ## Contact me
 
 Feel free to reach out if you have questions or if you want to contribute in any way:
@@ -80,6 +78,9 @@ Feel free to reach out if you have questions or if you want to contribute in any
 KeyboardKit Pro is closed source. See the `LICENSE` file for more info.
 
 [KeyboardKit]: https://github.com/KeyboardKit/KeyboardKit
+
+[Website]: https://getkeyboardkit.com
+[Licenses]: https://getkeyboardkit.com/Pro
 
 [Installation]: https://github.com/KeyboardKit/KeyboardKit/blob/master/readmes/Installation.md
 [Troubleshooting]: https://github.com/KeyboardKit/KeyboardKit/blob/master/readmes/Troubleshooting.md
