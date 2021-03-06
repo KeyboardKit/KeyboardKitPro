@@ -80,7 +80,7 @@ KeyboardKit Pro is closed source. See the `LICENSE` file for more info.
 [KeyboardKit]: https://github.com/KeyboardKit/KeyboardKit
 
 [Website]: https://getkeyboardkit.com
-[Licenses]: https://getkeyboardkit.com/Pro
+[Licenses]: https://getkeyboardkit.com/pro
 
 [Installation]: https://github.com/KeyboardKit/KeyboardKit/blob/master/readmes/Installation.md
 [Troubleshooting]: https://github.com/KeyboardKit/KeyboardKit/blob/master/readmes/Troubleshooting.md
