@@ -2,7 +2,7 @@
 
 ## 4.0.1
 
-This patch fixes a double quote bug for German and Italian keyboards.
+🐛 This patch fixes a double quote bug for Swedish, German and Italian providers.
 
 
 ## 4.0.0
