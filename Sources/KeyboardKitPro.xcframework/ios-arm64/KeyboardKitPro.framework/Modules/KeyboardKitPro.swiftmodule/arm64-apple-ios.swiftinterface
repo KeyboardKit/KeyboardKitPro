@@ -35,13 +35,6 @@ extension KeyboardInputViewController {
   @objc deinit
   override public init()
 }
-@available(iOS 14.0, *)
-public struct EmojiCategoryKeyboardMenu : SwiftUI.View {
-  public var body: some SwiftUI.View {
-    get
-  }
-  public typealias Body = @_opaqueReturnTypeOf("$s14KeyboardKitPro013EmojiCategoryA4MenuV4bodyQrvp", 0) 🦸
-}
 extension String {
   public func base64Decoded() -> Swift.String?
   public func base64Encoded() -> Swift.String?
@@ -52,13 +45,6 @@ extension String {
   override public func secondaryCalloutActionString(for char: Swift.String) -> Swift.String
   @objc deinit
   override public init()
-}
-@available(iOS 14.0, *)
-public struct EmojiCategoryKeyboard : SwiftUI.View {
-  public var body: some SwiftUI.View {
-    get
-  }
-  public typealias Body = @_opaqueReturnTypeOf("$s14KeyboardKitPro013EmojiCategoryA0V4bodyQrvp", 0) 🦸
 }
 open class StandardAutocompleteSuggestionProvider : KeyboardKit.AutocompleteSuggestionProvider {
   public init(mode: KeyboardKitPro.StandardAutocompleteSuggestionProvider.Mode = .autocomplete, locale: Foundation.Locale = .current, checker: UIKit.UITextChecker = UITextChecker())
