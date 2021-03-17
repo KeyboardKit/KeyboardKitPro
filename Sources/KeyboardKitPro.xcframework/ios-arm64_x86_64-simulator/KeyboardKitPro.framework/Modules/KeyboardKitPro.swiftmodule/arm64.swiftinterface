@@ -7,83 +7,102 @@ import KeyboardKit
 import Swift
 import SwiftUI
 import UIKit
-public class GermanKeyboardInputSetProvider : KeyboardKit.DeviceSpecificInputSetProvider, KeyboardKit.LocalizedService {
+extension KeyboardLocale {
+  public var keyboardInputSetProvider: KeyboardKit.KeyboardInputSetProvider & KeyboardKit.LocalizedService {
+    get
+  }
+}
+public class GermanKeyboardInputSetProvider : KeyboardKitPro.ProKeyboardInputSetProvider, KeyboardKit.DeviceSpecificInputSetProvider {
   public init(device: UIKit.UIDevice = .current)
-  final public let device: UIKit.UIDevice
-  final public let localeKey: Swift.String
   public func alphabeticInputSet() -> KeyboardKit.AlphabeticKeyboardInputSet
   public func numericInputSet() -> KeyboardKit.NumericKeyboardInputSet
   public func symbolicInputSet() -> KeyboardKit.SymbolicKeyboardInputSet
+  override public init(device: UIKit.UIDevice = super, locale: KeyboardKit.KeyboardLocale)
   @objc deinit
 }
-public class ItalianKeyboardInputSetProvider : KeyboardKit.DeviceSpecificInputSetProvider, KeyboardKit.LocalizedService {
+public class ItalianKeyboardInputSetProvider : KeyboardKitPro.ProKeyboardInputSetProvider, KeyboardKit.DeviceSpecificInputSetProvider {
   public init(device: UIKit.UIDevice = .current)
-  final public let device: UIKit.UIDevice
-  final public let localeKey: Swift.String
   public func alphabeticInputSet() -> KeyboardKit.AlphabeticKeyboardInputSet
   public func numericInputSet() -> KeyboardKit.NumericKeyboardInputSet
   public func symbolicInputSet() -> KeyboardKit.SymbolicKeyboardInputSet
+  override public init(device: UIKit.UIDevice = super, locale: KeyboardKit.KeyboardLocale)
   @objc deinit
 }
 extension KeyboardInputViewController {
   public func setupPro(withLicenseKey key: Swift.String)
   public func setupPro<Content>(withLicenseKey key: Swift.String, view: Content) where Content : SwiftUI.View
 }
-@_inheritsConvenienceInitializers public class GermanSecondaryCalloutActionProvider : KeyboardKit.BaseSecondaryCalloutActionProvider, KeyboardKit.LocalizedService {
-  final public let localeKey: Swift.String
+public class GermanSecondaryCalloutActionProvider : KeyboardKitPro.ProSecondaryCalloutActionProvider {
+  public init()
   override public func secondaryCalloutActionString(for char: Swift.String) -> Swift.String
   @objc deinit
-  override public init()
+  override public init(locale: KeyboardKit.KeyboardLocale)
 }
 extension String {
   public func base64Decoded() -> Swift.String?
   public func base64Encoded() -> Swift.String?
 }
-@_inheritsConvenienceInitializers public class SwedishSecondaryCalloutActionProvider : KeyboardKit.BaseSecondaryCalloutActionProvider, KeyboardKit.LocalizedService {
-  final public let localeKey: Swift.String
+public class SwedishSecondaryCalloutActionProvider : KeyboardKitPro.ProSecondaryCalloutActionProvider {
+  public init()
   override public func secondaryCalloutActions(for action: KeyboardKit.KeyboardAction) -> [KeyboardKit.KeyboardAction]
   override public func secondaryCalloutActionString(for char: Swift.String) -> Swift.String
   @objc deinit
-  override public init()
+  override public init(locale: KeyboardKit.KeyboardLocale)
+}
+extension KeyboardLocale {
+  public var secondaryCalloutActionProvider: KeyboardKit.LocalizedService & KeyboardKit.SecondaryCalloutActionProvider {
+    get
+  }
 }
 open class StandardAutocompleteSuggestionProvider : KeyboardKit.AutocompleteSuggestionProvider {
-  public init(mode: KeyboardKitPro.StandardAutocompleteSuggestionProvider.Mode = .autocomplete, locale: Foundation.Locale = .current, checker: UIKit.UITextChecker = UITextChecker())
-  public enum Mode {
-    case autocomplete, autocorrect
-    public static func == (a: KeyboardKitPro.StandardAutocompleteSuggestionProvider.Mode, b: KeyboardKitPro.StandardAutocompleteSuggestionProvider.Mode) -> Swift.Bool
-    public var hashValue: Swift.Int {
-      get
-    }
-    public func hash(into hasher: inout Swift.Hasher)
-  }
+  public init(maxCount: Swift.Int = 3, locale: Foundation.Locale = .current)
   public var locale: Foundation.Locale
-  public var mode: KeyboardKitPro.StandardAutocompleteSuggestionProvider.Mode
   public func autocompleteSuggestions(for text: Swift.String, completion: (KeyboardKit.AutocompleteResult) -> Swift.Void)
+  public var canIgnoreWords: Swift.Bool {
+    get
+  }
+  public var ignoredWords: [Swift.String] {
+    get
+    set
+  }
+  public func hasIgnoredWord(_ word: Swift.String) -> Swift.Bool
+  public func ignoreWord(_ word: Swift.String)
+  public func removeIgnoredWord(_ word: Swift.String)
+  public var canLearnWords: Swift.Bool {
+    get
+  }
+  public func hasLearnedWord(_ word: Swift.String) -> Swift.Bool
+  public func learnWord(_ word: Swift.String)
+  public func unlearnWord(_ word: Swift.String)
   @objc deinit
 }
 extension Date {
   public init(year: Swift.Int, month: Swift.Int, day: Swift.Int, hour: Swift.Int = 0, minute: Swift.Int = 0, second: Swift.Int = 0, calendar: Foundation.Calendar = .current)
 }
-@_inheritsConvenienceInitializers public class ItalianSecondaryCalloutActionProvider : KeyboardKit.BaseSecondaryCalloutActionProvider, KeyboardKit.LocalizedService {
-  final public let localeKey: Swift.String
+public class ItalianSecondaryCalloutActionProvider : KeyboardKitPro.ProSecondaryCalloutActionProvider {
+  public init()
   override public func secondaryCalloutActionString(for char: Swift.String) -> Swift.String
+  override public init(locale: KeyboardKit.KeyboardLocale)
   @objc deinit
-  override public init()
 }
-extension StandardSecondaryCalloutActionProvider {
-  public static func pro(for context: KeyboardKit.KeyboardContext, additionalProviders: [KeyboardKit.LocalizedService & KeyboardKit.SecondaryCalloutActionProvider] = []) -> KeyboardKit.StandardSecondaryCalloutActionProvider
-}
-extension StandardKeyboardInputSetProvider {
-  public static func pro(for context: KeyboardKit.KeyboardContext, additionalProviders: [KeyboardKit.KeyboardInputSetProvider & KeyboardKit.LocalizedService] = []) -> KeyboardKit.StandardKeyboardInputSetProvider
-}
-public class SwedishKeyboardInputSetProvider : KeyboardKit.DeviceSpecificInputSetProvider, KeyboardKit.LocalizedService {
-  public init(device: UIKit.UIDevice = .current)
-  final public let device: UIKit.UIDevice
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class ProSecondaryCalloutActionProvider : KeyboardKit.BaseSecondaryCalloutActionProvider, KeyboardKit.LocalizedService {
+  public init(locale: KeyboardKit.KeyboardLocale)
+  final public let locale: KeyboardKit.KeyboardLocale
   final public let localeKey: Swift.String
+  @objc deinit
+}
+public class SwedishKeyboardInputSetProvider : KeyboardKitPro.ProKeyboardInputSetProvider, KeyboardKit.DeviceSpecificInputSetProvider {
+  public init(device: UIKit.UIDevice = .current)
   public func alphabeticInputSet() -> KeyboardKit.AlphabeticKeyboardInputSet
   public func numericInputSet() -> KeyboardKit.NumericKeyboardInputSet
   public func symbolicInputSet() -> KeyboardKit.SymbolicKeyboardInputSet
+  override public init(device: UIKit.UIDevice = super, locale: KeyboardKit.KeyboardLocale)
   @objc deinit
 }
-extension KeyboardKitPro.StandardAutocompleteSuggestionProvider.Mode : Swift.Equatable {}
-extension KeyboardKitPro.StandardAutocompleteSuggestionProvider.Mode : Swift.Hashable {}
+public class ProKeyboardInputSetProvider : KeyboardKit.LocalizedService {
+  public init(device: UIKit.UIDevice = .current, locale: KeyboardKit.KeyboardLocale)
+  final public let device: UIKit.UIDevice
+  final public let locale: KeyboardKit.KeyboardLocale
+  final public let localeKey: Swift.String
+  @objc deinit
+}
