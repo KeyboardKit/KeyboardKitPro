@@ -1,5 +1,24 @@
 # Release Notes
 
+## 4.1
+
+[Milestone](https://github.com/KeyboardKit/KeyboardKit/milestone/30).
+
+### ✨ New features
+
+* `KeyboardLocale` has a new `keyboardInputSetProvider` property.
+* `KeyboardLocale` has a new `secondaryCalloutActionProvider` property.
+* `KeyboardInputViewController` now auto-registers a `StandardAutocompleteSuggestionProvider` when going pro.
+* `StandardAutocompleteSuggestionProvider` is a new autosuggestion provider that can be used to get real suggestions.
+
+### 🌐 New locales
+
+* 🇩🇰 Danish
+* 🇳🇱 Dutch
+* 🇫🇮 Finnish
+* 🇳🇴 Norwegian
+
+
 ## 4.0.1
 
 🐛 This patch fixes a double quote bug for Swedish, German and Italian providers.
