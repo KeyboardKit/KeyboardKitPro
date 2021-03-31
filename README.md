@@ -17,7 +17,41 @@
 
 ## About KeyboardKit Pro
 
-[KeyboardKit][KeyboardKit] is a Swift library that helps you create custom keyboard extensions for `iOS` and `ipadOS`.  KeyboardKit Pro is a license-based extensions that unlocks pro features, such as additional locales.
+[KeyboardKit][KeyboardKit] is a Swift library that helps you create custom keyboard extensions for `iOS` and `ipadOS`.  
+
+KeyboardKit Pro is a license-based plug-in that unlocks more locales and pro features like an autocomplete engine.
+
+
+## Features
+
+### 🏳️‍🌈 More Locales
+
+KeyboardKit pro adds support for more locales:
+
+* 🇺🇸 English (US)
+* 🇩🇰 Danish
+* 🇳🇱 Dutch
+* 🇫🇮 Finnish
+* 🇩🇪 German
+* 🇮🇹 Italian
+* 🇳🇴 Norwegian
+* 🇸🇪 Swedish 
+
+If you use a `SystemKeyboard` these locales will be supported right away.
+
+New locales are added by demand. One new locale is offered free of charge for each new license.
+
+### 🔤 Localized Input Sets
+
+KeyboardKit Pro adds input set providers for the above locales.
+
+### 🗯 Localized Callout Actions
+
+KeyboardKit Pro adds secondary callout action providers for the above locales.
+
+### 💡 Autocomplete
+
+KeyboardKit Pro adds an autocomplete engine that provides localized autocomplete suggestions.
 
 
 ## Getting started
@@ -31,30 +65,6 @@ KeyboardKit Pro can be setup with a single line of code after it has been instal
 * You can also call `setupPro(withLicenseKey:)` to setup KeyboardKit Pro without a view.
 
 `IMPORTANT` Failure to call `setupPro` before accessing pro features will cause the extension to show a warning and crash.
-
-
-## Features
-
-### 🏳️‍🌈 More Locales
-
-KeyboardKit pro adds support for more locales:
-
-* 🇺🇸 English (US)
-* 🇩🇪 German
-* 🇮🇹 Italian
-* 🇸🇪 Swedish 
-
-If you use a `SystemKeyboard` these locales will be supported right away.
-
-New locales are added by demand. One new locale is offered free of charge for each new pro license.
-
-### 🔤 More Input Sets
-
-KeyboardKit Pro adds input set providers for the above locales.
-
-### 🗯 Improved Callouts
-
-KeyboardKit Pro adds secondary callout action providers for the above locales.
 
 
 ## Licensing
