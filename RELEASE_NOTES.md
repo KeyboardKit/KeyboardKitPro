@@ -1,5 +1,10 @@
 # Release Notes
 
+## 4.3
+
+This release is only done to make the binaries work with the main library.
+
+
 ## 4.1
 
 [Milestone](https://github.com/KeyboardKit/KeyboardKit/milestone/30).
