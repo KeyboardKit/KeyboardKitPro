@@ -158,6 +158,27 @@ public class SwedishKeyboardInputSetProvider : KeyboardKitPro.ProKeyboardInputSe
   override public init(device: UIKit.UIDevice = super, locale: KeyboardKit.KeyboardLocale)
   @objc deinit
 }
+public struct License : Swift.Hashable, Swift.Identifiable {
+  public var id: Swift.String {
+    get
+  }
+  public let key: Swift.String
+  public let bundleIds: [Swift.String]
+  public let locales: [KeyboardKit.KeyboardLocale]
+  public let expires: Foundation.Date
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+  public typealias ID = Swift.String
+  public static func == (a: KeyboardKitPro.License, b: KeyboardKitPro.License) -> Swift.Bool
+}
+extension License {
+  public static var current: KeyboardKitPro.License? {
+    get
+  }
+  public static func register(licenseKey: Swift.String) -> KeyboardKitPro.License?
+}
 public class ProKeyboardInputSetProvider : KeyboardKit.LocalizedService {
   public init(device: UIKit.UIDevice = .current, locale: KeyboardKit.KeyboardLocale)
   final public let device: UIKit.UIDevice

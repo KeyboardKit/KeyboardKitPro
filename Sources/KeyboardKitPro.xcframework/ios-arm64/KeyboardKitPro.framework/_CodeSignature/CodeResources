@@ -14,31 +14,31 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		HZyw0EH6YH2wggX6GO06egMLdGs=
+		SlAAAX0YCGlqeXv18nvgb0HJENE=
 		</data>
 		<key>Modules/KeyboardKitPro.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		uu2+Q2OKkbBI3NmaRRZ0SkPK+Ak=
+		4+CBf+f6HMu6adgDqS1+Og8V50c=
 		</data>
 		<key>Modules/KeyboardKitPro.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		rPgQ2mqowAbUnyuB6DrMFyBSB+M=
+		9atkkwr8Q68/0I6nxaLxTI22WoA=
 		</data>
 		<key>Modules/KeyboardKitPro.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		OlLQvAVONhUskopaQ50eVraOhIg=
+		xJ4N7KEehgkzCRsNyKZHYvu4xpk=
 		</data>
 		<key>Modules/KeyboardKitPro.swiftmodule/arm64.swiftdoc</key>
 		<data>
-		uu2+Q2OKkbBI3NmaRRZ0SkPK+Ak=
+		4+CBf+f6HMu6adgDqS1+Og8V50c=
 		</data>
 		<key>Modules/KeyboardKitPro.swiftmodule/arm64.swiftinterface</key>
 		<data>
-		rPgQ2mqowAbUnyuB6DrMFyBSB+M=
+		9atkkwr8Q68/0I6nxaLxTI22WoA=
 		</data>
 		<key>Modules/KeyboardKitPro.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		OlLQvAVONhUskopaQ50eVraOhIg=
+		xJ4N7KEehgkzCRsNyKZHYvu4xpk=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -65,42 +65,42 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			wj4N5lPMM+60iN7a+lXFjQ/3eTVW8lPlRxYM9rpj8C8=
+			dAAwj9V3BOwjIW7TxehnqXYGkuSzJc1iBEdFJfpVxSQ=
 			</data>
 		</dict>
 		<key>Modules/KeyboardKitPro.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			7BvrBTLHOUBDLfe7yzaAqB051K8eaA5n8UOXKKQ2X9I=
+			75Kq72asT94aGZi2Za3ev7mOXRVt+zmtDgBqopm481c=
 			</data>
 		</dict>
 		<key>Modules/KeyboardKitPro.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			zc9o34cOf0Q9yvgz8mhcCwA1NUwIKn/JZ9o8wERjKgU=
+			FHRcMuWIPT8w3fQPS2/Vcx7MFswWbCXzu2fnG7E7Tto=
 			</data>
 		</dict>
 		<key>Modules/KeyboardKitPro.swiftmodule/arm64.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			wj4N5lPMM+60iN7a+lXFjQ/3eTVW8lPlRxYM9rpj8C8=
+			dAAwj9V3BOwjIW7TxehnqXYGkuSzJc1iBEdFJfpVxSQ=
 			</data>
 		</dict>
 		<key>Modules/KeyboardKitPro.swiftmodule/arm64.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			7BvrBTLHOUBDLfe7yzaAqB051K8eaA5n8UOXKKQ2X9I=
+			75Kq72asT94aGZi2Za3ev7mOXRVt+zmtDgBqopm481c=
 			</data>
 		</dict>
 		<key>Modules/KeyboardKitPro.swiftmodule/arm64.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			zc9o34cOf0Q9yvgz8mhcCwA1NUwIKn/JZ9o8wERjKgU=
+			FHRcMuWIPT8w3fQPS2/Vcx7MFswWbCXzu2fnG7E7Tto=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

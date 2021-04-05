@@ -1,8 +1,23 @@
 # Release Notes
 
+## 4.3.2
+
+This release adds new license registration functions, to make it possibe to register pro licenses when not in a keyboard extension.
+
+### ✨ New features
+
+* `License` has a new, static `current` property.
+* `License` has a new, static `register(licenseKey:)` function.
+
+
+## 4.3.1
+
+This release enables new licenses.
+
+
 ## 4.3
 
-This release is only done to make the binaries work with the main library.
+This release makes the binaries work with the main library.
 
 
 ## 4.1
