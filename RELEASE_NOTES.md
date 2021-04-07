@@ -1,5 +1,27 @@
 # Release Notes
 
+
+## 4.3.4
+
+This release adds support for new locales.
+
+### 🌐 New locales
+
+* 🇬🇧 English U.K. (GB)
+* 🇺🇸 English U.S. (same keyboard as base English but different region)
+
+### 💡 Behavior changes
+
+* All locales now return secondary callout actions for `%`, since `‰` now renders correctly. 
+
+
+
+## 4.3.3
+
+This release enables new licenses.
+
+
+
 ## 4.3.2
 
 This release adds new license registration functions, to make it possibe to register pro licenses when not in a keyboard extension.
@@ -10,14 +32,17 @@ This release adds new license registration functions, to make it possibe to regi
 * `License` has a new, static `register(licenseKey:)` function.
 
 
+
 ## 4.3.1
 
 This release enables new licenses.
 
 
+
 ## 4.3
 
 This release makes the binaries work with the main library.
+
 
 
 ## 4.1
@@ -39,18 +64,22 @@ This release makes the binaries work with the main library.
 * 🇳🇴 Norwegian
 
 
+
 ## 4.0.1
 
-🐛 This patch fixes a double quote bug for Swedish, German and Italian providers.
+### 🐛 Bug fixes
+
+* This patch fixes a double quote bug for Swedish, German and Italian providers.
 
 
-## 4.0.0
 
-This is the first release of KeyboardKit Pro.
+## 4.0
+
+This is the first release of KeyboardKit Pro. 
 
 New versions will sync with the major and minor version of the main library, but the patch number may differ.
 
-### New features:
+### ✨ New features:
 
 * There is a new `KeyboardInputViewController` `.setupPro(with:)` setup function.
 * There is a new `StandardKeyboardInputSetProvider.pro(with:)` function.
