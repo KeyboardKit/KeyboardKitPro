@@ -52,6 +52,22 @@ public class NorwegianKeyboardInputSetProvider : KeyboardKitPro.ProKeyboardInput
   override public init(device: UIKit.UIDevice = super, locale: KeyboardKit.KeyboardLocale)
   @objc deinit
 }
+public class EnglishGbKeyboardInputSetProvider : KeyboardKitPro.ProKeyboardInputSetProvider, KeyboardKit.DeviceSpecificInputSetProvider {
+  public init(device: UIKit.UIDevice = .current)
+  public func alphabeticInputSet() -> KeyboardKit.AlphabeticKeyboardInputSet
+  public func numericInputSet() -> KeyboardKit.NumericKeyboardInputSet
+  public func symbolicInputSet() -> KeyboardKit.SymbolicKeyboardInputSet
+  override public init(device: UIKit.UIDevice = super, locale: KeyboardKit.KeyboardLocale)
+  @objc deinit
+}
+public class EnglishUsKeyboardInputSetProvider : KeyboardKitPro.ProKeyboardInputSetProvider, KeyboardKit.DeviceSpecificInputSetProvider {
+  public init(device: UIKit.UIDevice = .current)
+  public func alphabeticInputSet() -> KeyboardKit.AlphabeticKeyboardInputSet
+  public func numericInputSet() -> KeyboardKit.NumericKeyboardInputSet
+  public func symbolicInputSet() -> KeyboardKit.SymbolicKeyboardInputSet
+  override public init(device: UIKit.UIDevice = super, locale: KeyboardKit.KeyboardLocale)
+  @objc deinit
+}
 public class FinnishSecondaryCalloutActionProvider : KeyboardKitPro.ProSecondaryCalloutActionProvider {
   public init()
   override public func secondaryCalloutActions(for action: KeyboardKit.KeyboardAction) -> [KeyboardKit.KeyboardAction]
@@ -85,6 +101,12 @@ public class DanishSecondaryCalloutActionProvider : KeyboardKitPro.ProSecondaryC
 extension String {
   public func base64Decoded() -> Swift.String?
   public func base64Encoded() -> Swift.String?
+}
+public class EnglishGbSecondaryCalloutActionProvider : KeyboardKitPro.ProSecondaryCalloutActionProvider {
+  public init()
+  override public func secondaryCalloutActionString(for char: Swift.String) -> Swift.String
+  @objc deinit
+  override public init(locale: KeyboardKit.KeyboardLocale)
 }
 public class DutchKeyboardInputSetProvider : KeyboardKitPro.ProKeyboardInputSetProvider, KeyboardKit.DeviceSpecificInputSetProvider {
   public init(device: UIKit.UIDevice = .current)
@@ -184,5 +206,11 @@ public class ProKeyboardInputSetProvider : KeyboardKit.LocalizedService {
   final public let device: UIKit.UIDevice
   final public let locale: KeyboardKit.KeyboardLocale
   final public let localeKey: Swift.String
+  @objc deinit
+}
+public class EnglishUsSecondaryCalloutActionProvider : KeyboardKitPro.ProSecondaryCalloutActionProvider {
+  public init()
+  override public func secondaryCalloutActions(for action: KeyboardKit.KeyboardAction) -> [KeyboardKit.KeyboardAction]
+  override public init(locale: KeyboardKit.KeyboardLocale)
   @objc deinit
 }
