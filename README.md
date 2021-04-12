@@ -78,13 +78,13 @@ KeyboardKit Pro requires a commercial license.
 More information about pricing and tiers can be found [here][Licenses].
 
 
-## Contact me
+## Contact
 
-Feel free to reach out if you have questions or if you want to contribute in any way:
+Feel free to reach out if you have questions or feedback:
 
 * E-mail: [daniel.saidi@gmail.com][Email]
-* Twitter: [@danielsaidi][Twitter]
-* Web site: [danielsaidi.com][Website]
+* Twitter: [@keyboardkitapp][Twitter]
+* Web site: [getkeyboardkit.com][Website]
 
 
 ## License
@@ -92,13 +92,9 @@ Feel free to reach out if you have questions or if you want to contribute in any
 KeyboardKit Pro is closed source. See the `LICENSE` file for more info.
 
 [KeyboardKit]: https://github.com/KeyboardKit/KeyboardKit
-
-[Website]: https://getkeyboardkit.com
-[Licenses]: https://getkeyboardkit.com/pro
-
 [Installation]: https://github.com/KeyboardKit/KeyboardKit/blob/master/readmes/Installation.md
-[Troubleshooting]: https://github.com/KeyboardKit/KeyboardKit/blob/master/readmes/Troubleshooting.md
 
 [Email]: mailto:daniel.saidi@gmail.com
-[Twitter]: http://www.twitter.com/danielsaidi
-[Website]: http://www.danielsaidi.com
+[Twitter]: http://www.twitter.com/keyboardkitapp
+[Website]: https://getkeyboardkit.com
+[Licenses]: https://getkeyboardkit.com/pro
