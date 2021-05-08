@@ -1,7 +1,7 @@
 # Release Notes
 
 
-## 4.3.4
+## 4.4
 
 This release adds support for new locales.
 
@@ -12,7 +12,7 @@ This release adds support for new locales.
 
 ### 💡 Behavior changes
 
-* All locales now return secondary callout actions for `%`, since `‰` now renders correctly. 
+* All locales now return secondary callout actions for `%`, since `‰` now renders correctly.  
 
 
 
