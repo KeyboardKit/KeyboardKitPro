@@ -7,6 +7,12 @@ import KeyboardKit
 import Swift
 import SwiftUI
 import UIKit
+public class FrenchSecondaryCalloutActionProvider : KeyboardKitPro.ProSecondaryCalloutActionProvider {
+  public init()
+  override public func secondaryCalloutActionString(for char: Swift.String) -> Swift.String
+  override public init(locale: KeyboardKit.KeyboardLocale)
+  @objc deinit
+}
 extension KeyboardLocale {
   public var keyboardInputSetProvider: KeyboardKit.KeyboardInputSetProvider & KeyboardKit.LocalizedService {
     get
@@ -60,6 +66,14 @@ public class EnglishGbKeyboardInputSetProvider : KeyboardKitPro.ProKeyboardInput
   override public init(device: UIKit.UIDevice = super, locale: KeyboardKit.KeyboardLocale)
   @objc deinit
 }
+public class SpanishKeyboardInputSetProvider : KeyboardKitPro.ProKeyboardInputSetProvider, KeyboardKit.DeviceSpecificInputSetProvider {
+  public init(device: UIKit.UIDevice = .current)
+  public func alphabeticInputSet() -> KeyboardKit.AlphabeticKeyboardInputSet
+  public func numericInputSet() -> KeyboardKit.NumericKeyboardInputSet
+  public func symbolicInputSet() -> KeyboardKit.SymbolicKeyboardInputSet
+  override public init(device: UIKit.UIDevice = super, locale: KeyboardKit.KeyboardLocale)
+  @objc deinit
+}
 public class EnglishUsKeyboardInputSetProvider : KeyboardKitPro.ProKeyboardInputSetProvider, KeyboardKit.DeviceSpecificInputSetProvider {
   public init(device: UIKit.UIDevice = .current)
   public func alphabeticInputSet() -> KeyboardKit.AlphabeticKeyboardInputSet
@@ -87,6 +101,13 @@ public class DutchSecondaryCalloutActionProvider : KeyboardKitPro.ProSecondaryCa
 }
 public class GermanSecondaryCalloutActionProvider : KeyboardKitPro.ProSecondaryCalloutActionProvider {
   public init()
+  override public func secondaryCalloutActionString(for char: Swift.String) -> Swift.String
+  override public init(locale: KeyboardKit.KeyboardLocale)
+  @objc deinit
+}
+public class SpanishSecondaryCalloutActionProvider : KeyboardKitPro.ProSecondaryCalloutActionProvider {
+  public init()
+  override public func secondaryCalloutActions(for char: Swift.String) -> [KeyboardKit.KeyboardAction]
   override public func secondaryCalloutActionString(for char: Swift.String) -> Swift.String
   override public init(locale: KeyboardKit.KeyboardLocale)
   @objc deinit
@@ -127,6 +148,14 @@ extension KeyboardLocale {
   public var secondaryCalloutActionProvider: KeyboardKit.LocalizedService & KeyboardKit.SecondaryCalloutActionProvider {
     get
   }
+}
+public class FrenchKeyboardInputSetProvider : KeyboardKitPro.ProKeyboardInputSetProvider, KeyboardKit.DeviceSpecificInputSetProvider {
+  public init(device: UIKit.UIDevice = .current)
+  public func alphabeticInputSet() -> KeyboardKit.AlphabeticKeyboardInputSet
+  public func numericInputSet() -> KeyboardKit.NumericKeyboardInputSet
+  public func symbolicInputSet() -> KeyboardKit.SymbolicKeyboardInputSet
+  override public init(device: UIKit.UIDevice = super, locale: KeyboardKit.KeyboardLocale)
+  @objc deinit
 }
 open class StandardAutocompleteSuggestionProvider : KeyboardKit.AutocompleteSuggestionProvider {
   public init(maxCount: Swift.Int = 3, locale: Foundation.Locale = .current)

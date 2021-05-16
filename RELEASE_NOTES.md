@@ -1,6 +1,17 @@
 # Release Notes
 
 
+## 4.5
+
+This release adds support for new new locales.
+
+### 🌐 New locales
+
+* 🇫🇷 French
+* 🇪🇸 Spanish
+
+
+
 ## 4.4
 
 This release adds support for new locales.

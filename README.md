@@ -26,24 +26,22 @@ KeyboardKit Pro is a license-based plug-in that unlocks more locales and pro fea
 
 ### 🏳️‍🌈 More Locales
 
-KeyboardKit pro adds support for more locales:
+KeyboardKit pro adds support for more localized keyboards and services:
+
+* 🇺🇸 English (US - Default)
 
 * 🇩🇰 Danish
 * 🇳🇱 Dutch
-* 🇺🇸 English
-* 🇺🇸 English (US)
 * 🇬🇧 English (UK)
 * 🇫🇮 Finnish
+* 🇫🇷 French
 * 🇩🇪 German
 * 🇮🇹 Italian
 * 🇳🇴 Norwegian
-* 🇸🇪 Swedish 
+* 🇪🇸 Spanish
+* 🇸🇪 Swedish
 
-The number of available locales is based on your license. Read more below.
-
-If you use a `SystemKeyboard` these locales will be supported right away.
-
-New locales are added by demand. One new locale is offered free of charge for each new license.
+The number of available locales is based on your license.
 
 ### 🔤 More Input Sets
 
