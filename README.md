@@ -63,19 +63,31 @@ KeyboardKit Pro adds locale-specific input sets for all locales above.
 KeyboardKit Pro adds locale-specific secondary callout actions for all locales above.
 
 
+## Installation
+
+### Swift Package Manager
+
+```
+https://github.com/KeyboardKit/KeyboardKitPro.git
+```
+
+
 ## Getting started
 
-KeyboardKit Pro can be setup with a single line of code after it has been installed:
+Before you can use KeyboardKit Pro, you need to install it and obtain a license:
 
 * Install and setup KeyboardKit as described [in the main repo][KeyboardKit].
+* Install KeyboardKitPro alongside KeyboardKit, using the installation url above.
 * Obtain a KeyboardKit Pro license key (read more [here][Licenses]).
-* Install and `import KeyboardKitPro` alongside KeyboardKit as described [Installation].
-* Instead of `setup(with:)`, call `setupPro(withLicenseKey:view:)` to setup Pro features. 
-* You can also call `setupPro(withLicenseKey:)` to setup KeyboardKit Pro without a keyboard view.
 
-This will setup the Pro features that your license supports, such as the autocomplete engine and locales. You can then use any features that your license includes in any way you like.
+KeyboardKit Pro can then be setup with a single line of code.
+
+* For a keyboard extension, call `setupPro(withLicenseKey:view:)` instead of `setup(with:)`. You can also use `setupPro(withLicenseKey:)` if you don't want to provide a keyboard view.
+* For an application, where `setupPro` is not available, use `KeyboardKitLicense.register(licenseKey:)` instead.
 
 After registering a valid license, you can inspect the license details with `KeyboardKitLicense.current`.
+
+Registering a Pro license will setup Pro features that your license supports, such as the autocomplete engine and supported locales. You can then use any features that your license includes in any way you like.
 
 `IMPORTANT` Failure to call `setupPro` before accessing pro features, or attempting to use features that are not included in your license, will cause the extension to show a warning and then crash.
 
