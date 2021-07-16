@@ -179,9 +179,6 @@ open class StandardAutocompleteSuggestionProvider : KeyboardKit.AutocompleteSugg
   public func unlearnWord(_ word: Swift.String)
   @objc deinit
 }
-extension Date {
-  public init(year: Swift.Int, month: Swift.Int, day: Swift.Int, hour: Swift.Int = 0, minute: Swift.Int = 0, second: Swift.Int = 0, calendar: Foundation.Calendar = .current)
-}
 public class ItalianSecondaryCalloutActionProvider : KeyboardKitPro.ProSecondaryCalloutActionProvider {
   public init()
   override public func secondaryCalloutActionString(for char: Swift.String) -> Swift.String
@@ -201,6 +198,11 @@ public class NorwegianSecondaryCalloutActionProvider : KeyboardKitPro.ProSeconda
   final public let localeKey: Swift.String
   @objc deinit
 }
+extension KeyboardKitLicense {
+  public struct Customer : Swift.Equatable {
+    public static func == (a: KeyboardKitPro.KeyboardKitLicense.Customer, b: KeyboardKitPro.KeyboardKitLicense.Customer) -> Swift.Bool
+  }
+}
 public class SwedishKeyboardInputSetProvider : KeyboardKitPro.ProKeyboardInputSetProvider, KeyboardKit.DeviceSpecificInputSetProvider {
   public init(device: UIKit.UIDevice = .current)
   public func alphabeticInputSet() -> KeyboardKit.AlphabeticKeyboardInputSet
@@ -209,26 +211,28 @@ public class SwedishKeyboardInputSetProvider : KeyboardKitPro.ProKeyboardInputSe
   override public init(device: UIKit.UIDevice = super, locale: KeyboardKit.KeyboardLocale)
   @objc deinit
 }
-public struct License : Swift.Hashable, Swift.Identifiable {
+public struct KeyboardKitLicense : Swift.Hashable, Swift.Identifiable {
   public var id: Swift.String {
     get
   }
-  public let key: Swift.String
+  public let licenseKey: Swift.String
+  public let expires: Foundation.Date
+  public let customer: KeyboardKitPro.KeyboardKitLicense.Customer
   public let bundleIds: [Swift.String]
   public let locales: [KeyboardKit.KeyboardLocale]
-  public let expires: Foundation.Date
   public func hash(into hasher: inout Swift.Hasher)
-  public static func == (a: KeyboardKitPro.License, b: KeyboardKitPro.License) -> Swift.Bool
+  public static func == (a: KeyboardKitPro.KeyboardKitLicense, b: KeyboardKitPro.KeyboardKitLicense) -> Swift.Bool
   public typealias ID = Swift.String
   public var hashValue: Swift.Int {
     get
   }
 }
-extension License {
-  public static var current: KeyboardKitPro.License? {
+extension KeyboardKitLicense {
+  public static var current: KeyboardKitPro.KeyboardKitLicense? {
     get
   }
-  public static func register(licenseKey: Swift.String) -> KeyboardKitPro.License?
+  @discardableResult
+  public static func register(licenseKey: Swift.String) -> KeyboardKitPro.KeyboardKitLicense?
 }
 public class ProKeyboardInputSetProvider : KeyboardKit.LocalizedService {
   public init(device: UIKit.UIDevice = .current, locale: KeyboardKit.KeyboardLocale)
