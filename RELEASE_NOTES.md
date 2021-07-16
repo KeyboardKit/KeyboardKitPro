@@ -1,6 +1,18 @@
 # Release Notes
 
 
+## 4.6.1
+
+This release enables new licenses.
+
+
+
+## 4.6
+
+This release makes the binaries work with the main library.
+
+
+
 ## 4.5
 
 This release adds support for new new locales.
