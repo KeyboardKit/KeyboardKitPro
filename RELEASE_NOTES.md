@@ -1,12 +1,6 @@
 # Release Notes
 
 
-## 4.6.1
-
-This release enables new licenses.
-
-
-
 ## 4.6
 
 This release makes the binaries work with the main library.
@@ -35,13 +29,7 @@ This release adds support for new locales.
 
 ### 💡 Behavior changes
 
-* All locales now return secondary callout actions for `%`, since `‰` now renders correctly.  
-
-
-
-## 4.3.3
-
-This release enables new licenses.
+* All locales now return secondary callout actions for `%`, since `‰` now renders correctly. 
 
 
 
@@ -53,12 +41,6 @@ This release adds new license registration functions, to make it possibe to regi
 
 * `License` has a new, static `current` property.
 * `License` has a new, static `register(licenseKey:)` function.
-
-
-
-## 4.3.1
-
-This release enables new licenses.
 
 
 
