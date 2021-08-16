@@ -1,5 +1,9 @@
 # Release Notes
 
+This list only includes logical changes and omits license information. 
+
+Sometimes, a new version is needed to make the binaries work with the main library. These versions will always be included in this list, and will use the same minor version as the latest version of the main library.
+
 
 ## 4.6
 
