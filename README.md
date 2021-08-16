@@ -80,14 +80,16 @@ Before you can use KeyboardKit Pro, you need to install it and obtain a license:
 * Install KeyboardKitPro alongside KeyboardKit, using the installation url above.
 * Obtain a KeyboardKit Pro license key (read more [here][Licenses]).
 
-KeyboardKit Pro can then be setup with a single line of code.
+KeyboardKit Pro can now be setup with a single line of code:
 
-* For a keyboard extension, call `setupPro(withLicenseKey:view:)` instead of `setup(with:)`. You can also use `setupPro(withLicenseKey:)` if you don't want to provide a keyboard view.
-* For an application, where `setupPro` is not available, use `KeyboardKitLicense.register(licenseKey:)` instead.
+* For keyboard extensions, call `setupPro(withLicenseKey:view:)` instead of `setup(with:)`. 
+* You can also use `setupPro(withLicenseKey:)` if you don't want to provide a keyboard view.
+* For applications, where `setupPro` is not available, use `KeyboardKitLicense.register(licenseKey:)` instead.
+* All these functions are throwing and must be called with `try` or `try?`. When they fail, they throw a `LicenseError`.
 
 After registering a valid license, you can inspect the license details with `KeyboardKitLicense.current`.
 
-Registering a Pro license will setup Pro features that your license supports, such as the autocomplete engine and supported locales. You can then use any features that your license includes in any way you like.
+Registering a Pro license will setup Pro features that your license includes, e.g. a real autocomplete suggestion provider and the supported locales. You can then use any features that your license includes in any way you like.
 
 `IMPORTANT` Failure to call `setupPro` before accessing pro features, or attempting to use features that are not included in your license, will cause the extension to show a warning and then crash.
 
