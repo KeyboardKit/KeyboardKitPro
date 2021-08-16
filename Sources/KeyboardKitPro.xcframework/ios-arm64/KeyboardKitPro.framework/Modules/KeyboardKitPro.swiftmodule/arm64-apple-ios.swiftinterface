@@ -90,8 +90,8 @@ public class FinnishSecondaryCalloutActionProvider : KeyboardKitPro.ProSecondary
   @objc deinit
 }
 extension KeyboardInputViewController {
-  public func setupPro(withLicenseKey key: Swift.String)
-  public func setupPro<Content>(withLicenseKey key: Swift.String, view: Content) where Content : SwiftUI.View
+  public func setupPro(withLicenseKey key: Swift.String) throws
+  public func setupPro<Content>(withLicenseKey key: Swift.String, view: Content) throws where Content : SwiftUI.View
 }
 public class DutchSecondaryCalloutActionProvider : KeyboardKitPro.ProSecondaryCalloutActionProvider {
   public init()
@@ -179,6 +179,19 @@ open class StandardAutocompleteSuggestionProvider : KeyboardKit.AutocompleteSugg
   public func unlearnWord(_ word: Swift.String)
   @objc deinit
 }
+public enum LicenseError : Swift.Error, Swift.Equatable {
+  case expiredLicense(expirationDate: Foundation.Date)
+  case invalidBundle(Foundation.Bundle)
+  case invalidLocale(KeyboardKit.KeyboardLocale)
+  case invalidLicenseKey(Swift.String)
+  case missingLicense
+  public static func == (a: KeyboardKitPro.LicenseError, b: KeyboardKitPro.LicenseError) -> Swift.Bool
+}
+extension LicenseError {
+  public var isFatal: Swift.Bool {
+    get
+  }
+}
 public class ItalianSecondaryCalloutActionProvider : KeyboardKitPro.ProSecondaryCalloutActionProvider {
   public init()
   override public func secondaryCalloutActionString(for char: Swift.String) -> Swift.String
@@ -232,7 +245,7 @@ extension KeyboardKitLicense {
     get
   }
   @discardableResult
-  public static func register(licenseKey: Swift.String) -> KeyboardKitPro.KeyboardKitLicense?
+  public static func register(licenseKey: Swift.String) throws -> KeyboardKitPro.KeyboardKitLicense?
 }
 public class ProKeyboardInputSetProvider : KeyboardKit.LocalizedService {
   public init(device: UIKit.UIDevice = .current, locale: KeyboardKit.KeyboardLocale)

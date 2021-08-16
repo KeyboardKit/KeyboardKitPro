@@ -5,6 +5,26 @@ This list only includes logical changes and omits license information.
 Sometimes, a new version is needed to make the binaries work with the main library. These versions will always be included in this list, and will use the same minor version as the latest version of the main library.
 
 
+## 4.7
+
+This release makes it easier to inspect errors that occur when registering or validating licenses.
+
+### ✨ New features
+
+* `setupPro` and `KeyboardKitLicense.register` are now throwing, which means that you can inspect any errors that occur. 
+
+### 💡 Behavior changes
+
+* License registration and validation are now throwing instead of returning.
+* Failing a license registration or validation no longer causes assertion failures, since they are now throwing.
+* Failing a license registration or validation no longer displays the error view. This is now handled by `setupPro` instead.
+
+### 💥 Breaking changes
+
+* `setupPro` and `KeyboardKitLicense.register` are now throwing, which means that you must call them with `try` (or `try?` to ignore the result). 
+
+
+
 ## 4.6
 
 This release makes the binaries work with the main library.
