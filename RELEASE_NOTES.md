@@ -1,8 +1,14 @@
 # Release Notes
 
-This list only includes logical changes and omits license information. 
+These release notes only include functional changes. They do
+not cover license changes.
 
-Sometimes, a new version is needed to make the binaries work with the main library. These versions will always be included in this list, and will use the same minor version as the latest version of the main library.
+
+
+## 4.8
+
+KeyboardKit Pro 4.8 has no functional changes.
+
 
 
 ## 4.7
