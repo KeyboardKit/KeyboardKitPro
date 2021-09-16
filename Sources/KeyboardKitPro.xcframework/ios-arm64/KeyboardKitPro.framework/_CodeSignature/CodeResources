@@ -14,7 +14,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		2yfN6jgxwOMrCL/DofhoRhD5K4k=
+		E2TtWE1OnYgqLcqQtT6WoqVzTRE=
 		</data>
 		<key>Modules/KeyboardKitPro.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
@@ -26,7 +26,7 @@
 		</data>
 		<key>Modules/KeyboardKitPro.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		F8Ylgxk5zBrgiWSRBaA5Lq8Js2A=
+		yD5GRQGvwxguLDnXaq1k2crE+Z8=
 		</data>
 		<key>Modules/KeyboardKitPro.swiftmodule/arm64.swiftdoc</key>
 		<data>
@@ -38,7 +38,7 @@
 		</data>
 		<key>Modules/KeyboardKitPro.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		F8Ylgxk5zBrgiWSRBaA5Lq8Js2A=
+		yD5GRQGvwxguLDnXaq1k2crE+Z8=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -79,7 +79,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			6I/rRrbI4AyIDgJuj8Iz+WljpGGhvJ8e8QiYok9iVC0=
+			ztEMOKySzUptD9quWS7UlE/ZA9y2k7/rd5WGJFt9sic=
 			</data>
 		</dict>
 		<key>Modules/KeyboardKitPro.swiftmodule/arm64.swiftdoc</key>
@@ -100,7 +100,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			6I/rRrbI4AyIDgJuj8Iz+WljpGGhvJ8e8QiYok9iVC0=
+			ztEMOKySzUptD9quWS7UlE/ZA9y2k7/rd5WGJFt9sic=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
