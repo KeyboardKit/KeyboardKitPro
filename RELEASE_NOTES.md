@@ -5,6 +5,20 @@ not cover license changes.
 
 
 
+## 4.9
+
+This version adds support for fetching autocomplete suggestions from an external datasource. 
+
+### ✨ New features
+
+* `ExternalAutocompleteProvider` is a new autocomplete provider that can be used to fetch autocomplete suggestions from an external datasource. 
+
+### 🗑 Deprecations
+
+* `StandardAutocompleteSuggestionProvider` has been renamed to `StandardAutocompleteProvider`.
+
+
+
 ## 4.8
 
 KeyboardKit Pro 4.8 has no functional changes.
