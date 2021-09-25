@@ -5,6 +5,14 @@ not cover license changes.
 
 
 
+## 4.9.1
+
+This version syncs KeyboardKit Pro with new features in the core library.
+
+Make sure to update both dependencies, otherwise KeyboardKit Pro will crash. 
+
+
+
 ## 4.9
 
 This version adds support for fetching autocomplete suggestions from an external datasource. 
