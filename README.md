@@ -22,6 +22,7 @@
 KeyboardKit Pro is a license-based plug-in that unlocks more locales and pro features.
 
 
+
 ## Getting a Pro License
 
 KeyboardKit Pro requires a commercial license.
@@ -29,7 +30,9 @@ KeyboardKit Pro requires a commercial license.
 More information about pricing and tiers can be found [here][Licenses].
 
 
+
 ## Features
+
 
 ### 🏳️‍🌈 Locales
 
@@ -50,35 +53,50 @@ KeyboardKit Pro adds support for more keyboard locales:
 
 The number of available locales is based on your [license tier][Licenses].
 
+
 ### 💡 Autocomplete
 
-KeyboardKit Pro adds an autocomplete engine that supports all locales above.
+KeyboardKit Pro adds an autocomplete engine that supports all keyboard localse, as well as a web-based provider that fetches autocomplete suggestions from a remote, configurable data source. 
+
+[Read more here][Autocomplete]
+
 
 ### 🔤 Input Sets
 
 KeyboardKit Pro adds locale-specific input sets for all locales above.
 
+The correct input set will automatically be enabled when you change the keyboard locale.
+
+
 ### 🗯 Secondary Actions
 
 KeyboardKit Pro adds locale-specific secondary callout actions for all locales above.
+
+The correct actions will automatically be enabled when you change the keyboard locale.
+
 
 
 ## Installation
 
 ### Swift Package Manager
 
+KeyboardKit Pro only supports Swift Package Manager.
+
 ```
 https://github.com/KeyboardKit/KeyboardKitPro.git
 ```
+
+KeyboardKit Pro only needs to be added to the main app target.
+
 
 
 ## Getting started
 
 Before you can use KeyboardKit Pro, you need to install it and obtain a license:
 
-* Install and setup KeyboardKit as described [in the main repo][KeyboardKit].
-* Install KeyboardKitPro alongside KeyboardKit, using the installation url above.
-* Obtain a KeyboardKit Pro license key (read more [here][Licenses]).
+* Obtain a [KeyboardKit Pro license][Licenses].
+* Install KeyboardKit as described [in the main repo][KeyboardKit].
+* Install KeyboardKitPro alongside KeyboardKit, as described above.
 
 KeyboardKit Pro can now be setup with a single line of code:
 
@@ -109,8 +127,8 @@ KeyboardKit Pro is closed source. See the `LICENSE` file for more info.
 
 
 
+[Autocomplete]: https://github.com/KeyboardKit/KeyboardKit/blob/master/readmes/Autocomplete.md
 [KeyboardKit]: https://github.com/KeyboardKit/KeyboardKit
-[Installation]: https://github.com/KeyboardKit/KeyboardKit/blob/master/readmes/Installation.md
 
 [Email]: mailto:daniel.saidi@gmail.com
 [Twitter]: http://www.twitter.com/keyboardkitapp
