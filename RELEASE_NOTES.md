@@ -5,6 +5,16 @@ not cover license changes.
 
 
 
+## 4.9.2
+
+This version removes `ExternalAutocompleteProvider`s `AutocompleteProvider` implementation.
+
+Something is causing app extensions to link KeyboardKit and KeyboardKit Pro differently, in a way that makes the protocol implementation not work in app extensions.
+
+Until this is fixed, subclass `ExternalAutocompleteProvider` and just implement `AutocompleteProvider` as well.
+
+
+
 ## 4.9.1
 
 This version syncs KeyboardKit Pro with new features in the core library.
