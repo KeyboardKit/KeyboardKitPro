@@ -5,6 +5,14 @@ not cover license changes.
 
 
 
+## 4.9.3
+
+### 🐛 Bug fixes
+
+* This patch fixes a min text length but in the `ExternalAutocompleteProvider`.
+
+
+
 ## 4.9.2
 
 This version removes `ExternalAutocompleteProvider`s `AutocompleteProvider` implementation.
