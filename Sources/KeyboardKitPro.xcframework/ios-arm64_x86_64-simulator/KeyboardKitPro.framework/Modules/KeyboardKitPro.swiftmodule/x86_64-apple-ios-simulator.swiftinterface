@@ -81,7 +81,7 @@ public class FinnishSecondaryCalloutActionProvider : KeyboardKitPro.ProSecondary
   override public func secondaryCalloutActionString(for char: Swift.String) -> Swift.String
   @objc deinit
 }
-open class ExternalAutocompleteProvider<Result> : KeyboardKit.AutocompleteProvider where Result : KeyboardKitPro.ExternalAutocompleteResult {
+open class ExternalAutocompleteProvider<Result> where Result : KeyboardKitPro.ExternalAutocompleteResult {
   public init(urlPattern: Swift.String, urlLocaleReplacementPattern: Swift.String = "{LOCALE}", urlTextReplacementPattern: Swift.String = "{TEXT}", locale: Foundation.Locale = .current, minimumTextLength: Swift.Int = 3, throttleInterval: Swift.Double? = nil, debounceInterval: Swift.Double? = nil)
   public var locale: Foundation.Locale
   public enum AutocompleteError : Swift.Error {
