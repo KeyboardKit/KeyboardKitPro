@@ -4,6 +4,24 @@ These release notes only include functional changes. They do
 not cover license changes.
 
 
+## 5.0
+
+
+### 💡 Behavior changes
+
+* License errors no longer cause a crash, but are instead throwing.
+* All pro feature initializers are now throwing and no longer cause any hidden license validation errors.
+
+### 🐛 Bug fixes
+
+* The autocomplete provider is now created with the correct locale.
+
+### 💥 Breaking changes
+
+* All previously deprecated functionality has been removed.
+* All pro feature initializers are now throwing and must be called using `try`.
+
+
 
 ## 4.9.3
 
