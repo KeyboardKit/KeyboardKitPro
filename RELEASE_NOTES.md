@@ -6,6 +6,9 @@ not cover license changes.
 
 ## 5.0
 
+### ✨ New features
+
+* `StandardAutocompleteProvider` can now be enrichened with a custom lexicon.  
 
 ### 💡 Behavior changes
 
