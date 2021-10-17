@@ -134,6 +134,6 @@ KeyboardKit Pro is closed source. See the `LICENSE` file for more info.
 [KeyboardKit]: https://github.com/KeyboardKit/KeyboardKit
 
 [Email]: mailto:daniel.saidi@gmail.com
-[Twitter]: http://www.twitter.com/keyboardkitapp
+[Twitter]: http://www.twitter.com/getkeyboardkit
 [Website]: https://getkeyboardkit.com
 [Licenses]: https://getkeyboardkit.com/pro
