@@ -1,7 +1,15 @@
 # Release Notes
 
-These release notes only include functional changes. They do
-not cover license changes.
+These release notes only include functional changes.
+
+
+## 5.1
+
+### 🌐 New locales
+
+* 🇪🇪 Estonian
+* 🇱🇻 Latvian
+* 🇱🇹 Lithuanian
 
 
 ## 5.0

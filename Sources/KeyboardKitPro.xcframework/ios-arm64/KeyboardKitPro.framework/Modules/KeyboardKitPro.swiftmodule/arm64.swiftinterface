@@ -22,6 +22,11 @@ extension KeyboardKit.KeyboardLocale {
   #endif
 
 }
+public class EstonianSecondaryCalloutActionProvider : KeyboardKitPro.ProSecondaryCalloutActionProvider {
+  public init() throws
+  override public func secondaryCalloutActionString(for char: Swift.String) -> Swift.String
+  @objc deinit
+}
 public class GermanKeyboardInputSetProvider : KeyboardKitPro.ProKeyboardInputSetProvider, KeyboardKit.DeviceSpecificInputSetProvider {
   public init(device: UIKit.UIDevice = .current) throws
   public var alphabeticInputSet: KeyboardKit.AlphabeticKeyboardInputSet {
@@ -176,6 +181,11 @@ public class GermanSecondaryCalloutActionProvider : KeyboardKitPro.ProSecondaryC
   override public func secondaryCalloutActionString(for char: Swift.String) -> Swift.String
   @objc deinit
 }
+public class LithuanianSecondaryCalloutActionProvider : KeyboardKitPro.ProSecondaryCalloutActionProvider {
+  public init() throws
+  override public func secondaryCalloutActionString(for char: Swift.String) -> Swift.String
+  @objc deinit
+}
 public class SpanishSecondaryCalloutActionProvider : KeyboardKitPro.ProSecondaryCalloutActionProvider {
   public init() throws
   override public func secondaryCalloutActions(for char: Swift.String) -> [KeyboardKit.KeyboardAction]
@@ -224,6 +234,11 @@ extension KeyboardKit.KeyboardLocale {
   }
   #endif
 
+}
+public class LatvianSecondaryCalloutActionProvider : KeyboardKitPro.ProSecondaryCalloutActionProvider {
+  public init() throws
+  override public func secondaryCalloutActionString(for char: Swift.String) -> Swift.String
+  @objc deinit
 }
 public class FrenchKeyboardInputSetProvider : KeyboardKitPro.ProKeyboardInputSetProvider, KeyboardKit.DeviceSpecificInputSetProvider {
   public init(device: UIKit.UIDevice = .current) throws
@@ -280,6 +295,19 @@ extension KeyboardKitPro.LicenseError {
     get
   }
 }
+public class LatvianKeyboardInputSetProvider : KeyboardKitPro.ProKeyboardInputSetProvider, KeyboardKit.DeviceSpecificInputSetProvider {
+  public init(device: UIKit.UIDevice = .current) throws
+  public var alphabeticInputSet: KeyboardKit.AlphabeticKeyboardInputSet {
+    get
+  }
+  public var numericInputSet: KeyboardKit.NumericKeyboardInputSet {
+    get
+  }
+  public var symbolicInputSet: KeyboardKit.SymbolicKeyboardInputSet {
+    get
+  }
+  @objc deinit
+}
 public class ItalianSecondaryCalloutActionProvider : KeyboardKitPro.ProSecondaryCalloutActionProvider {
   public init() throws
   override public func secondaryCalloutActionString(for char: Swift.String) -> Swift.String
@@ -295,6 +323,32 @@ public class NorwegianSecondaryCalloutActionProvider : KeyboardKitPro.ProSeconda
   public init(locale: KeyboardKit.KeyboardLocale) throws
   final public let locale: KeyboardKit.KeyboardLocale
   final public let localeKey: Swift.String
+  @objc deinit
+}
+public class LithuanianKeyboardInputSetProvider : KeyboardKitPro.ProKeyboardInputSetProvider, KeyboardKit.DeviceSpecificInputSetProvider {
+  public init(device: UIKit.UIDevice = .current) throws
+  public var alphabeticInputSet: KeyboardKit.AlphabeticKeyboardInputSet {
+    get
+  }
+  public var numericInputSet: KeyboardKit.NumericKeyboardInputSet {
+    get
+  }
+  public var symbolicInputSet: KeyboardKit.SymbolicKeyboardInputSet {
+    get
+  }
+  @objc deinit
+}
+public class EstonianKeyboardInputSetProvider : KeyboardKitPro.ProKeyboardInputSetProvider, KeyboardKit.DeviceSpecificInputSetProvider {
+  public init(device: UIKit.UIDevice = .current) throws
+  public var alphabeticInputSet: KeyboardKit.AlphabeticKeyboardInputSet {
+    get
+  }
+  public var numericInputSet: KeyboardKit.NumericKeyboardInputSet {
+    get
+  }
+  public var symbolicInputSet: KeyboardKit.SymbolicKeyboardInputSet {
+    get
+  }
   @objc deinit
 }
 extension KeyboardKitPro.KeyboardKitLicense {
