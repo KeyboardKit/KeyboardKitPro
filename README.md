@@ -43,10 +43,13 @@ KeyboardKit Pro adds support for more keyboard locales:
 * 🇩🇰 Danish
 * 🇳🇱 Dutch
 * 🇬🇧 English (UK)
+* 🇪🇪 Estonian
 * 🇫🇮 Finnish
 * 🇫🇷 French
 * 🇩🇪 German
 * 🇮🇹 Italian
+* 🇱🇻 Latvian
+* 🇱🇹 Lithuanian
 * 🇳🇴 Norwegian
 * 🇪🇸 Spanish
 * 🇸🇪 Swedish
