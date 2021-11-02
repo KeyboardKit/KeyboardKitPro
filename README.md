@@ -36,7 +36,7 @@ More information about pricing and tiers can be found [here][Licenses].
 
 ### 🏳️‍🌈 Locales
 
-KeyboardKit Pro adds support for more keyboard locales:
+KeyboardKit Pro adds completely localized keyboards for the following locales:
 
 * 🇺🇸 English (US - Default)
 
@@ -51,8 +51,10 @@ KeyboardKit Pro adds support for more keyboard locales:
 * 🇱🇻 Latvian
 * 🇱🇹 Lithuanian
 * 🇳🇴 Norwegian
+* 🇷🇺 Russian
 * 🇪🇸 Spanish
 * 🇸🇪 Swedish
+* 🇺🇦 Ukranian
 
 The number of available locales is based on your [license tier][Licenses].
 

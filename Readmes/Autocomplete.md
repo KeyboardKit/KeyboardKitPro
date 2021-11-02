@@ -1,4 +1,4 @@
-#  Appearance
+#  Autocomplete
 
 KeyboardKit Pro adds an autocomplete engine that supports all keyboard localse, as well as a web-based provider that fetches autocomplete suggestions from a remote, configurable data source. 
 

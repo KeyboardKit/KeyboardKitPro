@@ -3,13 +3,28 @@
 These release notes only include functional changes.
 
 
+
+## 5.2
+
+This version adds support for `russian` and `ukranian`.
+
+### 🌐 New locales
+
+* 🇷🇺 Russian
+* 🇺🇦 Ukranian  
+
+
+
 ## 5.1
+
+This version adds support for `estonian`, `latvian` and `lithuanian`.
 
 ### 🌐 New locales
 
 * 🇪🇪 Estonian
 * 🇱🇻 Latvian
 * 🇱🇹 Lithuanian
+
 
 
 ## 5.0
