@@ -14,7 +14,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		g570cv2Z8OI0AEW1MpoA1nazcbw=
+		wMqDCef8b7XNLsqbP3BSnNgovh4=
 		</data>
 		<key>Modules/KeyboardKitPro.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -26,7 +26,7 @@
 		</data>
 		<key>Modules/KeyboardKitPro.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		LnH5gvjmMeJPdsSSc2pu0kXOQuY=
+		f98ISlyfJBVdEzuW8KZaxwm8y/0=
 		</data>
 		<key>Modules/KeyboardKitPro.swiftmodule/arm64.swiftdoc</key>
 		<data>
@@ -38,7 +38,7 @@
 		</data>
 		<key>Modules/KeyboardKitPro.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		LnH5gvjmMeJPdsSSc2pu0kXOQuY=
+		f98ISlyfJBVdEzuW8KZaxwm8y/0=
 		</data>
 		<key>Modules/KeyboardKitPro.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -50,7 +50,7 @@
 		</data>
 		<key>Modules/KeyboardKitPro.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		/DN/RQeEvKCMh4M/AFtC0M/Oo/g=
+		5UgC7wBhtEO4L9PQP81L42Y//Wc=
 		</data>
 		<key>Modules/KeyboardKitPro.swiftmodule/x86_64.swiftdoc</key>
 		<data>
@@ -62,7 +62,7 @@
 		</data>
 		<key>Modules/KeyboardKitPro.swiftmodule/x86_64.swiftmodule</key>
 		<data>
-		/DN/RQeEvKCMh4M/AFtC0M/Oo/g=
+		5UgC7wBhtEO4L9PQP81L42Y//Wc=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -103,7 +103,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			XkPYYDLVqhypu7/56/ZpAbjMX3Szhb7EFT4ilvVQCtc=
+			8chAuIIllVGwTSWhJ0YtozOSa0igT35FgDO3dYWRl2w=
 			</data>
 		</dict>
 		<key>Modules/KeyboardKitPro.swiftmodule/arm64.swiftdoc</key>
@@ -124,7 +124,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			XkPYYDLVqhypu7/56/ZpAbjMX3Szhb7EFT4ilvVQCtc=
+			8chAuIIllVGwTSWhJ0YtozOSa0igT35FgDO3dYWRl2w=
 			</data>
 		</dict>
 		<key>Modules/KeyboardKitPro.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -145,7 +145,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			AJQ3660n2JNY94CQURkeSuz32B14XqEKCYd+bNRAfyk=
+			iar4tHbY5L/s1S+Qw7mnkuffgk8thIX9LCqZwCcmais=
 			</data>
 		</dict>
 		<key>Modules/KeyboardKitPro.swiftmodule/x86_64.swiftdoc</key>
@@ -166,7 +166,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			AJQ3660n2JNY94CQURkeSuz32B14XqEKCYd+bNRAfyk=
+			iar4tHbY5L/s1S+Qw7mnkuffgk8thIX9LCqZwCcmais=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
