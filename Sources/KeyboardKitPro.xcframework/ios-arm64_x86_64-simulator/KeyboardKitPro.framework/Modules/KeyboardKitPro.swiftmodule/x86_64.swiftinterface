@@ -45,6 +45,33 @@ public class GermanKeyboardInputSetProvider : KeyboardKitPro.ProKeyboardInputSet
   }
   @objc deinit
 }
+public struct ToggleToolbar<Toolbar, ToggledToolbar> : SwiftUI.View where Toolbar : SwiftUI.View, ToggledToolbar : SwiftUI.View {
+  public init(animation: KeyboardKitPro.ToggleToolbarAnimation = .opacity, toolbar: Toolbar, toggledToolbar: ToggledToolbar) throws
+  @_Concurrency.MainActor(unsafe) public var body: some SwiftUI.View {
+    get
+  }
+  public typealias Body = @_opaqueReturnTypeOf("$s14KeyboardKitPro13ToggleToolbarV4bodyQrvp", 0) __<Toolbar, ToggledToolbar>
+}
+public enum ToggleToolbarAnimation : Swift.String, Swift.CaseIterable, Swift.Codable, Swift.Equatable, Swift.Identifiable {
+  case opacity
+  case flipUp
+  case flipDown
+  case slideUp
+  case slideDown
+  public var id: Swift.String {
+    get
+  }
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [KeyboardKitPro.ToggleToolbarAnimation]
+  public typealias ID = Swift.String
+  public typealias RawValue = Swift.String
+  public static var allCases: [KeyboardKitPro.ToggleToolbarAnimation] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
 public class DanishKeyboardInputSetProvider : KeyboardKitPro.ProKeyboardInputSetProvider, KeyboardKit.DeviceSpecificInputSetProvider {
   public init(device: UIKit.UIDevice = .current) throws
   public var alphabeticInputSet: KeyboardKit.AlphabeticKeyboardInputSet {
@@ -123,6 +150,16 @@ public class SpanishKeyboardInputSetProvider : KeyboardKitPro.ProKeyboardInputSe
   }
   @objc deinit
 }
+@_Concurrency.MainActor(unsafe) public struct AudioFeedbackToggleButton<ViewType> : SwiftUI.View where ViewType : SwiftUI.View {
+  @_Concurrency.MainActor(unsafe) public init(settings: KeyboardKit.KeyboardFeedbackSettings, enabledView: ViewType, disabledView: ViewType) throws
+  @_Concurrency.MainActor(unsafe) public var body: some SwiftUI.View {
+    get
+  }
+  public typealias Body = @_opaqueReturnTypeOf("$s14KeyboardKitPro25AudioFeedbackToggleButtonV4bodyQrvp", 0) __<ViewType>
+}
+extension KeyboardKitPro.AudioFeedbackToggleButton where ViewType == SwiftUI.Image {
+  @_Concurrency.MainActor(unsafe) public init(settings: KeyboardKit.KeyboardFeedbackSettings, enabledImage: SwiftUI.Image = .keyboardAudioFeedbackEnabled, disabledImage: SwiftUI.Image = .keyboardAudioFeedbackDisabled) throws
+}
 public class EnglishUsKeyboardInputSetProvider : KeyboardKitPro.ProKeyboardInputSetProvider, KeyboardKit.DeviceSpecificInputSetProvider {
   public init(device: UIKit.UIDevice = .current) throws
   public var alphabeticInputSet: KeyboardKit.AlphabeticKeyboardInputSet {
@@ -141,6 +178,14 @@ public class FinnishSecondaryCalloutActionProvider : KeyboardKitPro.ProSecondary
   override public func secondaryCalloutActions(for action: KeyboardKit.KeyboardAction) -> [KeyboardKit.KeyboardAction]
   override public func secondaryCalloutActionString(for char: Swift.String) -> Swift.String
   @objc deinit
+}
+@available(iOS 14.0, *)
+public struct EnabledLabel : SwiftUI.View {
+  public init(isEnabled: Swift.Bool, enabledText: Swift.String, enabledIcon: SwiftUI.Image = .enabledLabelEnabledIcon, enabledColor: SwiftUI.Color = .green, disabledText: Swift.String, disabledIcon: SwiftUI.Image = .enabledLabelDisabledIcon, disabledColor: SwiftUI.Color = .orange) throws
+  @_Concurrency.MainActor(unsafe) public var body: some SwiftUI.View {
+    get
+  }
+  public typealias Body = @_opaqueReturnTypeOf("$s14KeyboardKitPro12EnabledLabelV4bodyQrvp", 0) __
 }
 open class ExternalAutocompleteProvider<Result> where Result : KeyboardKitPro.ExternalAutocompleteResult {
   public init(urlPattern: Swift.String, urlLocaleReplacementPattern: Swift.String = "{LOCALE}", urlTextReplacementPattern: Swift.String = "{TEXT}", locale: Foundation.Locale = .current, minimumTextLength: Swift.Int = 3, throttleInterval: Swift.Double? = nil, debounceInterval: Swift.Double? = nil) throws
@@ -170,6 +215,7 @@ open class ExternalAutocompleteProvider<Result> where Result : KeyboardKitPro.Ex
   @objc deinit
 }
 extension KeyboardKit.KeyboardInputViewController {
+  @_Concurrency.MainActor(unsafe) public static var hasShownErrorAlert: Swift.Bool
   @_Concurrency.MainActor(unsafe) public func setupPro(withLicenseKey key: Swift.String) throws
   @_Concurrency.MainActor(unsafe) public func setupPro<Content>(withLicenseKey key: Swift.String, view: Content) throws where Content : SwiftUI.View
 }
@@ -203,14 +249,25 @@ public class DanishSecondaryCalloutActionProvider : KeyboardKitPro.ProSecondaryC
   override public func secondaryCalloutActionString(for char: Swift.String) -> Swift.String
   @objc deinit
 }
-extension Swift.String {
-  public func base64Decoded() -> Swift.String?
-  public func base64Encoded() -> Swift.String?
-}
 public class EnglishGbSecondaryCalloutActionProvider : KeyboardKitPro.ProSecondaryCalloutActionProvider {
   public init() throws
   override public func secondaryCalloutActionString(for char: Swift.String) -> Swift.String
   @objc deinit
+}
+extension KeyboardKitPro.LicenseTier {
+  public static let basic: KeyboardKitPro.LicenseTier
+  public static let silver: KeyboardKitPro.LicenseTier
+  public static let gold: KeyboardKitPro.LicenseTier
+}
+@_Concurrency.MainActor(unsafe) public struct HapticFeedbackToggleButton<ViewType> : SwiftUI.View where ViewType : SwiftUI.View {
+  @_Concurrency.MainActor(unsafe) public init(settings: KeyboardKit.KeyboardFeedbackSettings, enabledView: ViewType, disabledView: ViewType) throws
+  @_Concurrency.MainActor(unsafe) public var body: some SwiftUI.View {
+    get
+  }
+  public typealias Body = @_opaqueReturnTypeOf("$s14KeyboardKitPro26HapticFeedbackToggleButtonV4bodyQrvp", 0) __<ViewType>
+}
+extension KeyboardKitPro.HapticFeedbackToggleButton where ViewType == SwiftUI.Image {
+  @_Concurrency.MainActor(unsafe) public init(settings: KeyboardKit.KeyboardFeedbackSettings, enabledImage: SwiftUI.Image = .keyboardHapticFeedbackEnabled, disabledImage: SwiftUI.Image = .keyboardHapticFeedbackDisabled) throws
 }
 public class DutchKeyboardInputSetProvider : KeyboardKitPro.ProKeyboardInputSetProvider, KeyboardKit.DeviceSpecificInputSetProvider {
   public init(device: UIKit.UIDevice = .current) throws
@@ -290,8 +347,8 @@ open class StandardAutocompleteProvider : KeyboardKit.AutocompleteProvider {
 public enum LicenseError : Swift.Error, Swift.Equatable {
   case expiredLicense(expirationDate: Foundation.Date)
   case invalidBundle(Foundation.Bundle)
-  case invalidLocale(KeyboardKit.KeyboardLocale)
   case invalidLicenseKey(Swift.String)
+  case invalidLocale(KeyboardKit.KeyboardLocale)
   case missingLicense
   public static func == (a: KeyboardKitPro.LicenseError, b: KeyboardKitPro.LicenseError) -> Swift.Bool
 }
@@ -313,6 +370,21 @@ public class LatvianKeyboardInputSetProvider : KeyboardKitPro.ProKeyboardInputSe
   }
   @objc deinit
 }
+extension SwiftUI.Image {
+  public static let keyboardAudioFeedbackEnabled: SwiftUI.Image
+  public static let keyboardAudioFeedbackDisabled: SwiftUI.Image
+  public static let keyboardHapticFeedbackEnabled: SwiftUI.Image
+  public static let keyboardHapticFeedbackDisabled: SwiftUI.Image
+  public static let enabledLabelEnabledIcon: SwiftUI.Image
+  public static let enabledLabelDisabledIcon: SwiftUI.Image
+}
+@available(*, deprecated, renamed: "License")
+public typealias KeyboardKitLicense = KeyboardKitPro.License
+@available(*, deprecated, renamed: "License")
+extension KeyboardKitPro.License {
+  @available(*, deprecated, renamed: "LicenseCustomer")
+  public typealias Customer = KeyboardKitPro.LicenseCustomer
+}
 public class RussianKeyboardInputSetProvider : KeyboardKitPro.ProKeyboardInputSetProvider, KeyboardKit.DeviceSpecificInputSetProvider {
   public init(device: UIKit.UIDevice = .current) throws
   public var alphabeticInputSet: KeyboardKit.AlphabeticKeyboardInputSet {
@@ -331,10 +403,31 @@ public class UkrainianSecondaryCalloutActionProvider : KeyboardKitPro.ProSeconda
   override public func secondaryCalloutActionString(for char: Swift.String) -> Swift.String
   @objc deinit
 }
+@available(iOS 14.0, *)
+public struct KeyboardEnabledLabel : SwiftUI.View, KeyboardKit.KeyboardEnabledStateInspector {
+  public init(keyboardBundleId: Swift.String, enabledText: Swift.String, enabledIcon: SwiftUI.Image = .enabledLabelEnabledIcon, enabledColor: SwiftUI.Color = .green, disabledText: Swift.String, disabledIcon: SwiftUI.Image = .enabledLabelDisabledIcon, disabledColor: SwiftUI.Color = .orange) throws
+  @_Concurrency.MainActor(unsafe) public var body: some SwiftUI.View {
+    get
+  }
+  public typealias Body = @_opaqueReturnTypeOf("$s14KeyboardKitPro0A12EnabledLabelV4bodyQrvp", 0) __
+}
 public class ItalianSecondaryCalloutActionProvider : KeyboardKitPro.ProSecondaryCalloutActionProvider {
   public init() throws
   override public func secondaryCalloutActionString(for char: Swift.String) -> Swift.String
   @objc deinit
+}
+public struct LicenseTier : Swift.Codable, Swift.Equatable, Swift.Identifiable {
+  public init(id: Swift.String, name: Swift.String, level: Swift.Int)
+  public let id: Swift.String
+  public let name: Swift.String
+  public let level: Swift.Int
+  public static func == (a: KeyboardKitPro.LicenseTier, b: KeyboardKitPro.LicenseTier) -> Swift.Bool
+  public typealias ID = Swift.String
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+extension KeyboardKitPro.LicenseTier {
+  public static let standard: KeyboardKitPro.LicenseTier
 }
 public class NorwegianSecondaryCalloutActionProvider : KeyboardKitPro.ProSecondaryCalloutActionProvider {
   public init() throws
@@ -374,10 +467,17 @@ public class EstonianKeyboardInputSetProvider : KeyboardKitPro.ProKeyboardInputS
   }
   @objc deinit
 }
-extension KeyboardKitPro.KeyboardKitLicense {
-  public struct Customer : Swift.Equatable {
-    public static func == (a: KeyboardKitPro.KeyboardKitLicense.Customer, b: KeyboardKitPro.KeyboardKitLicense.Customer) -> Swift.Bool
-  }
+public struct LicenseCustomer : Swift.Codable, Swift.Equatable {
+  public init(name: Swift.String, contact: Swift.String, address: Swift.String, email: Swift.String, phone: Swift.String, additionalInfo: [Swift.String : Swift.String] = [:])
+  public let name: Swift.String
+  public let contact: Swift.String
+  public let address: Swift.String
+  public let email: Swift.String
+  public let phone: Swift.String
+  public let additionalInfo: [Swift.String : Swift.String]
+  public static func == (a: KeyboardKitPro.LicenseCustomer, b: KeyboardKitPro.LicenseCustomer) -> Swift.Bool
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
 }
 public class SwedishKeyboardInputSetProvider : KeyboardKitPro.ProKeyboardInputSetProvider, KeyboardKit.DeviceSpecificInputSetProvider {
   public init(device: UIKit.UIDevice = .current) throws
@@ -392,28 +492,41 @@ public class SwedishKeyboardInputSetProvider : KeyboardKitPro.ProKeyboardInputSe
   }
   @objc deinit
 }
-public struct KeyboardKitLicense : Swift.Hashable, Swift.Identifiable {
+public struct License : Swift.Codable, Swift.Hashable, Swift.Identifiable {
+  public init(licenseKey: Swift.String, tier: KeyboardKitPro.LicenseTier = .standard, expires: Foundation.Date, customer: KeyboardKitPro.LicenseCustomer, bundleIds: [Swift.String], locales: [KeyboardKit.KeyboardLocale], additionalInfo: [Swift.String : Swift.String] = [:])
   public var id: Swift.String {
     get
   }
+  public var tier: KeyboardKitPro.LicenseTier
   public let licenseKey: Swift.String
   public let expires: Foundation.Date
-  public let customer: KeyboardKitPro.KeyboardKitLicense.Customer
+  public let customer: KeyboardKitPro.LicenseCustomer
   public let bundleIds: [Swift.String]
   public let locales: [KeyboardKit.KeyboardLocale]
+  public let additionalInfo: [Swift.String : Swift.String]
   public func hash(into hasher: inout Swift.Hasher)
-  public static func == (a: KeyboardKitPro.KeyboardKitLicense, b: KeyboardKitPro.KeyboardKitLicense) -> Swift.Bool
+  public static func == (a: KeyboardKitPro.License, b: KeyboardKitPro.License) -> Swift.Bool
   public typealias ID = Swift.String
+  public func encode(to encoder: Swift.Encoder) throws
   public var hashValue: Swift.Int {
     get
   }
+  public init(from decoder: Swift.Decoder) throws
 }
-extension KeyboardKitPro.KeyboardKitLicense {
-  public static var current: KeyboardKitPro.KeyboardKitLicense? {
+extension KeyboardKitPro.License {
+  public static var current: KeyboardKitPro.License? {
     get
   }
   @discardableResult
-  public static func register(licenseKey: Swift.String) throws -> KeyboardKitPro.KeyboardKitLicense?
+  public static func register(licenseKey: Swift.String) throws -> KeyboardKitPro.License?
+}
+@available(iOS 14.0, *)
+public struct KeyboardActiveLabel : SwiftUI.View, KeyboardKit.KeyboardEnabledStateInspector {
+  public init(keyboardBundleId: Swift.String, enabledText: Swift.String, enabledIcon: SwiftUI.Image = .enabledLabelEnabledIcon, enabledColor: SwiftUI.Color = .green, disabledText: Swift.String, disabledIcon: SwiftUI.Image = .enabledLabelDisabledIcon, disabledColor: SwiftUI.Color = .orange) throws
+  @_Concurrency.MainActor(unsafe) public var body: some SwiftUI.View {
+    get
+  }
+  public typealias Body = @_opaqueReturnTypeOf("$s14KeyboardKitPro0A11ActiveLabelV4bodyQrvp", 0) __
 }
 public class ProKeyboardInputSetProvider : KeyboardKit.LocalizedService {
   public init(device: UIKit.UIDevice = .current, locale: KeyboardKit.KeyboardLocale) throws
@@ -440,3 +553,5 @@ public class UkrainianKeyboardInputSetProvider : KeyboardKitPro.ProKeyboardInput
   }
   @objc deinit
 }
+extension KeyboardKitPro.ToggleToolbarAnimation : Swift.Hashable {}
+extension KeyboardKitPro.ToggleToolbarAnimation : Swift.RawRepresentable {}

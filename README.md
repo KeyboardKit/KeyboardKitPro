@@ -19,15 +19,50 @@
 
 [KeyboardKit][KeyboardKit] is a Swift library that helps you create custom keyboard extensions for `iOS` and `iPadOS`.  
 
-KeyboardKit Pro is a license-based plug-in that unlocks more locales and pro features.
+KeyboardKit Pro is a license-based plug-in that extends KeyboardKit with more locales and pro features.
+
+[Visit the KeyboardKit website][Licenses] for more information about the license and how to purchase one.
 
 
 
-## Getting a Pro License
+## Installation
 
-KeyboardKit Pro requires a commercial license.
+KeyboardKit Pro can be installed with the Swift Package Manager:
 
-More information about pricing and tiers can be found [here][Licenses].
+```
+https://github.com/KeyboardKit/KeyboardKitPro.git
+```
+
+KeyboardKit Pro only needs to be added to the main app target.
+
+
+
+## Getting started
+
+Before you can use KeyboardKit Pro, you need to install it and obtain a license:
+
+* Obtain a license from the [KeyboardKit website][Licenses].
+* Install KeyboardKit as described [in the main repo][KeyboardKit].
+* Install KeyboardKitPro alongside KeyboardKit, as described above.
+
+KeyboardKit Pro can now be setup with a single line of code:
+
+* For keyboard extensions, call `setupPro(withLicenseKey:view:)` instead of `setup(with:)`. 
+* For keyboard extensions, you can also use `setupPro(withLicenseKey:)` if you don't want to provide a view.
+* For applications, where `setupPro` is not available, use `KeyboardKitLicense.register(licenseKey:)` instead.
+* All these functions are throwing and must be called with `try` or `try?`. When they fail, they throw a `LicenseError`.
+
+After registering a valid license, you can inspect the license details with `KeyboardKitLicense.current`.
+
+Registering a Pro license will setup Pro features that your license includes, e.g. a real autocomplete suggestion provider and the supported locales. You can then use any features that your license includes in any way you like.
+
+
+
+## Documentation
+
+The [KeyboardKit Pro documentation][Documentation] contains structured information that makes it easy to overview the various parts of the library, see how the various parts connect to each other etc.
+
+Just download the documentation, extract the zip file and double-tap the `doccarchive` file to view the documentation directly in Xcode.
 
 
 
@@ -61,7 +96,9 @@ The number of available locales is based on your [license tier][Licenses].
 
 ### 💡 Autocomplete
 
-KeyboardKit Pro adds an autocomplete engine that supports all keyboard localse, as well as a web-based provider that fetches autocomplete suggestions from a remote, configurable data source. 
+KeyboardKit Pro adds an autocomplete engine that supports all for all locales above.
+
+It also has a web-based engine that fetches suggestions from a remote, configurable data source. 
 
 [Read more here][Autocomplete]
 
@@ -80,50 +117,27 @@ KeyboardKit Pro adds locale-specific secondary callout actions for all locales a
 The correct actions will automatically be enabled when you change the keyboard locale.
 
 
+### 🖼 Views
 
-## Installation
+KeyboardKit Pro adds additonal views that simplifies building greater keyboard apps.
 
-### Swift Package Manager
+* `AudioFeedbackToggleButton` can be used to toggle audio feedback on and off.
+* `EnabledLabel` is can be used to show different views depending on a provided enabled state.
+* `HapticFeedbackToggleButton` can be used to toggle haptic feedback on and off.
+* `KeyboardActiveLabel` is can be used to present whether or not a keyboard extension is currently being used to edit a text field.
+* `KeyboardEnabledLabel` is can be used to present whether or not a keyboard extension is enabled in System Settings.
+* `ToggleToolbar` can be used to toggle between two toolbars.
 
-KeyboardKit Pro only supports Swift Package Manager.
-
-```
-https://github.com/KeyboardKit/KeyboardKitPro.git
-```
-
-KeyboardKit Pro only needs to be added to the main app target.
-
-
-
-## Getting started
-
-Before you can use KeyboardKit Pro, you need to install it and obtain a license:
-
-* Obtain a [KeyboardKit Pro license][Licenses].
-* Install KeyboardKit as described [in the main repo][KeyboardKit].
-* Install KeyboardKitPro alongside KeyboardKit, as described above.
-
-KeyboardKit Pro can now be setup with a single line of code:
-
-* For keyboard extensions, call `setupPro(withLicenseKey:view:)` instead of `setup(with:)`. 
-* You can also use `setupPro(withLicenseKey:)` if you don't want to provide a keyboard view.
-* For applications, where `setupPro` is not available, use `KeyboardKitLicense.register(licenseKey:)` instead.
-* All these functions are throwing and must be called with `try` or `try?`. When they fail, they throw a `LicenseError`.
-
-After registering a valid license, you can inspect the license details with `KeyboardKitLicense.current`.
-
-Registering a Pro license will setup Pro features that your license includes, e.g. a real autocomplete suggestion provider and the supported locales. You can then use any features that your license includes in any way you like.
-
-`IMPORTANT` Failure to call `setupPro` before accessing pro features, or attempting to use features that are not included in your license, will cause the extension to show a warning and then crash.
 
 
 ## Contact
 
 Feel free to reach out if you have questions or feedback:
 
-* E-mail: [daniel.saidi@gmail.com][Email]
+* E-mail: [info@getkeyboardkit.com][Email]
 * Twitter: [@keyboardkitapp][Twitter]
 * Web site: [getkeyboardkit.com][Website]
+
 
 
 ## License
@@ -131,11 +145,12 @@ Feel free to reach out if you have questions or feedback:
 KeyboardKit Pro is closed source. See the `LICENSE` file for more info.
 
 
-
-[Autocomplete]: https://github.com/KeyboardKit/KeyboardKit/blob/master/readmes/Autocomplete.md
-[KeyboardKit]: https://github.com/KeyboardKit/KeyboardKit
-
-[Email]: mailto:daniel.saidi@gmail.com
+[Email]: mailto:info@getkeyboardkit.com
 [Twitter]: http://www.twitter.com/getkeyboardkit
 [Website]: https://getkeyboardkit.com
 [Licenses]: https://getkeyboardkit.com/pro
+
+[Documentation]: https://github.com/KeyboardKit/KeyboardKitPro/raw/master/Docs/KeyboardKitPro.doccarchive.zip
+[KeyboardKit]: https://github.com/KeyboardKit/KeyboardKit
+
+[Autocomplete]: https://github.com/KeyboardKit/KeyboardKit/blob/master/readmes/Autocomplete.md
