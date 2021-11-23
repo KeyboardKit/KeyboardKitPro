@@ -4,6 +4,41 @@ These release notes only include functional changes.
 
 
 
+## 5.3
+
+This release adds new locales and views and improves documentation.
+
+The release also improves the license model and adds more info.
+
+### 🌐 New locales
+
+* 🇦🇱 Albanian
+* 🇮🇸 Icelandic
+* 🇵🇱 Polish
+
+### ✨ New features
+
+* `AudioFeedbackToggleButton` is a new view that can be used to toggle audio feedback on and off.
+* `EnabledLabel` is a new view that can be used to show different views depending on a provided enabled state.
+* `HapticFeedbackToggleButton` is a new view that can be used to toggle haptic feedback on and off.
+* `KeyboardActiveLabel` is a new view that can be used to present whether or not a keyboard extension is currently being used to edit a text field.
+* `KeyboardEnabledLabel` is a new view that can be used to present whether or not a keyboard extension is enabled in System Settings.
+* `License` now implements `Codable` and has a public initializer, as well as new `tier` and `additionalInfo` properties.
+* `LicenseCustomer` now implements `Codable` and has a public initializer, as well as a new `additionalInfo` property.
+* `LicenseTier` is a new type that defines the level of service for your specific license.
+* `ToggleToolbar` is a new view that can be used to toggle between two toolbars.
+
+### 🐛 Bug fixes
+
+* The Finnish iPad input set provider has been corrected for numeric and symbolic inputs.
+
+### 🗑 Deprecations
+
+* `KeyboardKitLicense` has been renamed to `License`.
+* `KeyboardKitLicense+Customer` has been converted to a typealias for `LicenseCustomer` and has been deprecated.
+
+
+
 ## 5.2
 
 This version adds support for `russian` and `ukranian`.

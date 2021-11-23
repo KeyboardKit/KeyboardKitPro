@@ -73,23 +73,27 @@ Just download the documentation, extract the zip file and double-tap the `doccar
 
 KeyboardKit Pro adds completely localized keyboards for the following locales:
 
-* 🇺🇸 English (US - Default)
+* 🇺🇸 English
 
+* 🇦🇱 Albanian
 * 🇩🇰 Danish
 * 🇳🇱 Dutch
 * 🇬🇧 English (UK)
+* 🇺🇸 English (US)
 * 🇪🇪 Estonian
 * 🇫🇮 Finnish
 * 🇫🇷 French
 * 🇩🇪 German
+* 🇮🇸 Icelandic
 * 🇮🇹 Italian
 * 🇱🇻 Latvian
 * 🇱🇹 Lithuanian
 * 🇳🇴 Norwegian
+* 🇵🇱 Polish
 * 🇷🇺 Russian
 * 🇪🇸 Spanish
 * 🇸🇪 Swedish
-* 🇺🇦 Ukranian
+* 🇺🇦 Ukrainian
 
 The number of available locales is based on your [license tier][Licenses].
 

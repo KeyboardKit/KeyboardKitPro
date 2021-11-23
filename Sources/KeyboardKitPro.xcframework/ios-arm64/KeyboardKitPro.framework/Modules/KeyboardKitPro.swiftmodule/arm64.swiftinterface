@@ -27,6 +27,19 @@ extension KeyboardKit.KeyboardLocale {
   #endif
 
 }
+public class AlbanianKeyboardInputSetProvider : KeyboardKitPro.ProKeyboardInputSetProvider, KeyboardKit.DeviceSpecificInputSetProvider {
+  public init(device: UIKit.UIDevice = .current) throws
+  public var alphabeticInputSet: KeyboardKit.AlphabeticKeyboardInputSet {
+    get
+  }
+  public var numericInputSet: KeyboardKit.NumericKeyboardInputSet {
+    get
+  }
+  public var symbolicInputSet: KeyboardKit.SymbolicKeyboardInputSet {
+    get
+  }
+  @objc deinit
+}
 public class EstonianSecondaryCalloutActionProvider : KeyboardKitPro.ProSecondaryCalloutActionProvider {
   public init() throws
   override public func secondaryCalloutActionString(for char: Swift.String) -> Swift.String
@@ -96,6 +109,11 @@ public class FinnishKeyboardInputSetProvider : KeyboardKitPro.ProKeyboardInputSe
   public var symbolicInputSet: KeyboardKit.SymbolicKeyboardInputSet {
     get
   }
+  @objc deinit
+}
+public class PolishSecondaryCalloutActionProvider : KeyboardKitPro.ProSecondaryCalloutActionProvider {
+  public init() throws
+  override public func secondaryCalloutActionString(for char: Swift.String) -> Swift.String
   @objc deinit
 }
 public class ItalianKeyboardInputSetProvider : KeyboardKitPro.ProKeyboardInputSetProvider, KeyboardKit.DeviceSpecificInputSetProvider {
@@ -249,6 +267,11 @@ public class DanishSecondaryCalloutActionProvider : KeyboardKitPro.ProSecondaryC
   override public func secondaryCalloutActionString(for char: Swift.String) -> Swift.String
   @objc deinit
 }
+public class AlbanianSecondaryCalloutActionProvider : KeyboardKitPro.ProSecondaryCalloutActionProvider {
+  public init() throws
+  override public func secondaryCalloutActionString(for char: Swift.String) -> Swift.String
+  @objc deinit
+}
 public class EnglishGbSecondaryCalloutActionProvider : KeyboardKitPro.ProSecondaryCalloutActionProvider {
   public init() throws
   override public func secondaryCalloutActionString(for char: Swift.String) -> Swift.String
@@ -357,6 +380,19 @@ extension KeyboardKitPro.LicenseError {
     get
   }
 }
+public class PolishKeyboardInputSetProvider : KeyboardKitPro.ProKeyboardInputSetProvider, KeyboardKit.DeviceSpecificInputSetProvider {
+  public init(device: UIKit.UIDevice = .current) throws
+  public var alphabeticInputSet: KeyboardKit.AlphabeticKeyboardInputSet {
+    get
+  }
+  public var numericInputSet: KeyboardKit.NumericKeyboardInputSet {
+    get
+  }
+  public var symbolicInputSet: KeyboardKit.SymbolicKeyboardInputSet {
+    get
+  }
+  @objc deinit
+}
 public class LatvianKeyboardInputSetProvider : KeyboardKitPro.ProKeyboardInputSetProvider, KeyboardKit.DeviceSpecificInputSetProvider {
   public init(device: UIKit.UIDevice = .current) throws
   public var alphabeticInputSet: KeyboardKit.AlphabeticKeyboardInputSet {
@@ -411,6 +447,19 @@ public struct KeyboardEnabledLabel : SwiftUI.View, KeyboardKit.KeyboardEnabledSt
   }
   public typealias Body = @_opaqueReturnTypeOf("$s14KeyboardKitPro0A12EnabledLabelV4bodyQrvp", 0) __
 }
+public class IcelandicKeyboardInputSetProvider : KeyboardKitPro.ProKeyboardInputSetProvider, KeyboardKit.DeviceSpecificInputSetProvider {
+  public init(device: UIKit.UIDevice = .current) throws
+  public var alphabeticInputSet: KeyboardKit.AlphabeticKeyboardInputSet {
+    get
+  }
+  public var numericInputSet: KeyboardKit.NumericKeyboardInputSet {
+    get
+  }
+  public var symbolicInputSet: KeyboardKit.SymbolicKeyboardInputSet {
+    get
+  }
+  @objc deinit
+}
 public class ItalianSecondaryCalloutActionProvider : KeyboardKitPro.ProSecondaryCalloutActionProvider {
   public init() throws
   override public func secondaryCalloutActionString(for char: Swift.String) -> Swift.String
@@ -432,6 +481,12 @@ extension KeyboardKitPro.LicenseTier {
 public class NorwegianSecondaryCalloutActionProvider : KeyboardKitPro.ProSecondaryCalloutActionProvider {
   public init() throws
   override public func secondaryCalloutActions(for action: KeyboardKit.KeyboardAction) -> [KeyboardKit.KeyboardAction]
+  override public func secondaryCalloutActionString(for char: Swift.String) -> Swift.String
+  @objc deinit
+}
+public class IcelandicSecondaryCalloutActionProvider : KeyboardKitPro.ProSecondaryCalloutActionProvider {
+  public init() throws
+  override public func secondaryCalloutActions(for char: Swift.String) -> [KeyboardKit.KeyboardAction]
   override public func secondaryCalloutActionString(for char: Swift.String) -> Swift.String
   @objc deinit
 }
