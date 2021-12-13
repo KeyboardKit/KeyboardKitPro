@@ -4,6 +4,14 @@ These release notes only include functional changes.
 
 
 
+## 5.3.1
+
+### 💡 Behavior changes
+
+* The Icelandic keyboard layout has been adjusted to use the iPhone 8 kr layout instead of the iPhone 13 $ one. 
+
+
+
 ## 5.3
 
 This release adds new locales and views and improves documentation.
