@@ -139,8 +139,8 @@ KeyboardKit Pro adds additonal views that simplifies building greater keyboard a
 Feel free to reach out if you have questions or feedback:
 
 * E-mail: [info@getkeyboardkit.com][Email]
-* Twitter: [@keyboardkitapp][Twitter]
-* Web site: [getkeyboardkit.com][Website]
+* Twitter: [@getkeyboardkit][Twitter]
+* Website: [getkeyboardkit.com][Website]
 
 
 

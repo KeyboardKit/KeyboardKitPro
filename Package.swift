@@ -15,6 +15,6 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "KeyboardKitPro",
-            path: "Sources/KeyboardKitPro.xcframework"),
+            path: "Sources/KeyboardKitPro.xcframework")
     ]
 )

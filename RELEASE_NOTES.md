@@ -4,6 +4,23 @@ These release notes only include functional changes.
 
 
 
+## 5.5
+
+Thanks to [@ardavank](https://github.com/ardavank), this release adds support for Persian (Farsi) and RTL keyboards.
+
+### 🌐 New locale
+
+* 🇮🇷 Persian
+
+
+
+## 5.4
+
+KeyboardKit Pro never had a 5.4 release.
+
+
+
+
 ## 5.3.1
 
 ### 💡 Behavior changes
