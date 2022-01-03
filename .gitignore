@@ -4,6 +4,9 @@
 /Packages
 xcuserdata/
 
+Fastlane/README.md
+Fastlane/report.xml
+
 ## Build generated
 build/
 DerivedData/
