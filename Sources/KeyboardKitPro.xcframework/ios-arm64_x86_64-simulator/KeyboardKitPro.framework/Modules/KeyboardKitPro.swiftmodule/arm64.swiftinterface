@@ -181,6 +181,12 @@ public class SpanishKeyboardInputSetProvider : KeyboardKitPro.ProKeyboardInputSe
   }
   @objc deinit
 }
+public class ArabicSecondaryCalloutActionProvider : KeyboardKitPro.ProSecondaryCalloutActionProvider {
+  public init() throws
+  override public func secondaryCalloutActions(for action: KeyboardKit.KeyboardAction) -> [KeyboardKit.KeyboardAction]
+  override public func secondaryCalloutActionString(for char: Swift.String) -> Swift.String
+  @objc deinit
+}
 @_Concurrency.MainActor(unsafe) public struct AudioFeedbackToggleButton<ViewType> : SwiftUI.View where ViewType : SwiftUI.View {
   @_Concurrency.MainActor(unsafe) public init(settings: KeyboardKit.KeyboardFeedbackSettings, enabledView: ViewType, disabledView: ViewType) throws
   @_Concurrency.MainActor(unsafe) public var body: some SwiftUI.View {
@@ -633,6 +639,19 @@ public class EnglishUsSecondaryCalloutActionProvider : KeyboardKitPro.ProSeconda
   @objc deinit
 }
 public class UkrainianKeyboardInputSetProvider : KeyboardKitPro.ProKeyboardInputSetProvider, KeyboardKit.DeviceSpecificInputSetProvider {
+  public init(device: UIKit.UIDevice = .current) throws
+  public var alphabeticInputSet: KeyboardKit.AlphabeticKeyboardInputSet {
+    get
+  }
+  public var numericInputSet: KeyboardKit.NumericKeyboardInputSet {
+    get
+  }
+  public var symbolicInputSet: KeyboardKit.SymbolicKeyboardInputSet {
+    get
+  }
+  @objc deinit
+}
+public class ArabicKeyboardInputSetProvider : KeyboardKitPro.ProKeyboardInputSetProvider, KeyboardKit.DeviceSpecificInputSetProvider {
   public init(device: UIKit.UIDevice = .current) throws
   public var alphabeticInputSet: KeyboardKit.AlphabeticKeyboardInputSet {
     get
