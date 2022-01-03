@@ -14,6 +14,10 @@ Thanks to [@ardavank](https://github.com/ardavank) and [@rawandahmad698](https:/
 * 🇹🇯 Kurdish Sorani
 * 🇮🇷 Persian
 
+### 💡 Behavior changes
+
+* `IMPORTANT` After switching to M1 and macOS Mojave, Xcode fails to specify that this framework supports bitcode, which it does. This will generate a build error when you try to build a keyboard extension that has bitcode enabled. For now, disable bitcode for your keyboard extension until this problem has been fixed.    
+
 
 
 ## 5.4
