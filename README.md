@@ -76,6 +76,7 @@ KeyboardKit Pro adds completely localized keyboards for the following locales:
 * 🇺🇸 English
 
 * 🇦🇱 Albanian
+* 🇦🇪 Arabic
 * 🇩🇰 Danish
 * 🇳🇱 Dutch
 * 🇬🇧 English (UK)
@@ -86,9 +87,11 @@ KeyboardKit Pro adds completely localized keyboards for the following locales:
 * 🇩🇪 German
 * 🇮🇸 Icelandic
 * 🇮🇹 Italian
+* 🇹🇯 Kurdish Sorani
 * 🇱🇻 Latvian
 * 🇱🇹 Lithuanian
 * 🇳🇴 Norwegian
+* 🇮🇷 Persian
 * 🇵🇱 Polish
 * 🇷🇺 Russian
 * 🇪🇸 Spanish
