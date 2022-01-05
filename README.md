@@ -17,11 +17,9 @@
 
 ## About KeyboardKit Pro
 
-[KeyboardKit][KeyboardKit] is a Swift library that helps you create custom keyboard extensions for `iOS` and `iPadOS`.  
+[KeyboardKit][KeyboardKit] is a Swift library that helps you create custom keyboard extensions for `iOS` and `iPadOS` using `SwiftUI`. KeyboardKit Pro is a license-based plug-in that extends KeyboardKit with pro features.
 
-KeyboardKit Pro is a license-based plug-in that extends KeyboardKit with more locales and pro features.
-
-[Visit the KeyboardKit website][Licenses] for more information about the license and how to purchase one.
+Visit the [KeyboardKit website][Licenses] for more information about how to obtain a Pro license.
 
 
 
@@ -43,26 +41,25 @@ Before you can use KeyboardKit Pro, you need to install it and obtain a license:
 
 * Obtain a license from the [KeyboardKit website][Licenses].
 * Install KeyboardKit as described [in the main repo][KeyboardKit].
-* Install KeyboardKitPro alongside KeyboardKit, as described above.
+* Install KeyboardKitPro as described above.
 
 KeyboardKit Pro can now be setup with a single line of code:
 
 * For keyboard extensions, call `setupPro(withLicenseKey:view:)` instead of `setup(with:)`. 
-* For keyboard extensions, you can also use `setupPro(withLicenseKey:)` if you don't want to provide a view.
-* For applications, where `setupPro` is not available, use `KeyboardKitLicense.register(licenseKey:)` instead.
-* All these functions are throwing and must be called with `try` or `try?`. When they fail, they throw a `LicenseError`.
+* For applications, where `setupPro` is not available, use `License.register(licenseKey:)` instead.
+* These functions are throwing and throw a `LicenseError` when they fail.
 
-After registering a valid license, you can inspect the license details with `KeyboardKitLicense.current`.
+After registering a valid license, you can inspect the current license with `License.current`.
 
-Registering a Pro license will setup Pro features that your license includes, e.g. a real autocomplete suggestion provider and the supported locales. You can then use any features that your license includes in any way you like.
+Registering a Pro license will setup Pro features that your license includes, e.g. a real autocomplete suggestion provider and all supported locales. You can then use any features that your license includes in any way you like.
 
 
 
 ## Documentation
 
-The [KeyboardKit Pro documentation][Documentation] contains structured information that makes it easy to overview the various parts of the library, see how the various parts connect to each other etc.
+The [KeyboardKit Pro documentation][Documentation] contains structured information that makes it easy to overview the various parts of the library, see how they connect to each other etc.
 
-Just download the documentation, extract the zip file and double-tap the `doccarchive` file to view the documentation directly in Xcode.
+Just download the documentation, extract the zip file and double-tap the extracted file to view the documentation directly in Xcode.
 
 
 
@@ -71,7 +68,7 @@ Just download the documentation, extract the zip file and double-tap the `doccar
 
 ### 🏳️‍🌈 Locales
 
-KeyboardKit Pro adds completely localized keyboards for the following locales:
+KeyboardKit Pro adds completely localized keyboard services for the following locales:
 
 * 🇺🇸 English
 
@@ -102,14 +99,12 @@ KeyboardKit Pro adds completely localized keyboards for the following locales:
 * 🇹🇷 Turkish
 * 🇺🇦 Ukrainian
 
-The number of available locales is based on your [license tier][Licenses].
+The number of available locales is based on your license. The available license tiers can be found on the [KeyboardKit website][Licenses].
 
 
 ### 💡 Autocomplete
 
-KeyboardKit Pro adds an autocomplete engine that supports all for all locales above.
-
-It also has a web-based engine that fetches suggestions from a remote, configurable data source. 
+KeyboardKit Pro adds an autocomplete engine that supports all locales above. It also has a web-based autocomplete engine that fetches suggestions from a remote web service or api. 
 
 [Read more here][Autocomplete]
 
@@ -118,26 +113,17 @@ It also has a web-based engine that fetches suggestions from a remote, configura
 
 KeyboardKit Pro adds locale-specific input sets for all locales above.
 
-The correct input set will automatically be enabled when you change the keyboard locale.
-
 
 ### 🗯 Secondary Actions
 
 KeyboardKit Pro adds locale-specific secondary callout actions for all locales above.
-
-The correct actions will automatically be enabled when you change the keyboard locale.
 
 
 ### 🖼 Views
 
 KeyboardKit Pro adds additonal views that simplifies building greater keyboard apps.
 
-* `AudioFeedbackToggleButton` can be used to toggle audio feedback on and off.
-* `EnabledLabel` is can be used to show different views depending on a provided enabled state.
-* `HapticFeedbackToggleButton` can be used to toggle haptic feedback on and off.
-* `KeyboardActiveLabel` is can be used to present whether or not a keyboard extension is currently being used to edit a text field.
-* `KeyboardEnabledLabel` is can be used to present whether or not a keyboard extension is enabled in System Settings.
-* `ToggleToolbar` can be used to toggle between two toolbars.
+[Read more here][Views]
 
 
 
@@ -153,7 +139,7 @@ Feel free to reach out if you have questions or feedback:
 
 ## License
 
-KeyboardKit Pro is closed source. See the `LICENSE` file for more info.
+KeyboardKit Pro is closed source. See the [LICENSE][License] file for more info.
 
 
 [Email]: mailto:info@getkeyboardkit.com
@@ -165,3 +151,5 @@ KeyboardKit Pro is closed source. See the `LICENSE` file for more info.
 [KeyboardKit]: https://github.com/KeyboardKit/KeyboardKit
 
 [Autocomplete]: https://github.com/KeyboardKit/KeyboardKitPro/blob/master/Readmes/Autocomplete.md
+[License]: https://github.com/KeyboardKit/KeyboardKitPro/blob/master/LICENSE
+[Views]: https://github.com/KeyboardKit/KeyboardKitPro/blob/master/Readmes/Views.md
