@@ -216,6 +216,19 @@ public class FinnishSecondaryCalloutActionProvider : KeyboardKitPro.ProSecondary
   override public func secondaryCalloutActionString(for char: Swift.String) -> Swift.String
   @objc deinit
 }
+public class PortugueseKeyboardInputSetProvider : KeyboardKitPro.ProKeyboardInputSetProvider, KeyboardKit.DeviceSpecificInputSetProvider {
+  public init(device: UIKit.UIDevice = .current) throws
+  public var alphabeticInputSet: KeyboardKit.AlphabeticKeyboardInputSet {
+    get
+  }
+  public var numericInputSet: KeyboardKit.NumericKeyboardInputSet {
+    get
+  }
+  public var symbolicInputSet: KeyboardKit.SymbolicKeyboardInputSet {
+    get
+  }
+  @objc deinit
+}
 @available(iOS 14.0, *)
 public struct EnabledLabel : SwiftUI.View {
   public init(isEnabled: Swift.Bool, enabledText: Swift.String, enabledIcon: SwiftUI.Image = .enabledLabelEnabledIcon, enabledColor: SwiftUI.Color = .green, disabledText: Swift.String, disabledIcon: SwiftUI.Image = .enabledLabelDisabledIcon, disabledColor: SwiftUI.Color = .orange) throws
@@ -223,6 +236,12 @@ public struct EnabledLabel : SwiftUI.View {
     get
   }
   public typealias Body = @_opaqueReturnTypeOf("$s14KeyboardKitPro12EnabledLabelV4bodyQrvp", 0) __
+}
+public class BrazilianSecondaryCalloutActionProvider : KeyboardKitPro.ProSecondaryCalloutActionProvider {
+  public init() throws
+  override public func secondaryCalloutActions(for char: Swift.String) -> [KeyboardKit.KeyboardAction]
+  override public func secondaryCalloutActionString(for char: Swift.String) -> Swift.String
+  @objc deinit
 }
 open class ExternalAutocompleteProvider<Result> where Result : KeyboardKitPro.ExternalAutocompleteResult {
   public init(urlPattern: Swift.String, urlLocaleReplacementPattern: Swift.String = "{LOCALE}", urlTextReplacementPattern: Swift.String = "{TEXT}", locale: Foundation.Locale = .current, minimumTextLength: Swift.Int = 3, throttleInterval: Swift.Double? = nil, debounceInterval: Swift.Double? = nil) throws
@@ -255,6 +274,11 @@ extension KeyboardKit.KeyboardInputViewController {
   @_Concurrency.MainActor(unsafe) public static var hasShownErrorAlert: Swift.Bool
   @_Concurrency.MainActor(unsafe) public func setupPro(withLicenseKey key: Swift.String) throws
   @_Concurrency.MainActor(unsafe) public func setupPro<Content>(withLicenseKey key: Swift.String, view: Content) throws where Content : SwiftUI.View
+}
+public class IrishSecondaryCalloutActionProvider : KeyboardKitPro.ProSecondaryCalloutActionProvider {
+  public init() throws
+  override public func secondaryCalloutActionString(for char: Swift.String) -> Swift.String
+  @objc deinit
 }
 public protocol ExternalAutocompleteResult : Swift.Decodable, Swift.Encodable {
   var suggestions: [KeyboardKit.AutocompleteSuggestion] { get }
@@ -337,6 +361,12 @@ public class DutchKeyboardInputSetProvider : KeyboardKitPro.ProKeyboardInputSetP
   }
   @objc deinit
 }
+public class PortugueseSecondaryCalloutActionProvider : KeyboardKitPro.ProSecondaryCalloutActionProvider {
+  public init() throws
+  override public func secondaryCalloutActions(for char: Swift.String) -> [KeyboardKit.KeyboardAction]
+  override public func secondaryCalloutActionString(for char: Swift.String) -> Swift.String
+  @objc deinit
+}
 public class SwedishSecondaryCalloutActionProvider : KeyboardKitPro.ProSecondaryCalloutActionProvider {
   public init() throws
   override public func secondaryCalloutActions(for action: KeyboardKit.KeyboardAction) -> [KeyboardKit.KeyboardAction]
@@ -361,6 +391,19 @@ public class KurdishSoraniSecondaryCalloutActionProvider : KeyboardKitPro.ProSec
   public init() throws
   override public func secondaryCalloutActions(for action: KeyboardKit.KeyboardAction) -> [KeyboardKit.KeyboardAction]
   override public func secondaryCalloutActionString(for char: Swift.String) -> Swift.String
+  @objc deinit
+}
+public class IrishKeyboardInputSetProvider : KeyboardKitPro.ProKeyboardInputSetProvider, KeyboardKit.DeviceSpecificInputSetProvider {
+  public init(device: UIKit.UIDevice = .current) throws
+  public var alphabeticInputSet: KeyboardKit.AlphabeticKeyboardInputSet {
+    get
+  }
+  public var numericInputSet: KeyboardKit.NumericKeyboardInputSet {
+    get
+  }
+  public var symbolicInputSet: KeyboardKit.SymbolicKeyboardInputSet {
+    get
+  }
   @objc deinit
 }
 public class FrenchKeyboardInputSetProvider : KeyboardKitPro.ProKeyboardInputSetProvider, KeyboardKit.DeviceSpecificInputSetProvider {
@@ -477,9 +520,35 @@ public class RussianKeyboardInputSetProvider : KeyboardKitPro.ProKeyboardInputSe
   }
   @objc deinit
 }
+public class TurkishKeyboardInputSetProvider : KeyboardKitPro.ProKeyboardInputSetProvider, KeyboardKit.DeviceSpecificInputSetProvider {
+  public init(device: UIKit.UIDevice = .current) throws
+  public var alphabeticInputSet: KeyboardKit.AlphabeticKeyboardInputSet {
+    get
+  }
+  public var numericInputSet: KeyboardKit.NumericKeyboardInputSet {
+    get
+  }
+  public var symbolicInputSet: KeyboardKit.SymbolicKeyboardInputSet {
+    get
+  }
+  @objc deinit
+}
 public class UkrainianSecondaryCalloutActionProvider : KeyboardKitPro.ProSecondaryCalloutActionProvider {
   public init() throws
   override public func secondaryCalloutActionString(for char: Swift.String) -> Swift.String
+  @objc deinit
+}
+public class BrazilianKeyboardInputSetProvider : KeyboardKitPro.ProKeyboardInputSetProvider, KeyboardKit.DeviceSpecificInputSetProvider {
+  public init(device: UIKit.UIDevice = .current) throws
+  public var alphabeticInputSet: KeyboardKit.AlphabeticKeyboardInputSet {
+    get
+  }
+  public var numericInputSet: KeyboardKit.NumericKeyboardInputSet {
+    get
+  }
+  public var symbolicInputSet: KeyboardKit.SymbolicKeyboardInputSet {
+    get
+  }
   @objc deinit
 }
 @available(iOS 14.0, *)
@@ -576,6 +645,11 @@ public struct LicenseCustomer : Swift.Codable, Swift.Equatable {
   public static func == (a: KeyboardKitPro.LicenseCustomer, b: KeyboardKitPro.LicenseCustomer) -> Swift.Bool
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
+}
+public class TurkishSecondaryCalloutActionProvider : KeyboardKitPro.ProSecondaryCalloutActionProvider {
+  public init() throws
+  override public func secondaryCalloutActionString(for char: Swift.String) -> Swift.String
+  @objc deinit
 }
 public class SwedishKeyboardInputSetProvider : KeyboardKitPro.ProKeyboardInputSetProvider, KeyboardKit.DeviceSpecificInputSetProvider {
   public init(device: UIKit.UIDevice = .current) throws

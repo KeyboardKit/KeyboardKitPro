@@ -4,11 +4,24 @@ These release notes only include functional changes.
 
 
 
+## 5.6
+
+This version adds support for new locales.
+
+### 🌐 New locales
+
+* 🇧🇷 Brazilian
+* 🇮🇪 Irish
+* 🇵🇹 Portuguese
+* 🇹🇷 Turkish
+
+
+
 ## 5.5
 
 Thanks to [@ardavank](https://github.com/ardavank) and [@rawandahmad698](https://github.com/rawandahmad698), this release adds support for Persian (Farsi), Arabic, Kurdish Sorani and RTL keyboards.
 
-### 🌐 New locale
+### 🌐 New locales
 
 * 🇦🇪 Arabic
 * 🇹🇯 Kurdish Sorani
