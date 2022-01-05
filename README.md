@@ -164,4 +164,4 @@ KeyboardKit Pro is closed source. See the `LICENSE` file for more info.
 [Documentation]: https://github.com/KeyboardKit/KeyboardKitPro/raw/master/Docs/KeyboardKitPro.doccarchive.zip
 [KeyboardKit]: https://github.com/KeyboardKit/KeyboardKit
 
-[Autocomplete]: https://github.com/KeyboardKit/KeyboardKit/blob/master/readmes/Autocomplete.md
+[Autocomplete]: https://github.com/KeyboardKit/KeyboardKitPro/blob/master/Readmes/Autocomplete.md
