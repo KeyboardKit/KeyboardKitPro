@@ -17,9 +17,9 @@
 
 ## About KeyboardKit Pro
 
-[KeyboardKit][KeyboardKit] is a Swift library that helps you create custom keyboard extensions for `iOS` and `iPadOS` using `SwiftUI`. KeyboardKit Pro is a license-based plug-in that extends KeyboardKit with pro features.
+[KeyboardKit][KeyboardKit] is a Swift library that helps you create custom keyboard extensions for `iOS` and `iPadOS`, using `SwiftUI`. 
 
-Visit the [KeyboardKit website][Licenses] for more information about how to obtain a Pro license.
+KeyboardKit Pro is a license-based plug-in that extends KeyboardKit with pro features, such as localized services, autocomplete etc.
 
 
 
@@ -37,30 +37,17 @@ KeyboardKit Pro only needs to be added to the main app target.
 
 ## Getting started
 
-Before you can use KeyboardKit Pro, you need to install it and obtain a license:
+Once KeyboardKit is added to your project, you need to obtain a license before you can start using it in your application.
 
-* Obtain a license from the [KeyboardKit website][Licenses].
-* Install KeyboardKit as described [in the main repo][KeyboardKit].
-* Install KeyboardKitPro as described above.
-
-KeyboardKit Pro can now be setup with a single line of code:
-
-* For keyboard extensions, call `setupPro(withLicenseKey:view:)` instead of `setup(with:)`. 
-* For applications, where `setupPro` is not available, use `License.register(licenseKey:)` instead.
-* These functions are throwing and throw a `LicenseError` when they fail.
-
-After registering a valid license, you can inspect the current license with `License.current`.
-
-Registering a Pro license will setup Pro features that your license includes, e.g. a real autocomplete suggestion provider and all supported locales. You can then use any features that your license includes in any way you like.
+[Read more here][Getting-Started]
 
 
 
 ## Documentation
 
-The [KeyboardKit Pro documentation][Documentation] contains structured information that makes it easy to overview the various parts of the library, see how they connect to each other etc.
+The KeyboardKit Pro documentation contains extensive information, code examples etc. and makes it easy to overview the various parts of the library.
 
-Just download the documentation, extract the zip file and double-tap the extracted file to view the documentation directly in Xcode.
-
+You can either [download][Documentation] the latest documentation or build it directly in Xcode, using `Product/Build Documentation`.
 
 
 ## Features
@@ -147,9 +134,10 @@ KeyboardKit Pro is closed source. See the [LICENSE][License] file for more info.
 [Website]: https://getkeyboardkit.com
 [Licenses]: https://getkeyboardkit.com/pro
 
-[Documentation]: https://github.com/KeyboardKit/KeyboardKitPro/raw/master/Docs/KeyboardKitPro.doccarchive.zip
+[Documentation]: https://github.com/danielsaidi/Documentation/blob/main/Docs/KeyboardKitPro.doccarchive.zip?raw=true
 [KeyboardKit]: https://github.com/KeyboardKit/KeyboardKit
 
 [Autocomplete]: https://github.com/KeyboardKit/KeyboardKitPro/blob/master/Readmes/Autocomplete.md
+[Getting-Started]: https://github.com/KeyboardKit/KeyboardKitPro/blob/master/Readmes/Getting-Started.md
 [License]: https://github.com/KeyboardKit/KeyboardKitPro/blob/master/LICENSE
 [Views]: https://github.com/KeyboardKit/KeyboardKitPro/blob/master/Readmes/Views.md
