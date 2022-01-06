@@ -47,7 +47,7 @@ Once KeyboardKit is added to your project, you need to obtain a license before y
 
 The KeyboardKit Pro documentation contains extensive information, code examples etc. and makes it easy to overview the various parts of the library.
 
-You can either [download][Documentation] the latest documentation or build it directly in Xcode, using `Product/Build Documentation`.
+You can either [download][Documentation] the documentation or build it directly in Xcode, using `Product/Build Documentation`.
 
 
 ## Features
