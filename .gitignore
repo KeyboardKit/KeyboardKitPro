@@ -4,10 +4,10 @@
 /Packages
 xcuserdata/
 
-Fastlane/README.md
-Fastlane/report.xml
+Docs/
 
 ## Build generated
+.build/
 build/
 DerivedData/
 
@@ -35,22 +35,6 @@ xcuserdata/
 
 # Bundler
 .bundle
-
-## Playgrounds
-timeline.xctimeline
-playground.xcworkspace
-
-# Swift Package Manager
-# Add this line if you want to avoid checking in source code from Swift Package Manager dependencies.
-# Packages/
-# Package.pins
-.build/
-
-# CocoaPods
-# Pods/
-
-# Carthage
-Carthage
 
 # fastlane
 # It is recommended to not store the screenshots in the git repo. Instead, use fastlane to re-generate the
