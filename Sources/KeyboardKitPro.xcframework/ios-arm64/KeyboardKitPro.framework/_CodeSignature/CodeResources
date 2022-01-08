@@ -18,27 +18,27 @@
 		</data>
 		<key>Modules/KeyboardKitPro.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		nGxlCtg3LuA0mwRv8rter+NsOmM=
+		nUBakKkVckpoG4uFvCIRSQhA++0=
 		</data>
 		<key>Modules/KeyboardKitPro.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		rYYRBwGQ0ET2Zz2URtdn6+Bg0ts=
+		Fwnlwj1Min3RNjxgWwD/z8cFR8E=
 		</data>
 		<key>Modules/KeyboardKitPro.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		IKjSBnB3oiTcFTg5PiExZx8l1ts=
+		uCG4Mzsmy5i0kvp/m0OF9nEgVWs=
 		</data>
 		<key>Modules/KeyboardKitPro.swiftmodule/arm64.swiftdoc</key>
 		<data>
-		nGxlCtg3LuA0mwRv8rter+NsOmM=
+		nUBakKkVckpoG4uFvCIRSQhA++0=
 		</data>
 		<key>Modules/KeyboardKitPro.swiftmodule/arm64.swiftinterface</key>
 		<data>
-		rYYRBwGQ0ET2Zz2URtdn6+Bg0ts=
+		Fwnlwj1Min3RNjxgWwD/z8cFR8E=
 		</data>
 		<key>Modules/KeyboardKitPro.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		IKjSBnB3oiTcFTg5PiExZx8l1ts=
+		uCG4Mzsmy5i0kvp/m0OF9nEgVWs=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -65,42 +65,42 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			r6jkks8i42ajp35Q7rcULQ5mmJ4566N3y5dS5RXwNEY=
+			6A2jysOaqsk1/gg37Xx7eOgp80ePG1ki+/0ywX3wsOM=
 			</data>
 		</dict>
 		<key>Modules/KeyboardKitPro.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			DqNqfDT+VQj5HgJucGgtmlVdMjkwaZFwd9EUeA/v72c=
+			0t74GfbzZlCqscs0H0mPqmX+me647h/WxNJpXGf0NCE=
 			</data>
 		</dict>
 		<key>Modules/KeyboardKitPro.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			wxdoLyN007v17BeAq4xby1HQM8t1brHz7W6041OkKkk=
+			snN4+TRsdQnoQ8+Q1W97SMMvhzv5FSv07Yn+KMEfcHA=
 			</data>
 		</dict>
 		<key>Modules/KeyboardKitPro.swiftmodule/arm64.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			r6jkks8i42ajp35Q7rcULQ5mmJ4566N3y5dS5RXwNEY=
+			6A2jysOaqsk1/gg37Xx7eOgp80ePG1ki+/0ywX3wsOM=
 			</data>
 		</dict>
 		<key>Modules/KeyboardKitPro.swiftmodule/arm64.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			DqNqfDT+VQj5HgJucGgtmlVdMjkwaZFwd9EUeA/v72c=
+			0t74GfbzZlCqscs0H0mPqmX+me647h/WxNJpXGf0NCE=
 			</data>
 		</dict>
 		<key>Modules/KeyboardKitPro.swiftmodule/arm64.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			wxdoLyN007v17BeAq4xby1HQM8t1brHz7W6041OkKkk=
+			snN4+TRsdQnoQ8+Q1W97SMMvhzv5FSv07Yn+KMEfcHA=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
