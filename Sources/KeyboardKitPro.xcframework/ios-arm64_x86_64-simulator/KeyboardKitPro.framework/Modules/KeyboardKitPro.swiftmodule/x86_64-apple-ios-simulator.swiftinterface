@@ -382,6 +382,19 @@ extension KeyboardKit.KeyboardLocale {
   #endif
 
 }
+public class BelarusianKeyboardInputSetProvider : KeyboardKitPro.ProKeyboardInputSetProvider, KeyboardKit.DeviceSpecificInputSetProvider {
+  public init(device: UIKit.UIDevice = .current) throws
+  public var alphabeticInputSet: KeyboardKit.AlphabeticKeyboardInputSet {
+    get
+  }
+  public var numericInputSet: KeyboardKit.NumericKeyboardInputSet {
+    get
+  }
+  public var symbolicInputSet: KeyboardKit.SymbolicKeyboardInputSet {
+    get
+  }
+  @objc deinit
+}
 public class LatvianSecondaryCalloutActionProvider : KeyboardKitPro.ProSecondaryCalloutActionProvider {
   public init() throws
   override public func secondaryCalloutActionString(for char: Swift.String) -> Swift.String
@@ -651,6 +664,11 @@ public class TurkishSecondaryCalloutActionProvider : KeyboardKitPro.ProSecondary
   override public func secondaryCalloutActionString(for char: Swift.String) -> Swift.String
   @objc deinit
 }
+public class BelarusianSecondaryCalloutActionProvider : KeyboardKitPro.ProSecondaryCalloutActionProvider {
+  public init() throws
+  override public func secondaryCalloutActionString(for char: Swift.String) -> Swift.String
+  @objc deinit
+}
 public class SwedishKeyboardInputSetProvider : KeyboardKitPro.ProKeyboardInputSetProvider, KeyboardKit.DeviceSpecificInputSetProvider {
   public init(device: UIKit.UIDevice = .current) throws
   public var alphabeticInputSet: KeyboardKit.AlphabeticKeyboardInputSet {
@@ -665,7 +683,7 @@ public class SwedishKeyboardInputSetProvider : KeyboardKitPro.ProKeyboardInputSe
   @objc deinit
 }
 public struct License : Swift.Codable, Swift.Hashable, Swift.Identifiable {
-  public init(licenseKey: Swift.String, tier: KeyboardKitPro.LicenseTier = .standard, expires: Foundation.Date, customer: KeyboardKitPro.LicenseCustomer, bundleIds: [Swift.String], locales: [KeyboardKit.KeyboardLocale], additionalInfo: [Swift.String : Swift.String] = [:])
+  public init(licenseKey: Swift.String, tier: KeyboardKitPro.LicenseTier = .standard, expires: Foundation.Date, customer: KeyboardKitPro.LicenseCustomer, bundleIds: [Swift.String], locales: [KeyboardKit.KeyboardLocale], renewalPrice: Swift.Int? = nil, additionalInfo: [Swift.String : Swift.String] = [:])
   public var id: Swift.String {
     get
   }
@@ -675,6 +693,7 @@ public struct License : Swift.Codable, Swift.Hashable, Swift.Identifiable {
   public let customer: KeyboardKitPro.LicenseCustomer
   public let bundleIds: [Swift.String]
   public let locales: [KeyboardKit.KeyboardLocale]
+  public let renewalPrice: Swift.Int?
   public let additionalInfo: [Swift.String : Swift.String]
   public func hash(into hasher: inout Swift.Hasher)
   public static func == (a: KeyboardKitPro.License, b: KeyboardKitPro.License) -> Swift.Bool

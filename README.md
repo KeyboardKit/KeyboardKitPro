@@ -129,6 +129,7 @@ Feel free to reach out if you have questions or feedback:
 KeyboardKit Pro is closed source. See the [LICENSE][License] file for more info.
 
 
+
 [Email]: mailto:info@getkeyboardkit.com
 [Twitter]: http://www.twitter.com/getkeyboardkit
 [Website]: https://getkeyboardkit.com
@@ -136,8 +137,8 @@ KeyboardKit Pro is closed source. See the [LICENSE][License] file for more info.
 
 [Documentation]: https://github.com/danielsaidi/Documentation/blob/main/Docs/KeyboardKitPro.doccarchive.zip?raw=true
 [KeyboardKit]: https://github.com/KeyboardKit/KeyboardKit
+[License]: https://github.com/KeyboardKit/KeyboardKitPro/blob/master/LICENSE
 
 [Autocomplete]: https://github.com/KeyboardKit/KeyboardKitPro/blob/master/Readmes/Autocomplete.md
 [Getting-Started]: https://github.com/KeyboardKit/KeyboardKitPro/blob/master/Readmes/Getting-Started.md
-[License]: https://github.com/KeyboardKit/KeyboardKitPro/blob/master/LICENSE
 [Views]: https://github.com/KeyboardKit/KeyboardKitPro/blob/master/Readmes/Views.md
