@@ -4,6 +4,18 @@ These release notes only include functional changes.
 
 
 
+## 5.7
+
+This version adds support for new locales.
+
+### 🌐 New locales
+
+* 🇧🇾 Belarusian
+* 🇨🇿 Czech
+* 🇷🇴 Romanian
+
+
+
 ## 5.6
 
 This version adds support for new locales.
