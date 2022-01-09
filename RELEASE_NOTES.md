@@ -4,6 +4,35 @@ These release notes only include functional changes.
 
 
 
+## 5.8
+
+This version adds new locales and renames a bunch of types, properties and parameters to make things nicer in preparation for 6.0.
+
+### 🌐 New locales
+
+* 🇭🇷 Croatian
+* 🇧🇪 Dutch (Belgium)
+* 🇧🇪 French (Belgium)
+* 🇨🇭 French (Switzerland)
+* 🇦🇹 German (Austria)
+* 🇨🇭 German (Switzerland)
+* 🇭🇺 Hungarian
+* 🇸🇮 Slovenian
+
+### 💡 Behavior changes
+
+* Several iPad layouts has adjusted the lower-right keys for numeric keyboards, to have `,` and `.` on the alphabetic keyboard and `!` and `?` on the numeric and symbolic. This is because these symbols currently don't adjust for uppercase and there is no swipe down support.  
+
+### 🗑 Deprecations
+
+* `BrazilianCalloutActionProvider` has been renamed to `PortugueseBrazilCalloutActionProvider`
+* `BrazilianInputSetProvider` has been renamed to `PortugueseBrazilInputSetProvider`
+* `KeyboardLocale+secondaryCalloutActionProvider` has been renamed to `calloutActionProvider`.
+* `*KeyboardInputSetProvider` implementations have been renamed to `*InputSetProvider`.
+* `*SecondaryCalloutActionProvider` implementations have been renamed to `*CalloutActionProvider`.
+
+
+
 ## 5.7
 
 This version adds support for new locales.
