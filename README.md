@@ -17,9 +17,15 @@
 
 ## About KeyboardKit Pro
 
-[KeyboardKit][KeyboardKit] is a Swift library that helps you create custom keyboard extensions for `iOS` and `iPadOS`, using `SwiftUI`. 
+[KeyboardKit][KeyboardKit] helps you build custom keyboard extensions for `iOS` and `iPadOS`, using `SwiftUI`. It extends the native APIs to provide you with more functionality and has views and utils to let you mimic native keyboards.
 
-KeyboardKit Pro is a license-based plug-in that extends KeyboardKit with pro features, such as localized services, autocomplete etc.
+The end result can look something like this...or entirely different:
+
+<p align="center">
+    <img src ="https://github.com/KeyboardKit/KeyboardKit/blob/master/Resources/Demo.gif?raw=true" width="300" />
+</p> 
+
+KeyboardKit Pro is a license-based plug-in that extends KeyboardKit with pro features, such as fully localized system keyboards and services, local and remote autocomplete services, additional views etc.
 
 
 
@@ -50,46 +56,25 @@ The KeyboardKit Pro documentation contains extensive information, code examples 
 You can either [download][Documentation] the documentation or build it directly in Xcode, using `Product/Build Documentation`.
 
 
-## Features
 
+## 🇸🇪 Localization
 
-### 🏳️‍🌈 Locales
+KeyboardKit is localized in 39 keyboard-specific locales:
 
-KeyboardKit Pro adds completely localized keyboard services for the following locales:
+🇺🇸 🇦🇱 🇦🇪 🇧🇾 🇨🇿 🇭🇷 🇩🇰 🇳🇱 🇧🇪 🇬🇧 <br />
+🇺🇸 🇪🇪 🇫🇮 🇫🇷 🇧🇪 🇨🇭 🇩🇪 🇦🇹 🇨🇭 🇬🇷 <br />
+🇭🇺 🇮🇸 🇮🇪 🇮🇹 🇹🇯 🇱🇻 🇱🇹 🇳🇴 🇮🇷 🇵🇱 <br />
+🇵🇹 🇧🇷 🇷🇴 🇷🇺 🇸🇮 🇪🇸 🇸🇪 🇹🇷 🇺🇦
 
-* 🇺🇸 English
-
-* 🇦🇱 Albanian
-* 🇦🇪 Arabic
-* 🇧🇾 Belarusian
-* 🇧🇷 Brazilian
-* 🇨🇿 Czech
-* 🇩🇰 Danish
-* 🇳🇱 Dutch
-* 🇬🇧 English (UK)
-* 🇺🇸 English (US)
-* 🇪🇪 Estonian
-* 🇫🇮 Finnish
-* 🇫🇷 French
-* 🇩🇪 German
-* 🇮🇸 Icelandic
-* 🇮🇪 Irish
-* 🇮🇹 Italian
-* 🇹🇯 Kurdish Sorani
-* 🇱🇻 Latvian
-* 🇱🇹 Lithuanian
-* 🇳🇴 Norwegian
-* 🇮🇷 Persian
-* 🇵🇱 Polish
-* 🇵🇹 Portuguese
-* 🇷🇴 Romanian
-* 🇷🇺 Russian
-* 🇪🇸 Spanish
-* 🇸🇪 Swedish
-* 🇹🇷 Turkish
-* 🇺🇦 Ukrainian
+KeyboardKit Pro provides completely localized keyboards for all keyboard locales, including locale-specific input sets, keyboard layouts and callout actions.
 
 The number of available locales is based on your license. The available license tiers can be found on the [KeyboardKit website][Licenses].
+
+[Read more in the main repo][KeyboardKit]
+
+
+
+## Features
 
 
 ### 💡 Autocomplete
@@ -126,6 +111,31 @@ Feel free to reach out if you have questions or feedback:
 * Website: [getkeyboardkit.com][Website]
 
 
+## Sponsors and Clients
+
+This project is proudly sponsored by the following companies:
+
+<a href="https://www.oribi.se/en">
+    <img src="Resources/sponsors/oribi.png" alt="Oribi Icon" title="Oribi" width=120 />
+</a>
+<a href="https://www.phonetoroam.com">
+    <img src="Resources/sponsors/phonetoroam.png" alt="phonetoroam Icon" title="phonetoroam" width=120 />
+</a>
+<a href="https://vitalisapps.com">
+    <img src="Resources/sponsors/vitalis.png" alt="Vitalis Icon" title="Vitalis" width=120 />
+</a>
+<a href="https://letterkey.eu">
+    <img src="Resources/sponsors/letterkey.png" alt="LetterKey Icon" title="LetterKey" width=120 />
+</a>
+<a href="http://anomaly.net.au">
+    <img src="Resources/sponsors/anomaly.png" alt="Anomaly Software Icon" title="Anomaly Software" width=120 />
+</a>
+<a href="https://www.milocreative.com">
+    <img src="Resources/sponsors/milo.png" alt="Milo Creative Icon" title="Milo Creative" width=120 />
+</a>
+
+KeyboardKit is free, but please consider sponsoring the project if you find it useful. You can support KeyboardKit through [GitHub Sponsors][Sponsors], by signing up for a Pro license, paying for support, donations etc.
+
 
 ## License
 
@@ -137,9 +147,10 @@ KeyboardKit Pro is closed source. See the [LICENSE][License] file for more info.
 [Twitter]: http://www.twitter.com/getkeyboardkit
 [Website]: https://getkeyboardkit.com
 [Licenses]: https://getkeyboardkit.com/pro
+[Sponsors]: https://github.com/sponsors/danielsaidi
+[KeyboardKit]: https://github.com/KeyboardKit/KeyboardKit
 
 [Documentation]: https://github.com/danielsaidi/Documentation/blob/main/Docs/KeyboardKitPro.doccarchive.zip?raw=true
-[KeyboardKit]: https://github.com/KeyboardKit/KeyboardKit
 [License]: https://github.com/KeyboardKit/KeyboardKitPro/blob/master/LICENSE
 
 [Autocomplete]: https://github.com/KeyboardKit/KeyboardKitPro/blob/master/Readmes/Autocomplete.md
