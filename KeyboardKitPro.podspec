@@ -2,7 +2,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'KeyboardKitPro'
-  s.version          = '5.8.0'
+  s.version          = '5.8.1'
   s.swift_versions   = ['5.3']
   s.summary          = 'KeyboardKit Pro adds additional functionality to KeyboardKit.'
 
