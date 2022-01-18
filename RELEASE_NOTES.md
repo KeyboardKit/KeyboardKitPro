@@ -1,6 +1,14 @@
 # Release Notes
 
-These release notes only include functional changes.
+These release notes only include functional changes. They do
+not cover license changes, which means that there may be new
+versions that are not listed here.
+
+
+
+## 5.8.1
+
+This version makes the XCFramework support Bitcode once more.
 
 
 
