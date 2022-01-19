@@ -8,42 +8,6 @@ import Swift
 import SwiftUI
 import UIKit
 import _Concurrency
-public class PolishCalloutActionProvider : KeyboardKitPro.ProCalloutActionProvider {
-  public init() throws
-  override public func calloutActionString(for char: Swift.String) -> Swift.String
-  @objc deinit
-}
-@available(iOS 14.0, *)
-public struct EnabledLabel : SwiftUI.View {
-  public init(isEnabled: Swift.Bool, enabledText: Swift.String, enabledIcon: SwiftUI.Image = .enabledLabelEnabledIcon, enabledColor: SwiftUI.Color = .green, disabledText: Swift.String, disabledIcon: SwiftUI.Image = .enabledLabelDisabledIcon, disabledColor: SwiftUI.Color = .orange) throws
-  @_Concurrency.MainActor(unsafe) public var body: some SwiftUI.View {
-    get
-  }
-  public typealias Body = @_opaqueReturnTypeOf("$s14KeyboardKitPro12EnabledLabelV4bodyQrvp", 0) __
-}
-public class PersianInputSetProvider : KeyboardKitPro.ProInputSetProvider, KeyboardKit.DeviceSpecificInputSetProvider {
-  public init(device: UIKit.UIDevice = .current) throws
-  public var alphabeticInputSet: KeyboardKit.AlphabeticInputSet {
-    get
-  }
-  public var numericInputSet: KeyboardKit.NumericInputSet {
-    get
-  }
-  public var symbolicInputSet: KeyboardKit.SymbolicInputSet {
-    get
-  }
-  @objc deinit
-}
-public class PortugueseBrazilCalloutActionProvider : KeyboardKitPro.ProCalloutActionProvider {
-  public init() throws
-  override public func calloutActionString(for char: Swift.String) -> Swift.String
-  @objc deinit
-}
-public class EnglishGbCalloutActionProvider : KeyboardKitPro.ProCalloutActionProvider {
-  public init() throws
-  override public func calloutActionString(for char: Swift.String) -> Swift.String
-  @objc deinit
-}
 open class StandardAutocompleteProvider : KeyboardKit.AutocompleteProvider {
   public init(maxCount: Swift.Int = 3, locale: Foundation.Locale = .current, lexicon: UIKit.UILexicon? = nil) throws
   public var locale: Foundation.Locale
@@ -82,13 +46,91 @@ extension KeyboardKit.KeyboardLocale {
   #endif
 
 }
-public class GermanSwitzerlandCalloutActionProvider : KeyboardKitPro.ProCalloutActionProvider {
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class ProCalloutActionProvider : KeyboardKit.BaseCalloutActionProvider, KeyboardKit.LocalizedService {
+  public init(locale: KeyboardKit.KeyboardLocale) throws
+  final public let locale: KeyboardKit.KeyboardLocale
+  final public let localeKey: Swift.String
+  @objc deinit
+}
+public class FilipinoInputSetProvider : KeyboardKitPro.ProInputSetProvider, KeyboardKit.DeviceSpecificInputSetProvider {
+  public init() throws
+  public var alphabeticInputSet: KeyboardKit.AlphabeticInputSet {
+    get
+  }
+  public var numericInputSet: KeyboardKit.NumericInputSet {
+    get
+  }
+  public var symbolicInputSet: KeyboardKit.SymbolicInputSet {
+    get
+  }
+  @objc deinit
+}
+public class IrishInputSetProvider : KeyboardKitPro.ProInputSetProvider, KeyboardKit.DeviceSpecificInputSetProvider {
+  public init() throws
+  public var alphabeticInputSet: KeyboardKit.AlphabeticInputSet {
+    get
+  }
+  public var numericInputSet: KeyboardKit.NumericInputSet {
+    get
+  }
+  public var symbolicInputSet: KeyboardKit.SymbolicInputSet {
+    get
+  }
+  @objc deinit
+}
+@_Concurrency.MainActor(unsafe) public struct AudioFeedbackToggleButton<ViewType> : SwiftUI.View where ViewType : SwiftUI.View {
+  @_Concurrency.MainActor(unsafe) public init(settings: KeyboardKit.KeyboardFeedbackSettings, enabledView: ViewType, disabledView: ViewType) throws
+  @_Concurrency.MainActor(unsafe) public var body: some SwiftUI.View {
+    get
+  }
+  public typealias Body = @_opaqueReturnTypeOf("$s14KeyboardKitPro25AudioFeedbackToggleButtonV4bodyQrvp", 0) __<ViewType>
+}
+extension KeyboardKitPro.AudioFeedbackToggleButton where ViewType == SwiftUI.Image {
+  @_Concurrency.MainActor(unsafe) public init(settings: KeyboardKit.KeyboardFeedbackSettings, enabledImage: SwiftUI.Image = .keyboardAudioFeedbackEnabled, disabledImage: SwiftUI.Image = .keyboardAudioFeedbackDisabled) throws
+}
+public class CzechCalloutActionProvider : KeyboardKitPro.ProCalloutActionProvider {
   public init() throws
   override public func calloutActionString(for char: Swift.String) -> Swift.String
   @objc deinit
 }
-public class PortugueseInputSetProvider : KeyboardKitPro.ProInputSetProvider, KeyboardKit.DeviceSpecificInputSetProvider {
-  public init(device: UIKit.UIDevice = .current) throws
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class DutchCalloutActionProvider : KeyboardKitPro.ProCalloutActionProvider {
+  convenience public init() throws
+  override public func calloutActionString(for char: Swift.String) -> Swift.String
+  @objc deinit
+}
+public class LatvianInputSetProvider : KeyboardKitPro.ProInputSetProvider, KeyboardKit.DeviceSpecificInputSetProvider {
+  public init() throws
+  public var alphabeticInputSet: KeyboardKit.AlphabeticInputSet {
+    get
+  }
+  public var numericInputSet: KeyboardKit.NumericInputSet {
+    get
+  }
+  public var symbolicInputSet: KeyboardKit.SymbolicInputSet {
+    get
+  }
+  @objc deinit
+}
+public class MacedonianInputSetProvider : KeyboardKitPro.ProInputSetProvider, KeyboardKit.DeviceSpecificInputSetProvider {
+  public init() throws
+  public var alphabeticInputSet: KeyboardKit.AlphabeticInputSet {
+    get
+  }
+  public var numericInputSet: KeyboardKit.NumericInputSet {
+    get
+  }
+  public var symbolicInputSet: KeyboardKit.SymbolicInputSet {
+    get
+  }
+  @objc deinit
+}
+public class PolishCalloutActionProvider : KeyboardKitPro.ProCalloutActionProvider {
+  public init() throws
+  override public func calloutActionString(for char: Swift.String) -> Swift.String
+  @objc deinit
+}
+public class TurkishInputSetProvider : KeyboardKitPro.ProInputSetProvider, KeyboardKit.DeviceSpecificInputSetProvider {
+  public init() throws
   public var alphabeticInputSet: KeyboardKit.AlphabeticInputSet {
     get
   }
@@ -103,54 +145,8 @@ public class PortugueseInputSetProvider : KeyboardKitPro.ProInputSetProvider, Ke
 public protocol ExternalAutocompleteResult : Swift.Decodable, Swift.Encodable {
   var suggestions: [KeyboardKit.AutocompleteSuggestion] { get }
 }
-public class UkrainianInputSetProvider : KeyboardKitPro.ProInputSetProvider, KeyboardKit.DeviceSpecificInputSetProvider {
-  public init(device: UIKit.UIDevice = .current) throws
-  public var alphabeticInputSet: KeyboardKit.AlphabeticInputSet {
-    get
-  }
-  public var numericInputSet: KeyboardKit.NumericInputSet {
-    get
-  }
-  public var symbolicInputSet: KeyboardKit.SymbolicInputSet {
-    get
-  }
-  @objc deinit
-}
-public class LatvianInputSetProvider : KeyboardKitPro.ProInputSetProvider, KeyboardKit.DeviceSpecificInputSetProvider {
-  public init(device: UIKit.UIDevice = .current) throws
-  public var alphabeticInputSet: KeyboardKit.AlphabeticInputSet {
-    get
-  }
-  public var numericInputSet: KeyboardKit.NumericInputSet {
-    get
-  }
-  public var symbolicInputSet: KeyboardKit.SymbolicInputSet {
-    get
-  }
-  @objc deinit
-}
 public class AlbanianInputSetProvider : KeyboardKitPro.ProInputSetProvider, KeyboardKit.DeviceSpecificInputSetProvider {
-  public init(device: UIKit.UIDevice = .current) throws
-  public var alphabeticInputSet: KeyboardKit.AlphabeticInputSet {
-    get
-  }
-  public var numericInputSet: KeyboardKit.NumericInputSet {
-    get
-  }
-  public var symbolicInputSet: KeyboardKit.SymbolicInputSet {
-    get
-  }
-  @objc deinit
-}
-public class ProInputSetProvider : KeyboardKit.LocalizedService {
-  public init(device: UIKit.UIDevice = .current, locale: KeyboardKit.KeyboardLocale) throws
-  final public let device: UIKit.UIDevice
-  final public let locale: KeyboardKit.KeyboardLocale
-  final public let localeKey: Swift.String
-  @objc deinit
-}
-public class NorwegianInputSetProvider : KeyboardKitPro.ProInputSetProvider, KeyboardKit.DeviceSpecificInputSetProvider {
-  public init(device: UIKit.UIDevice = .current) throws
+  public init() throws
   public var alphabeticInputSet: KeyboardKit.AlphabeticInputSet {
     get
   }
@@ -167,26 +163,25 @@ public class ItalianCalloutActionProvider : KeyboardKitPro.ProCalloutActionProvi
   override public func calloutActionString(for char: Swift.String) -> Swift.String
   @objc deinit
 }
-@_hasMissingDesignatedInitializers public class GermanAustriaCalloutActionProvider : KeyboardKitPro.GermanCalloutActionProvider {
-  public init() throws
-  @objc deinit
-}
-extension KeyboardKit.KeyboardLocale {
-  
-  #if compiler(>=5.3) && $EffectfulProp
-  public var calloutActionProvider: KeyboardKit.LocalizedCalloutActionProvider {
-    get throws
-  }
-  #endif
-
-}
-public class CzechCalloutActionProvider : KeyboardKitPro.ProCalloutActionProvider {
+public class MalteseCalloutActionProvider : KeyboardKitPro.ProCalloutActionProvider {
   public init() throws
   override public func calloutActionString(for char: Swift.String) -> Swift.String
   @objc deinit
 }
-@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class FrenchInputSetProvider : KeyboardKitPro.ProInputSetProvider, KeyboardKit.DeviceSpecificInputSetProvider {
-  convenience public init(device: UIKit.UIDevice = .current) throws
+public class HungarianCalloutActionProvider : KeyboardKitPro.ProCalloutActionProvider {
+  public init() throws
+  override public func calloutActionString(for char: Swift.String) -> Swift.String
+  @objc deinit
+}
+@available(*, deprecated, renamed: "License")
+public typealias KeyboardKitLicense = KeyboardKitPro.License
+@available(*, deprecated, renamed: "License")
+extension KeyboardKitPro.License {
+  @available(*, deprecated, renamed: "LicenseCustomer")
+  public typealias Customer = KeyboardKitPro.LicenseCustomer
+}
+public class RomanianInputSetProvider : KeyboardKitPro.ProInputSetProvider, KeyboardKit.DeviceSpecificInputSetProvider {
+  public init() throws
   public var alphabeticInputSet: KeyboardKit.AlphabeticInputSet {
     get
   }
@@ -198,7 +193,296 @@ public class CzechCalloutActionProvider : KeyboardKitPro.ProCalloutActionProvide
   }
   @objc deinit
 }
-public class RussianCalloutActionProvider : KeyboardKitPro.ProCalloutActionProvider {
+public class CroatianCalloutActionProvider : KeyboardKitPro.ProCalloutActionProvider {
+  public init() throws
+  override public func calloutActionString(for char: Swift.String) -> Swift.String
+  @objc deinit
+}
+public class RussianInputSetProvider : KeyboardKitPro.ProInputSetProvider, KeyboardKit.DeviceSpecificInputSetProvider {
+  public init() throws
+  public var alphabeticInputSet: KeyboardKit.AlphabeticInputSet {
+    get
+  }
+  public var numericInputSet: KeyboardKit.NumericInputSet {
+    get
+  }
+  public var symbolicInputSet: KeyboardKit.SymbolicInputSet {
+    get
+  }
+  @objc deinit
+}
+public class BelarusianCalloutActionProvider : KeyboardKitPro.ProCalloutActionProvider {
+  public init() throws
+  override public func calloutActionString(for char: Swift.String) -> Swift.String
+  @objc deinit
+}
+public class SwedishCalloutActionProvider : KeyboardKitPro.ProCalloutActionProvider {
+  public init() throws
+  override public func calloutActions(for action: KeyboardKit.KeyboardAction) -> [KeyboardKit.KeyboardAction]
+  override public func calloutActionString(for char: Swift.String) -> Swift.String
+  @objc deinit
+}
+public class MalteseInputSetProvider : KeyboardKitPro.ProInputSetProvider, KeyboardKit.DeviceSpecificInputSetProvider {
+  public init() throws
+  public var alphabeticInputSet: KeyboardKit.AlphabeticInputSet {
+    get
+  }
+  public var numericInputSet: KeyboardKit.NumericInputSet {
+    get
+  }
+  public var symbolicInputSet: KeyboardKit.SymbolicInputSet {
+    get
+  }
+  @objc deinit
+}
+public class SerbianInputSetProvider : KeyboardKitPro.ProInputSetProvider, KeyboardKit.DeviceSpecificInputSetProvider {
+  public init() throws
+  public var alphabeticInputSet: KeyboardKit.AlphabeticInputSet {
+    get
+  }
+  public var numericInputSet: KeyboardKit.NumericInputSet {
+    get
+  }
+  public var symbolicInputSet: KeyboardKit.SymbolicInputSet {
+    get
+  }
+  @objc deinit
+}
+public class CzechInputSetProvider : KeyboardKitPro.ProInputSetProvider, KeyboardKit.DeviceSpecificInputSetProvider {
+  public init() throws
+  public var alphabeticInputSet: KeyboardKit.AlphabeticInputSet {
+    get
+  }
+  public var numericInputSet: KeyboardKit.NumericInputSet {
+    get
+  }
+  public var symbolicInputSet: KeyboardKit.SymbolicInputSet {
+    get
+  }
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class GermanAustriaInputSetProvider : KeyboardKitPro.GermanInputSetProvider {
+  public init() throws
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class FrenchCalloutActionProvider : KeyboardKitPro.ProCalloutActionProvider {
+  convenience public init() throws
+  override public func calloutActionString(for char: Swift.String) -> Swift.String
+  @objc deinit
+}
+public class BelarusianInputSetProvider : KeyboardKitPro.ProInputSetProvider, KeyboardKit.DeviceSpecificInputSetProvider {
+  public init() throws
+  public var alphabeticInputSet: KeyboardKit.AlphabeticInputSet {
+    get
+  }
+  public var numericInputSet: KeyboardKit.NumericInputSet {
+    get
+  }
+  public var symbolicInputSet: KeyboardKit.SymbolicInputSet {
+    get
+  }
+  @objc deinit
+}
+public class FaroeseCalloutActionProvider : KeyboardKitPro.ProCalloutActionProvider {
+  public init() throws
+  override public func calloutActionString(for char: Swift.String) -> Swift.String
+  @objc deinit
+}
+extension KeyboardKit.KeyboardLocale {
+  
+  #if compiler(>=5.3) && $EffectfulProp
+  public var calloutActionProvider: KeyboardKit.LocalizedCalloutActionProvider {
+    get throws
+  }
+  #endif
+
+}
+public class ProInputSetProvider : KeyboardKit.LocalizedService {
+  public init(locale: KeyboardKit.KeyboardLocale) throws
+  final public let locale: KeyboardKit.KeyboardLocale
+  final public let localeKey: Swift.String
+  @objc deinit
+}
+@_Concurrency.MainActor(unsafe) public struct HapticFeedbackToggleButton<ViewType> : SwiftUI.View where ViewType : SwiftUI.View {
+  @_Concurrency.MainActor(unsafe) public init(settings: KeyboardKit.KeyboardFeedbackSettings, enabledView: ViewType, disabledView: ViewType) throws
+  @_Concurrency.MainActor(unsafe) public var body: some SwiftUI.View {
+    get
+  }
+  public typealias Body = @_opaqueReturnTypeOf("$s14KeyboardKitPro26HapticFeedbackToggleButtonV4bodyQrvp", 0) __<ViewType>
+}
+extension KeyboardKitPro.HapticFeedbackToggleButton where ViewType == SwiftUI.Image {
+  @_Concurrency.MainActor(unsafe) public init(settings: KeyboardKit.KeyboardFeedbackSettings, enabledImage: SwiftUI.Image = .keyboardHapticFeedbackEnabled, disabledImage: SwiftUI.Image = .keyboardHapticFeedbackDisabled) throws
+}
+extension SwiftUI.Image {
+  public static let keyboardAudioFeedbackEnabled: SwiftUI.Image
+  public static let keyboardAudioFeedbackDisabled: SwiftUI.Image
+  public static let keyboardHapticFeedbackEnabled: SwiftUI.Image
+  public static let keyboardHapticFeedbackDisabled: SwiftUI.Image
+  public static let enabledLabelEnabledIcon: SwiftUI.Image
+  public static let enabledLabelDisabledIcon: SwiftUI.Image
+}
+extension KeyboardKitPro.ProInputSetProvider {
+  @available(*, deprecated, message: "Use the new, device-agnostic initializer")
+  convenience public init(device: UIKit.UIDevice, locale: KeyboardKit.KeyboardLocale) throws
+}
+extension KeyboardKitPro.AlbanianInputSetProvider {
+  @available(*, deprecated, message: "Use the new, device-agnostic initializer")
+  convenience public init(device: UIKit.UIDevice) throws
+}
+extension KeyboardKitPro.ArabicInputSetProvider {
+  @available(*, deprecated, message: "Use the new, device-agnostic initializer")
+  convenience public init(device: UIKit.UIDevice) throws
+}
+extension KeyboardKitPro.BelarusianInputSetProvider {
+  @available(*, deprecated, message: "Use the new, device-agnostic initializer")
+  convenience public init(device: UIKit.UIDevice) throws
+}
+extension KeyboardKitPro.CroatianInputSetProvider {
+  @available(*, deprecated, message: "Use the new, device-agnostic initializer")
+  convenience public init(device: UIKit.UIDevice) throws
+}
+extension KeyboardKitPro.CzechInputSetProvider {
+  @available(*, deprecated, message: "Use the new, device-agnostic initializer")
+  convenience public init(device: UIKit.UIDevice) throws
+}
+extension KeyboardKitPro.DanishInputSetProvider {
+  @available(*, deprecated, message: "Use the new, device-agnostic initializer")
+  convenience public init(device: UIKit.UIDevice) throws
+}
+extension KeyboardKitPro.DutchBelgiumInputSetProvider {
+  @available(*, deprecated, message: "Use the new, device-agnostic initializer")
+  convenience public init(device: UIKit.UIDevice) throws
+}
+extension KeyboardKitPro.DutchInputSetProvider {
+  @available(*, deprecated, message: "Use the new, device-agnostic initializer")
+  convenience public init(device: UIKit.UIDevice) throws
+}
+extension KeyboardKitPro.EnglishGbInputSetProvider {
+  @available(*, deprecated, message: "Use the new, device-agnostic initializer")
+  convenience public init(device: UIKit.UIDevice) throws
+}
+extension KeyboardKitPro.EnglishUsInputSetProvider {
+  @available(*, deprecated, message: "Use the new, device-agnostic initializer")
+  convenience public init(device: UIKit.UIDevice) throws
+}
+extension KeyboardKitPro.EstonianInputSetProvider {
+  @available(*, deprecated, message: "Use the new, device-agnostic initializer")
+  convenience public init(device: UIKit.UIDevice) throws
+}
+extension KeyboardKitPro.FinnishInputSetProvider {
+  @available(*, deprecated, message: "Use the new, device-agnostic initializer")
+  convenience public init(device: UIKit.UIDevice) throws
+}
+extension KeyboardKitPro.FrenchInputSetProvider {
+  @available(*, deprecated, message: "Use the new, device-agnostic initializer")
+  convenience public init(device: UIKit.UIDevice) throws
+}
+extension KeyboardKitPro.FrenchSwitzerlandInputSetProvider {
+  @available(*, deprecated, message: "Use the new, device-agnostic initializer")
+  convenience public init(device: UIKit.UIDevice) throws
+}
+extension KeyboardKitPro.GermanInputSetProvider {
+  @available(*, deprecated, message: "Use the new, device-agnostic initializer")
+  convenience public init(device: UIKit.UIDevice) throws
+}
+extension KeyboardKitPro.GermanSwitzerlandInputSetProvider {
+  @available(*, deprecated, message: "Use the new, device-agnostic initializer")
+  convenience public init(device: UIKit.UIDevice) throws
+}
+extension KeyboardKitPro.GreekInputSetProvider {
+  @available(*, deprecated, message: "Use the new, device-agnostic initializer")
+  convenience public init(device: UIKit.UIDevice) throws
+}
+extension KeyboardKitPro.HungarianInputSetProvider {
+  @available(*, deprecated, message: "Use the new, device-agnostic initializer")
+  convenience public init(device: UIKit.UIDevice) throws
+}
+extension KeyboardKitPro.IcelandicInputSetProvider {
+  @available(*, deprecated, message: "Use the new, device-agnostic initializer")
+  convenience public init(device: UIKit.UIDevice) throws
+}
+extension KeyboardKitPro.IrishInputSetProvider {
+  @available(*, deprecated, message: "Use the new, device-agnostic initializer")
+  convenience public init(device: UIKit.UIDevice) throws
+}
+extension KeyboardKitPro.ItalianInputSetProvider {
+  @available(*, deprecated, message: "Use the new, device-agnostic initializer")
+  convenience public init(device: UIKit.UIDevice) throws
+}
+extension KeyboardKitPro.KurdishSoraniInputSetProvider {
+  @available(*, deprecated, message: "Use the new, device-agnostic initializer")
+  convenience public init(device: UIKit.UIDevice) throws
+}
+extension KeyboardKitPro.LatvianInputSetProvider {
+  @available(*, deprecated, message: "Use the new, device-agnostic initializer")
+  convenience public init(device: UIKit.UIDevice) throws
+}
+extension KeyboardKitPro.LithuanianInputSetProvider {
+  @available(*, deprecated, message: "Use the new, device-agnostic initializer")
+  convenience public init(device: UIKit.UIDevice) throws
+}
+extension KeyboardKitPro.NorwegianInputSetProvider {
+  @available(*, deprecated, message: "Use the new, device-agnostic initializer")
+  convenience public init(device: UIKit.UIDevice) throws
+}
+extension KeyboardKitPro.PersianInputSetProvider {
+  @available(*, deprecated, message: "Use the new, device-agnostic initializer")
+  convenience public init(device: UIKit.UIDevice) throws
+}
+extension KeyboardKitPro.PolishInputSetProvider {
+  @available(*, deprecated, message: "Use the new, device-agnostic initializer")
+  convenience public init(device: UIKit.UIDevice) throws
+}
+extension KeyboardKitPro.PortugueseBrazilInputSetProvider {
+  @available(*, deprecated, message: "Use the new, device-agnostic initializer")
+  convenience public init(device: UIKit.UIDevice) throws
+}
+extension KeyboardKitPro.PortugueseInputSetProvider {
+  @available(*, deprecated, message: "Use the new, device-agnostic initializer")
+  convenience public init(device: UIKit.UIDevice) throws
+}
+extension KeyboardKitPro.RomanianInputSetProvider {
+  @available(*, deprecated, message: "Use the new, device-agnostic initializer")
+  convenience public init(device: UIKit.UIDevice) throws
+}
+extension KeyboardKitPro.RussianInputSetProvider {
+  @available(*, deprecated, message: "Use the new, device-agnostic initializer")
+  convenience public init(device: UIKit.UIDevice) throws
+}
+extension KeyboardKitPro.SlovenianInputSetProvider {
+  @available(*, deprecated, message: "Use the new, device-agnostic initializer")
+  convenience public init(device: UIKit.UIDevice) throws
+}
+extension KeyboardKitPro.SpanishInputSetProvider {
+  @available(*, deprecated, message: "Use the new, device-agnostic initializer")
+  convenience public init(device: UIKit.UIDevice) throws
+}
+extension KeyboardKitPro.SwedishInputSetProvider {
+  @available(*, deprecated, message: "Use the new, device-agnostic initializer")
+  convenience public init(device: UIKit.UIDevice) throws
+}
+extension KeyboardKitPro.TurkishInputSetProvider {
+  @available(*, deprecated, message: "Use the new, device-agnostic initializer")
+  convenience public init(device: UIKit.UIDevice) throws
+}
+extension KeyboardKitPro.UkrainianInputSetProvider {
+  @available(*, deprecated, message: "Use the new, device-agnostic initializer")
+  convenience public init(device: UIKit.UIDevice) throws
+}
+public class LithuanianInputSetProvider : KeyboardKitPro.ProInputSetProvider, KeyboardKit.DeviceSpecificInputSetProvider {
+  public init() throws
+  public var alphabeticInputSet: KeyboardKit.AlphabeticInputSet {
+    get
+  }
+  public var numericInputSet: KeyboardKit.NumericInputSet {
+    get
+  }
+  public var symbolicInputSet: KeyboardKit.SymbolicInputSet {
+    get
+  }
+  @objc deinit
+}
+public class AlbanianCalloutActionProvider : KeyboardKitPro.ProCalloutActionProvider {
   public init() throws
   override public func calloutActionString(for char: Swift.String) -> Swift.String
   @objc deinit
@@ -215,136 +499,9 @@ public struct LicenseCustomer : Swift.Codable, Swift.Equatable {
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
 }
-public class KurdishSoraniCalloutActionProvider : KeyboardKitPro.ProCalloutActionProvider {
-  public init() throws
-  override public func calloutActions(for action: KeyboardKit.KeyboardAction) -> [KeyboardKit.KeyboardAction]
-  override public func calloutActionString(for char: Swift.String) -> Swift.String
-  @objc deinit
-}
-extension KeyboardKit.KeyboardInputViewController {
-  @_Concurrency.MainActor(unsafe) public static var hasShownErrorAlert: Swift.Bool
-  @_Concurrency.MainActor(unsafe) public func setupPro(withLicenseKey key: Swift.String) throws
-  @_Concurrency.MainActor(unsafe) public func setupPro<Content>(withLicenseKey key: Swift.String, view: Content) throws where Content : SwiftUI.View
-}
-public class SpanishCalloutActionProvider : KeyboardKitPro.ProCalloutActionProvider {
-  public init() throws
-  override public func calloutActions(for char: Swift.String) -> [KeyboardKit.KeyboardAction]
-  override public func calloutActionString(for char: Swift.String) -> Swift.String
-  @objc deinit
-}
-@_hasMissingDesignatedInitializers public class FrenchBelgiumCalloutActionProvider : KeyboardKitPro.FrenchCalloutActionProvider {
-  public init() throws
-  @objc deinit
-}
-@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class GermanCalloutActionProvider : KeyboardKitPro.ProCalloutActionProvider {
-  convenience public init() throws
-  override public func calloutActionString(for char: Swift.String) -> Swift.String
-  @objc deinit
-}
-@_hasMissingDesignatedInitializers public class GermanAustriaInputSetProvider : KeyboardKitPro.GermanInputSetProvider {
-  public init(device: UIKit.UIDevice = .current) throws
-  @objc deinit
-}
-public class GreekInputSetProvider : KeyboardKitPro.ProInputSetProvider, KeyboardKit.DeviceSpecificInputSetProvider {
-  public init(device: UIKit.UIDevice = .current) throws
-  public var alphabeticInputSet: KeyboardKit.AlphabeticInputSet {
-    get
-  }
-  public var numericInputSet: KeyboardKit.NumericInputSet {
-    get
-  }
-  public var symbolicInputSet: KeyboardKit.SymbolicInputSet {
-    get
-  }
-  @objc deinit
-}
-@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class DutchCalloutActionProvider : KeyboardKitPro.ProCalloutActionProvider {
-  convenience public init() throws
-  override public func calloutActionString(for char: Swift.String) -> Swift.String
-  @objc deinit
-}
-@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class FrenchCalloutActionProvider : KeyboardKitPro.ProCalloutActionProvider {
-  convenience public init() throws
-  override public func calloutActionString(for char: Swift.String) -> Swift.String
-  @objc deinit
-}
-public class DanishCalloutActionProvider : KeyboardKitPro.ProCalloutActionProvider {
-  public init() throws
-  override public func calloutActions(for action: KeyboardKit.KeyboardAction) -> [KeyboardKit.KeyboardAction]
-  override public func calloutActionString(for char: Swift.String) -> Swift.String
-  @objc deinit
-}
-public struct ToggleToolbar<Toolbar, ToggledToolbar> : SwiftUI.View where Toolbar : SwiftUI.View, ToggledToolbar : SwiftUI.View {
-  public init(animation: KeyboardKitPro.ToggleToolbarAnimation = .opacity, toolbar: Toolbar, toggledToolbar: ToggledToolbar) throws
-  @_Concurrency.MainActor(unsafe) public var body: some SwiftUI.View {
-    get
-  }
-  public typealias Body = @_opaqueReturnTypeOf("$s14KeyboardKitPro13ToggleToolbarV4bodyQrvp", 0) __<Toolbar, ToggledToolbar>
-}
-public enum ToggleToolbarAnimation : Swift.String, Swift.CaseIterable, Swift.Codable, Swift.Equatable, Swift.Identifiable {
-  case opacity
-  case flipUp
-  case flipDown
-  case slideUp
-  case slideDown
-  public var id: Swift.String {
-    get
-  }
-  public init?(rawValue: Swift.String)
-  public typealias AllCases = [KeyboardKitPro.ToggleToolbarAnimation]
-  public typealias ID = Swift.String
-  public typealias RawValue = Swift.String
-  public static var allCases: [KeyboardKitPro.ToggleToolbarAnimation] {
-    get
-  }
-  public var rawValue: Swift.String {
-    get
-  }
-}
-public class FrenchSwitzerlandInputSetProvider : KeyboardKitPro.ProInputSetProvider, KeyboardKit.DeviceSpecificInputSetProvider {
-  public init(device: UIKit.UIDevice = .current) throws
-  public var alphabeticInputSet: KeyboardKit.AlphabeticInputSet {
-    get
-  }
-  public var numericInputSet: KeyboardKit.NumericInputSet {
-    get
-  }
-  public var symbolicInputSet: KeyboardKit.SymbolicInputSet {
-    get
-  }
-  @objc deinit
-}
-public class GreekCalloutActionProvider : KeyboardKitPro.ProCalloutActionProvider {
+public class SlovenianCalloutActionProvider : KeyboardKitPro.ProCalloutActionProvider {
   public init() throws
   override public func calloutActionString(for char: Swift.String) -> Swift.String
-  @objc deinit
-}
-public class EnglishUsCalloutActionProvider : KeyboardKitPro.ProCalloutActionProvider {
-  public init() throws
-  override public func calloutActions(for action: KeyboardKit.KeyboardAction) -> [KeyboardKit.KeyboardAction]
-  @objc deinit
-}
-public class SwedishCalloutActionProvider : KeyboardKitPro.ProCalloutActionProvider {
-  public init() throws
-  override public func calloutActions(for action: KeyboardKit.KeyboardAction) -> [KeyboardKit.KeyboardAction]
-  override public func calloutActionString(for char: Swift.String) -> Swift.String
-  @objc deinit
-}
-@_hasMissingDesignatedInitializers public class DutchBelgiumCalloutActionProvider : KeyboardKitPro.DutchCalloutActionProvider {
-  public init() throws
-  @objc deinit
-}
-public class CzechInputSetProvider : KeyboardKitPro.ProInputSetProvider, KeyboardKit.DeviceSpecificInputSetProvider {
-  public init(device: UIKit.UIDevice = .current) throws
-  public var alphabeticInputSet: KeyboardKit.AlphabeticInputSet {
-    get
-  }
-  public var numericInputSet: KeyboardKit.NumericInputSet {
-    get
-  }
-  public var symbolicInputSet: KeyboardKit.SymbolicInputSet {
-    get
-  }
   @objc deinit
 }
 extension KeyboardKit.KeyboardLocale {
@@ -364,6 +521,70 @@ extension KeyboardKit.KeyboardLocale {
   }
   #endif
 
+}
+public class EnglishUsInputSetProvider : KeyboardKitPro.ProInputSetProvider, KeyboardKit.DeviceSpecificInputSetProvider {
+  public init() throws
+  public var alphabeticInputSet: KeyboardKit.AlphabeticInputSet {
+    get
+  }
+  public var numericInputSet: KeyboardKit.NumericInputSet {
+    get
+  }
+  public var symbolicInputSet: KeyboardKit.SymbolicInputSet {
+    get
+  }
+  @objc deinit
+}
+public class CatalanCalloutActionProvider : KeyboardKitPro.ProCalloutActionProvider {
+  public init() throws
+  override public func calloutActions(for char: Swift.String) -> [KeyboardKit.KeyboardAction]
+  override public func calloutActionString(for char: Swift.String) -> Swift.String
+  @objc deinit
+}
+public class SerbianCalloutActionProvider : KeyboardKitPro.ProCalloutActionProvider {
+  public init() throws
+  override public func calloutActionString(for char: Swift.String) -> Swift.String
+  @objc deinit
+}
+public class RussianCalloutActionProvider : KeyboardKitPro.ProCalloutActionProvider {
+  public init() throws
+  override public func calloutActionString(for char: Swift.String) -> Swift.String
+  @objc deinit
+}
+public class FaroeseInputSetProvider : KeyboardKitPro.ProInputSetProvider, KeyboardKit.DeviceSpecificInputSetProvider {
+  public init() throws
+  public var alphabeticInputSet: KeyboardKit.AlphabeticInputSet {
+    get
+  }
+  public var numericInputSet: KeyboardKit.NumericInputSet {
+    get
+  }
+  public var symbolicInputSet: KeyboardKit.SymbolicInputSet {
+    get
+  }
+  @objc deinit
+}
+public class MongolianInputSetProvider : KeyboardKitPro.ProInputSetProvider, KeyboardKit.DeviceSpecificInputSetProvider {
+  public init() throws
+  public var alphabeticInputSet: KeyboardKit.AlphabeticInputSet {
+    get
+  }
+  public var numericInputSet: KeyboardKit.NumericInputSet {
+    get
+  }
+  public var symbolicInputSet: KeyboardKit.SymbolicInputSet {
+    get
+  }
+  @objc deinit
+}
+public class IrishCalloutActionProvider : KeyboardKitPro.ProCalloutActionProvider {
+  public init() throws
+  override public func calloutActionString(for char: Swift.String) -> Swift.String
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class FrenchBelgiumCalloutActionProvider : KeyboardKitPro.FrenchCalloutActionProvider {
+  public init() throws
+  @objc deinit
 }
 public struct License : Swift.Codable, Swift.Hashable, Swift.Identifiable {
   public init(licenseKey: Swift.String, tier: KeyboardKitPro.LicenseTier = .standard, expires: Foundation.Date, customer: KeyboardKitPro.LicenseCustomer, bundleIds: [Swift.String], locales: [KeyboardKit.KeyboardLocale], renewalPrice: Swift.Int? = nil, additionalInfo: [Swift.String : Swift.String] = [:])
@@ -394,26 +615,8 @@ extension KeyboardKitPro.License {
   @discardableResult
   public static func register(licenseKey: Swift.String) throws -> KeyboardKitPro.License?
 }
-public class TurkishInputSetProvider : KeyboardKitPro.ProInputSetProvider, KeyboardKit.DeviceSpecificInputSetProvider {
-  public init(device: UIKit.UIDevice = .current) throws
-  public var alphabeticInputSet: KeyboardKit.AlphabeticInputSet {
-    get
-  }
-  public var numericInputSet: KeyboardKit.NumericInputSet {
-    get
-  }
-  public var symbolicInputSet: KeyboardKit.SymbolicInputSet {
-    get
-  }
-  @objc deinit
-}
-public class EstonianCalloutActionProvider : KeyboardKitPro.ProCalloutActionProvider {
+public class NorwegianInputSetProvider : KeyboardKitPro.ProInputSetProvider, KeyboardKit.DeviceSpecificInputSetProvider {
   public init() throws
-  override public func calloutActionString(for char: Swift.String) -> Swift.String
-  @objc deinit
-}
-public class GermanSwitzerlandInputSetProvider : KeyboardKitPro.ProInputSetProvider, KeyboardKit.DeviceSpecificInputSetProvider {
-  public init(device: UIKit.UIDevice = .current) throws
   public var alphabeticInputSet: KeyboardKit.AlphabeticInputSet {
     get
   }
@@ -425,25 +628,8 @@ public class GermanSwitzerlandInputSetProvider : KeyboardKitPro.ProInputSetProvi
   }
   @objc deinit
 }
-@available(*, deprecated, renamed: "License")
-public typealias KeyboardKitLicense = KeyboardKitPro.License
-@available(*, deprecated, renamed: "License")
-extension KeyboardKitPro.License {
-  @available(*, deprecated, renamed: "LicenseCustomer")
-  public typealias Customer = KeyboardKitPro.LicenseCustomer
-}
-@_Concurrency.MainActor(unsafe) public struct AudioFeedbackToggleButton<ViewType> : SwiftUI.View where ViewType : SwiftUI.View {
-  @_Concurrency.MainActor(unsafe) public init(settings: KeyboardKit.KeyboardFeedbackSettings, enabledView: ViewType, disabledView: ViewType) throws
-  @_Concurrency.MainActor(unsafe) public var body: some SwiftUI.View {
-    get
-  }
-  public typealias Body = @_opaqueReturnTypeOf("$s14KeyboardKitPro25AudioFeedbackToggleButtonV4bodyQrvp", 0) __<ViewType>
-}
-extension KeyboardKitPro.AudioFeedbackToggleButton where ViewType == SwiftUI.Image {
-  @_Concurrency.MainActor(unsafe) public init(settings: KeyboardKit.KeyboardFeedbackSettings, enabledImage: SwiftUI.Image = .keyboardAudioFeedbackEnabled, disabledImage: SwiftUI.Image = .keyboardAudioFeedbackDisabled) throws
-}
-public class BelarusianInputSetProvider : KeyboardKitPro.ProInputSetProvider, KeyboardKit.DeviceSpecificInputSetProvider {
-  public init(device: UIKit.UIDevice = .current) throws
+public class CroatianInputSetProvider : KeyboardKitPro.ProInputSetProvider, KeyboardKit.DeviceSpecificInputSetProvider {
+  public init() throws
   public var alphabeticInputSet: KeyboardKit.AlphabeticInputSet {
     get
   }
@@ -460,8 +646,8 @@ public class PersianCalloutActionProvider : KeyboardKitPro.ProCalloutActionProvi
   override public func calloutActionString(for char: Swift.String) -> Swift.String
   @objc deinit
 }
-public class PortugueseBrazilInputSetProvider : KeyboardKitPro.ProInputSetProvider, KeyboardKit.DeviceSpecificInputSetProvider {
-  public init(device: UIKit.UIDevice = .current) throws
+public class HungarianInputSetProvider : KeyboardKitPro.ProInputSetProvider, KeyboardKit.DeviceSpecificInputSetProvider {
+  public init() throws
   public var alphabeticInputSet: KeyboardKit.AlphabeticInputSet {
     get
   }
@@ -472,6 +658,90 @@ public class PortugueseBrazilInputSetProvider : KeyboardKitPro.ProInputSetProvid
     get
   }
   @objc deinit
+}
+public class GermanSwitzerlandCalloutActionProvider : KeyboardKitPro.ProCalloutActionProvider {
+  public init() throws
+  override public func calloutActionString(for char: Swift.String) -> Swift.String
+  @objc deinit
+}
+public class EnglishUsCalloutActionProvider : KeyboardKitPro.ProCalloutActionProvider {
+  public init() throws
+  override public func calloutActions(for action: KeyboardKit.KeyboardAction) -> [KeyboardKit.KeyboardAction]
+  @objc deinit
+}
+public class PersianInputSetProvider : KeyboardKitPro.ProInputSetProvider, KeyboardKit.DeviceSpecificInputSetProvider {
+  public init() throws
+  public var alphabeticInputSet: KeyboardKit.AlphabeticInputSet {
+    get
+  }
+  public var numericInputSet: KeyboardKit.NumericInputSet {
+    get
+  }
+  public var symbolicInputSet: KeyboardKit.SymbolicInputSet {
+    get
+  }
+  @objc deinit
+}
+public class BulgarianCalloutActionProvider : KeyboardKitPro.ProCalloutActionProvider {
+  public init() throws
+  override public func calloutActionString(for char: Swift.String) -> Swift.String
+  @objc deinit
+}
+public class GermanSwitzerlandInputSetProvider : KeyboardKitPro.ProInputSetProvider, KeyboardKit.DeviceSpecificInputSetProvider {
+  public init() throws
+  public var alphabeticInputSet: KeyboardKit.AlphabeticInputSet {
+    get
+  }
+  public var numericInputSet: KeyboardKit.NumericInputSet {
+    get
+  }
+  public var symbolicInputSet: KeyboardKit.SymbolicInputSet {
+    get
+  }
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class GermanAustriaCalloutActionProvider : KeyboardKitPro.GermanCalloutActionProvider {
+  public init() throws
+  @objc deinit
+}
+public class GeorgianInputSetProvider : KeyboardKitPro.ProInputSetProvider, KeyboardKit.DeviceSpecificInputSetProvider {
+  public init() throws
+  public var alphabeticInputSet: KeyboardKit.AlphabeticInputSet {
+    get
+  }
+  public var numericInputSet: KeyboardKit.NumericInputSet {
+    get
+  }
+  public var symbolicInputSet: KeyboardKit.SymbolicInputSet {
+    get
+  }
+  @objc deinit
+}
+public class BulgarianInputSetProvider : KeyboardKitPro.ProInputSetProvider, KeyboardKit.DeviceSpecificInputSetProvider {
+  public init() throws
+  public var alphabeticInputSet: KeyboardKit.AlphabeticInputSet {
+    get
+  }
+  public var numericInputSet: KeyboardKit.NumericInputSet {
+    get
+  }
+  public var symbolicInputSet: KeyboardKit.SymbolicInputSet {
+    get
+  }
+  @objc deinit
+}
+public class FilipinoCalloutActionProvider : KeyboardKitPro.ProCalloutActionProvider {
+  public init() throws
+  override public func calloutActionString(for char: Swift.String) -> Swift.String
+  @objc deinit
+}
+@available(iOS 14.0, *)
+public struct KeyboardEnabledLabel : SwiftUI.View, KeyboardKit.KeyboardEnabledStateInspector {
+  public init(keyboardBundleId: Swift.String, enabledText: Swift.String, enabledIcon: SwiftUI.Image = .enabledLabelEnabledIcon, enabledColor: SwiftUI.Color = .green, disabledText: Swift.String, disabledIcon: SwiftUI.Image = .enabledLabelDisabledIcon, disabledColor: SwiftUI.Color = .orange) throws
+  @_Concurrency.MainActor(unsafe) public var body: some SwiftUI.View {
+    get
+  }
+  public typealias Body = @_opaqueReturnTypeOf("$s14KeyboardKitPro0A12EnabledLabelV4bodyQrvp", 0) __
 }
 open class ExternalAutocompleteProvider<Result> where Result : KeyboardKitPro.ExternalAutocompleteResult {
   public init(urlPattern: Swift.String, urlLocaleReplacementPattern: Swift.String = "{LOCALE}", urlTextReplacementPattern: Swift.String = "{TEXT}", locale: Foundation.Locale = .current, minimumTextLength: Swift.Int = 3, throttleInterval: Swift.Double? = nil, debounceInterval: Swift.Double? = nil) throws
@@ -500,12 +770,8 @@ open class ExternalAutocompleteProvider<Result> where Result : KeyboardKitPro.Ex
   public func unlearnWord(_ word: Swift.String)
   @objc deinit
 }
-@available(*, deprecated, renamed: "PortugueseBrazilCalloutActionProvider")
-public typealias BrazilianCalloutActionProvider = KeyboardKitPro.PortugueseBrazilCalloutActionProvider
-@available(*, deprecated, renamed: "PortugueseBrazilInputSetProvider")
-public typealias BrazilianInputSetProvider = KeyboardKitPro.PortugueseBrazilInputSetProvider
-public class IrishInputSetProvider : KeyboardKitPro.ProInputSetProvider, KeyboardKit.DeviceSpecificInputSetProvider {
-  public init(device: UIKit.UIDevice = .current) throws
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class GermanInputSetProvider : KeyboardKitPro.ProInputSetProvider, KeyboardKit.DeviceSpecificInputSetProvider {
+  convenience public init() throws
   public var alphabeticInputSet: KeyboardKit.AlphabeticInputSet {
     get
   }
@@ -517,110 +783,8 @@ public class IrishInputSetProvider : KeyboardKitPro.ProInputSetProvider, Keyboar
   }
   @objc deinit
 }
-public class SwedishInputSetProvider : KeyboardKitPro.ProInputSetProvider, KeyboardKit.DeviceSpecificInputSetProvider {
-  public init(device: UIKit.UIDevice = .current) throws
-  public var alphabeticInputSet: KeyboardKit.AlphabeticInputSet {
-    get
-  }
-  public var numericInputSet: KeyboardKit.NumericInputSet {
-    get
-  }
-  public var symbolicInputSet: KeyboardKit.SymbolicInputSet {
-    get
-  }
-  @objc deinit
-}
-public class CroatianInputSetProvider : KeyboardKitPro.ProInputSetProvider, KeyboardKit.DeviceSpecificInputSetProvider {
-  public init(device: UIKit.UIDevice = .current) throws
-  public var alphabeticInputSet: KeyboardKit.AlphabeticInputSet {
-    get
-  }
-  public var numericInputSet: KeyboardKit.NumericInputSet {
-    get
-  }
-  public var symbolicInputSet: KeyboardKit.SymbolicInputSet {
-    get
-  }
-  @objc deinit
-}
-public struct LicenseTier : Swift.Codable, Swift.Equatable, Swift.Identifiable {
-  public init(id: Swift.String, name: Swift.String, level: Swift.Int)
-  public let id: Swift.String
-  public let name: Swift.String
-  public let level: Swift.Int
-  public static func == (a: KeyboardKitPro.LicenseTier, b: KeyboardKitPro.LicenseTier) -> Swift.Bool
-  public typealias ID = Swift.String
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
-}
-extension KeyboardKitPro.LicenseTier {
-  public static let standard: KeyboardKitPro.LicenseTier
-}
-@available(*, deprecated, renamed: "AlbanianInputSetProvider")
-public typealias AlbanianKeyboardInputSetProvider = KeyboardKitPro.AlbanianInputSetProvider
-@available(*, deprecated, renamed: "ArabicInputSetProvider")
-public typealias ArabicKeyboardInputSetProvider = KeyboardKitPro.ArabicInputSetProvider
-@available(*, deprecated, renamed: "BelarusianInputSetProvider")
-public typealias BelarusianKeyboardInputSetProvider = KeyboardKitPro.BelarusianInputSetProvider
-@available(*, deprecated, renamed: "BrazilianInputSetProvider")
-public typealias BrazilianKeyboardInputSetProvider = KeyboardKitPro.BrazilianInputSetProvider
-@available(*, deprecated, renamed: "CzechInputSetProvider")
-public typealias CzechKeyboardInputSetProvider = KeyboardKitPro.CzechInputSetProvider
-@available(*, deprecated, renamed: "DanishInputSetProvider")
-public typealias DanishKeyboardInputSetProvider = KeyboardKitPro.DanishInputSetProvider
-@available(*, deprecated, renamed: "DutchInputSetProvider")
-public typealias DutchKeyboardInputSetProvider = KeyboardKitPro.DutchInputSetProvider
-@available(*, deprecated, renamed: "EstonianInputSetProvider")
-public typealias EstonianKeyboardInputSetProvider = KeyboardKitPro.EstonianInputSetProvider
-@available(*, deprecated, renamed: "EnglishGbInputSetProvider")
-public typealias EnglishGbKeyboardInputSetProvider = KeyboardKitPro.EnglishGbInputSetProvider
-@available(*, deprecated, renamed: "EnglishUsInputSetProvider")
-public typealias EnglishUsKeyboardInputSetProvider = KeyboardKitPro.EnglishUsInputSetProvider
-@available(*, deprecated, renamed: "FinnishInputSetProvider")
-public typealias FinnishKeyboardInputSetProvider = KeyboardKitPro.FinnishInputSetProvider
-@available(*, deprecated, renamed: "FrenchInputSetProvider")
-public typealias FrenchKeyboardInputSetProvider = KeyboardKitPro.FrenchInputSetProvider
-@available(*, deprecated, renamed: "GermanInputSetProvider")
-public typealias GermanKeyboardInputSetProvider = KeyboardKitPro.GermanInputSetProvider
-@available(*, deprecated, renamed: "IcelandicInputSetProvider")
-public typealias IcelandicKeyboardInputSetProvider = KeyboardKitPro.IcelandicInputSetProvider
-@available(*, deprecated, renamed: "IrishInputSetProvider")
-public typealias IrishKeyboardInputSetProvider = KeyboardKitPro.IrishInputSetProvider
-@available(*, deprecated, renamed: "ItalianInputSetProvider")
-public typealias ItalianKeyboardInputSetProvider = KeyboardKitPro.ItalianInputSetProvider
-@available(*, deprecated, renamed: "KurdishSoraniInputSetProvide")
-public typealias KurdishSoraniKeyboardInputSetProvider = KeyboardKitPro.KurdishSoraniInputSetProvider
-@available(*, deprecated, renamed: "LatvianInputSetProvider")
-public typealias LatvianKeyboardInputSetProvider = KeyboardKitPro.LatvianInputSetProvider
-@available(*, deprecated, renamed: "LithuanianInputSetProvider")
-public typealias LithuanianKeyboardInputSetProvider = KeyboardKitPro.LithuanianInputSetProvider
-@available(*, deprecated, renamed: "NorwegianInputSetProvider")
-public typealias NorwegianKeyboardInputSetProvider = KeyboardKitPro.NorwegianInputSetProvider
-@available(*, deprecated, renamed: "PersianInputSetProvider")
-public typealias PersianKeyboardInputSetProvider = KeyboardKitPro.PersianInputSetProvider
-@available(*, deprecated, renamed: "PolishInputSetProvider")
-public typealias PolishKeyboardInputSetProvider = KeyboardKitPro.PolishInputSetProvider
-@available(*, deprecated, renamed: "PortugueseInputSetProvider")
-public typealias PortugueseKeyboardInputSetProvider = KeyboardKitPro.PortugueseInputSetProvider
-@available(*, deprecated, renamed: "RomanianInputSetProvider")
-public typealias RomanianKeyboardInputSetProvider = KeyboardKitPro.RomanianInputSetProvider
-@available(*, deprecated, renamed: "RussianInputSetProvider")
-public typealias RussianKeyboardInputSetProvider = KeyboardKitPro.RussianInputSetProvider
-@available(*, deprecated, renamed: "SpanishInputSetProvider")
-public typealias SpanishKeyboardInputSetProvider = KeyboardKitPro.SpanishInputSetProvider
-@available(*, deprecated, renamed: "SwedishInputSetProvider")
-public typealias SwedishKeyboardInputSetProvider = KeyboardKitPro.SwedishInputSetProvider
-@available(*, deprecated, renamed: "TurkishInputSetProvider")
-public typealias TurkishKeyboardInputSetProvider = KeyboardKitPro.TurkishInputSetProvider
-@available(*, deprecated, renamed: "UkrainianInputSetProvider")
-public typealias UkrainianKeyboardInputSetProvider = KeyboardKitPro.UkrainianInputSetProvider
-public class RomanianCalloutActionProvider : KeyboardKitPro.ProCalloutActionProvider {
+public class ItalianInputSetProvider : KeyboardKitPro.ProInputSetProvider, KeyboardKit.DeviceSpecificInputSetProvider {
   public init() throws
-  override public func calloutActionString(for char: Swift.String) -> Swift.String
-  @objc deinit
-}
-public class DanishInputSetProvider : KeyboardKitPro.ProInputSetProvider, KeyboardKit.DeviceSpecificInputSetProvider {
-  public init(device: UIKit.UIDevice = .current) throws
   public var alphabeticInputSet: KeyboardKit.AlphabeticInputSet {
     get
   }
@@ -632,12 +796,8 @@ public class DanishInputSetProvider : KeyboardKitPro.ProInputSetProvider, Keyboa
   }
   @objc deinit
 }
-@_hasMissingDesignatedInitializers public class FrenchSwitzerlandCalloutActionProvider : KeyboardKitPro.FrenchCalloutActionProvider {
+public class ArabicInputSetProvider : KeyboardKitPro.ProInputSetProvider, KeyboardKit.DeviceSpecificInputSetProvider {
   public init() throws
-  @objc deinit
-}
-public class HungarianInputSetProvider : KeyboardKitPro.ProInputSetProvider, KeyboardKit.DeviceSpecificInputSetProvider {
-  public init(device: UIKit.UIDevice = .current) throws
   public var alphabeticInputSet: KeyboardKit.AlphabeticInputSet {
     get
   }
@@ -649,13 +809,8 @@ public class HungarianInputSetProvider : KeyboardKitPro.ProInputSetProvider, Key
   }
   @objc deinit
 }
-public class CroatianCalloutActionProvider : KeyboardKitPro.ProCalloutActionProvider {
+public class DutchInputSetProvider : KeyboardKitPro.ProInputSetProvider, KeyboardKit.DeviceSpecificInputSetProvider {
   public init() throws
-  override public func calloutActionString(for char: Swift.String) -> Swift.String
-  @objc deinit
-}
-public class LithuanianInputSetProvider : KeyboardKitPro.ProInputSetProvider, KeyboardKit.DeviceSpecificInputSetProvider {
-  public init(device: UIKit.UIDevice = .current) throws
   public var alphabeticInputSet: KeyboardKit.AlphabeticInputSet {
     get
   }
@@ -665,76 +820,6 @@ public class LithuanianInputSetProvider : KeyboardKitPro.ProInputSetProvider, Ke
   public var symbolicInputSet: KeyboardKit.SymbolicInputSet {
     get
   }
-  @objc deinit
-}
-public class FinnishInputSetProvider : KeyboardKitPro.ProInputSetProvider, KeyboardKit.DeviceSpecificInputSetProvider {
-  public init(device: UIKit.UIDevice = .current) throws
-  public var alphabeticInputSet: KeyboardKit.AlphabeticInputSet {
-    get
-  }
-  public var numericInputSet: KeyboardKit.NumericInputSet {
-    get
-  }
-  public var symbolicInputSet: KeyboardKit.SymbolicInputSet {
-    get
-  }
-  @objc deinit
-}
-public class SlovenianInputSetProvider : KeyboardKitPro.ProInputSetProvider, KeyboardKit.DeviceSpecificInputSetProvider {
-  public init(device: UIKit.UIDevice = .current) throws
-  public var alphabeticInputSet: KeyboardKit.AlphabeticInputSet {
-    get
-  }
-  public var numericInputSet: KeyboardKit.NumericInputSet {
-    get
-  }
-  public var symbolicInputSet: KeyboardKit.SymbolicInputSet {
-    get
-  }
-  @objc deinit
-}
-public class EnglishGbInputSetProvider : KeyboardKitPro.ProInputSetProvider, KeyboardKit.DeviceSpecificInputSetProvider {
-  public init(device: UIKit.UIDevice = .current) throws
-  public var alphabeticInputSet: KeyboardKit.AlphabeticInputSet {
-    get
-  }
-  public var numericInputSet: KeyboardKit.NumericInputSet {
-    get
-  }
-  public var symbolicInputSet: KeyboardKit.SymbolicInputSet {
-    get
-  }
-  @objc deinit
-}
-public class IcelandicCalloutActionProvider : KeyboardKitPro.ProCalloutActionProvider {
-  public init() throws
-  override public func calloutActions(for char: Swift.String) -> [KeyboardKit.KeyboardAction]
-  override public func calloutActionString(for char: Swift.String) -> Swift.String
-  @objc deinit
-}
-public class TurkishCalloutActionProvider : KeyboardKitPro.ProCalloutActionProvider {
-  public init() throws
-  override public func calloutActionString(for char: Swift.String) -> Swift.String
-  @objc deinit
-}
-public class AlbanianCalloutActionProvider : KeyboardKitPro.ProCalloutActionProvider {
-  public init() throws
-  override public func calloutActionString(for char: Swift.String) -> Swift.String
-  @objc deinit
-}
-@_hasMissingDesignatedInitializers public class FrenchBelgiumInputSetProvider : KeyboardKitPro.FrenchInputSetProvider {
-  public init(device: UIKit.UIDevice = .current) throws
-  @objc deinit
-}
-public class ArabicCalloutActionProvider : KeyboardKitPro.ProCalloutActionProvider {
-  public init() throws
-  override public func calloutActions(for action: KeyboardKit.KeyboardAction) -> [KeyboardKit.KeyboardAction]
-  override public func calloutActionString(for char: Swift.String) -> Swift.String
-  @objc deinit
-}
-public class BelarusianCalloutActionProvider : KeyboardKitPro.ProCalloutActionProvider {
-  public init() throws
-  override public func calloutActionString(for char: Swift.String) -> Swift.String
   @objc deinit
 }
 public class FinnishCalloutActionProvider : KeyboardKitPro.ProCalloutActionProvider {
@@ -743,44 +828,8 @@ public class FinnishCalloutActionProvider : KeyboardKitPro.ProCalloutActionProvi
   override public func calloutActionString(for char: Swift.String) -> Swift.String
   @objc deinit
 }
-public class RomanianInputSetProvider : KeyboardKitPro.ProInputSetProvider, KeyboardKit.DeviceSpecificInputSetProvider {
-  public init(device: UIKit.UIDevice = .current) throws
-  public var alphabeticInputSet: KeyboardKit.AlphabeticInputSet {
-    get
-  }
-  public var numericInputSet: KeyboardKit.NumericInputSet {
-    get
-  }
-  public var symbolicInputSet: KeyboardKit.SymbolicInputSet {
-    get
-  }
-  @objc deinit
-}
-public enum LicenseError : Swift.Error, Swift.Equatable {
-  case expiredLicense(expirationDate: Foundation.Date)
-  case invalidBundle(Foundation.Bundle)
-  case invalidLicenseKey(Swift.String)
-  case invalidLocale(KeyboardKit.KeyboardLocale)
-  case missingLicense
-  public static func == (a: KeyboardKitPro.LicenseError, b: KeyboardKitPro.LicenseError) -> Swift.Bool
-}
-extension KeyboardKitPro.LicenseError {
-  public var isFatal: Swift.Bool {
-    get
-  }
-}
-public class HungarianCalloutActionProvider : KeyboardKitPro.ProCalloutActionProvider {
+public class DutchBelgiumInputSetProvider : KeyboardKitPro.ProInputSetProvider, KeyboardKit.DeviceSpecificInputSetProvider {
   public init() throws
-  override public func calloutActionString(for char: Swift.String) -> Swift.String
-  @objc deinit
-}
-public class IrishCalloutActionProvider : KeyboardKitPro.ProCalloutActionProvider {
-  public init() throws
-  override public func calloutActionString(for char: Swift.String) -> Swift.String
-  @objc deinit
-}
-public class RussianInputSetProvider : KeyboardKitPro.ProInputSetProvider, KeyboardKit.DeviceSpecificInputSetProvider {
-  public init(device: UIKit.UIDevice = .current) throws
   public var alphabeticInputSet: KeyboardKit.AlphabeticInputSet {
     get
   }
@@ -793,7 +842,7 @@ public class RussianInputSetProvider : KeyboardKitPro.ProInputSetProvider, Keybo
   @objc deinit
 }
 public class PolishInputSetProvider : KeyboardKitPro.ProInputSetProvider, KeyboardKit.DeviceSpecificInputSetProvider {
-  public init(device: UIKit.UIDevice = .current) throws
+  public init() throws
   public var alphabeticInputSet: KeyboardKit.AlphabeticInputSet {
     get
   }
@@ -803,6 +852,25 @@ public class PolishInputSetProvider : KeyboardKitPro.ProInputSetProvider, Keyboa
   public var symbolicInputSet: KeyboardKit.SymbolicInputSet {
     get
   }
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class FrenchBelgiumInputSetProvider : KeyboardKitPro.FrenchInputSetProvider {
+  public init() throws
+  @objc deinit
+}
+public class MacedonianCalloutActionProvider : KeyboardKitPro.ProCalloutActionProvider {
+  public init() throws
+  override public func calloutActionString(for char: Swift.String) -> Swift.String
+  @objc deinit
+}
+public class EnglishGbCalloutActionProvider : KeyboardKitPro.ProCalloutActionProvider {
+  public init() throws
+  override public func calloutActionString(for char: Swift.String) -> Swift.String
+  @objc deinit
+}
+public class UkrainianCalloutActionProvider : KeyboardKitPro.ProCalloutActionProvider {
+  public init() throws
+  override public func calloutActionString(for char: Swift.String) -> Swift.String
   @objc deinit
 }
 @available(*, deprecated, renamed: "AlbanianCalloutActionProvider")
@@ -863,118 +931,61 @@ public typealias TurkishSecondaryCalloutActionProvider = KeyboardKitPro.TurkishC
 public typealias UkrainianSecondaryCalloutActionProvider = KeyboardKitPro.UkrainianCalloutActionProvider
 @available(*, deprecated, renamed: "CzechCalloutActionProvider")
 public typealias CzechSecondaryCalloutActionProvider = KeyboardKitPro.CzechCalloutActionProvider
+public class SlovakCalloutActionProvider : KeyboardKitPro.ProCalloutActionProvider {
+  public init() throws
+  override public func calloutActionString(for char: Swift.String) -> Swift.String
+  @objc deinit
+}
+public class RomanianCalloutActionProvider : KeyboardKitPro.ProCalloutActionProvider {
+  public init() throws
+  override public func calloutActionString(for char: Swift.String) -> Swift.String
+  @objc deinit
+}
 public class NorwegianCalloutActionProvider : KeyboardKitPro.ProCalloutActionProvider {
   public init() throws
   override public func calloutActions(for action: KeyboardKit.KeyboardAction) -> [KeyboardKit.KeyboardAction]
   override public func calloutActionString(for char: Swift.String) -> Swift.String
   @objc deinit
 }
-@available(iOS 14.0, *)
-public struct KeyboardEnabledLabel : SwiftUI.View, KeyboardKit.KeyboardEnabledStateInspector {
-  public init(keyboardBundleId: Swift.String, enabledText: Swift.String, enabledIcon: SwiftUI.Image = .enabledLabelEnabledIcon, enabledColor: SwiftUI.Color = .green, disabledText: Swift.String, disabledIcon: SwiftUI.Image = .enabledLabelDisabledIcon, disabledColor: SwiftUI.Color = .orange) throws
-  @_Concurrency.MainActor(unsafe) public var body: some SwiftUI.View {
-    get
-  }
-  public typealias Body = @_opaqueReturnTypeOf("$s14KeyboardKitPro0A12EnabledLabelV4bodyQrvp", 0) __
-}
-public class SpanishInputSetProvider : KeyboardKitPro.ProInputSetProvider, KeyboardKit.DeviceSpecificInputSetProvider {
-  public init(device: UIKit.UIDevice = .current) throws
-  public var alphabeticInputSet: KeyboardKit.AlphabeticInputSet {
-    get
-  }
-  public var numericInputSet: KeyboardKit.NumericInputSet {
-    get
-  }
-  public var symbolicInputSet: KeyboardKit.SymbolicInputSet {
-    get
-  }
-  @objc deinit
-}
-public class EstonianInputSetProvider : KeyboardKitPro.ProInputSetProvider, KeyboardKit.DeviceSpecificInputSetProvider {
-  public init(device: UIKit.UIDevice = .current) throws
-  public var alphabeticInputSet: KeyboardKit.AlphabeticInputSet {
-    get
-  }
-  public var numericInputSet: KeyboardKit.NumericInputSet {
-    get
-  }
-  public var symbolicInputSet: KeyboardKit.SymbolicInputSet {
-    get
-  }
-  @objc deinit
-}
-public class DutchBelgiumInputSetProvider : KeyboardKitPro.ProInputSetProvider, KeyboardKit.DeviceSpecificInputSetProvider {
-  public init(device: UIKit.UIDevice = .current) throws
-  public var alphabeticInputSet: KeyboardKit.AlphabeticInputSet {
-    get
-  }
-  public var numericInputSet: KeyboardKit.NumericInputSet {
-    get
-  }
-  public var symbolicInputSet: KeyboardKit.SymbolicInputSet {
-    get
-  }
-  @objc deinit
-}
-@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class GermanInputSetProvider : KeyboardKitPro.ProInputSetProvider, KeyboardKit.DeviceSpecificInputSetProvider {
-  convenience public init(device: UIKit.UIDevice = .current) throws
-  public var alphabeticInputSet: KeyboardKit.AlphabeticInputSet {
-    get
-  }
-  public var numericInputSet: KeyboardKit.NumericInputSet {
-    get
-  }
-  public var symbolicInputSet: KeyboardKit.SymbolicInputSet {
-    get
-  }
-  @objc deinit
-}
-@_Concurrency.MainActor(unsafe) public struct HapticFeedbackToggleButton<ViewType> : SwiftUI.View where ViewType : SwiftUI.View {
-  @_Concurrency.MainActor(unsafe) public init(settings: KeyboardKit.KeyboardFeedbackSettings, enabledView: ViewType, disabledView: ViewType) throws
-  @_Concurrency.MainActor(unsafe) public var body: some SwiftUI.View {
-    get
-  }
-  public typealias Body = @_opaqueReturnTypeOf("$s14KeyboardKitPro26HapticFeedbackToggleButtonV4bodyQrvp", 0) __<ViewType>
-}
-extension KeyboardKitPro.HapticFeedbackToggleButton where ViewType == SwiftUI.Image {
-  @_Concurrency.MainActor(unsafe) public init(settings: KeyboardKit.KeyboardFeedbackSettings, enabledImage: SwiftUI.Image = .keyboardHapticFeedbackEnabled, disabledImage: SwiftUI.Image = .keyboardHapticFeedbackDisabled) throws
-}
-public class PortugueseCalloutActionProvider : KeyboardKitPro.ProCalloutActionProvider {
+public class SwedishInputSetProvider : KeyboardKitPro.ProInputSetProvider, KeyboardKit.DeviceSpecificInputSetProvider {
   public init() throws
-  override public func calloutActions(for char: Swift.String) -> [KeyboardKit.KeyboardAction]
-  override public func calloutActionString(for char: Swift.String) -> Swift.String
+  public var alphabeticInputSet: KeyboardKit.AlphabeticInputSet {
+    get
+  }
+  public var numericInputSet: KeyboardKit.NumericInputSet {
+    get
+  }
+  public var symbolicInputSet: KeyboardKit.SymbolicInputSet {
+    get
+  }
   @objc deinit
 }
-public class SlovenianCalloutActionProvider : KeyboardKitPro.ProCalloutActionProvider {
+@_hasMissingDesignatedInitializers public class FrenchSwitzerlandCalloutActionProvider : KeyboardKitPro.FrenchCalloutActionProvider {
+  public init() throws
+  @objc deinit
+}
+public class LithuanianCalloutActionProvider : KeyboardKitPro.ProCalloutActionProvider {
   public init() throws
   override public func calloutActionString(for char: Swift.String) -> Swift.String
   @objc deinit
 }
-extension SwiftUI.Image {
-  public static let keyboardAudioFeedbackEnabled: SwiftUI.Image
-  public static let keyboardAudioFeedbackDisabled: SwiftUI.Image
-  public static let keyboardHapticFeedbackEnabled: SwiftUI.Image
-  public static let keyboardHapticFeedbackDisabled: SwiftUI.Image
-  public static let enabledLabelEnabledIcon: SwiftUI.Image
-  public static let enabledLabelDisabledIcon: SwiftUI.Image
-}
-@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class ProCalloutActionProvider : KeyboardKit.BaseCalloutActionProvider, KeyboardKit.LocalizedService {
-  public init(locale: KeyboardKit.KeyboardLocale) throws
-  final public let locale: KeyboardKit.KeyboardLocale
-  final public let localeKey: Swift.String
+@available(*, deprecated, renamed: "PortugueseBrazilCalloutActionProvider")
+public typealias BrazilianCalloutActionProvider = KeyboardKitPro.PortugueseBrazilCalloutActionProvider
+@available(*, deprecated, renamed: "PortugueseBrazilInputSetProvider")
+public typealias BrazilianInputSetProvider = KeyboardKitPro.PortugueseBrazilInputSetProvider
+public class ArabicCalloutActionProvider : KeyboardKitPro.ProCalloutActionProvider {
+  public init() throws
+  override public func calloutActions(for action: KeyboardKit.KeyboardAction) -> [KeyboardKit.KeyboardAction]
+  override public func calloutActionString(for char: Swift.String) -> Swift.String
   @objc deinit
 }
-public class ItalianInputSetProvider : KeyboardKitPro.ProInputSetProvider, KeyboardKit.DeviceSpecificInputSetProvider {
-  public init(device: UIKit.UIDevice = .current) throws
-  public var alphabeticInputSet: KeyboardKit.AlphabeticInputSet {
-    get
-  }
-  public var numericInputSet: KeyboardKit.NumericInputSet {
-    get
-  }
-  public var symbolicInputSet: KeyboardKit.SymbolicInputSet {
-    get
-  }
+public class PortugueseBrazilCalloutActionProvider : KeyboardKitPro.ProCalloutActionProvider {
+  public init() throws
+  override public func calloutActionString(for char: Swift.String) -> Swift.String
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class DutchBelgiumCalloutActionProvider : KeyboardKitPro.DutchCalloutActionProvider {
+  public init() throws
   @objc deinit
 }
 public class LatvianCalloutActionProvider : KeyboardKitPro.ProCalloutActionProvider {
@@ -990,18 +1001,31 @@ public struct KeyboardActiveLabel : SwiftUI.View, KeyboardKit.KeyboardEnabledSta
   }
   public typealias Body = @_opaqueReturnTypeOf("$s14KeyboardKitPro0A11ActiveLabelV4bodyQrvp", 0) __
 }
-extension KeyboardKitPro.LicenseTier {
-  public static let basic: KeyboardKitPro.LicenseTier
-  public static let silver: KeyboardKitPro.LicenseTier
-  public static let gold: KeyboardKitPro.LicenseTier
-}
-public class UkrainianCalloutActionProvider : KeyboardKitPro.ProCalloutActionProvider {
+public class GeorgianCalloutActionProvider : KeyboardKitPro.ProCalloutActionProvider {
   public init() throws
   override public func calloutActionString(for char: Swift.String) -> Swift.String
   @objc deinit
 }
-public class DutchInputSetProvider : KeyboardKitPro.ProInputSetProvider, KeyboardKit.DeviceSpecificInputSetProvider {
-  public init(device: UIKit.UIDevice = .current) throws
+public class GreekCalloutActionProvider : KeyboardKitPro.ProCalloutActionProvider {
+  public init() throws
+  override public func calloutActionString(for char: Swift.String) -> Swift.String
+  @objc deinit
+}
+public struct LicenseTier : Swift.Codable, Swift.Equatable, Swift.Identifiable {
+  public init(id: Swift.String, name: Swift.String, level: Swift.Int)
+  public let id: Swift.String
+  public let name: Swift.String
+  public let level: Swift.Int
+  public static func == (a: KeyboardKitPro.LicenseTier, b: KeyboardKitPro.LicenseTier) -> Swift.Bool
+  public typealias ID = Swift.String
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+extension KeyboardKitPro.LicenseTier {
+  public static let standard: KeyboardKitPro.LicenseTier
+}
+public class SlovakInputSetProvider : KeyboardKitPro.ProInputSetProvider, KeyboardKit.DeviceSpecificInputSetProvider {
+  public init() throws
   public var alphabeticInputSet: KeyboardKit.AlphabeticInputSet {
     get
   }
@@ -1013,21 +1037,8 @@ public class DutchInputSetProvider : KeyboardKitPro.ProInputSetProvider, Keyboar
   }
   @objc deinit
 }
-public class ArabicInputSetProvider : KeyboardKitPro.ProInputSetProvider, KeyboardKit.DeviceSpecificInputSetProvider {
-  public init(device: UIKit.UIDevice = .current) throws
-  public var alphabeticInputSet: KeyboardKit.AlphabeticInputSet {
-    get
-  }
-  public var numericInputSet: KeyboardKit.NumericInputSet {
-    get
-  }
-  public var symbolicInputSet: KeyboardKit.SymbolicInputSet {
-    get
-  }
-  @objc deinit
-}
-public class IcelandicInputSetProvider : KeyboardKitPro.ProInputSetProvider, KeyboardKit.DeviceSpecificInputSetProvider {
-  public init(device: UIKit.UIDevice = .current) throws
+public class SlovenianInputSetProvider : KeyboardKitPro.ProInputSetProvider, KeyboardKit.DeviceSpecificInputSetProvider {
+  public init() throws
   public var alphabeticInputSet: KeyboardKit.AlphabeticInputSet {
     get
   }
@@ -1040,7 +1051,7 @@ public class IcelandicInputSetProvider : KeyboardKitPro.ProInputSetProvider, Key
   @objc deinit
 }
 public class KurdishSoraniInputSetProvider : KeyboardKitPro.ProInputSetProvider, KeyboardKit.DeviceSpecificInputSetProvider {
-  public init(device: UIKit.UIDevice = .current) throws
+  public init() throws
   public var alphabeticInputSet: KeyboardKit.AlphabeticInputSet {
     get
   }
@@ -1052,13 +1063,348 @@ public class KurdishSoraniInputSetProvider : KeyboardKitPro.ProInputSetProvider,
   }
   @objc deinit
 }
-public class LithuanianCalloutActionProvider : KeyboardKitPro.ProCalloutActionProvider {
+public class SerbianLatinCalloutActionProvider : KeyboardKitPro.ProCalloutActionProvider {
   public init() throws
   override public func calloutActionString(for char: Swift.String) -> Swift.String
   @objc deinit
 }
-public class EnglishUsInputSetProvider : KeyboardKitPro.ProInputSetProvider, KeyboardKit.DeviceSpecificInputSetProvider {
-  public init(device: UIKit.UIDevice = .current) throws
+public class PortugueseInputSetProvider : KeyboardKitPro.ProInputSetProvider, KeyboardKit.DeviceSpecificInputSetProvider {
+  public init() throws
+  public var alphabeticInputSet: KeyboardKit.AlphabeticInputSet {
+    get
+  }
+  public var numericInputSet: KeyboardKit.NumericInputSet {
+    get
+  }
+  public var symbolicInputSet: KeyboardKit.SymbolicInputSet {
+    get
+  }
+  @objc deinit
+}
+public class FrenchSwitzerlandInputSetProvider : KeyboardKitPro.ProInputSetProvider, KeyboardKit.DeviceSpecificInputSetProvider {
+  public init() throws
+  public var alphabeticInputSet: KeyboardKit.AlphabeticInputSet {
+    get
+  }
+  public var numericInputSet: KeyboardKit.NumericInputSet {
+    get
+  }
+  public var symbolicInputSet: KeyboardKit.SymbolicInputSet {
+    get
+  }
+  @objc deinit
+}
+extension KeyboardKit.KeyboardInputViewController {
+  @_Concurrency.MainActor(unsafe) public static var hasShownErrorAlert: Swift.Bool
+  @_Concurrency.MainActor(unsafe) public func setupPro(withLicenseKey key: Swift.String) throws
+  @_Concurrency.MainActor(unsafe) public func setupPro<Content>(withLicenseKey key: Swift.String, view: Content) throws where Content : SwiftUI.View
+}
+public class GreekInputSetProvider : KeyboardKitPro.ProInputSetProvider, KeyboardKit.DeviceSpecificInputSetProvider {
+  public init() throws
+  public var alphabeticInputSet: KeyboardKit.AlphabeticInputSet {
+    get
+  }
+  public var numericInputSet: KeyboardKit.NumericInputSet {
+    get
+  }
+  public var symbolicInputSet: KeyboardKit.SymbolicInputSet {
+    get
+  }
+  @objc deinit
+}
+public class CatalanInputSetProvider : KeyboardKitPro.ProInputSetProvider, KeyboardKit.DeviceSpecificInputSetProvider {
+  public init() throws
+  public var alphabeticInputSet: KeyboardKit.AlphabeticInputSet {
+    get
+  }
+  public var numericInputSet: KeyboardKit.NumericInputSet {
+    get
+  }
+  public var symbolicInputSet: KeyboardKit.SymbolicInputSet {
+    get
+  }
+  @objc deinit
+}
+public class UkrainianInputSetProvider : KeyboardKitPro.ProInputSetProvider, KeyboardKit.DeviceSpecificInputSetProvider {
+  public init() throws
+  public var alphabeticInputSet: KeyboardKit.AlphabeticInputSet {
+    get
+  }
+  public var numericInputSet: KeyboardKit.NumericInputSet {
+    get
+  }
+  public var symbolicInputSet: KeyboardKit.SymbolicInputSet {
+    get
+  }
+  @objc deinit
+}
+public class SerbianLatinInputSetProvider : KeyboardKitPro.ProInputSetProvider, KeyboardKit.DeviceSpecificInputSetProvider {
+  public init() throws
+  public var alphabeticInputSet: KeyboardKit.AlphabeticInputSet {
+    get
+  }
+  public var numericInputSet: KeyboardKit.NumericInputSet {
+    get
+  }
+  public var symbolicInputSet: KeyboardKit.SymbolicInputSet {
+    get
+  }
+  @objc deinit
+}
+public class SpanishInputSetProvider : KeyboardKitPro.ProInputSetProvider, KeyboardKit.DeviceSpecificInputSetProvider {
+  public init() throws
+  public var alphabeticInputSet: KeyboardKit.AlphabeticInputSet {
+    get
+  }
+  public var numericInputSet: KeyboardKit.NumericInputSet {
+    get
+  }
+  public var symbolicInputSet: KeyboardKit.SymbolicInputSet {
+    get
+  }
+  @objc deinit
+}
+@available(*, deprecated, renamed: "AlbanianInputSetProvider")
+public typealias AlbanianKeyboardInputSetProvider = KeyboardKitPro.AlbanianInputSetProvider
+@available(*, deprecated, renamed: "ArabicInputSetProvider")
+public typealias ArabicKeyboardInputSetProvider = KeyboardKitPro.ArabicInputSetProvider
+@available(*, deprecated, renamed: "BelarusianInputSetProvider")
+public typealias BelarusianKeyboardInputSetProvider = KeyboardKitPro.BelarusianInputSetProvider
+@available(*, deprecated, renamed: "BrazilianInputSetProvider")
+public typealias BrazilianKeyboardInputSetProvider = KeyboardKitPro.BrazilianInputSetProvider
+@available(*, deprecated, renamed: "CzechInputSetProvider")
+public typealias CzechKeyboardInputSetProvider = KeyboardKitPro.CzechInputSetProvider
+@available(*, deprecated, renamed: "DanishInputSetProvider")
+public typealias DanishKeyboardInputSetProvider = KeyboardKitPro.DanishInputSetProvider
+@available(*, deprecated, renamed: "DutchInputSetProvider")
+public typealias DutchKeyboardInputSetProvider = KeyboardKitPro.DutchInputSetProvider
+@available(*, deprecated, renamed: "EstonianInputSetProvider")
+public typealias EstonianKeyboardInputSetProvider = KeyboardKitPro.EstonianInputSetProvider
+@available(*, deprecated, renamed: "EnglishGbInputSetProvider")
+public typealias EnglishGbKeyboardInputSetProvider = KeyboardKitPro.EnglishGbInputSetProvider
+@available(*, deprecated, renamed: "EnglishUsInputSetProvider")
+public typealias EnglishUsKeyboardInputSetProvider = KeyboardKitPro.EnglishUsInputSetProvider
+@available(*, deprecated, renamed: "FinnishInputSetProvider")
+public typealias FinnishKeyboardInputSetProvider = KeyboardKitPro.FinnishInputSetProvider
+@available(*, deprecated, renamed: "FrenchInputSetProvider")
+public typealias FrenchKeyboardInputSetProvider = KeyboardKitPro.FrenchInputSetProvider
+@available(*, deprecated, renamed: "GermanInputSetProvider")
+public typealias GermanKeyboardInputSetProvider = KeyboardKitPro.GermanInputSetProvider
+@available(*, deprecated, renamed: "IcelandicInputSetProvider")
+public typealias IcelandicKeyboardInputSetProvider = KeyboardKitPro.IcelandicInputSetProvider
+@available(*, deprecated, renamed: "IrishInputSetProvider")
+public typealias IrishKeyboardInputSetProvider = KeyboardKitPro.IrishInputSetProvider
+@available(*, deprecated, renamed: "ItalianInputSetProvider")
+public typealias ItalianKeyboardInputSetProvider = KeyboardKitPro.ItalianInputSetProvider
+@available(*, deprecated, renamed: "KurdishSoraniInputSetProvide")
+public typealias KurdishSoraniKeyboardInputSetProvider = KeyboardKitPro.KurdishSoraniInputSetProvider
+@available(*, deprecated, renamed: "LatvianInputSetProvider")
+public typealias LatvianKeyboardInputSetProvider = KeyboardKitPro.LatvianInputSetProvider
+@available(*, deprecated, renamed: "LithuanianInputSetProvider")
+public typealias LithuanianKeyboardInputSetProvider = KeyboardKitPro.LithuanianInputSetProvider
+@available(*, deprecated, renamed: "NorwegianInputSetProvider")
+public typealias NorwegianKeyboardInputSetProvider = KeyboardKitPro.NorwegianInputSetProvider
+@available(*, deprecated, renamed: "PersianInputSetProvider")
+public typealias PersianKeyboardInputSetProvider = KeyboardKitPro.PersianInputSetProvider
+@available(*, deprecated, renamed: "PolishInputSetProvider")
+public typealias PolishKeyboardInputSetProvider = KeyboardKitPro.PolishInputSetProvider
+@available(*, deprecated, renamed: "PortugueseInputSetProvider")
+public typealias PortugueseKeyboardInputSetProvider = KeyboardKitPro.PortugueseInputSetProvider
+@available(*, deprecated, renamed: "RomanianInputSetProvider")
+public typealias RomanianKeyboardInputSetProvider = KeyboardKitPro.RomanianInputSetProvider
+@available(*, deprecated, renamed: "RussianInputSetProvider")
+public typealias RussianKeyboardInputSetProvider = KeyboardKitPro.RussianInputSetProvider
+@available(*, deprecated, renamed: "SpanishInputSetProvider")
+public typealias SpanishKeyboardInputSetProvider = KeyboardKitPro.SpanishInputSetProvider
+@available(*, deprecated, renamed: "SwedishInputSetProvider")
+public typealias SwedishKeyboardInputSetProvider = KeyboardKitPro.SwedishInputSetProvider
+@available(*, deprecated, renamed: "TurkishInputSetProvider")
+public typealias TurkishKeyboardInputSetProvider = KeyboardKitPro.TurkishInputSetProvider
+@available(*, deprecated, renamed: "UkrainianInputSetProvider")
+public typealias UkrainianKeyboardInputSetProvider = KeyboardKitPro.UkrainianInputSetProvider
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class FrenchInputSetProvider : KeyboardKitPro.ProInputSetProvider, KeyboardKit.DeviceSpecificInputSetProvider {
+  convenience public init() throws
+  public var alphabeticInputSet: KeyboardKit.AlphabeticInputSet {
+    get
+  }
+  public var numericInputSet: KeyboardKit.NumericInputSet {
+    get
+  }
+  public var symbolicInputSet: KeyboardKit.SymbolicInputSet {
+    get
+  }
+  @objc deinit
+}
+public enum LicenseError : Swift.Error, Swift.Equatable {
+  case expiredLicense(expirationDate: Foundation.Date)
+  case invalidBundle(Foundation.Bundle)
+  case invalidLicenseKey(Swift.String)
+  case invalidLocale(KeyboardKit.KeyboardLocale)
+  case missingLicense
+  public static func == (a: KeyboardKitPro.LicenseError, b: KeyboardKitPro.LicenseError) -> Swift.Bool
+}
+extension KeyboardKitPro.LicenseError {
+  public var isFatal: Swift.Bool {
+    get
+  }
+}
+public class EnglishGbInputSetProvider : KeyboardKitPro.ProInputSetProvider, KeyboardKit.DeviceSpecificInputSetProvider {
+  public init() throws
+  public var alphabeticInputSet: KeyboardKit.AlphabeticInputSet {
+    get
+  }
+  public var numericInputSet: KeyboardKit.NumericInputSet {
+    get
+  }
+  public var symbolicInputSet: KeyboardKit.SymbolicInputSet {
+    get
+  }
+  @objc deinit
+}
+public class IcelandicCalloutActionProvider : KeyboardKitPro.ProCalloutActionProvider {
+  public init() throws
+  override public func calloutActions(for char: Swift.String) -> [KeyboardKit.KeyboardAction]
+  override public func calloutActionString(for char: Swift.String) -> Swift.String
+  @objc deinit
+}
+public class EstonianCalloutActionProvider : KeyboardKitPro.ProCalloutActionProvider {
+  public init() throws
+  override public func calloutActionString(for char: Swift.String) -> Swift.String
+  @objc deinit
+}
+public class DanishCalloutActionProvider : KeyboardKitPro.ProCalloutActionProvider {
+  public init() throws
+  override public func calloutActions(for action: KeyboardKit.KeyboardAction) -> [KeyboardKit.KeyboardAction]
+  override public func calloutActionString(for char: Swift.String) -> Swift.String
+  @objc deinit
+}
+public class PortugueseCalloutActionProvider : KeyboardKitPro.ProCalloutActionProvider {
+  public init() throws
+  override public func calloutActions(for char: Swift.String) -> [KeyboardKit.KeyboardAction]
+  override public func calloutActionString(for char: Swift.String) -> Swift.String
+  @objc deinit
+}
+public class DanishInputSetProvider : KeyboardKitPro.ProInputSetProvider, KeyboardKit.DeviceSpecificInputSetProvider {
+  public init() throws
+  public var alphabeticInputSet: KeyboardKit.AlphabeticInputSet {
+    get
+  }
+  public var numericInputSet: KeyboardKit.NumericInputSet {
+    get
+  }
+  public var symbolicInputSet: KeyboardKit.SymbolicInputSet {
+    get
+  }
+  @objc deinit
+}
+public class TurkishCalloutActionProvider : KeyboardKitPro.ProCalloutActionProvider {
+  public init() throws
+  override public func calloutActionString(for char: Swift.String) -> Swift.String
+  @objc deinit
+}
+public class SpanishCalloutActionProvider : KeyboardKitPro.ProCalloutActionProvider {
+  public init() throws
+  override public func calloutActions(for char: Swift.String) -> [KeyboardKit.KeyboardAction]
+  override public func calloutActionString(for char: Swift.String) -> Swift.String
+  @objc deinit
+}
+@available(iOS 14.0, tvOS 14.0, watchOS 7.0, *)
+public struct EnabledLabel : SwiftUI.View {
+  public init(isEnabled: Swift.Bool, enabledText: Swift.String, enabledIcon: SwiftUI.Image = .enabledLabelEnabledIcon, enabledColor: SwiftUI.Color = .green, disabledText: Swift.String, disabledIcon: SwiftUI.Image = .enabledLabelDisabledIcon, disabledColor: SwiftUI.Color = .orange) throws
+  @_Concurrency.MainActor(unsafe) public var body: some SwiftUI.View {
+    get
+  }
+  public typealias Body = @_opaqueReturnTypeOf("$s14KeyboardKitPro12EnabledLabelV4bodyQrvp", 0) __
+}
+public class KurdishSoraniCalloutActionProvider : KeyboardKitPro.ProCalloutActionProvider {
+  public init() throws
+  override public func calloutActions(for action: KeyboardKit.KeyboardAction) -> [KeyboardKit.KeyboardAction]
+  override public func calloutActionString(for char: Swift.String) -> Swift.String
+  @objc deinit
+}
+public class FinnishInputSetProvider : KeyboardKitPro.ProInputSetProvider, KeyboardKit.DeviceSpecificInputSetProvider {
+  public init() throws
+  public var alphabeticInputSet: KeyboardKit.AlphabeticInputSet {
+    get
+  }
+  public var numericInputSet: KeyboardKit.NumericInputSet {
+    get
+  }
+  public var symbolicInputSet: KeyboardKit.SymbolicInputSet {
+    get
+  }
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class GermanCalloutActionProvider : KeyboardKitPro.ProCalloutActionProvider {
+  convenience public init() throws
+  override public func calloutActionString(for char: Swift.String) -> Swift.String
+  @objc deinit
+}
+public class IcelandicInputSetProvider : KeyboardKitPro.ProInputSetProvider, KeyboardKit.DeviceSpecificInputSetProvider {
+  public init() throws
+  public var alphabeticInputSet: KeyboardKit.AlphabeticInputSet {
+    get
+  }
+  public var numericInputSet: KeyboardKit.NumericInputSet {
+    get
+  }
+  public var symbolicInputSet: KeyboardKit.SymbolicInputSet {
+    get
+  }
+  @objc deinit
+}
+extension KeyboardKitPro.LicenseTier {
+  public static let basic: KeyboardKitPro.LicenseTier
+  public static let silver: KeyboardKitPro.LicenseTier
+  public static let gold: KeyboardKitPro.LicenseTier
+}
+public class EstonianInputSetProvider : KeyboardKitPro.ProInputSetProvider, KeyboardKit.DeviceSpecificInputSetProvider {
+  public init() throws
+  public var alphabeticInputSet: KeyboardKit.AlphabeticInputSet {
+    get
+  }
+  public var numericInputSet: KeyboardKit.NumericInputSet {
+    get
+  }
+  public var symbolicInputSet: KeyboardKit.SymbolicInputSet {
+    get
+  }
+  @objc deinit
+}
+public class MongolianCalloutActionProvider : KeyboardKitPro.ProCalloutActionProvider {
+  public init() throws
+  override public func calloutActionString(for char: Swift.String) -> Swift.String
+  @objc deinit
+}
+public struct ToggleToolbar<Toolbar, ToggledToolbar> : SwiftUI.View where Toolbar : SwiftUI.View, ToggledToolbar : SwiftUI.View {
+  public init(animation: KeyboardKitPro.ToggleToolbarAnimation = .opacity, toolbar: Toolbar, toggledToolbar: ToggledToolbar) throws
+  @_Concurrency.MainActor(unsafe) public var body: some SwiftUI.View {
+    get
+  }
+  public typealias Body = @_opaqueReturnTypeOf("$s14KeyboardKitPro13ToggleToolbarV4bodyQrvp", 0) __<Toolbar, ToggledToolbar>
+}
+public enum ToggleToolbarAnimation : Swift.String, Swift.CaseIterable, Swift.Codable, Swift.Equatable, Swift.Identifiable {
+  case opacity
+  case flipUp
+  case flipDown
+  case slideUp
+  case slideDown
+  public var id: Swift.String {
+    get
+  }
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [KeyboardKitPro.ToggleToolbarAnimation]
+  public typealias ID = Swift.String
+  public typealias RawValue = Swift.String
+  public static var allCases: [KeyboardKitPro.ToggleToolbarAnimation] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public class PortugueseBrazilInputSetProvider : KeyboardKitPro.ProInputSetProvider, KeyboardKit.DeviceSpecificInputSetProvider {
+  public init() throws
   public var alphabeticInputSet: KeyboardKit.AlphabeticInputSet {
     get
   }
