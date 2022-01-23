@@ -6,6 +6,43 @@ versions that are not listed here.
 
 
 
+## 5.9
+
+This version adds new locales and makes the library build on more platforms.
+
+### 📺 Platform support
+
+* This version makes the library build on tvOS and watchOS.
+
+### 🌐 New locales
+
+* 🇧🇬 Bulgarian
+* 🇦🇩 Catalan
+* 🇫🇴 Faroese
+* 🇵🇭 Filipino
+* 🇬🇪 Georgian
+* 🇲🇰 Macedonian
+* 🇲🇹 Maltese
+* 🇲🇳 Mongolian
+* 🇷🇸 Serbian
+* 🇷🇸 Serbian (Latin)
+* 🇸🇰 Slovak
+
+### 🐛 Bug fixes
+
+* The Belarusian iPad input set has been corrected.
+* The Czech iPad input set has been corrected.
+* The Dutch (Belgium) iPad input set has been corrected.
+* The French iPad input set has been corrected.
+* The German iPad input set has been corrected.
+* The Greek iPad input set has been corrected.
+
+### 🗑 Deprecations
+
+* All input set providers have the `UIDevice`-based initializer replaced by a device-agnostic one.
+
+
+
 ## 5.8.1
 
 This version makes the XCFramework support Bitcode once more.
