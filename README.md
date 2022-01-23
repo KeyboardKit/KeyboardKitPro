@@ -29,6 +29,20 @@ KeyboardKit Pro is a license-based plug-in that extends KeyboardKit with pro fea
 
 
 
+## Platform Support
+
+KeyboardKit supports the following platforms:
+
+* iOS 13.0
+* tvOS 13.0
+* watchOS 6.0
+
+macOS support is coming in KeyboardKit 6.0.
+
+Note that not all features are available on all platforms.
+
+
+
 ## Installation
 
 KeyboardKit Pro can be installed with the Swift Package Manager:
@@ -59,16 +73,17 @@ You can either [download][Documentation] the documentation or build it directly 
 
 ## 🇸🇪 Localization
 
-KeyboardKit is localized in 39 keyboard-specific locales:
+KeyboardKit is localized in 50 keyboard-specific locales:
 
-🇺🇸 🇦🇱 🇦🇪 🇧🇾 🇨🇿 🇭🇷 🇩🇰 🇳🇱 🇧🇪 🇬🇧 <br />
-🇺🇸 🇪🇪 🇫🇮 🇫🇷 🇧🇪 🇨🇭 🇩🇪 🇦🇹 🇨🇭 🇬🇷 <br />
-🇭🇺 🇮🇸 🇮🇪 🇮🇹 🇹🇯 🇱🇻 🇱🇹 🇳🇴 🇮🇷 🇵🇱 <br />
-🇵🇹 🇧🇷 🇷🇴 🇷🇺 🇸🇮 🇪🇸 🇸🇪 🇹🇷 🇺🇦
+🇺🇸 🇦🇱 🇦🇪 🇧🇾 🇧🇬 🇦🇩 🇭🇷 🇨🇿 🇩🇰 🇳🇱 <br />
+🇧🇪 🇬🇧 🇺🇸 🇪🇪 🇫🇴 🇵🇭 🇫🇮 🇫🇷 🇧🇪 🇨🇭 <br />
+🇬🇪 🇩🇪 🇦🇹 🇨🇭 🇬🇷 🇭🇺 🇮🇸 🇮🇪 🇮🇹 🇹🇯 <br />
+🇱🇻 🇱🇹 🇲🇰 🇲🇹 🇲🇳 🇳🇴 🇮🇷 🇵🇱 🇵🇹 🇧🇷 <br />
+🇷🇴 🇷🇺 🇷🇸 🇷🇸 🇸🇰 🇸🇮 🇪🇸 🇸🇪 🇹🇷 🇺🇦
 
-KeyboardKit Pro provides completely localized keyboards for all keyboard locales, including locale-specific input sets, keyboard layouts and callout actions.
+KeyboardKit Pro provides completely localized keyboards for all locales, including locale-specific input sets, keyboard layouts and callout actions.
 
-The number of available locales is based on your license. The available license tiers can be found on the [KeyboardKit website][Licenses].
+The number of localized keyboards is based on your license. License tiers can be found on the [KeyboardKit website][Licenses].
 
 [Read more in the main repo][KeyboardKit]
 
