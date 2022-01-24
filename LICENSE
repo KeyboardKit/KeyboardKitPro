@@ -1,19 +1,18 @@
-Closed Source License
+Closed Source License. 
 
-Copyright (c) 2021 Daniel Saidi AB
-
-This software and any associated documentation and resources
-(hereby referred to as "the Software") must only be used with
-a valid license key and a prior mutual and written agreement
-between the licenser and the licensee.
+This software and any associated software, documentation and 
+resources (hereby referred to as "the Software") must only be
+used with a valid license key and a prior mutual and written
+license agreement between the licenser and the licensee.
 
 The Software must only be used in the application(s) that are
 included in the license agreement and must not be distributed
-to or used by any other developers, teams or companies. Any
-attempts to work around these limitations or to circumvent the
-security mechanisms of the Software or license or any other
-security mechanisms involved in the license agreement, will be
-considered as an attempt to break the license agreement and may
+to or used by developers, teams, companies or other parties 
+that are not covered by the license agreement.
+
+Any attempts to bypass or work around these limitations or any
+other restrictions or security mechanisms in the Software, will
+be seen as an attempt to violate the license agreement and may
 render the licenser liable to compensate the licensee for any
 damages, loss of IP or any other economic losses caused by the
 infringement.
@@ -26,3 +25,5 @@ HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
 WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
 FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 OTHER DEALINGS IN THE SOFTWARE.
+
+Copyright © 2021-2022 Daniel Saidi AB
