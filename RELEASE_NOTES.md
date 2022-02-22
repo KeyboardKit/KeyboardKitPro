@@ -1,8 +1,41 @@
 # Release Notes
 
-These release notes only include functional changes. They do
-not cover license changes, which means that there may be new
-versions that are not listed here.
+KeyboardKit tries to honor semantic versioning:
+
+* Only deprecate code in `minor` versions.
+* Only remove deprecated code in `major` versions.
+* Avoid introducing breaking changes in `minor` versions. 
+
+Breaking changes can still occur in minor versions and patches, though, if the alternative is to not be able to release new critical features or fixes.
+
+
+## About these release notes
+
+These release notes only include KeyboardKit Pro changes. To
+see the full changeset for a certain release, have a look at
+the [KeyboardKit](https://github.com/KeyboardKit/KeyboardKit)
+project site.
+
+
+
+## 6.0
+
+This version makes the library standalone, instead of being a KeyboardKit plugin.
+
+This version also makes the library build on more platforms and removes old, deprecated code.
+
+### 📺 Platform support
+
+* KeyboardKit Pro now supports iOS, iPadOS, macOS, tvOS and watchOS.
+* KeyboardKit Pro licenses can be upgraded to support more platforms.
+
+### 💡 Behavior changes
+
+* KeyboardKit Pro is now standalone. You don't have to import both libraries to use Pro.
+
+### 🐛 Bug fixes
+
+* Since KeyboardKit Pro is standalone, the previous duplicate symbol warnings have been fixed. 
 
 
 
