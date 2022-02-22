@@ -1,5 +1,6 @@
 disabled_rules:
   - cyclomatic_complexity
+  - file_length
   - function_body_length
   - function_parameter_count
   - identifier_name
@@ -14,7 +15,6 @@ disabled_rules:
 included:
   - Sources
   - Tests
-  - KeyboardKitDemo
 
 identifier_name:
   excluded:
