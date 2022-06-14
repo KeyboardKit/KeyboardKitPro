@@ -61,9 +61,9 @@ Once KeyboardKit Pro is added to your project, you need to obtain a license befo
 
 ## Documentation
 
-The KeyboardKit Pro documentation contains extensive information, code examples etc. and makes it easy to overview the various parts of the library.
+The [online documentation][Documentation] contains more information, code examples etc. and makes it easy to overview the various parts of the library.
 
-You can [download][Documentation] the documentation and open it directly in Xcode.
+The online documentation is currently iOS only. To generate documentation for other platforms, open the package in Xcode, select a simulator then run `Product/Build Documentation`.
 
 
 
@@ -155,7 +155,7 @@ KeyboardKit Pro is closed source. See the [LICENSE][License] file for more info.
 [Sponsors]: https://github.com/sponsors/danielsaidi
 [KeyboardKit]: https://github.com/KeyboardKit/KeyboardKit
 
-[Documentation]: https://github.com/danielsaidi/Documentation/blob/main/Docs/KeyboardKitPro.doccarchive.zip?raw=true
+[Documentation]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkitpro/
 [License]: https://github.com/KeyboardKit/KeyboardKitPro/blob/master/LICENSE
 
 [Autocomplete]: https://github.com/KeyboardKit/KeyboardKitPro/blob/master/Readmes/Autocomplete.md
