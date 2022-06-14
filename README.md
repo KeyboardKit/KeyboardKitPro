@@ -29,22 +29,17 @@ KeyboardKit Pro extends KeyboardKit with pro features, such as localized service
 
 
 
-## Platform Support
+## Supported Platforms
 
-KeyboardKit Pro supports the following platforms:
+KeyboardKit Pro supports `iOS 13`, `macOS 11`, `tvOS 13` and `watchOS 6`.
 
-* iOS 13.0
-* macOS 11.0
-* tvOS 13.0
-* watchOS 6.0
-
-Although KeyboardKit builds on all platform, some features are unavailable on some platforms.
+Although KeyboardKit Pro builds on all platform, some features are unavailable on some platforms. 
 
 
 
 ## Installation
 
-The best way to install KeyboardKit Pro is to use the Swift Package Manager.
+KeyboardKit Pro is installed with the Swift Package Manager.
 
 ```
 https://github.com/KeyboardKit/KeyboardKitPro.git
