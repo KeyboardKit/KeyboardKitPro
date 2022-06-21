@@ -18,6 +18,20 @@ project site.
 
 
 
+## 6.0.1
+
+This version fixes bugs in the Kurdish Sorani keyboard.
+
+### 💡 Behavior changes
+
+* The Kurdish Sorani keyboard now uses the dollar currency by default.
+
+### 🐛 Bug fixes
+
+* Tapping `"ھ"` now inserts `"ه"` for Kurdish Sorani.
+
+
+
 ## 6.0
 
 This version makes the library standalone, instead of being a KeyboardKit plugin.
