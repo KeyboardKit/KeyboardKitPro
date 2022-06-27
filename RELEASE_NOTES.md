@@ -18,6 +18,22 @@ project site.
 
 
 
+## 6.0.3
+
+This version adds more primary button types.
+
+### ✨ New Features
+
+* `KeyboardAction.PrimaryType` has new `join` and `custom` cases.
+* `KeyboardAction.PrimaryType` now maps unrepresented `UIReturnKeyType` types to the new `custom` type.
+* `UIReturnKeyType` has new extensions for getting the `keyboardAction` and `primaryButtonType`.
+
+### 💡 Behavior changes
+
+* `KeyboardGestures` shortens the time it takes for the secondary action callout to be presented.
+
+
+
 ## 6.0.2
 
 This version fixes bugs in the Kurdish Sorani keyboard.
