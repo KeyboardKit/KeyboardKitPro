@@ -11,10 +11,44 @@ Breaking changes can still occur in minor versions and patches, though, if the a
 
 ## About these release notes
 
-These release notes only include KeyboardKit Pro changes. To
-see the full changeset for a certain release, have a look at
-the [KeyboardKit](https://github.com/KeyboardKit/KeyboardKit)
-project site.
+From 6.1.0, these release notes include all changes, including non-pro changes.
+
+
+
+## 6.1.0
+
+### 👑 Pro Updates
+
+* `ArabicCalloutActionProvider` can now be initialized with a custom locale.
+* `ArabicInputSetProvider` can now be initialized with a custom locale.
+* `Bundle+KeyboardKitPro` adds a new `.keyboardKitPro` bundle.
+* `KurdishSoraniArabicCalloutActionProvider` is a new provider for Kurdish Sorani (Arabic).
+* `KurdishSoraniArabicInputSetProvider` is a new provider for Kurdish Sorani (Arabic).
+* `UIInputViewController` has a new, static `setupProColors`, which must be run for colors to be .
+
+### ✨ New Features
+
+* `AutocompleteContext` has a new `lastError` property.
+* `AutocompleteProvider` has a new `caseAdjust(suggestion:for:)` extension to help handle casing.
+* `Bundle+KeyboardKit` adds a new `.keyboardKit` bundle.
+* `StandardAutocompleteProvider` has a new `caseAdjustExactMatch` init argument to let you choose whether or not to apply the case adjustment to exact matches.
+* `String+Casing` adds an `isCapitalized` property to String.
+
+### 🌐 New locales
+
+* 🇹🇯 Kurdish Sorani (Arabic)
+
+### 💡 Behavior changes
+
+* `KeyboardColor` no longer needs or is affected by enabling preview mode.
+* `KKL10n` no longer needs or is affected by enabling preview mode.
+* `StandardAutocompleteProvider` in KeyboardKit Pro uses the new case adjustments to provide better completions.
+* `KeyboardInputViewController` will now update the autocomplete context on the main queue.
+* `KeyboardInputViewController` will now write any autocomplete errors to the context's `lastError` property.
+
+### 🗑 Deprecations
+
+* `KeyboardPreviewMode` is not longer needed and enabling it has no effect from now on. 
 
 
 

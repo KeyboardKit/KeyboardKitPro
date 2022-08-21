@@ -3,7 +3,7 @@
 Pod::Spec.new do |s|
   s.name             = 'KeyboardKitPro'
   s.version          = '6.0.3'
-  s.swift_versions   = ['5.5']
+  s.swift_versions   = ['5.6']
   s.summary          = 'KeyboardKit Pro adds additional functionality to KeyboardKit.'
 
   s.description      = <<-DESC
@@ -16,7 +16,7 @@ KeyboardKit Pro adds additional functionality to KeyboardKit.
   s.source           = { :git => 'https://github.com/danielsaidi/KeyboardKit.git', :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/danielsaidi'
 
-  s.swift_version = '5.5'
+  s.swift_version = '5.6'
   
   s.ios.deployment_target = '13.0'
   s.macos.deployment_target = '11.0'
