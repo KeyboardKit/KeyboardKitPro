@@ -2,16 +2,52 @@
 
 KeyboardKit tries to honor semantic versioning:
 
-* Only deprecate code in `minor` versions.
 * Only remove deprecated code in `major` versions.
-* Avoid introducing breaking changes in `minor` versions. 
+* Only deprecate code in `minor` and `patch` versions.
+* Avoid breaking changes in `minor` and `patch` versions.
+* Code can be marked as deprecated at any time.
 
 Breaking changes can still occur in minor versions and patches, though, if the alternative is to not be able to release new critical features or fixes.
 
 
-## About these release notes
 
-From 6.1.0, these release notes include all changes, including non-pro changes.
+## 6.2
+
+This release adds a bunch of new emojis that have been added since emojis were last updated.
+
+It also adds input set variants, such as `.englishQwerty`, `.englishAzerty`, `.englishQwertz` etc. and introduces AlphabeticInputSet, NumericInputSet and SymbolicInputSet builders for all locales. 
+
+The KeyboardKit Pro standard autocomplete provider has been improved even further, and now handles casing closer to the stock keyboards. It has also been gifted with some prediction capabilites.
+
+### 👑 Pro Updates
+
+* `AlphabeticInputSet`, `NumericInputSet` and `SymbolicInputSet` has new set builders for all locales.
+* `EnglishGbInputSetProvider` now supports specifying an alphabetic input set.
+* `EnglishUsInputSetProvider` now supports specifying an alphabetic input set.
+* `StandardAutocompleteProvider` has improved case handling.
+* `StandardAutocompleteProvider` is now able to give locale-specifi predictions.
+* `StandardAutocompleteProvider` has a new, open `autocompleteCompletions(for:)` function.
+* `StandardAutocompleteProvider` has a new, open `autocompleteGuesses(for:)` function.
+* `StandardAutocompleteProvider` has a new, open `autocompleteNextWordPredictions(for:)` function.
+* `StandardAutocompleteProvider` has a new, open `autocompleteLexiconMatch(for:)` function.
+* `StandardAutocompleteProvider` has deprecated the recently introduced casing initializers, since casing is no longer being done.
+
+### ✨ New Features
+
+* `EmojiCategory` has a bunch of new emojis.
+* `EnglishInputSetProvider` now supports specifying an alphabetic input set.
+* `InputSetRow` has new convenience initializers.
+* `KeyboardContext` has a new KeyboardLocale-based `setLocale()`.
+
+* `AlphabeticInputSet`, `NumericInputSet` and `SymbolicInputSet` has new set builders for `.english`.
+* `AlphabeticInputSet` also has new `.englishQwerty`, `.englishAzerty`, `.englishQwertz` input sets.
+
+### 🗑 Deprecations
+
+* `DeviceSpecificInputSetProvider` has been deprecated.
+* The `EnglishInputSetProvider` currency properties have been deprecated. 
+* The `InputSetProvider` row extensions have been deprecated.
+* The `InputSetRow` initializer extensions have been deprecated.
 
 
 
