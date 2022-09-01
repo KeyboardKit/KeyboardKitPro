@@ -10,6 +10,38 @@ KeyboardKit tries to honor semantic versioning:
 Breaking changes can still occur in minor versions and patches, though, if the alternative is to not be able to release new critical features or fixes.
 
 
+## 6.3
+
+### 👑 Pro changes
+
+* A bunch of input set providers now support `QWERTY`, `QWERTZ` and `AZERTY`.
+* The standard autocomplete lexicon logic has been slightly adjusted.
+* The Kurdish Sorani (Arabic) layout has been corrected.
+
+### ✨ New Features
+
+* `KeyboardContext` has new `hasKeyboardLocale` and `hasKeyboardLocale` functions.
+* `AlphabeticInputSet` has new, static `azerty` input set.
+* `AlphabeticInputSet` has new, static `qwerty` input set.
+* `AlphabeticInputSet` has new, static `qwertz` input set.
+* `NumericInputSet` has new, static `standard` input set.
+* `SymbolicInputSet` has new, static `standard` input set.
+
+### 🐛 Bug fixes
+
+* The `qwertz` iPad input set has been corrected.
+* The `azerty` iPad input set has been corrected.
+
+### 🌐 New locales
+
+* 🇰🇪 Swahili
+
+### 🗑 Deprecations
+
+* A bunch of `SystemKeyboardLayoutProvider` layout util functions have been deprecated.
+* The `englishAzerty`, `englishQwerty` and `englishQwertz` alphabetic input sets have been renamed to `azerty`, `qwerty` and `qwertz`.
+
+
 
 ## 6.2
 
@@ -19,7 +51,7 @@ It also adds input set variants, such as `.englishQwerty`, `.englishAzerty`, `.e
 
 The KeyboardKit Pro standard autocomplete provider has been improved even further, and now handles casing closer to the stock keyboards. It has also been gifted with some prediction capabilites.
 
-### 👑 Pro Updates
+### 👑 Pro updates
 
 * `AlphabeticInputSet`, `NumericInputSet` and `SymbolicInputSet` has new set builders for all locales.
 * `EnglishGbInputSetProvider` now supports specifying an alphabetic input set.
@@ -32,7 +64,7 @@ The KeyboardKit Pro standard autocomplete provider has been improved even furthe
 * `StandardAutocompleteProvider` has a new, open `autocompleteLexiconMatch(for:)` function.
 * `StandardAutocompleteProvider` has deprecated the recently introduced casing initializers, since casing is no longer being done.
 
-### ✨ New Features
+### ✨ New features
 
 * `EmojiCategory` has a bunch of new emojis.
 * `EnglishInputSetProvider` now supports specifying an alphabetic input set.
@@ -51,9 +83,9 @@ The KeyboardKit Pro standard autocomplete provider has been improved even furthe
 
 
 
-## 6.1.0
+## 6.1
 
-### 👑 Pro Updates
+### 👑 Pro updates
 
 * `ArabicCalloutActionProvider` can now be initialized with a custom locale.
 * `ArabicInputSetProvider` can now be initialized with a custom locale.
@@ -62,7 +94,7 @@ The KeyboardKit Pro standard autocomplete provider has been improved even furthe
 * `KurdishSoraniArabicInputSetProvider` is a new provider for Kurdish Sorani (Arabic).
 * `UIInputViewController` has a new, static `setupProColors`, which must be run for colors to be .
 
-### ✨ New Features
+### ✨ New features
 
 * `AutocompleteContext` has a new `lastError` property.
 * `AutocompleteProvider` has a new `caseAdjust(suggestion:for:)` extension to help handle casing.
@@ -92,7 +124,7 @@ The KeyboardKit Pro standard autocomplete provider has been improved even furthe
 
 This version adds more primary button types.
 
-### ✨ New Features
+### ✨ New features
 
 * `KeyboardAction.PrimaryType` has new `join` and `custom` cases.
 * `KeyboardAction.PrimaryType` now maps unrepresented `UIReturnKeyType` types to the new `custom` type.
