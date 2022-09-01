@@ -17,7 +17,7 @@
 
 ## About KeyboardKit Pro
 
-[KeyboardKit][KeyboardKit] helps you build custom keyboard extensions with Swift and SwiftUI. It extends the native keyboard APIs and provides you with a lot more functionality than is otherwise available. 
+KeyboardKit Pro helps you build custom keyboard extensions with Swift and SwiftUI. It extends the native Apple keyboard APIs and provides you with a lot more functionality than is otherwise available. 
 
 The end result can look something like this...or entirely different:
 
@@ -25,7 +25,7 @@ The end result can look something like this...or entirely different:
     <img src ="https://github.com/KeyboardKit/KeyboardKit/blob/master/Resources/Demo.gif?raw=true" width="300" />
 </p> 
 
-KeyboardKit Pro extends KeyboardKit with pro features, such as localized services, autocomplete services and more views. It requires a [commercial license][Licenses] to be used.
+KeyboardKit Pro is an extension to [KeyboardKit][KeyboardKit] and extends the core library with pro features, such as locale-specific keyboards, input sets and services, local and remote autocomplete services, more views etc. It requires a [commercial license][Licenses] to be used.
 
 If you're new to iOS keyboard extensions, [this great guide][Guide] will help you get started. You can also have a look at the demo apps for inspiration.
 
@@ -103,7 +103,7 @@ KeyboardKit Pro adds locale-specific secondary callout actions for all locales a
 
 ### 🖼 Views
 
-KeyboardKit Pro adds additonal views that simplifies building greater keyboard apps.
+KeyboardKit Pro adds additonal views that simplifies building great keyboards.
 
 
 
