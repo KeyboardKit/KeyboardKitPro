@@ -27,6 +27,8 @@ The end result can look something like this...or entirely different:
 
 KeyboardKit Pro extends KeyboardKit with pro features, such as localized services, autocomplete services and more views. It requires a [commercial license][Licenses] to be used.
 
+If you're new to iOS keyboard extensions, [this great guide][Guide] will help you get started. You can also have a look at the demo apps for inspiration.
+
 
 
 ## Supported Platforms
@@ -39,7 +41,7 @@ Although KeyboardKit Pro builds on all platform, some features are unavailable o
 
 ## Installation
 
-KeyboardKit Pro is installed with the Swift Package Manager.
+KeyboardKit Pro can be installed with the Swift Package Manager:
 
 ```
 https://github.com/KeyboardKit/KeyboardKitPro.git
@@ -47,35 +49,33 @@ https://github.com/KeyboardKit/KeyboardKitPro.git
 
 KeyboardKit Pro only needs to be added to the main app target.
 
-`IMPORTANT` From KeyboardKit 6.0, KeyboardKit Pro is standalone. This means that it's no longer a plugin that requires KeyboardKit, but rather a standalone library that contains both the core library as well as Pro features.
-
 
 
 ## Getting started
 
-Once KeyboardKit Pro is added to your project, you need to obtain a license before you can start using it in your application and keyboard extension.
-
-[Read more here][Getting-Started]
+The online documentation has a [getting-started guide][Getting-Started] that will help you get started with the library.
 
 
 
 ## Documentation
 
-The [online documentation][Documentation] contains more information, code examples etc. and makes it easy to overview the various parts of the library.
+The [online documentation][Documentation] has articles, code examples etc. that let you overview the various parts of the library.
 
-The online documentation is currently iOS only. To generate documentation for other platforms, open the package in Xcode, select a simulator then run `Product/Build Documentation`.
+The online documentation is currently iOS-specific.
+
+Note that extensions to native types are not included in this documentation. Future versions of this library will aim at adding protocols for these extensions, to make them appear in the documentation.
 
 
 
 ## 🇸🇪 Localization
 
-KeyboardKit is localized in 50 keyboard-specific locales:
+KeyboardKit is localized in 50+ keyboard-specific locales:
 
 🇺🇸 🇦🇱 🇦🇪 🇧🇾 🇧🇬 🇦🇩 🇭🇷 🇨🇿 🇩🇰 🇳🇱 <br />
-🇧🇪 🇬🇧 🇺🇸 🇪🇪 🇫🇴 🇵🇭 🇫🇮 🇫🇷 🇧🇪 🇨🇭 <br />
-🇬🇪 🇩🇪 🇦🇹 🇨🇭 🇬🇷 🇭🇺 🇮🇸 🇮🇪 🇮🇹 🇹🇯 <br />
-🇱🇻 🇱🇹 🇲🇰 🇲🇹 🇲🇳 🇳🇴 🇮🇷 🇵🇱 🇵🇹 🇧🇷 <br />
-🇷🇴 🇷🇺 🇷🇸 🇷🇸 🇸🇰 🇸🇮 🇪🇸 🇸🇪 🇹🇷 🇺🇦
+🇧🇪 🇬🇧 🇺🇸 🇪🇪 🇫🇴 🇵🇭 🇫🇮 🇫🇷 🇨🇭 🇬🇪 <br />
+🇩🇪 🇦🇹 🇬🇷 🇭🇺 🇮🇸 🇮🇪 🇮🇹 🇹🇯 🇱🇻 🇱🇹 <br />
+🇲🇰 🇲🇹 🇲🇳 🇳🇴 🇮🇷 🇵🇱 🇵🇹 🇧🇷 🇷🇴 🇷🇺 <br />
+🇷🇸 🇸🇰 🇸🇮 🇪🇸 🇰🇪 🇸🇪 🇹🇷 🇺🇦 🇺🇸 🇧🇪 <br />
 
 [Read more in the main repo][KeyboardKit]
 
@@ -83,7 +83,7 @@ KeyboardKit is localized in 50 keyboard-specific locales:
 
 ## Features
 
-KeyboardKit and KeyboardKit Pro comes packed with features. Checkout the [main repo][KeyboardKit] for core features and the list below for Pro features.
+KeyboardKit Pro comes packed with features. Checkout the [main repo][KeyboardKit] for core features and the list below for Pro features.
 
 
 ### 💡 Autocomplete
@@ -142,6 +142,59 @@ This project is proudly sponsored by the following companies:
 KeyboardKit is free, but please consider sponsoring the project if you find it useful. You can support KeyboardKit through [GitHub Sponsors][Sponsors], by signing up for a Pro license, paying for support, donations etc.
 
 
+
+## Demo Applications
+
+The [main repo][KeyboardKit] contains a `Demo` folder with two demo apps that lets you try out KeyboardKit and KeyboardKit Pro:
+
+* `Demo` has a system keyboard that mimics an English keyboard, as well as a unicode-based keyboard.
+* `Demo - Pro` shows you how to use KeyboardKit Pro and has one keyboard for LTR locales, and one for RTL locales. 
+
+To run the demo apps, open and run the projects, then enable the keyboards you want to try under System Settings. 
+
+Note that you need to enable full access to try some features, like audio and haptic feedback.
+
+
+
+## Contact
+
+Feel free to reach out if you have questions or if you want to contribute in any way:
+
+* E-mail: [info@getkeyboardkit.com][Email]
+* Twitter: [@getkeyboardkit][Twitter]
+* Web site: [getkeyboardkit.com][Website]
+
+
+
+## Support
+
+You can sponsor this project on [GitHub Sponsors][Sponsors] or get in touch for paid support. 
+
+KeyboardKit is proudly sponsored by the following companies:
+
+<a href="https://www.oribi.se/en">
+    <img src="Resources/sponsors/oribi.png" alt="Oribi Icon" title="Oribi" width=120 />
+</a>
+<a href="https://www.phonetoroam.com">
+    <img src="Resources/sponsors/phonetoroam.png" alt="phonetoroam Icon" title="phonetoroam" width=120 />
+</a>
+<a href="https://vitalisapps.com">
+    <img src="Resources/sponsors/vitalis.png" alt="Vitalis Icon" title="Vitalis" width=120 />
+</a>
+<a href="https://letterkey.eu">
+    <img src="Resources/sponsors/letterkey.png" alt="LetterKey Icon" title="LetterKey" width=120 />
+</a>
+<a href="http://anomaly.net.au">
+    <img src="Resources/sponsors/anomaly.png" alt="Anomaly Software Icon" title="Anomaly Software" width=120 />
+</a>
+<a href="https://www.milocreative.com">
+    <img src="Resources/sponsors/milo.png" alt="Milo Creative Icon" title="Milo Creative" width=120 />
+</a>
+
+KeyboardKit is free, but please consider sponsoring the project or upgrading to KeyboardKit Pro if you find it useful.
+
+
+
 ## License
 
 KeyboardKit Pro is closed source. See the [LICENSE][License] file for more info.
@@ -156,8 +209,7 @@ KeyboardKit Pro is closed source. See the [LICENSE][License] file for more info.
 [KeyboardKit]: https://github.com/KeyboardKit/KeyboardKit
 
 [Documentation]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkitpro/
+[Getting-Started]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkitpro/getting-started
 [License]: https://github.com/KeyboardKit/KeyboardKitPro/blob/master/LICENSE
 
-[Autocomplete]: https://github.com/KeyboardKit/KeyboardKitPro/blob/master/Readmes/Autocomplete.md
-[Getting-Started]: https://github.com/KeyboardKit/KeyboardKitPro/blob/master/Readmes/Getting-Started.md
-[Views]: https://github.com/KeyboardKit/KeyboardKitPro/blob/master/Readmes/Views.md
+[Guide]: https://shyngys.com/ios-custom-keyboard-guide
