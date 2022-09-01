@@ -12,34 +12,31 @@ Breaking changes can still occur in minor versions and patches, though, if the a
 
 ## 6.3
 
-### 👑 Pro changes
+This release adds two new locales and a bunch of input set changes.
 
-* A bunch of input set providers now support `QWERTY`, `QWERTZ` and `AZERTY`.
-* The standard autocomplete lexicon logic has been slightly adjusted.
-* The Kurdish Sorani (Arabic) layout has been corrected.
+### 👑 KeyboardKit Pro changes
 
-### ✨ New Features
+* `AlphabeticInputSet` has new `qwertz` and `azerty` input set builders.
+* `AlphabeticInputSet`, `NumericInputSet` and `SymbolicInputSet` has input set builders for all keyboard locales.
+* `InputSetProvider`s that support `QWERTY`, `QWERTZ` and `AZERTY` now lets you inject a custom alphabetic input set.
+* `KurdishSoraniArabicInputSetProvider` has been tweaked to render a more correct layout.
+* `StandardInputSetProvider` now handles lexicon-based completions differently and ignores single-char suggestions.
+
+### ✨ New features
 
 * `KeyboardContext` has new `hasKeyboardLocale` and `hasKeyboardLocale` functions.
-* `AlphabeticInputSet` has new, static `azerty` input set.
-* `AlphabeticInputSet` has new, static `qwerty` input set.
-* `AlphabeticInputSet` has new, static `qwertz` input set.
-* `NumericInputSet` has new, static `standard` input set.
-* `SymbolicInputSet` has new, static `standard` input set.
-
-### 🐛 Bug fixes
-
-* The `qwertz` iPad input set has been corrected.
-* The `azerty` iPad input set has been corrected.
+* `AlphabeticInputSet` has a new `qwerty` input set builder.
+* `NumericInputSet` has a new `standard` input set builder.
+* `SymbolicInputSet` has a new `standard` input set builder.
 
 ### 🌐 New locales
 
+* 🇺🇸 Hawaiian
 * 🇰🇪 Swahili
 
 ### 🗑 Deprecations
 
 * A bunch of `SystemKeyboardLayoutProvider` layout util functions have been deprecated.
-* The `englishAzerty`, `englishQwerty` and `englishQwertz` alphabetic input sets have been renamed to `azerty`, `qwerty` and `qwertz`.
 
 
 
