@@ -10,6 +10,12 @@ KeyboardKit tries to honor semantic versioning:
 Breaking changes can still occur in minor versions and patches, though, if the alternative is to not be able to release new critical features or fixes.
 
 
+## 6.3.1
+
+This release just adds new licenses to KeyboardKit Pro. It has no functional changes.
+
+
+
 ## 6.3
 
 This release adds two new locales and a bunch of input set changes.
