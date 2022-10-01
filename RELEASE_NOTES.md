@@ -10,6 +10,76 @@ KeyboardKit tries to honor semantic versioning:
 Breaking changes can still occur in minor versions and patches, though, if the alternative is to not be able to release new critical features or fixes.
 
 
+
+## 6.4
+
+This release bumps the package Swift version to 5.6.
+
+The release also makes more types, extensions, mocks and unit tests available for macOS, tvOS and watchOS, and binds a bunch of extensions to protocols, which make them show up in DocC and makes it possible to use them on more types.
+
+There are also new layout utilities that make adjusting keyboard locales a lot easier, and a bunch of struct properties have been converted from `let` to `var` as well, to make them mutable.
+
+The demos have been adjusted as well. There's also a brand new demo keyboard that shows how to customize the layout. 
+
+### 👑 KeyboardKit Pro changes
+
+* `KurdishSoraniPcInputSetProvider` is a new input set provider for Kurdish Sorani PC.
+* `KurdishSoraniPcCalloutActionProvider` is a new callout action provider for Kurdish Sorani PC.
+* `AlphabeticInputSet` has new `kurdishSoraniPc` input set builder.
+
+### 🌐 New locales
+
+* 🇹🇯 Kurdish Sorani PC
+
+### ✨ New features
+
+* `CaseAdjustable` is a new protocol that can be implemented by types that should be able to adjust themselves to a casing.
+* `EmojiKeyboardStyle` now lets you provide a device type in the standard style builder.
+* `HapticFeedback` now uses `HapticFeedbackPlayer` for its `player`. 
+* `InputCallout` now lets you provide a device type in the initializer.
+* `InputSet` properties are now mutable.
+* `InputSetItem` properties are now mutable.
+* `KeyboardColorReader` is a new protocol that is implemented by `Color` and lets its implementations access keyboard colors.
+* `KeyboardContext` has a new `keyboardType` property.
+* `KeyboardContext` no longer requires a controller in the initializer, although it's good to provide one.
+* `KeyboardFeedbackHandler` is now available on all platforms.
+* `KeyboardImageReader` is a new protocol that is implemented by `Image` and lets its implementations access keyboard images.
+* `KeyboardLayout` has new ideal height and inset properties, which can be used to create new item types easier.
+* `KeyboardLayoutConfiguration` properties are now mutable.
+* `KeyboardLayoutConfiguration` has a new standard layout for device type.
+* `KeyboardLayoutItem` properties are now mutable.
+* `KeyboardLayoutItemSize` properties are now mutable.
+* `KeyboardRowItem` has a bunch of new collection extensions.
+* `StandardAutocompleteSuggestion` properties are now mutable.
+* `StandardKeyboardFeedbackHandler` is now available on all platforms.
+* `SystemAudio` now uses `SystemAudioPlayer` for its `player`.
+
+### 💡 Behavior changes
+
+* `Color` extensions have been moved to `KeyboardColorReader`.
+* `KeyboardContext` `activeAppBundleId` has been converted to a calculated property.
+* `StandardKeyboardLayoutProvider` now fallbacks to iPhone layout instead of an empty layout.
+* `StandardKeyboardLayoutProviderTests` now runs on all platforms.
+* `String` casing extensions have been moved to `CaseAdjustable`.
+
+### 🐛 Bug fixes
+
+* A memory leak has been fixed.
+
+### 🗑 Deprecations
+
+* The `Color.DarkAppearanceStrategy` is no longer used and has been deprecated.
+* The `KeyboardContext` `device` initializer and property has been deprecated.
+* The `KeyboardContext` `activeAppBundleId` no longer works in iOS 16 and has been deprecated.
+* The `KeyboardLayoutConfiguration` standard configuration for idiom has been deprecated.
+* The `KeyboardInputViewController` `activeAppBundleId` no longer works in iOS 16 and has been deprecated.
+* The `MockCollectionViewLayout` is no longer used and has been deprecated.
+* Two `Sequence` extensions for mapping casing are no longer used and have been deprecated.
+* The `StandardKeyboardLayoutProvider` `fallbackProvider` has been deprecated.
+* The `StandardKeyboardLayoutProvider` `layoutProvider(for:)` has been renamed to `keyboardLayoutProvider(for:)`.
+
+
+
 ## 6.3.1
 
 This release just adds new licenses to KeyboardKit Pro. It has no functional changes.
