@@ -11,6 +11,27 @@ Breaking changes can still occur in minor versions and patches, though, if the a
 
 
 
+## 6.4.1
+
+This release adds a new localized strings and new document proxy extensions.
+
+### 👑 KeyboardKit Pro
+
+* `UITextDocumentProxy` has a new `fullDocumentContext()` extension that gets all the text from the proxy, not just the closest one.
+* `UITextDocumentProxy` has a new `fullDocumentContextBeforeInput()` extension that gets all the text before the input cursor.
+* `UITextDocumentProxy` has a new `fullDocumentContextAfterInput()` extension that gets all the text after the input cursor.
+
+### ✨ New features
+
+* `KeyboardLocale` now supports defining a localized string to override its localized name.
+
+### 💡 Behavior changes
+
+* `KeyboardLocale` now uses `localizedName` from its localized strings, if any.
+* `KeyboardLocale.kurdish_sorani_arabic` has a new localized name and adjusted keyboard layouts.
+
+
+
 ## 6.4
 
 This release bumps the package Swift version to 5.6.
