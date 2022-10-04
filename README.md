@@ -27,7 +27,7 @@ The end result can look something like this...or entirely different:
 KeyboardKit Pro extends KeyboardKit with pro features, such as additional locales, autocomplete engines, more extensions, additional views etc. It lets you create fully localized system keyboards with a single line of code. 
  
 
-KeyboardKit Pro requires a [commercial license][Licenses] to be used. Licenses can be purchased from the [website][Website] or from [Gumroad][Gumroad].
+KeyboardKit Pro requires a commercial license. Licenses can be purchased from the [website][Website] or from [Gumroad][Gumroad].
 
 
 
@@ -69,7 +69,7 @@ Note that extensions to native types are not included in this documentation. Fut
 
 ## ✨ Features
 
-KeyboardKit is localized in 50+ keyboard-specific locales ([Read more in the main repo][KeyboardKit]):
+KeyboardKit is localized in 50+ keyboard-specific locales ([read more][KeyboardKit]):
 
 🇺🇸 🇦🇱 🇦🇪 🇧🇾 🇧🇬 🇦🇩 🇭🇷 🇨🇿 🇩🇰 🇳🇱 <br />
 🇧🇪 🇬🇧 🇺🇸 🇪🇪 🇫🇴 🇵🇭 🇫🇮 🇫🇷 🇨🇭 🇬🇪 <br />
@@ -79,11 +79,59 @@ KeyboardKit is localized in 50+ keyboard-specific locales ([Read more in the mai
 
 Besides the core features, KeyboardKit Pro extends KeyboardKit with a bunch of pro features:
 
-* 💡 Autocomplete - KeyboardKit Pro adds an autocomplete engine that supports all locales above, as well as an engine that fetches suggestions from a remote api.
+* 💡 Autocomplete - KeyboardKit Pro adds an on-device autocomplete engine as well as an api-based one.
 * 🗯 Callouts - KeyboardKit Pro adds locale-specific callout actions for all locales above. 
 * 🔤 Input Sets - KeyboardKit Pro adds locale-specific input sets for all locales above.
 * ➡️ [Proxy][Proxy] - KeyboardKit Pro adds `UITextDocumentProxy` extensions for getting all text from the proxy.
 * 🖼 Views - KeyboardKit Pro adds additonal views that simplify building great keyboards.
+
+KeyboardKit Pro lets you create fully localized system keyboards with a single line of code and makes it easy to add more information to the main app. 
+
+
+
+## Demo Applications
+
+The [main repo][KeyboardKit] contains a `Demo` folder with two demo apps that lets you try out KeyboardKit.
+
+The `Demo` app uses KeyboardKit and lets you type in a light and dark text field. It has three keyboards:
+
+* `English` uses a `SystemKeyboard` to mimic a native English keyboard.
+* `Unicode` uses a `SystemKeyboard` and a custom, unicode-based input set.
+* `Custom` shows you how to easily customize input sets and layouts.
+
+The `Demo - Pro` app uses KeyboardKit Pro and supports 50+ locales, autocomplete etc. It has two keyboards:  
+
+* `System LTR` uses a `SystemKeyboard` with all left-to-right locales.
+* `System RTL` uses a `SystemKeyboard` with all right-to-left locales.
+
+Just open and run any of these projects, then enable the keyboards you want to try under System Settings. Note that you need to enable full access to try some features, like audio and haptic feedback.
+
+
+
+## Support
+
+KeyboardKit is trusted and proudly sponsored by the following companies:
+
+<a href="https://www.oribi.se/en">
+    <img src="Resources/sponsors/oribi.png" alt="Oribi Icon" title="Oribi" width=120 />
+</a>
+<a href="https://www.phonetoroam.com">
+    <img src="Resources/sponsors/phonetoroam.png" alt="phonetoroam Icon" title="phonetoroam" width=120 />
+</a>
+<a href="https://vitalisapps.com">
+    <img src="Resources/sponsors/vitalis.png" alt="Vitalis Icon" title="Vitalis" width=120 />
+</a>
+<a href="https://letterkey.eu">
+    <img src="Resources/sponsors/letterkey.png" alt="LetterKey Icon" title="LetterKey" width=120 />
+</a>
+<a href="http://anomaly.net.au">
+    <img src="Resources/sponsors/anomaly.png" alt="Anomaly Software Icon" title="Anomaly Software" width=120 />
+</a>
+<a href="https://www.milocreative.com">
+    <img src="Resources/sponsors/milo.png" alt="Milo Creative Icon" title="Milo Creative" width=120 />
+</a>
+
+KeyboardKit is open-source and completely free, but you can sponsor this project on [GitHub Sponsors][Sponsors], upgrade to KeyboardKit Pro or get in touch for paid support.
 
 
 
@@ -96,84 +144,6 @@ Feel free to reach out if you have questions or if you want to contribute in any
 * Website: [getkeyboardkit.com][Website]
 
 
-## Sponsors and Clients
-
-This project is proudly sponsored by the following companies:
-
-<a href="https://www.oribi.se/en">
-    <img src="Resources/sponsors/oribi.png" alt="Oribi Icon" title="Oribi" width=120 />
-</a>
-<a href="https://www.phonetoroam.com">
-    <img src="Resources/sponsors/phonetoroam.png" alt="phonetoroam Icon" title="phonetoroam" width=120 />
-</a>
-<a href="https://vitalisapps.com">
-    <img src="Resources/sponsors/vitalis.png" alt="Vitalis Icon" title="Vitalis" width=120 />
-</a>
-<a href="https://letterkey.eu">
-    <img src="Resources/sponsors/letterkey.png" alt="LetterKey Icon" title="LetterKey" width=120 />
-</a>
-<a href="http://anomaly.net.au">
-    <img src="Resources/sponsors/anomaly.png" alt="Anomaly Software Icon" title="Anomaly Software" width=120 />
-</a>
-<a href="https://www.milocreative.com">
-    <img src="Resources/sponsors/milo.png" alt="Milo Creative Icon" title="Milo Creative" width=120 />
-</a>
-
-KeyboardKit is free, but please consider sponsoring the project if you find it useful. You can support KeyboardKit through [GitHub Sponsors][Sponsors], by signing up for a Pro license, paying for support, donations etc.
-
-
-
-## Demo Applications
-
-The [main repo][KeyboardKit] contains a `Demo` folder with two demo apps that lets you try out KeyboardKit and KeyboardKit Pro:
-
-* `Demo` has a system keyboard that mimics an English keyboard, as well as a unicode-based keyboard.
-* `Demo - Pro` shows you how to use KeyboardKit Pro and has one keyboard for LTR locales, and one for RTL locales. 
-
-To run the demo apps, open and run the projects, then enable the keyboards you want to try under System Settings. 
-
-Note that you need to enable full access to try some features, like audio and haptic feedback.
-
-
-
-## Contact
-
-Feel free to reach out if you have questions or if you want to contribute in any way:
-
-* E-mail: [info@getkeyboardkit.com][Email]
-* Twitter: [@getkeyboardkit][Twitter]
-* Web site: [getkeyboardkit.com][Website]
-
-
-
-## Support
-
-You can sponsor this project on [GitHub Sponsors][Sponsors] or get in touch for paid support. 
-
-KeyboardKit is proudly sponsored by the following companies:
-
-<a href="https://www.oribi.se/en">
-    <img src="Resources/sponsors/oribi.png" alt="Oribi Icon" title="Oribi" width=120 />
-</a>
-<a href="https://www.phonetoroam.com">
-    <img src="Resources/sponsors/phonetoroam.png" alt="phonetoroam Icon" title="phonetoroam" width=120 />
-</a>
-<a href="https://vitalisapps.com">
-    <img src="Resources/sponsors/vitalis.png" alt="Vitalis Icon" title="Vitalis" width=120 />
-</a>
-<a href="https://letterkey.eu">
-    <img src="Resources/sponsors/letterkey.png" alt="LetterKey Icon" title="LetterKey" width=120 />
-</a>
-<a href="http://anomaly.net.au">
-    <img src="Resources/sponsors/anomaly.png" alt="Anomaly Software Icon" title="Anomaly Software" width=120 />
-</a>
-<a href="https://www.milocreative.com">
-    <img src="Resources/sponsors/milo.png" alt="Milo Creative Icon" title="Milo Creative" width=120 />
-</a>
-
-KeyboardKit is free, but please consider sponsoring the project or upgrading to KeyboardKit Pro if you find it useful.
-
-
 
 ## License
 
@@ -184,7 +154,6 @@ KeyboardKit Pro is closed source. See the [LICENSE][License] file for more info.
 [Email]: mailto:info@getkeyboardkit.com
 [Twitter]: http://www.twitter.com/getkeyboardkit
 [Website]: https://getkeyboardkit.com
-[Licenses]: https://getkeyboardkit.com/pro
 [Sponsors]: https://github.com/sponsors/danielsaidi
 [KeyboardKit]: https://github.com/KeyboardKit/KeyboardKit
 [Gumroad]: https://danielsaidi.gumroad.com
