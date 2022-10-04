@@ -10,6 +10,20 @@ KeyboardKit tries to honor semantic versioning:
 Breaking changes can still occur in minor versions and patches, though, if the alternative is to not be able to release new critical features or fixes.
 
 
+## 6.4.2
+
+This release rolls back the localized name adjustment in the last version, since the only locale that used this approach - Kurdish Sorani Arabic - had a language folder named `ckb_AR` which wasn't recognized by Apple. 
+
+This caused uploads to App Store generate warnings. Rolling back this change will make uploads work again, without warnings.
+
+If you want to customize the display name for a keyboard locale, you have to do so manually in your app.
+
+### 💡 Behavior changes
+
+* `KeyboardLocale` now only resolves `localizedName` from its ID, as it did before 6.4.1.
+* The new `KKL10n` `localizedName` property has been rolled back.
+
+
 
 ## 6.4.1
 
