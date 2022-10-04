@@ -1,5 +1,3 @@
-# KeyboardKit Pro
-
 <p align="center">
     <img src ="Resources/Logo.png" width=600 />
 </p>
@@ -15,9 +13,10 @@
 </p>
 
 
+
 ## About KeyboardKit Pro
 
-KeyboardKit Pro helps you build custom keyboard extensions with Swift and SwiftUI. It extends the native Apple keyboard APIs and provides you with a lot more functionality than is otherwise available. 
+[KeyboardKit][KeyboardKit] is a Swift library that helps you build custom keyboards with Swift and SwiftUI. It extends the native keyboard APIs and provides you with a lot more functionality than is otherwise available.
 
 The end result can look something like this...or entirely different:
 
@@ -25,9 +24,10 @@ The end result can look something like this...or entirely different:
     <img src ="https://github.com/KeyboardKit/KeyboardKit/blob/master/Resources/Demo.gif?raw=true" width="300" />
 </p> 
 
-KeyboardKit Pro is an extension to [KeyboardKit][KeyboardKit] and extends the core library with pro features, such as locale-specific keyboards, input sets and services, local and remote autocomplete services, more views etc. It requires a [commercial license][Licenses] to be used.
+KeyboardKit Pro extends KeyboardKit with pro features, such as additional locales, autocomplete engines, more extensions, additional views etc. It lets you create fully localized system keyboards with a single line of code. 
+ 
 
-If you're new to iOS keyboard extensions, [this great guide][Guide] will help you get started. You can also have a look at the demo apps for inspiration.
+KeyboardKit Pro requires a [commercial license][Licenses] to be used. Licenses can be purchased from the [website][Website] or from [Gumroad][Gumroad].
 
 
 
@@ -47,7 +47,7 @@ KeyboardKit Pro can be installed with the Swift Package Manager:
 https://github.com/KeyboardKit/KeyboardKitPro.git
 ```
 
-KeyboardKit Pro only needs to be added to the main app target.
+Since KeyboardKit Pro installs as a binary, it only has to be added to the main app target.
 
 
 
@@ -59,17 +59,17 @@ The online documentation has a [getting-started guide][Getting-Started] that wil
 
 ## Documentation
 
-The [online documentation][Documentation] has articles, code examples etc. that let you overview the various parts of the library.
+The [online documentation][Documentation] has articles, code examples etc. that let you overview the various parts of the library and understand how they all connect to each other.
 
 The online documentation is currently iOS-specific.
 
-Note that extensions to native types are not included in this documentation. Future versions of this library will aim at adding protocols for these extensions, to make them appear in the documentation.
+Note that extensions to native types are not included in this documentation. Future versions of this library will refactor the extensions in a way that makes them appear in the documentation.
 
 
 
-## 🇸🇪 Localization
+## ✨ Features
 
-KeyboardKit is localized in 50+ keyboard-specific locales:
+KeyboardKit is localized in 50+ keyboard-specific locales ([Read more in the main repo][KeyboardKit]):
 
 🇺🇸 🇦🇱 🇦🇪 🇧🇾 🇧🇬 🇦🇩 🇭🇷 🇨🇿 🇩🇰 🇳🇱 <br />
 🇧🇪 🇬🇧 🇺🇸 🇪🇪 🇫🇴 🇵🇭 🇫🇮 🇫🇷 🇨🇭 🇬🇪 <br />
@@ -77,33 +77,13 @@ KeyboardKit is localized in 50+ keyboard-specific locales:
 🇲🇰 🇲🇹 🇲🇳 🇳🇴 🇮🇷 🇵🇱 🇵🇹 🇧🇷 🇷🇴 🇷🇺 <br />
 🇷🇸 🇸🇰 🇸🇮 🇪🇸 🇰🇪 🇸🇪 🇹🇷 🇺🇦 🇺🇸 🇧🇪 <br />
 
-[Read more in the main repo][KeyboardKit]
+Besides the core features, KeyboardKit Pro extends KeyboardKit with a bunch of pro features:
 
-
-
-## Features
-
-KeyboardKit Pro comes packed with features. Checkout the [main repo][KeyboardKit] for core features and the list below for Pro features.
-
-
-### 💡 Autocomplete
-
-KeyboardKit Pro adds an autocomplete engine that supports all locales above. It also has an external autocomplete engine that fetches suggestions from a remote web service or api. 
-
-
-### 🔤 Input Sets
-
-KeyboardKit Pro adds locale-specific input sets for all locales above.
-
-
-### 🗯 Secondary Actions
-
-KeyboardKit Pro adds locale-specific secondary callout actions for all locales above.
-
-
-### 🖼 Views
-
-KeyboardKit Pro adds additonal views that simplifies building great keyboards.
+* 💡 Autocomplete - KeyboardKit Pro adds an autocomplete engine that supports all locales above, as well as an engine that fetches suggestions from a remote api.
+* 🗯 Callouts - KeyboardKit Pro adds locale-specific callout actions for all locales above. 
+* 🔤 Input Sets - KeyboardKit Pro adds locale-specific input sets for all locales above.
+* ➡️ [Proxy][Proxy] - KeyboardKit Pro adds `UITextDocumentProxy` extensions for getting all text from the proxy.
+* 🖼 Views - KeyboardKit Pro adds additonal views that simplify building great keyboards.
 
 
 
@@ -207,9 +187,10 @@ KeyboardKit Pro is closed source. See the [LICENSE][License] file for more info.
 [Licenses]: https://getkeyboardkit.com/pro
 [Sponsors]: https://github.com/sponsors/danielsaidi
 [KeyboardKit]: https://github.com/KeyboardKit/KeyboardKit
+[Gumroad]: https://danielsaidi.gumroad.com
 
 [Documentation]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkitpro/
-[Getting-Started]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkitpro/getting-started
-[License]: https://github.com/KeyboardKit/KeyboardKitPro/blob/master/LICENSE
+[Getting-Started]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkitpro/pro-getting-started
+[Proxy]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkitpro/pro-uitextdocumentproxy-extensions
 
-[Guide]: https://shyngys.com/ios-custom-keyboard-guide
+[License]: https://github.com/KeyboardKit/KeyboardKitPro/blob/master/LICENSE
