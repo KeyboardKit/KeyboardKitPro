@@ -10,6 +10,20 @@ KeyboardKit tries to honor semantic versioning:
 Breaking changes can still occur in minor versions and patches, though, if the alternative is to not be able to release new critical features or fixes.
 
 
+## 6.4.3
+
+### 👑 KeyboardKit Pro
+
+* The `UITextDocumentProxy` full text content extensions are now configurable.
+
+### ✨ New features
+
+* `ActionCalloutStyle.standardFont` can now be set to change the global callout font.
+* `KeyboardButtonShadowStyle.standard` can now be set to change the global style.
+* `KeyboardColorReader` standard values can now be set to change the global style.  
+
+
+
 ## 6.4.2
 
 This release rolls back the localized name adjustment in the last version, since the only locale that used this approach - Kurdish Sorani Arabic - had a language folder named `ckb_AR` which wasn't recognized by Apple. 
