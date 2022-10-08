@@ -12,14 +12,14 @@ Breaking changes can still occur in minor versions and patches, though, if the a
 
 ## 6.4.4
 
+This release is built for Xcode 14 and Swift 5.7. Use the `6.4.4_xcode13` tag if you need support for Xcode 13, Swift 5.6 and Bitcode.
+
 ### 👑 KeyboardKit Pro
 
 * The `UITextDocumentProxy` full text content extensions have been tweaked to perform better.
-* There is an alternate build for Xcode 13 and Bitcode that can be fetched from the `6.4.4_bitcode` tag.
 
 ### 💡 Behavior changes
 
-* `KeyboardLocale` re-introduces reading `localizedName` from localized strings, if any.
 * `KeyboardLocale.kurdish_sorani_arabic` uses `ckb_IQ` instead of `ckb_AR` to get a valid locale identifier.
 * `View+LocaleContextMenu` now iterates over the locales without enumerating.
 
@@ -27,7 +27,7 @@ Breaking changes can still occur in minor versions and patches, though, if the a
 
 ## 6.4.3
 
-This version adds a build for Xcode 13, Swift 5.6 and Bitcode. Just use the `6.4.3_bitcode` tag.
+This release is built for Xcode 14 and Swift 5.7. Use the `6.4.3_xcode13` tag if you need support for Xcode 13, Swift 5.6 and Bitcode.
 
 ### 👑 KeyboardKit Pro
 
