@@ -10,6 +10,21 @@ KeyboardKit tries to honor semantic versioning:
 Breaking changes can still occur in minor versions and patches, though, if the alternative is to not be able to release new critical features or fixes.
 
 
+## 6.4.4
+
+### 👑 KeyboardKit Pro
+
+* The `UITextDocumentProxy` full text content extensions have been tweaked to perform better.
+* There is an alternate build for Xcode 13 and Bitcode that can be fetched from the `6.4.4_bitcode` tag.
+
+### 💡 Behavior changes
+
+* `KeyboardLocale` re-introduces reading `localizedName` from localized strings, if any.
+* `KeyboardLocale.kurdish_sorani_arabic` uses `ckb_IQ` instead of `ckb_AR` to get a valid locale identifier.
+* `View+LocaleContextMenu` now iterates over the locales without enumerating.
+
+
+
 ## 6.4.3
 
 This version adds a build for Xcode 13, Swift 5.6 and Bitcode. Just use the `6.4.3_bitcode` tag.
