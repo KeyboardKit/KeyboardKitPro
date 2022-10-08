@@ -12,6 +12,8 @@ Breaking changes can still occur in minor versions and patches, though, if the a
 
 ## 6.4.3
 
+This version adds a build for Xcode 13, Swift 5.6 and Bitcode. Just use the `6.4.3_bitcode` tag.
+
 ### 👑 KeyboardKit Pro
 
 * The `UITextDocumentProxy` full text content extensions are now configurable.
