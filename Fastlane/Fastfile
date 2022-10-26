@@ -5,7 +5,23 @@ default_platform :ios
 platform :ios do
 
 
-  # Version ================
+  # KeyboardKit ================
+
+  desc "Remove KeyboardKit Demo"
+  lane :demoremove do
+    ensure_git_status_clean
+    sh('rm -rf ../Demo')
+  end
+
+  desc "Update KeyboardKit Demo"
+  lane :demoupdate do
+    demoremove
+    sh('cp -r ../../keyboardkit/Demo/ProDemo ../Demo')
+    git_commit(path: "*", message: "Update KeyboardKit Demo")
+  end
+
+
+  # Version ====================
 
   desc "Create a new version"
   lane :version do |options|
