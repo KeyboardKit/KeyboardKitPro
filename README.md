@@ -27,7 +27,12 @@ The end result can look something like this...or entirely different:
 KeyboardKit Pro extends KeyboardKit with pro features, such as additional locales, autocomplete engines, more extensions, additional views etc. It lets you create fully localized system keyboards with a single line of code. 
  
 
-KeyboardKit Pro requires a commercial license. Licenses can be purchased from the [website][Website] or from [Gumroad][Gumroad].
+
+## KeyboardKit Pro License
+
+KeyboardKit Pro requires a commercial license to be used. 
+
+Licenses can be purchased from the [website][Website] or from [Gumroad][Gumroad].
 
 
 
@@ -89,22 +94,18 @@ KeyboardKit Pro lets you create fully localized system keyboards with a single l
 
 
 
-## Demo Applications
+## Demo Application
 
-The [main repo][KeyboardKit] contains a `Demo` folder with two demo apps that lets you try out KeyboardKit.
+This project contains a `Demo` folder with a demo app that lets you try out KeyboardKit Pro.
 
-The `Demo` app uses KeyboardKit and lets you type in a light and dark text field. It has three keyboards:
-
-* `English` uses a `SystemKeyboard` to mimic a native English keyboard.
-* `Unicode` uses a `SystemKeyboard` and a custom, unicode-based input set.
-* `Custom` shows you how to easily customize input sets and layouts.
-
-The `Demo - Pro` app uses KeyboardKit Pro and supports 50+ locales, autocomplete etc. It has two keyboards:  
+The demo app supports 50+ locales, LTR and RTL locales, autocomplete etc. It has two keyboards:  
 
 * `System LTR` uses a `SystemKeyboard` with all left-to-right locales.
 * `System RTL` uses a `SystemKeyboard` with all right-to-left locales.
 
-Just open and run any of these projects, then enable the keyboards you want to try under System Settings. Note that you need to enable full access to try some features, like audio and haptic feedback.
+Just open and run the project, then enable the keyboards you want to try under System Settings. 
+
+Note that you need to enable full access to try some features, like audio and haptic feedback.
 
 
 
