@@ -10,6 +10,27 @@ KeyboardKit tries to honor semantic versioning:
 Breaking changes can still occur in minor versions and patches, though, if the alternative is to not be able to release new critical features or fixes.
 
 
+## 6.5
+
+This version adjusts the KeyboardKit Pro license model. 
+
+There are some minor breaking changes in KeyboardKit Pro that should be straightforward to fix. 
+ 
+### 👑 KeyboardKit Pro
+  
+* `License` contains new information and capabilities, to enable future license features.
+* `ProInputSetProvider` now nests all pro input set providers for a cleaer api.
+* `ProCalloutActionProvider` now nests all pro callout action providers for a cleaer api.
+
+### ✨ New features
+
+* `KeyboardLocale` implements the new `LocaleProvider` and `LocaleFlagProvider` protocols.
+* `Locale` implements the new `LocaleProvider` and `LocaleFlagProvider` protocols.
+* `LocaleProvider` is a new protocol that defines how to resolve locales.
+* `LocaleFlagProvider` is a new protocol that defines how to resolve flags for a locale.
+
+
+
 ## 6.4.4
 
 This release is built for Xcode 14 and Swift 5.7. Use the `6.4.4_xcode13` tag if you need support for Xcode 13, Swift 5.6 and Bitcode.
