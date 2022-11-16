@@ -10,6 +10,14 @@ KeyboardKit tries to honor semantic versioning:
 Breaking changes can still occur in minor versions and patches, though, if the alternative is to not be able to release new critical features or fixes.
 
 
+## 6.5.1
+
+### 👑 KeyboardKit Pro
+
+This version adds more licenses to KeyboardKit Pro. 
+
+
+
 ## 6.5
 
 This version adjusts the KeyboardKit Pro license model. 

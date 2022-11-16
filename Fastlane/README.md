@@ -15,6 +15,22 @@ For _fastlane_ installation instructions, see [Installing _fastlane_](https://do
 
 ## iOS
 
+### ios demoremove
+
+```sh
+[bundle exec] fastlane ios demoremove
+```
+
+Remove KeyboardKit Demo
+
+### ios demoupdate
+
+```sh
+[bundle exec] fastlane ios demoupdate
+```
+
+Update KeyboardKit Demo
+
 ### ios version
 
 ```sh
