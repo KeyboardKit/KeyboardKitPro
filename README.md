@@ -160,7 +160,7 @@ KeyboardKit Pro is closed source. See the [LICENSE][License] file for more info.
 [Gumroad]: https://danielsaidi.gumroad.com
 
 [Documentation]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkitpro/
-[Getting-Started]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkitpro/pro-getting-started
-[Proxy]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkitpro/pro-uitextdocumentproxy-extensions
+[Getting-Started]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkitpro/getting-started-with-keyboardkit-pro
+[Proxy]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkitpro/pro-document-proxy-extensions
 
 [License]: https://github.com/KeyboardKit/KeyboardKitPro/blob/master/LICENSE
