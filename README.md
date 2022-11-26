@@ -165,6 +165,6 @@ KeyboardKit Pro is closed source. See the [LICENSE][License] file for more info.
 
 [Autocomplete]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkitpro/understanding-autocomplete
 [Emojis]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkitpro/understanding-emojis
-[Proxy]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkitpro/understanding-document-proxy-extensions
+[Proxy]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkitpro/understanding-proxy-extensions
 
 [License]: https://github.com/KeyboardKit/KeyboardKitPro/blob/master/LICENSE
