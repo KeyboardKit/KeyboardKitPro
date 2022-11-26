@@ -10,6 +10,83 @@ KeyboardKit tries to honor semantic versioning:
 Breaking changes can still occur in minor versions and patches, though, if the alternative is to not be able to release new critical features or fixes.
 
 
+## Planned changes for 7.0
+
+Some things that are planned for the 7.0 release:
+
+* Removing the keyboard action `tap` gesture and only use `press` and `release`.
+* Rewriting the system keyboard gestures to support swipe to type and predictive type.
+
+
+
+## 6.6
+
+This version adds a brand new gesture engine, which aims to make typing feel a lot more like in the native keyboards.
+
+This version also adds new emoji capabilities, such as a unicode id and name, as well as support for skin tone variants (Pro feature). These new capabilities are used by the emoji keyboards, which can now show input callouts and skin tone variants when you type on an emoji keyboard.   
+
+
+### How to disable the new button gesture engine
+
+Since typing is such an important part of this library, the new gesture engine can be toggled off if you find problems with it:
+
+```
+FeatureToggle.shared.toggleFeature(.newButtonGestureEngine, .off)
+```
+
+Note that the new gesture engine is only available in iOS 14+. Devices running iOS 13 will still get the current gesture engine, even if you toggle on this feature.
+
+  
+### 👑 KeyboardKit Pro
+
+* `Emoji` implements the new `ProEmojiInfo` protocol.
+* `ProCalloutActionProvider` now returns skin tone variant actions for emojis. 
+* `ProEmojiInfo` is a new protocol for Pro emoji information.  
+* `ProEmojiInfo` has `hasSkinToneVariants`, `neutralSkinToneVariant`, `skinToneVariants` and `skinToneVariantsActions` properties.
+
+### ✨ New features
+
+* `ActionCalloutContext.shared` is now public.
+* `Emoji` has new `unicodeIdentifier` and `unicodeName` properties.
+* `EmojiKeyboard` and `EmojiCategoryKeyboard` now supports keyboard gestures and skin tone callouts.
+* `EmojiKeyboard` has a new `applyGestures` parameter, that you can set to true to apply standard keyboard gestures.
+* `EmojiKeyboard` has a new `standardKeyboardActionHandler` property.
+* `EmojiKeyboardItem` is a new view for rendering a keyboard item view.
+* `GestureButton` is a new view that lets you handle many different gestures with a single button.
+* `InputCalloutContext.shared` is now public.
+* `InputCalloutContext` has a new, configurable `minimumVisibleDuration` property that controls the minimum visibility of the input callout.
+* `KeyboardAction` has a new `image` property.
+* `KeyboardAction` has a new `isEmojiAction` property.
+* `SpaceCursorDragGestureHandler` is now open to inheritance.
+
+### 💡 Behavior changes
+
+* `EmojiKeyboard` uses smaller emojis for standard iPad in portrait.
+* `InputCallout` no longer allows hit testing.
+* `KeyboardAction.backspace` now triggers on `press` instead of `tap`.
+* `KeyboardGestures` now has private state to avoid press gesture problems when providing a constant binding.
+* `SystemKeyboardButtonRowItem` now avoids applying a negative width.
+* `View+KeyboardGestures` now render a plain button that triggers the press, release and tap action on tvOS.
+
+### 🐛 Bug fixes
+
+* `KeyboardGestures` now use internal state to avoid problems when passing in a constant binding.
+* `LocaleProvider` now wraps Swift 5.7 code in a compile version version check.
+* `SystemKeyboardButtonRowItem` now protects itself against getting a negative width.
+* Words with an autocompleting autocomplete suggestion will no longer autocomplete when ending a space cursor drag on them.
+
+### 🗑 Deprecations
+
+* `KeyboardAction` `.isShift` has been renamed to `isShiftAction`.
+* `KeyboardAction` `.isUppercaseShift` has been renamed to `isUppercasedShiftAction`.
+* `KeyboardImageButton` has been deprecated and will be removed in KeyboardKit 7.
+* `SystemAudio` types have been renamed to `AudioFeedback` to make the concept match haptic feedback types.
+* `SystemAudio` `play` has been renamed to `trigger` to make it match the haptic feedback trigger.
+* `SystemAudioPlayer` types have been renamed to `SystemAudioEngine` to make the concept match other feedback engines.
+* `View+KeyboardGestures` no longer need a keyboard context.
+ 
+ 
+ 
 ## 6.5.1, 6.5.2
 
 ### 👑 KeyboardKit Pro
