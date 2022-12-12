@@ -19,6 +19,57 @@ Some things that are planned for the 7.0 release:
 
 
 
+## 6.7
+
+This version adds more emoji features, such as improved unicode names and localized names.
+
+Localizing emojis is a major undertaking and therefore a community effort. Please see the documentation for information on how to help with localizing emojis.
+
+### ✨ New features
+
+* `AutocompleteToolbarStyle` has a new optional `height` parameter.
+* `CharacterProvider` is a new protocol that will let us design better character-based extensions over time.
+* `Emoji` has new `localizationKey` properties that are used to translate emoji names.
+* `Emoji` has new `localizedName(for:)` functions that are used to translate emoji names.
+* `Emoji` has new `unicodeNameOverride` properties, to provide good names and localization keys for the various flags.
+* `Emoji` has new `matches` functions, that lets you match on emoji unicode and localized names.
+* `Emoji` collections have new `matching` functions, that lets you search for emojis that match a certain search query.
+* `EmojiCharacterAnalyzer` is a new protocol that is implemented by `Character`.
+* `EmojiStringAnalyzer` is a new protocol that is implemented by `String`.
+* `KeyboardInputViewController` now only syncs proxy if it changes, which leads to fewer redraws.
+* `KeyboardRootView` no longer defines an explicit id.
+* `KKL10n` has a new `searchEmoji` key that must be localized in all `Localizable.strings` files.
+* `KKL10n` can now be used to translate custom keys as well, using the same bundle resolve.
+* `LocaleContextMenu` is a new view modifier for applying a locale context menu to any view.
+* `PrefersAutocompleteResolver` is a new protocol that is implemented by `KeyboardType` and `UIKeyboardType`.
+* `StringProvider` is a new protocol that will let us design better string-based extensions over time.
+
+### 💡 Behavior changes
+
+* `AutocompleteToolbar` now applies the height from its style.
+* `Emoji` has better unicode names for all flag emojis.
+* `EmojiCategoryTitle` doesn't have a default padding anymore.
+* `KeyboardRootView` no longer applies an explicit id.
+* The demo keyboards use the autocomplete prefered info to adjust the toolbar's opacity.
+
+### 🐛 Bug fixes
+
+* By no longer applying an explicit id to `KeyboardRootView`, the keyboard view no longer has to observe the `KeyboardContext`.
+* By no longer applying an explicit id to `KeyboardRootView`, the full document context correctly updates the view after the async operation completes. 
+
+### 🗑 Deprecations
+
+* `KKL10n` `hasText` is deprecated, since it produces incorrect results.
+* `InputSetProvider` row functions are deprecated.
+* `InputSetRow` initializers with implic names are deprecated.
+* `View+localeContextMenu` with locales parameter is deprecated.
+
+### 💥 Breaking changes
+
+* `EmojiCategoryKeyboard` no longer allows customizing the keyboard view.
+
+
+
 ## 6.6
 
 This version adds a brand new gesture engine, which aims to make typing feel a lot more like in the native keyboards.
