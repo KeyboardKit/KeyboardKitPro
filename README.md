@@ -84,7 +84,7 @@ KeyboardKit is localized in 50+ keyboard-specific locales ([read more][KeyboardK
 
 Besides the core features, KeyboardKit Pro extends KeyboardKit with a bunch of pro features:
 
-* 💡 [Autocomplete][Autocomplete] - KeyboardKit Pro unlocks an on-device autocomplete provider as well as an api-based one.
+* 💡 [Autocomplete][Autocomplete] - KeyboardKit Pro unlocks an on-device autocomplete provider and as an api-based one.
 * 🗯 Callouts - KeyboardKit Pro unlocks locale-specific callout actions for all locales above.
 * 😊 [Emojis][Emojis] - KeyboardKit Pro unlocks skin tone variants and secondary callout actions for emojis. 
 * 🔤 Input Sets - KeyboardKit Pro unlocks locale-specific input sets for all locales above.
