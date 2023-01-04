@@ -19,6 +19,68 @@ Some things that are planned for the 7.0 release:
 
 
 
+## 6.8
+
+This release adds 5 new locales, which brings the number of supported locales to 60!
+
+To get locales like Armenian to work, this version starts to break up the layout engine in smaller parts, to make it easier to manage as the number of locales grow. The iPhone and iPad layout providers will be converted to base classes and inherited by locale-specific providers.
+
+Note that a bunch of `StandardKeyboardLayoutProvider` things are deprecated in comments only, since the library still has to use them. These will be removed in the next major update.  
+
+### 🌐 New locales
+
+* 🇦🇲 Armenian
+* 🏳️ Cherokee
+* 🇮🇩 Indonesian
+* 🇲🇾 Malay
+* 🇺🇿 Uzbek
+
+### 👑 KeyboardKit Pro
+
+* `FullDocumentContextConfiguration` now uses a longer, default delay. 
+* `FullDocumentContextResult` now contains more information. 
+* `ProKeyboardLayoutProvider` is a new base class for pro layout providers.
+* `ProKeyboardLayoutProvider.Armenian` is the first, new layout provider that uses this new architecture.
+* `ProKeyboardLayoutProvider.German` and all German variants now correctly replaces `.return` with `.newLine`.
+* `UITextDocumentProxy` `fullDocumentContext` has been adjusted to behave better.
+* `UITextDocumentProxy` `fullDocumentContext` will now throw an error if it's called while a read operation is in progress.
+
+### ✨ New features
+
+* `EnglishKeyboardLayoutProvider` is a new, open class that provides English keyboard layouts.
+* `InputSetProviderBased` is a new protocol that is used to keep track of types that rely on an input set provider.
+* `KeyboardActions` has new character margin actions properties.
+* `KeyboardContext` has a new `keyboardDictationReplacement` property.
+* `KKL10n` has a new `join` case, although localiations are missing for most locales.
+* `StandardInputSetProvider` `keyboardContext` is now public.
+* `StandardKeyboardLayoutProvider` can now take a collection of localized layout providers.
+
+### 💡 Behavior changes
+
+* `SystemKeyboard` now applies locale as identifier to force update its rows.
+* `StandardKeyboardActionHandler` now ignores autocomplete suggestions when the cursor is at the beginning of a word.
+* `SystemKeyboardLayoutProvider` now uses the `KeyboardContext` `keyboardDictationReplacement` instead of the injected value.
+* `SystemKeyboardLayoutProvider` will for now set the `KeyboardContext` `keyboardDictationReplacement`, if one is provided, to not cause any old code to break.
+
+### 🗑 Deprecations
+
+* `KeyboardLayoutProvider` dictation replacement initializers and properties are deprecated.
+* `StandardCalloutActionProvider` `providerDictionary` has been renamed to `localizedProviders`.
+* `StandardInputSetProvider` `providerDictionary` has been renamed to `localizedProviders`.
+* `KeyboardInputTextComponent` has been renamed to `KeyboardInputComponent`.
+* `StandardKeyboardLayoutProvider` `inputSetProvider` is in-comment deprecated.
+* `StandardKeyboardLayoutProvider` `iPhoneProvider` is in-comment deprecated.
+* `StandardKeyboardLayoutProvider` `iPadProvider` is in-comment deprecated.
+* `StandardKeyboardLayoutProvider` leading and trailing margin action functions are deprecated.
+* `SystemKeyboardActionButtonContent` now applies a padding and minimum scale factor to text views. 
+
+### 💥 Breaking changes
+
+* `StandardKeyboardLayoutProvider` now requires a keyboard context.
+* `KeyboardAction` no longer implements `KeyboardRowItem`.
+
+
+
 ## 6.7.3
 
 ### 👑 KeyboardKit Pro
