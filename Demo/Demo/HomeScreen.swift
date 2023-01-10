@@ -8,71 +8,70 @@
 
 import KeyboardKitPro
 import SwiftUI
-import SwiftUIKit
 
-/**
- This screen shows the status of the demo keyboard and links
- to another screen, where you can try out the demo keyboards.
- */
 struct HomeScreen: View {
-    
+
+    @State
+    private var appearance = ColorScheme.light
+
+    @State
+    private var isAppearanceDark = false
+
+    @State
+    private var text = ""
+
     @StateObject
-    private var keyboardState = KeyboardEnabledState(bundleId: "com.keyboardkit.demo.keyboard")
-    
+    private var keyboardState = KeyboardEnabledState(
+        bundleId: "com.keyboardkit.demo.*")
+
     var body: some View {
         NavigationView {
             List {
-                Section(header: Text("Type")) {
-                    NavigationLink(destination: EditScreen(appearance: .default)) {
-                        Label("Type in a regular text field", image: .type)
-                    }
-                    NavigationLink(destination: EditScreen(appearance: .dark)) {
-                        Label("Type in a dark text field", image: .type)
+                Section(header: Text("Text Field")) {
+                    TextEditor(text: $text)
+                        .frame(height: 100)
+                        .keyboardAppearance(appearance)
+                    Toggle(isOn: $isAppearanceDark) {
+                        Text("Dark appearance")
                     }
                 }
-                Section(header: Text("Keyboard"), footer: footerText) {
-                    EnabledListItem(
-                        isEnabled: isKeyboardEnabled,
-                        enabledText: "Keyboard is enabled",
-                        disabledText: "Keyboard is disabled")
-                    EnabledListItem(
-                        isEnabled: isFullAccessEnabled,
+                Section(header: Text("Keyboard State"), footer: footerText) {
+                    KeyboardEnabledLabel(
+                        isEnabled: keyboardState.isKeyboardEnabled,
+                        enabledText: "Demo keyboard is enabled",
+                        disabledText: "Demo keyboard not enabled")
+                    KeyboardEnabledLabel(
+                        isEnabled: keyboardState.isKeyboardActive,
+                        enabledText: "Demo keyboard is active",
+                        disabledText: "Demo keyboard is not active")
+                    KeyboardEnabledLabel(
+                        isEnabled: keyboardState.isFullAccessEnabled,
                         enabledText: "Full Access is enabled",
                         disabledText: "Full Access is disabled")
-                    Button(action: openSettings) {
-                        Label("System settings", image: .settings)
-                    }
+                }
+                Section(header: Text("Settings")) {
+                    KeyboardSettingsLink()
                 }
             }
-            .buttonStyle(.list)
-            .listStyle(.insetGrouped)
-            .navigationTitle("KeyboardKit Demo")
+            .buttonStyle(.plain)
+            .navigationTitle("KeyboardKit")
+            .onChange(of: isAppearanceDark) { newValue in
+                appearance = isAppearanceDark ? .dark : .light
+            }
         }
         .navigationViewStyle(.stack)
-        .environmentObject(keyboardState)
+        .environment(\.layoutDirection, isRtl ? .rightToLeft : .leftToRight)
     }
 }
 
-private extension HomeScreen {
-    
+extension HomeScreen {
+
     var footerText: some View {
-        Text("You must enable the KeyboardKit keyboard under system settings, then select it with 🌐 when typing.")
+        Text("You must enable the keyboard in System Settings, then select it with 🌐 when typing.")
     }
-}
 
-private extension HomeScreen {
-    
-    var isFullAccessEnabled: Bool {
-        keyboardState.isFullAccessEnabled
-    }
-    
-    var isKeyboardEnabled: Bool {
-        keyboardState.isKeyboardEnabled
-    }
-    
-    func openSettings() {
-        guard let url = URL.keyboardSettings else { return }
-        UIApplication.shared.open(url, options: [:], completionHandler: nil)
+    var isRtl: Bool {
+        keyboardState.activeKeyboardBundleIds.first?.hasSuffix("rtl") ?? false
     }
 }
 
