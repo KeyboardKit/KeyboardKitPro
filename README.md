@@ -24,7 +24,9 @@ The end result can look something like this...or entirely different:
     <img src ="https://github.com/KeyboardKit/KeyboardKit/blob/master/Resources/Demo.gif?raw=true" width="300" />
 </p> 
 
-KeyboardKit Pro extends KeyboardKit with pro features, such as additional locales, autocomplete engines, more extensions, additional views etc. It lets you create fully localized system keyboards with a single line of code. 
+KeyboardKit Pro extends KeyboardKit with pro features, such as localized input sets, keyboard layouts and callout actions, which lets you create fully localized system keyboards for all keyboard locales with a single line of code. 
+
+KeyboardKit Pro also unlocks a local and a remote autocomplete providers, emoji skintone support, the possibility to read all the text from the text document proxy, additional views etc.
  
 
 
@@ -66,32 +68,43 @@ The online documentation has a [getting-started guide][Getting-Started] that wil
 
 The [online documentation][Documentation] has articles, code examples etc. that let you overview the various parts of the library and understand how they all connect to each other.
 
-The online documentation is currently iOS-specific.
-
-Note that extensions to native types are not included in this documentation. Future versions of this library will refactor the extensions in a way that makes them appear in the documentation.
+The online documentation is currently iOS-specific, which means that some parts will not be available if you run KeyboardKit Pro on other platforms.
 
 
 
-## ✨ Features
+## Localization
 
-KeyboardKit is localized in 50+ keyboard-specific locales ([read more][KeyboardKit]):
+KeyboardKit Pro is localized in 60 keyboard-specific locales ([read more][Localization]):
 
-🇺🇸 🇦🇱 🇦🇪 🇧🇾 🇧🇬 🇦🇩 🇭🇷 🇨🇿 🇩🇰 🇳🇱 <br />
-🇧🇪 🇬🇧 🇺🇸 🇪🇪 🇫🇴 🇵🇭 🇫🇮 🇫🇷 🇨🇭 🇬🇪 <br />
-🇩🇪 🇦🇹 🇬🇷 🇭🇺 🇮🇸 🇮🇪 🇮🇹 🇹🇯 🇱🇻 🇱🇹 <br />
-🇲🇰 🇲🇹 🇲🇳 🇳🇴 🇮🇷 🇵🇱 🇵🇹 🇧🇷 🇷🇴 🇷🇺 <br />
-🇷🇸 🇸🇰 🇸🇮 🇪🇸 🇰🇪 🇸🇪 🇹🇷 🇺🇦 🇺🇸 🇧🇪 <br />
+🇦🇱 🇦🇪 🇦🇲 🇧🇾 🇧🇬 🇦🇩 🏳️ 🇭🇷 🇨🇿 🇩🇰 <br />
+
+🇳🇱 🇧🇪 🇺🇸 🇬🇧 🇺🇸 🇪🇪 🇫🇴 🇵🇭 🇫🇮 🇫🇷 <br />
+
+🇧🇪 🇨🇭 🇬🇪 🇩🇪 🇦🇹 🇨🇭 🇬🇷 🇺🇸 🇮🇱 🇭🇺 <br />
+
+🇮🇸 🇮🇩 🇮🇪 🇮🇹 🇹🇯 🇹🇯 🇹🇯 🇱🇻 🇱🇹 🇲🇰 <br />
+
+🇲🇾 🇲🇹 🇲🇳 🇳🇴 🇮🇷 🇵🇱 🇵🇹 🇧🇷 🇷🇴 🇷🇺 <br />
+
+🇷🇸 🇷🇸 🇸🇰 🇸🇮 🇪🇸 🇰🇪 🇸🇪 🇹🇷 🇺🇦 🇺🇿 <br />
+
+KeyboardKit unlocks localized input sets, keyboard layouts and callout actions for all locales that your license contains.  
+
+
+
+## Features
 
 Besides the core features, KeyboardKit Pro extends KeyboardKit with a bunch of pro features:
 
-* 💡 [Autocomplete][Autocomplete] - KeyboardKit Pro unlocks an on-device autocomplete provider and as an api-based one.
-* 🗯 Callouts - KeyboardKit Pro unlocks locale-specific callout actions for all locales above.
+* 💡 [Autocomplete][Autocomplete] - KeyboardKit Pro unlocks a local and a remote autocomplete provider.
+* 🗯 [Callouts][Callouts] - KeyboardKit Pro unlocks locale-specific callout actions for all locales above.
 * 😊 [Emojis][Emojis] - KeyboardKit Pro unlocks skin tone variants and secondary callout actions for emojis. 
-* 🔤 Input Sets - KeyboardKit Pro unlocks locale-specific input sets for all locales above.
-* ➡️ [Proxy][Proxy] - KeyboardKit Pro unlocks `UITextDocumentProxy` extensions for getting all text from the proxy.
+* 🔤 [Input][Input] - KeyboardKit Pro unlocks locale-specific input sets for all locales above.
+* 💱 [Layout][Layout] - KeyboardKit Pro unlocks locale-specific keyboard layouts for all locales above.
+* ➡️ [Proxy][Proxy] - KeyboardKit Pro unlocks `UITextDocumentProxy` extensions for reading all text from the proxy.
 * 🖼 Views - KeyboardKit Pro unlocks additonal views that simplify building great keyboards.
 
-KeyboardKit Pro lets you create fully localized system keyboards with a single line of code and makes it easy to add more information to the main app. 
+You find KeyboardKit Pro-specific information at the end of these articles. 
 
 
 
@@ -99,10 +112,10 @@ KeyboardKit Pro lets you create fully localized system keyboards with a single l
 
 This project contains a `Demo` folder with a demo app that lets you try out KeyboardKit Pro.
 
-The demo app supports 50+ locales, LTR and RTL locales, autocomplete etc. It has two keyboards:  
+The demo app supports all keyboard locales, LTR and RTL, autocomplete etc. It has two keyboards:  
 
-* `System LTR` uses a `SystemKeyboard` with all left-to-right locales.
-* `System RTL` uses a `SystemKeyboard` with all right-to-left locales.
+* `System LTR` has a `SystemKeyboard` with all left-to-right locales.
+* `System RTL` has a `SystemKeyboard` with all right-to-left locales.
 
 Just open and run the project, then enable the keyboards you want to try under System Settings. 
 
@@ -163,8 +176,23 @@ KeyboardKit Pro is closed source. See the [LICENSE][License] file for more info.
 [Documentation]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkitpro/
 [Getting-Started]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkitpro/getting-started-with-keyboardkit-pro
 
-[Autocomplete]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkitpro/understanding-autocomplete
-[Emojis]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkitpro/understanding-emojis
-[Proxy]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkitpro/understanding-proxy-extensions
+[Actions]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkit/actions
+[Appearance]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkit/appearance
+[Autocomplete]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkit/autocomplete
+[Callouts]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkit/callouts
+[Emojis]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkit/emojis
+[External]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkit/external-keyboards
+[Feedback]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkit/feedback
+[Gestures]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkit/gestures
+[Input]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkit/input
+[Keyboard]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkit/keyboard
+[Layout]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkit/layout
+[Localization]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkit/localization
+[Previews]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkit/previews
+[Proxy]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkit/proxy-extensions
+[Routing]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkit/routing
+[RTL]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkit/rtl
+[Settings]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkit/settings
+[Styles]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkit/styles
 
 [License]: https://github.com/KeyboardKit/KeyboardKitPro/blob/master/LICENSE
