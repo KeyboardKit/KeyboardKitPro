@@ -31,6 +31,28 @@ Some things that are planned for the 7.0 release:
 
 
 
+## 6.9.2
+
+This version improves the full document context behavior for older devices and for playing well with autocomplete.
+
+### ✨ New features
+
+* `KeyboardInputViewController` has a new, open `isAutocompleteEnabled` property.
+* `UITextDocumentProxy` `isReadingFullDocumentContext` has been moved from KeyboardKit Pro to the main library.
+
+### 💡 Behavior changes
+
+* `KeyboardInputViewController` will now by default disable autocomplete while a full document context read operation is active.   
+
+### 👑 KeyboardKit Pro
+
+* `FullDocumentContextConfiguration` `sleepSeconds` is renamed to `sleepInteval`. 
+* `FullDocumentContextConfiguration` has adjusted the standard `sleepInteval` to 0.04 to behave better on old devices.
+* `FullDocumentContextReader` `isFullDocumentContextReadOperationInProgress` is renamed to `isReadingFullDocumentContext`.
+* `UITextDocumentProxy` `isFullDocumentContextReadOperationInProgress` is renamed to `isReadingFullDocumentContext`.
+
+
+
 ## 6.9.1
 
 ### 👑 KeyboardKit Pro
