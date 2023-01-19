@@ -40,9 +40,9 @@ Licenses can be purchased from the [website][Website] or from [Gumroad][Gumroad]
 
 ## Supported Platforms
 
-KeyboardKit Pro supports `iOS 13`, `macOS 11`, `tvOS 13` and `watchOS 6`.
+KeyboardKit Pro supports `iOS 13`, `macOS 11`, `tvOS 13` and `watchOS 6`, but the distribution is `iOS` only! 
 
-Although KeyboardKit Pro builds on all platform, some features are unavailable on some platforms. 
+Please reach out if you need to use KeyboardKit Pro on multiple platforms.
 
 
 
