@@ -1,1 +1,2 @@
-Fastlane/* linguist-vendored
+Fastlane/*  linguist-vendored
+*.podspec   linguist-vendored
