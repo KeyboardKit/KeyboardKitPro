@@ -33,6 +33,28 @@ Some things that are planned for the 7.0 release:
 
 
 
+## 6.9.4
+
+### ✨ New features
+
+* `KeyboardInputViewController` has a new `isContextSyncEnabled` property.
+* `KeyboardInputViewController` has a new `keyboardTextContext` property.
+* `KeyboardInputViewController` has a new `viewWillSyncWithContext` function.
+* `KeyboardInputViewController` injects its `keyboardTextContext` into the environment.
+* `KeyboardTextContext` is a new observable class that lets you observe the document text.
+* `UITextDocumentProxy` has a new `documentContext` property.
+
+### 👑 KeyboardKit Pro
+
+* The `UITextDocumentProxy` full document context functionality behaves better when there is leading and trailing newlines in the document.
+
+### 🗑 Deprecations
+
+* `UITextDocumentProxy` `trimmedDocumentContextBeforeInput` is deprecated.
+* `UITextDocumentProxy` `trimmedDocumentContextAfterInput` is deprecated.
+
+
+
 ## 6.9.3
 
 ### ✨ New features
