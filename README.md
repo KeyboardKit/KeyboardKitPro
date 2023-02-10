@@ -4,12 +4,11 @@
 
 <p align="center">
     <img src="https://img.shields.io/github/v/release/KeyboardKit/KeyboardKit?color=%2300550&sort=semver" alt="Version" />
-    <img src="https://img.shields.io/cocoapods/p/KeyboardKit.svg?style=flat" alt="Platform" />
-    <img src="https://img.shields.io/badge/Swift-5.6-orange.svg" alt="Swift 5.6" />
-    <img src="https://img.shields.io/github/license/KeyboardKit/KeyboardKit" alt="Closed-Source License" />
-    <a href="https://twitter.com/getkeyboardkit">
-        <img src="https://img.shields.io/badge/contact-@getkeyboardkit-blue.svg?style=flat" alt="Twitter: @getkeyboardkit" />
-    </a>
+    <img src="https://img.shields.io/badge/swift-5.6-orange.svg" alt="Swift 5.6" />
+    <img src="https://img.shields.io/badge/platform-SwiftUI-blue.svg" alt="Swift UI" title="Swift UI" />
+    <img src="https://img.shields.io/github/license/danielsaidi/DeckKit" alt="MIT License" />
+    <img src="https://img.shields.io/twitter/url?label=Twitter&style=social&url=https%3A%2F%2Ftwitter.com%2Fgetkeyboardkit" alt="Twitter: @@getkeyboardkit" title="Twitter: @getkeyboardkit" />
+    <img src="https://img.shields.io/mastodon/follow/109340839247880048?domain=https%3A%2F%2Ftechhub.social&style=social" alt="Mastodon: @keyboardkit@techhub.social" title="Mastodon: @danielsaidi@mastodon.social" />
 </p>
 
 
@@ -32,17 +31,13 @@ KeyboardKit Pro also unlocks a local and a remote autocomplete providers, emoji 
 
 ## KeyboardKit Pro License
 
-KeyboardKit Pro requires a commercial license to be used. 
-
-Licenses can be purchased from the [website][Website] or from [Gumroad][Gumroad].
+KeyboardKit Pro requires a commercial license. Licenses can be purchased from the [website][Website] or from [Gumroad][Gumroad].
 
 
 
 ## Supported Platforms
 
-KeyboardKit Pro supports `iOS 13`, `macOS 11`, `tvOS 13` and `watchOS 6`, but the distribution is `iOS` only! 
-
-Please reach out if you need to use KeyboardKit Pro on multiple platforms.
+KeyboardKit Pro supports `iOS 13`, `macOS 11`, `tvOS 13` and `watchOS 6`, but the distribution is `iOS` only for non-enterprise licenses! Please reach out if you need to use KeyboardKit Pro on multiple platforms.
 
 
 
@@ -154,9 +149,10 @@ KeyboardKit is open-source and completely free, but you can sponsor this project
 
 Feel free to reach out if you have questions or if you want to contribute in any way:
 
-* E-mail: [info@getkeyboardkit.com][Email]
-* Twitter: [@getkeyboardkit][Twitter]
 * Website: [getkeyboardkit.com][Website]
+* Mastodon: [@keyboardkit@techhub.social][Mastodon]
+* Twitter: [@getkeyboardkit][Twitter]
+* E-mail: [info@getkeyboardkit.com][Email]
 
 
 
@@ -167,9 +163,11 @@ KeyboardKit Pro is closed source. See the [LICENSE][License] file for more info.
 
 
 [Email]: mailto:info@getkeyboardkit.com
-[Twitter]: http://www.twitter.com/getkeyboardkit
 [Website]: https://getkeyboardkit.com
+[Twitter]: http://www.twitter.com/getkeyboardkit
+[Mastodon]: https://techhub.social/@keyboardkit
 [Sponsors]: https://github.com/sponsors/danielsaidi
+
 [KeyboardKit]: https://github.com/KeyboardKit/KeyboardKit
 [Gumroad]: https://danielsaidi.gumroad.com
 
