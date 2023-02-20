@@ -22,6 +22,12 @@ KeyboardKit 7.0 involves a major rewrite of many parts of the library, to get mo
 
 This version bumps the platform deployment targets to make more types available to more platforms. This bump also lets us remove all `@available` annotations, which makes the code a lot cleaner. The release also removes all previously deprecated code and todos.
 
+### Important
+
+To make the `SystemKeyboard` even easier to use, it will now add an autocomplete toolbar by default. This will make sure that the keyboard by default has enough space to show the callouts, and will reduce the risk of introducting memory leaks by injecting a strong controller reference.
+
+If your keyboard already has a custom autocomplete toolbar, you must pass in `autocompleteToolbar: none` in the system keyboard initializer. 
+
 ### Migrating from KeyboardKit 6
 
 Although this release aims to make as few breaking changes as possible, there are some surface level APIs that change and will require you to adjust your code. One such change is the removal of many shared instances, to reduce coupling within the library.
@@ -59,7 +65,8 @@ If you have problems upgrading to `7.0`, first try upgrading to `6.9`. It has a 
 * `ScrollViewGestureButton` is now available on watchOS 7.
 * `SpaceCursorDragGestureHandler` is now available on all platforms.
 * `String` has new casing, keyboard character, quotation, word and sentence extensions.
-* `SystemKeyboardActionButton` is now available on all platforms.
+* `SystemKeyboard` will now add an autocomplete toolbar by default.
+* `SystemKeyboardButton` is now available on all platforms.
 * `Text` is a new namespace for text analysis.
 * `UITextDocumentProxy` quotation utilities is now available as `StringQuotationAnalyzer`.
 
@@ -97,6 +104,7 @@ If you have problems upgrading to `7.0`, first try upgrading to `6.9`. It has a 
 * `EmojiCharacterAnalyzer` and `EmojiStringAnalyzer` have been merged into `EmojiAnalyzer`.
 * `EmojiKeyboard` init parameters have been refactored. 
 * `InputCalloutContext` `.shared` has been removed.
+* `InputSet` has been converted to a `protocol` and all input set types converted from `class` to `struct`.
 * `KeyboardAction` `.return` and `.newLine` have been replaced by `primary` variants.
 * `KeyboardAction` `.shift` `currentState` is renamed to `currentCasing`.
 * `KeyboardAction` `standardTextDocumentProxyAction` has been removed.
@@ -119,7 +127,9 @@ If you have problems upgrading to `7.0`, first try upgrading to `6.9`. It has a 
 * `StringCasingAnalyzer` has replaced properties with functions. 
 * `SystemKeyboard` init parameters have been refactored.
 * `SystemKeyboard` `standardKeyboardWidth` has been removed.
-* `SystemKeyboardActionButton` now requires a callout context.
+* `SystemKeyboardActionButton` has been renamed to ``SystemKeyboardButton`` and requires a callout context.
+* `SystemKeyboardActionButtonContent` has been renamed to `SystemKeyboardButtonContent`.
+* `SystemKeyboardButton` has been replaced by the renamed action button.
 * `SystemKeyboardButtonRowItem` now requires a callout context.
 * `UITextDocumentProxy` `isOpenQuotationBeforeInput` has been renamed to `hasUnclosedQuotationBeforeInput`.
 * `UITextDocumentProxy` `isOpenAlternateQuotationBeforeInput`has been renamed to `hasUnclosedAlternateQuotationBeforeInput`.
