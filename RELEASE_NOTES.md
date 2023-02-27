@@ -18,19 +18,13 @@ Older versions have their release notes listed in the `Release_Notes` folder.
 
 ## 7.0
 
-KeyboardKit 7.0 involves a major rewrite of many parts of the library, to get more consistency in how things are named and structured. It aims to streamline the library and to make future development easier.
-
-This version bumps the platform deployment targets to make more types available to more platforms. This bump also lets us remove all `@available` annotations, which makes the code a lot cleaner. The release also removes all previously deprecated code and todos.
-
-### Important
-
-To make the `SystemKeyboard` even easier to use, it will now add an autocomplete toolbar by default. This will make sure that the keyboard by default has enough space to show the callouts, and will reduce the risk of introducting memory leaks by injecting a strong controller reference.
-
-If your keyboard already has a custom autocomplete toolbar, you must pass in `autocompleteToolbar: none` in the system keyboard initializer. 
+KeyboardKit 7.0 involves a major rewrite that aims to bring more consistency in naming and structure and to streamline the library to make future development easier. It bumps the platform deployment targets to iOS 14, macOS 11, tvOS 14 and watchOS 7 and removes all previously deprecated code and todos.
 
 ### Migrating from KeyboardKit 6
 
-Although this release aims to make as few breaking changes as possible, there are some surface level APIs that change and will require you to adjust your code. One such change is the removal of many shared instances, to reduce coupling within the library.
+Although KeyboardKit 7.0 aims to introduce as few breaking changes as possible, there are some surface level APIs that will change. Some such changes are the removal of many shared instances and how more dependencies have to be passed in as parameters. If you are using the now removed shared instances, simply inject the instance as initializer or function parameter instead. 
+
+KeyboardKit 7.0 makes the `SystemKeyboard` easier to use, where it now adds an autocomplete toolbar by default to make sure that the callouts has enough space, and to reduce the risk of memory leaks that was previously easy to add by accident when you connected the toolbar to the keyboard input controller's autocomplete function. If your keyboard uses a custom autocomplete toolbar, you must pass in `autocompleteToolbar: none` in the system keyboard initializer.
 
 If you have problems upgrading to `7.0`, first try upgrading to `6.9`. It has a lot of deprecations in place to provide guidance. You may still experience breaking changes after that, but they will be fewer.
 
@@ -55,15 +49,22 @@ If you have problems upgrading to `7.0`, first try upgrading to `6.9`. It has a 
 * `KeyboardCharacterProvider` is a new protocol that provides keyboard-specific characters.
 * `KeyboardController` is a new protocol that lets us decouple actions from the input view controller.
 * `KeyboardContext` has a new `keyboardLocale` and new functions for setting locale and keyboard type.
+* `KeyboardContext` has a new `spaceLongPressBehavior` property to control the space button's behavior.
 * `KeyboardInputViewController` has a new `calloutContext`.  
 * `KeyboardInputViewController` implements `KeyboardController` which gives it a bunch of new functions.
+* `KeyboardLocale` implements `LocaleFlagProvider`.
+* `KeyboardLocale` has new `Locale` matching extensions.
 * `KeyboardType` has new properties.
 * `KeyboardLayoutConfiguration` has adjusted the standard corner radius for iPhone buttons.
+* `Locale` has new localized name extensions.
+* `Locale` has new `KeyboardLocale` matching extensions.
+* `LocaleContextMenu` now lets you customize the presentaiton locale.
 * `NextKeyboardButton` now supports using any custom content.
 * `NextKeyboardController` is used instead of the shared controller.
 * `QuotationAnalyzer` is a new protocol for analyzing quotations in strings.
 * `ScrollViewGestureButton` is now available on watchOS 7.
 * `SpaceCursorDragGestureHandler` is now available on all platforms.
+* `SpaceLongPressBehavior` is a new enum that defined the available space long press behaviors.
 * `String` has new casing, keyboard character, quotation, word and sentence extensions.
 * `SystemKeyboard` will now add an autocomplete toolbar by default.
 * `SystemKeyboardButton` is now available on all platforms.
@@ -87,6 +88,8 @@ If you have problems upgrading to `7.0`, first try upgrading to `6.9`. It has a 
 * `Image` `.keyboardEmoji` is looks closer to the native icon.
 * `KeyboardAction` `.backspace` now triggers on `.press` instead of `.release`.
 * `KeyboardLayoutConfiguration` now behaves the same on all platforms.
+* `KeyboardSettingsLink` has ben rewritten to only use plain SwiftUI code that works with extensions as well.
+* `StandardKeyboardAppearance` now applies medium font weights to the Gregorian ABC keyboard. 
 
 ### 💥 Breaking changes
 
@@ -119,6 +122,9 @@ If you have problems upgrading to `7.0`, first try upgrading to `6.9`. It has a 
 * `KeyboardTextField` now requires an keyboard input view controller.
 * `KeyboardTextView` now requires an keyboard input view controller.
 * `KeyboardType` has made the `isAlphabetic(with:)` parameter implicit.
+* `Locale` `regionIdentifier` has been removed.
+* `LocaleProvider` has been removed.
+* `LocaleFlagProvider` is now only implemented by `Locale` on iOS 16.
 * `StandardAutocompleteSuggestions` has been renamed to `AutocompleteSuggestions`.
 * `StandardKeyboardActionHandler` now requires a `KeyboardController`.
 * `StandardKeyboardActionHandler` `inputViewController` initializer is now a convenience initializer.
