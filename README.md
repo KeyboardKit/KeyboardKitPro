@@ -149,7 +149,7 @@ KeyboardKit is open-source and completely free, but you can sponsor this project
 
 Feel free to reach out if you have questions or if you want to contribute in any way:
 
-* Website: [getkeyboardkit.com][Website]
+* Website: [keyboardkit.com][Website]
 * Mastodon: [@keyboardkit@techhub.social][Mastodon]
 * Twitter: [@getkeyboardkit][Twitter]
 * E-mail: [info@getkeyboardkit.com][Email]
@@ -163,8 +163,8 @@ KeyboardKit Pro is closed source. See the [LICENSE][License] file for more info.
 
 
 [Email]: mailto:info@getkeyboardkit.com
-[Website]: https://getkeyboardkit.com
-[Twitter]: http://www.twitter.com/getkeyboardkit
+[Website]: https://keyboardkit.com
+[Twitter]: http://twitter.com/getkeyboardkit
 [Mastodon]: https://techhub.social/@keyboardkit
 [Sponsors]: https://github.com/sponsors/danielsaidi
 
