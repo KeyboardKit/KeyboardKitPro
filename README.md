@@ -105,16 +105,17 @@ You find KeyboardKit Pro-specific information at the end of these articles.
 
 ## Demo Application
 
-This project contains a `Demo` folder with a demo app that lets you try out KeyboardKit Pro.
+The [main project repository][KeyboardKit] has a `Demo` folder with a demo apps that lets you try out different KeyboardKit features.
 
-The demo app supports all keyboard locales, LTR and RTL, autocomplete etc. It has two keyboards:  
+The demo app has 5 keyboard extensions:
 
-* `System LTR` has a `SystemKeyboard` with all left-to-right locales.
-* `System RTL` has a `SystemKeyboard` with all right-to-left locales.
+* `English` has a `SystemKeyboard` with the standard, English locale.
+* `Unicode` has a `SystemKeyboard` with unicode-based input keys.
+* `Custom` has a `SystemKeyboard` with custom keys, layout and appearance.
+* `Pro` uses KeyboardKit Pro and has a `SystemKeyboard` with all LRT locales.
+* `ProRtl` uses KeyboardKit Pro and has a `SystemKeyboard` with all RTL locales.
 
-Just open and run the project, then enable the keyboards you want to try under System Settings. 
-
-Note that you need to enable full access to try some features, like audio and haptic feedback.
+Just open and run the demo app, then enable the keyboards you want to try under System Settings. Note that you need to enable full access to try some features, like audio and haptic feedback.
 
 
 
