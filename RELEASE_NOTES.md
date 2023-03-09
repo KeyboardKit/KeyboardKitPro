@@ -16,6 +16,51 @@ Older versions have their release notes listed in the `Release_Notes` folder.
 
 
 
+## 7.1
+
+KeyboardKit 7.1 fixes some bugs and makes it even easier to setup KeyboardKit.
+
+KeyboardKit Pro also has a new experimental and much better autocomplete provider that you can toggle on with the `FeatureToggle`:
+
+```swift
+FeatureToggle.shared.toggleFeature(.newAutocompleteEngine, .on)
+```
+
+Once this has been verified to work better than the current provider, it will replace it and this feature toggle flag will be removed.
+
+Furthermore, the locale context menu has been refactored to work and look a lot better on iOS 16 and macOS 12. This unfortunately required a few breaking api changes, that hopefully will not affect anyone.
+
+### ✨ New features
+
+* `FeatureToggle` has a new `.newAutocompleteEngine` feature.
+* `KeyboardContext` has a new `localePresentationLocale` property.
+* `KeyboardInputViewController` has new `setup` functions that provide a view builder with an unowned controller reference.
+* `QuotationAnalyzer` has more functions.
+* `String` has new quotation functions.
+
+### 👑 Pro changes
+
+* KeyboardKit Pro has a new experimental autocomplete provider that can be toggled on to replace the standard one.
+* Many iPad layouts have been tweaked to look even closer to the native layouts.
+
+### 💡 Behavior changes
+
+* `KeyboardInputViewController` `setup` uses a view builder instead of a static view.
+* `KeyboardInputViewController` now calls `viewWillSetupKeyboard` in `viewWillAppear` instead of `viewDidLoad`.
+* `KeyboardRootView` uses a view builder instead of a static view. 
+
+### 🐛 Bug fixes
+
+* `iPadKeyboardLayoutProvider` had a line accidentally removed, which caused English layouts to render incorrect. This has been fixed.
+* `KeyboardInputViewController` now creates the keyboard view later, which makes it respect the safe areas better in landscape.
+* `LocaleContextMenu` now uses the `KeyboardContext` to localize and sort locales. 
+
+### 💥 Breaking changes 
+
+* `SpaceLongPressBehavior` cases have been renamed to read better. This should hopefully affect few people.
+
+
+
 ## 7.0
 
 KeyboardKit 7.0 involves a major rewrite that aims to bring more consistency in naming and structure and to streamline the library to make future development easier. It bumps the platform deployment targets to iOS 14, macOS 11, tvOS 14 and watchOS 7 and removes all previously deprecated code and todos.
