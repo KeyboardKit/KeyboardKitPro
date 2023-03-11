@@ -16,6 +16,31 @@ Older versions have their release notes listed in the `Release_Notes` folder.
 
 
 
+## 7.1.1
+
+This version fixes some bugs in `KeyboardTextField` and `KeyboardTextView` and tweaks their behavior a bit.
+
+The demo app has a new `KeyboardTextInput` demo keyboard that shows `KeyboardTextField` and `KeyboardTextView` in action. 
+
+### ✨ New features
+
+* `KeyboardInputView` is a new protocol that lets you apply a `focused` binding together with a custom done button.
+
+### 💡 Behavior changes
+
+* `KeyboardTextField` and `KeyboardTextView` now implement the new `KeyboardInputView` protocol.
+* `KeyboardTextField` and `KeyboardTextView` now apply a basic style before applying any custom configuration.
+* `KeyboardTextField` and `KeyboardTextView` now animates together with the focused state.
+* `KeyboardTextField` now applies a background color and border style.
+* `KeyboardTextView` now applies a background color, corner radius and font.
+* `KeyboardTextView` now uses the same font as `KeyboardTextField` by default.
+
+### 🐛 Bug fixes
+
+* `KeyboardTextField` and `KeyboardTextView` now correctly resigns as first responder when they lose focus.
+
+
+
 ## 7.1
 
 KeyboardKit 7.1 fixes some bugs and makes it even easier to setup KeyboardKit.
