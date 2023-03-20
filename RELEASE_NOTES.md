@@ -16,7 +16,52 @@ Older versions have their release notes listed in the `Release_Notes` folder.
 
 
 
-## 7.1.3
+## 7.2
+
+This version focuses on making it easier to style keyboards.
+
+This version adds a theme engine to KeyboardKit Pro. The new `KeyboardThemeAppearance` can be used with the new `KeyboardTheme` to style keyboards with themes, which is a lot easier than defining custom appearances.
+
+This version comes with three themes - `.cottonCandy`, `.neonNights` and `.tron`. You can use them in your own keyboads, or tweak them to create your own visual styles. More themes are coming in future versions. 
+
+Due to a bug found in the new autocomplete provider, the old `StandardAutocompleteProvider` will be replaced in the next minor version.
+
+### ✨ New features
+
+* `AutocompleteContext` has a new `isEnabled` property that can be used to disable autocomplete.
+* `KeyboardAppearance` has a new `autocompleteToolbarStyle` property.
+* `KeyboardAppearance` has a new `keyboardBackground` property.
+* `KeyboardBackgroundStyle` is a new style that can be used to the background of a keyboard.
+* `KeyboardButtonStyle` properties are now optional to allow for overrides.
+* `KeyboardButtonStyle` has a new `pressedOverlayColor` property that can be used to highlight buttons.
+* `KeyboardButtonStyle` has a new `extended(with:)` function to let you extend a style with another style.
+* `View+SystemKeyboardButton` has a new `isPressed` parameter to let you define pressed state.
+
+### 👑 Pro changes
+
+* `KeyboardInputViewController` will use the new autocomplete context property to disable autocomplete if needed.
+* `KeyboardTheme` is a new type that can be used to define keyboard themes.
+* `KeyboardThemeAppearance` is a new appearance that can be used with `KeyboardTheme`.
+* The new `LocalAutocompleteProvider` that was introduced in 7.1 has been made public.
+* The new `LocalAutocompleteProvider` now ignores empty strings when wrapping in quotes.
+* The new `LocalAutocompleteProvider` now replaces hyphens with space when suggesting splitting up the word.
+* The incorrect Brazilian callout actions have been corrected.
+
+### 🎨 New keyboard themes
+
+* `KeyboardTheme.cottonCandy` is a pink and blue trip to fluffy delight.
+* `KeyboardTheme.neonNights` is a metropolitian color explosion.
+* `KeyboardTheme.tron` is a black and blue, digital adrenaline rush.
+
+### 💡 Behavior changes
+
+* `SystemKeyboard` uses the new appearance background and autocomplete toolbar styles.
+
+### 🗑️ Deprecations
+
+* `CalloutStyle` has been renamed to `KeyboardCalloutStyle`.
+* `ActionCalloutStyle` has been renamed to `KeyboardActionCalloutStyle`.
+* `InputCalloutStyle` has been renamed to `KeyboardInputCalloutStyle`.## 7.1.3
 
 This version adds an `isKeyboardFloating` property to the keyboard context. It's currently not used to change the visual representation of floating keyboards, but please verify that it works as expected.
 

@@ -37,7 +37,11 @@ KeyboardKit Pro requires a commercial license. Licenses can be purchased from th
 
 ## Supported Platforms
 
-KeyboardKit Pro supports `iOS 13`, `macOS 11`, `tvOS 13` and `watchOS 6`, but the distribution is `iOS` only for non-enterprise licenses! Please reach out if you need to use KeyboardKit Pro on multiple platforms.
+KeyboardKit supports `iOS 14`, `macOS 11`, `tvOS 14` and `watchOS 7`. 
+
+However, the distribution is `iOS` only for non-enterprise licenses! 
+
+Please reach out if you need to use KeyboardKit Pro on multiple platforms.
 
 
 
@@ -91,6 +95,7 @@ KeyboardKit unlocks localized input sets, keyboard layouts and callout actions f
 
 Besides the core features, KeyboardKit Pro extends KeyboardKit with a bunch of pro features:
 
+* 🎨 [Appearance][Appearance] - KeyboardKit Pro unlocks a theme engine with many pre-defined themes.
 * 💡 [Autocomplete][Autocomplete] - KeyboardKit Pro unlocks a local and a remote autocomplete provider.
 * 🗯 [Callouts][Callouts] - KeyboardKit Pro unlocks locale-specific callout actions for all locales above.
 * 😊 [Emojis][Emojis] - KeyboardKit Pro unlocks skin tone variants and secondary callout actions for emojis. 
