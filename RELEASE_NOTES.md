@@ -18,6 +18,72 @@ Older versions have their release notes listed in the `Release_Notes` folder.
 
 
 
+## 7.5
+
+This version improves the theme and dictation engines to make them easier to use.
+
+This version also deprecates the feature toggle for the new autocomplete provider and makes it the standard engine. It also renames the external provider to remote to better reflect what it does.  
+
+### 🚨 Important information
+
+This version adds a mandatory `id` to `KeyboardTheme`, which will make it possible to implement features like marking a theme as a favorite, persist references instead of values etc. While it's not mandatory to specify an `id` when creating a theme, it *is* a mandatory property, which means that any previously encoded data will fail to decode.
+
+If you have persisted `KeyboardTheme` values in your app, please reach out via `info@getkeyboardkit.com` and decode failure handling will be added to the library to handle any lacking IDs.
+
+### ✨ New features
+
+- `DictationContext` has a new `appDeepLink` property.
+- `DictationContext` has a new `setup(with:)` function.
+- `KeyboardAction` now uses `performDictation` for the `dictation` action.
+- `KeyboardController` has a new `performDictation` function.
+- `KeyboardEnabledLabel` now supports more styling.
+- `KeyboardInputViewController` has a new `dictationConfig` property.
+- `KeyboardInputViewController` has a new `performDictation` function.
+- `KeyboardLayout` has a new `bottomRowIndex` property.
+- `KeyboardLayout` has a new `bottomRowSystemItems` property.
+- `KeyboardLayout` has a new `tryCreateBottomRowItem(for:)` function.
+- `KeyboardSettingsLink` now supports custom labels.
+
+### 💡 Behavior changes
+
+* `KeyboardEnabledLabel` no longer colors text by default.
+* `KeyboardInputViewController` now changes `primaryLanguage` when the context locale changes.
+* `KeyboardLocale` has new collection extension.
+
+### 👑 Pro changes
+
+* `KeyboardTheme` and all styles now have static IDs.
+* `KeyboardTheme` and all styles have a new `copy` function.
+* `KeyboardTheme.allPredefined` is now stored instead of computed. 
+* `KeyboardTheme.standard` is no longer throwing.
+* `KeyboardThemeButtonPreview` is a new preview.
+* `KeyboardThemeCopyable` is a new protocol that specifies theme copy behavior.
+* `KeyboardThemeStyleVariation` is a new protocol that can be used by theme styles.
+
+### 🗑️ Deprecations
+
+* `ExternalAutocompleteProvider` is renamed to `RemoteAutocompleteProvider`.
+* `ExternalAutocompleteResult` is renamed to `RemoteAutocompleteResult`.
+* `FeatureToggle.Feature.newAutocompleteEngine` is no longer used.
+* `KeyboardContext.tempIsPreviewMode` is no longer used.
+* `KeyboardLocale` sort with insert first parameter is replaced by atomic operations.
+* `StandardAutocompleteProvider` is renamed to `LocalAutocompleteProvider`.
+
+### 🐛 Bug fixes
+
+* Thanks to `@gonzalonunez` the `KeyboardTextField` and `KeyboardTextView` now disables `captureTextFromCamera`.
+ 
+### 📄 Documentation
+
+* Thanks to `@f-person` some documentation errors have been fixed.
+
+### 💥 Breaking changes 
+
+* `DictationContext.lastAppGroupId` has been removed.
+* `KeyboardTheme.allPredefined` is no longer throwing.
+
+
+
 ## 7.4
 
 This release adds support for 🇰🇿 Kazakh and more locale and emoji features.
