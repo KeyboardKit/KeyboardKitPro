@@ -18,6 +18,35 @@ Older versions have their release notes listed in the `Release_Notes` folder.
 
 
 
+## 7.6
+
+This version updates the new dictionary beta feature.
+
+### 🚨 Important information
+
+After receiving reports that the new dictation features in KeyboardKit Pro required all apps to add dictation permissions to their `Info.plist`, a lot of work has been put into separating dictation from speech recognition.
+
+As a result, you must now provide a `SpeechRecognizer` when using Pro dictation. To avoid using `Speech` framework features that require the unwanted permissions, an already implemented speech recognizer can be copied from the `SpeechRecognizer` documentation.    
+
+### ✨ New Features
+
+* `KeyboardDictationConfiguration` has a new `matchesDeepLink`.
+
+### 👑 Pro changes
+
+* `DictationIndicator` has been renamed to `DictationEqualizer`.
+* `DictationOverlay` now uses a style instead of many parameters.
+* `DictationOverlay` now renders many thinner lines by default.
+* `SpeechRecognizer` is a new specialized protocol used by the pro dictation services and view modifiers.
+* `.keyboardDictationOverlay(...)` is a new view extension.
+* `.onKeyboardDictationDeepLink(...)` is a new view extension.
+
+### 💥 Breaking changes 
+
+* The `.keyboardDictation(...)` view modifier requires a speech recognizer.
+
+
+
 ## 7.5.2
 
 This version adjusts how the next keyboard button behaves.
