@@ -30,7 +30,13 @@ As a result, you must now provide a `SpeechRecognizer` when using Pro dictation.
 
 ### ✨ New Features
 
+* `DictationContext` has new initializers for specific usage.
+* `DictationContext` has a new `isDictationStartedByKeyboard` property.
 * `KeyboardDictationConfiguration` has a new `matchesDeepLink`.
+
+### 💡 Behavior changes
+
+* More dictation logic now updates the `DictationContext` `lastError`.
 
 ### 👑 Pro changes
 
@@ -38,12 +44,21 @@ As a result, you must now provide a `SpeechRecognizer` when using Pro dictation.
 * `DictationOverlay` now uses a style instead of many parameters.
 * `DictationOverlay` now renders many thinner lines by default.
 * `SpeechRecognizer` is a new specialized protocol used by the pro dictation services and view modifiers.
-* `.keyboardDictationOverlay(...)` is a new view extension.
-* `.onKeyboardDictationDeepLink(...)` is a new view extension.
+* `View.keyboardDictation(...)` now requires a speech recognizer.
+* `View.keyboardDictationOnAppear(...)` is a new view modifier that can be used in DocumentGroup-based apps.
+* `View.keyboardDictationOnDeepLink(...)` is a new view modifier that can be used to start dictation without presenting an overlay.
+
+### 🐛 Bug fixes
+
+* A duplicate emoji has been removed.
+* Incorrect Pro themes have been adjusted.
+* Incorrect `Emoji.skinToneVariant` values have been adjusted.
+* Incorrect `Emoji.neutralSkinToneVariant` values have been adjusted.
+* `GestureButton` no longer triggers timed events if it's removed before it's released. 
 
 ### 💥 Breaking changes 
 
-* The `.keyboardDictation(...)` view modifier requires a speech recognizer.
+* `KeyboardInputViewController` `viewWillPerformDictation` has been renamed to `viewWillHandleDictationResult`.
 
 
 
