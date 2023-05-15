@@ -24,13 +24,14 @@ This version updates the new dictionary beta feature.
 
 ### 🚨 Important information
 
-After receiving reports that the new dictation features in KeyboardKit Pro required all apps to add dictation permissions to their `Info.plist`, a lot of work has been put into separating dictation from speech recognition.
+After receiving reports that the new dictation features required all apps to add dictation permissions to their `Info.plist`, a lot of work has been put into separating speech recognition from dictation.
 
-As a result, you must now provide a `SpeechRecognizer` when using Pro dictation. To avoid using `Speech` framework features that require the unwanted permissions, an already implemented speech recognizer can be copied from the `SpeechRecognizer` documentation.    
+As a result, you must now provide a `SpeechRecognizer` when using the built-in dictation features, which fixes this problem. An already implemented recognizer can be copied from the `SpeechRecognizer` docs.    
 
 ### ✨ New Features
 
 * `DictationContext` has new initializers for specific usage.
+* `DictationContext` has a new `silenceLimit` property.
 * `DictationContext` has a new `isDictationStartedByKeyboard` property.
 * `KeyboardDictationConfiguration` has a new `matchesDeepLink`.
 
@@ -41,8 +42,9 @@ As a result, you must now provide a `SpeechRecognizer` when using Pro dictation.
 ### 👑 Pro changes
 
 * `DictationIndicator` has been renamed to `DictationEqualizer`.
-* `DictationOverlay` now uses a style instead of many parameters.
-* `DictationOverlay` now renders many thinner lines by default.
+* `DictationOverlay` now supports adding a done button.
+* `DictationOverlay` renders many thinner lines by default.
+* `DictationOverlay` supports a style instead of using many parameters.
 * `SpeechRecognizer` is a new specialized protocol used by the pro dictation services and view modifiers.
 * `View.keyboardDictation(...)` now requires a speech recognizer.
 * `View.keyboardDictationOnAppear(...)` is a new view modifier that can be used in DocumentGroup-based apps.
@@ -58,6 +60,7 @@ As a result, you must now provide a `SpeechRecognizer` when using Pro dictation.
 
 ### 💥 Breaking changes 
 
+* `KeyboardDictationService` `stopDictationInKeyboard` has been renamed to `handleDictationResultInKeyboard`.
 * `KeyboardInputViewController` `viewWillPerformDictation` has been renamed to `viewWillHandleDictationResult`.
 
 
