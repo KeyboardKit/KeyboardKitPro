@@ -12,9 +12,20 @@ Breaking changes can still occur in minor versions and patches, though, if the a
 Non-functional releases, such as KeyboardKit Pro license releases, are not listed here.
 
 
-## Older release notes
+## 7.7.1
 
-Older versions have their release notes listed in the `Release_Notes` folder.
+### 💡 Adjustments
+
+* `EnglishCalloutActionProvider` `localeKey` is now mutable.
+* `EnglishInputSetProvider` is now open to inheritance.
+* `EnglishInputSetProvider` `localeKey` is now mutable.
+* `EnglishKeyboardLayoutProvider` `localeKey` is now mutable.
+* `StandardKeyboardAppearance` `backgroundStyle` is now `open`.
+* `StandardKeyboardAppearance` `foregroundColor` is now `open`.
+
+### 🐛 Bug fixes
+
+* `StandardKeyboardActionHandler` once again activates the space drag gesture on long press instead of on press. 
 
 
 
