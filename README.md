@@ -15,19 +15,21 @@
 
 ## About KeyboardKit Pro
 
-[KeyboardKit][KeyboardKit] helps you build custom keyboard extensions for iOS and iPadOS, using Swift and SwiftUI. It extends the native keyboard APIs and provides you with a lot more functionality than is otherwise available.
+[KeyboardKit][KeyboardKit] helps you build custom keyboard extensions for iOS and iPadOS, using Swift and SwiftUI. It extends the native keyboard APIs and provides you with more functionality than is otherwise available.
 
 KeyboardKit lets you create keyboards that mimic the native iOS keyboards in a few lines of code. These keyboards can be customized to great extent to change input keys, keyboard layout, design, behavior etc.
 
 <p align="center">
     <img src ="https://github.com/KeyboardKit/KeyboardKit/blob/master/Resources/Demo.gif?raw=true" width="300" />
-</p> 
+</p>
 
 KeyboardKit Pro extends KeyboardKit with pro features, such as fully localized keyboards and services, autocomplete, dictation, proxy extensions, emoji skintone and version info, additional views etc. It supercharges your keyboard and lets you create localized keyboards in all locales with a few lines of code.
+
+KeyboardKit Pro supports `iOS 14`, `macOS 11`, `tvOS 14` and `watchOS 7`, but the standard distribution is `iOS` only. Please reach out if you need to use KeyboardKit Pro on multiple platforms.
  
 
 
-## Licenses
+## Pricing
 
 KeyboardKit Pro requires a commercial license. Licenses can be purchased from the [website][Website] or from [Gumroad][Gumroad].
 
@@ -42,14 +44,6 @@ https://github.com/KeyboardKit/KeyboardKitPro.git
 ```
 
 Since KeyboardKit Pro installs as a binary, it only has to be added to the main app target.
-
-
-
-## Supported Platforms
-
-KeyboardKit supports `iOS 14`, `macOS 11`, `tvOS 14` and `watchOS 7`. 
-
-The public distribution is `iOS` only for non-enterprise licenses! Please reach out if you need to use KeyboardKit Pro on multiple platforms.
 
 
 
@@ -73,7 +67,7 @@ KeyboardKit Pro can unlock localized input sets, keyboard layouts and callout ac
 
 Besides the [core features][KeyboardKit], KeyboardKit Pro extends KeyboardKit with a bunch of pro features:
 
-* 🎨 [Appearance][Appearance] - KeyboardKit Pro unlocks a theme engine with many pre-defined themes.
+* 🎨 [Appearance][Appearance] - KeyboardKit Pro unlocks a theme-based appearance engine with many pre-defined themes.
 * 💡 [Autocomplete][Autocomplete] - KeyboardKit Pro unlocks a local and a remote autocomplete provider.
 * 🗯 [Callouts][Callouts] - KeyboardKit Pro unlocks locale-specific callout actions for all locales above.
 * 🎤 [Dictation][Dictation] - (BETA) KeyboardKit can perform dictation from the keyboard extension.
@@ -91,26 +85,78 @@ You can find KeyboardKit Pro-specific information at the end of each of these ar
 
 The online documentation has a [getting-started guide][Getting-Started] that will help you get started with the library.
 
-To make your custom keyboard extension use KeyboardKit, just install and import KeyboardKit, then  make it inherit `KeyboardInputViewController` instead of `UIInputController`:
+If you want to setup KeyboardKit Pro without a custom view, you can use `setupPro(withLicenseKey:)`:
 
 ```swift
-import KeyboardKit
-
-class KeyboardController: KeyboardInputViewController {}
+func viewDidLoad() {
+    super.viewDidLoad()
+    let license = try? setupPro(withLicenseKey: "your-key")
+    // Use the license as needed here
+}
 ```
 
-This will by default set up a fully working U.S. English keyboard. You can then register your license key when setting up KeyboardKit Pro:
+Since KeyboardKit will use a `SystemKeyboard` as its default view, this alternative is nice if you just want to use a `SystemKeyboard` with the pro features that are included with your license.
 
-```
-override viewWillSetupKeyboard() {
+The controller will call `viewWillSetupKeyboard()` when the keyboard view should be created or updated. You can override this function and customize the default view or set up a completely custom one.
+
+Since KeyboardKit uses plain SwiftUI, you can use any custom SwiftUI view hierarchy as your keyboard view.
+
+To set up KeyboardKit Pro with a custom view, you can use `setupPro(withLicenseKey:licenseConfiguration:view:)`.
+
+For instance, here we replace the autocomplete toolbar in the default system keyboard with a custom toolbar:
+
+```swift
+override func viewWillSetupKeyboard() {
     super.viewWillSetupKeyboard()
     try? setupPro(
-        withLicenseKey: "299B33C6-061C-4285-8189-90525BCAF098",
-        view: { controller in MyKeyboardView(controller: controller) },
-        licenseConfiguration: { license in ... }
+        withLicenseKey: "LICENSE-KEY",
+        licenseConfiguration: { license in
+            // Use the license as needed here
+        },
+        view: { controller in
+            VStack(spacing: 0) {
+                MyCustomToolbar()
+                SystemKeyboard(
+                    controller: controller,
+                    autocompleteToolbar: .none
+                )
+            }
+        }
     )
 }
 ```
+
+and here we use a completely custom view that requires the app-specific controller type:
+
+```swift
+override func viewWillSetupKeyboard() {
+    super.viewWillSetupKeyboard()
+    try? setupPro(
+        withLicenseKey: "LICENSE-KEY",
+        licenseConfiguration: { license in
+            // Use the license as needed here
+        },
+        view: { [unowned self] _ in
+            MyKeyboardView(controller: self)
+        }
+    )
+}
+```
+
+When you use a custom view it's *very important* that it has an `unowned` controller reference:
+
+```swift
+struct MyKeyboardView: View {
+
+    @unowned var controller: KeyboardViewController 
+
+    var body: some View {
+        ... 
+    }
+}
+```
+
+**IMPORTANT** When you set up a custom view, it's *very* important to use `[unowned self] in`, otherwise the strong `self` reference will cause a memory leak, as well as an `unowned var` within the view! Failing to do so will cause a memory leak.
 
 For more information, please see the [online documentation][Documentation] and [getting-started guide][Getting-Started].
 
