@@ -13,6 +13,155 @@ Non-functional releases, such as KeyboardKit Pro license releases, are not liste
 
 
 
+## 7.9
+
+This release prepares the library for the upcoming major version bump, which will clean up the library and make it easier to use.
+
+Many types have been deprecated with proper `@available` annotations, but those that can't be deprecated yet are soft deprecated with a `[DEPRECATED]` comment. `> v8.0: ` comments are added where structural or architectural changes will, but currently can't be made.
+
+Many keyboard types are moved into a new `Keyboard` namespace, and that many styles are moved into a new `KeyboardStyle` namespace. This introduction of namespace types will make it easier to overview the library and find types within it.
+
+Another big change is that the `InputSetProvider` concept is replaced by just using `InputSet`s. This removes a lot of complexity and makes it easier to create custom layouts and use various input sets together.
+
+Other big changes are that the `KeyboardAppearance` is renamed to `KeyboardStyleProvider`, the `Appearance` namespace to `Styling` and that the `KeyboardFeedbackHandler` is merged into the `KeyboardActionHandler` to just have a single type.
+
+### ✨ New Features
+
+* `AutocompleteActionProvider.disabled` is a new alias for `DisabledAutocompleteProvider`.
+* `CalloutActionProvider.disabled` is a new alias for `DisabledCalloutActionProvider`.
+* `DictationService.disabled` is a new alias for `DisabledDictationService`.
+* `HapticFeedbackConfiguration` has new `press` and `release` configurations.
+* `Image.keyboardShift` is a new image.
+* `InputSet` has new `English` builders.
+* `Keyboard` is a new namespace type for some keyboard-specific types.
+* `Keyboard.ReturnKeyType` has new `continue`, `emergencyCall` and `route` types.
+* `Keyboard.ReturnKeyType` has a new `prefersAutocomplete` property.
+* `KeyboardActionHandler` has new feedback functions.
+* `KeyboardDictationService.disabled` is a new alias for `DisabledKeyboardDictationService`.
+* `KeyboardFeedbackSettings` has new enabled and disabled configurations.
+* `KeyboardInputViewController` has new view lifecycle functions for registering and unregistering as the shared controller. 
+* `KeyboardLayoutProviderProxy` has new standard functionality.
+* `KeyboardStyle` is a new style namespace that contains most style types.
+* `KeyboardStyleProvider` has a new function for the button content bottom margin.
+* `PreviewKeyboardInputViewController` is a new preview type.
+* `StandardKeyboardActionHandler` has new feedback functions.
+* `StandardKeyboardFeedbackHandler` has new feedback functions.
+* `StandardKeyboardLayoutProvider` has a new default initializer.
+* `SystemKeyboard` is now available on all platforms.
+* `View` has a new `withEnvironment(from:)` extension.
+
+### 💡 Adjustments
+
+* `AudioFeedbackEngine` has been converted from a protocol to an open class.
+* `AutocompleteToolbar` items now use `.current` as default locale.
+* `KeyboardActionHandler` has a new `triggerFeedback(for:on:)` function. 
+* `SpaceCursorDragGestureHandler` no longer needs a feedback handler.
+* `StandardKeyboardLayoutProvider` no longer requires an input set provider.
+* `StandardKeyboardStyleProvider` adjusts the bottom padding for some keys.
+* `SystemKeyboardLayoutProvider` now returns switcher actions for all keyboard types. 
+
+### 👑 Pro Adjustments
+
+* `AutocompleteToolbarPreview` is a new preview component.
+* `InputSet` has new input sets for some locales.
+* `InputSet` has new throwing properties for the localized input sets.
+* `KeyboardThemeAppearance` has a been renamed to `ThemeBasedKeyboardStyleProvider`.
+* `ProInputSetProvider` and all its locale-specific types have been deprecated. 
+* `ProKeyboardLayoutProvider` and all localized subclasses use input sets instead of providers.
+* `ProKeyboardLayoutProvider` and all localized subclasses can now be provided with custom input sets.
+* `SystemKeyboardPreview` is a new preview component.
+* `KeyboardThemeLivePreview` has been renamed to `SystemKeyboardThemePreview`.
+* `KeyboardThemeLivePreviewHeader` has been renamed to `SystemKeyboardThemePreviewHeader`.
+* `SystemKeyboardThemePreview` now works on all platforms.
+
+### 🐛 Bug fixes
+
+* `EmojiCategoryKeyboard` no longer requires two gestures when it's presented by the `SystemKeyboard`. This was strangely enough fixed by the `SystemKeyboardLayoutProvider` adjustment.
+* `EmojiCategoryKeyboard` now applies an interactable background to the grid, to make scrolling work even where there are no emojis.
+* `KeyboardContext` now switching to alphabetic when inserting a new line after a sentence delimiter in numeric and symbolic keyboards.
+
+### 🗑️ Deprecations
+
+* `AudioFeedbackConfiguration.noFeedback` has a been renamed to `.disabled`.
+* `AudioFeedbackConfiguration.standard` is replaced by `.enabled`.
+* `ActionCalloutContext` has been renamed to `KeyboardCalloutContext.ActionContext`.
+* `AutocompleteSpaceState` has been deprecated.
+* `AutocompleteSuggestion.isAutocomplete` has been renamed to `isAutocorrect`.
+* `AutocompleteToolbarStyle` has been renamed to `KeyboardStyle.AutocompleteToolbarItem`.
+* `AutocompleteToolbarItemBackgroundStyle` has been renamed to `KeyboardStyle.AutocompleteToolbarItemBackground`.
+* `AutocompleteToolbarItemStyle` has been renamed to `KeyboardStyle.AutocompleteToolbarItem`.
+* `AutocompleteToolbarSeparatorStyle` has been renamed to `KeyboardStyle.AutocompleteSeparator`.
+* `Callout` views have been soft deprecated and will be made internal in 8.0.
+* `EmojiAnalyzer` has been deprecated.
+* `EmojiCategoryKeyboardMenu` has been soft deprecated and will be made internal in 8.0.
+* `EmojiCategoryTitle` has been soft deprecated and will be made internal in 8.0.
+* `EnglishInputSetProvider` has been deprecated.
+* `HapticFeedbackConfiguration.noFeedback` has a been renamed to `.disabled`.
+* `AudioFeedbackConfiguration.standard` is replaced by `.minimal`.
+* `InputCalloutContext` has been renamed to `KeyboardCalloutContext.InputContext`.
+* `InputSetProvider` and all related types have been deprecated.
+* `InterfaceOrientationResolver` has been deprecated.
+* `KeyboardActionCalloutStyle` has been renamed to `KeyboardStyle.ActionCallout`.
+* `KeyboardAppearance` has been renamed to `KeyboardStyleProvider`.
+* `KeyboardAutocapitalizationType` has been renamed to `Keyboard.AutocapitalizationType`.
+* `KeyboardBackgroundStyle` has been renamed to `KeyboardStyle.Background`.
+* `KeyboardBackspaceRange` has been renamed to `Keyboard.BackspaceRange`.
+* `KeyboardButtonStyle` has been renamed to `KeyboardStyle.Button`.
+* `KeyboardButtonBorderStyle` has been renamed to `KeyboardStyle.ButtonBorder`.
+* `KeyboardButtonShadowStyle` has been renamed to `KeyboardStyle.ButtonShadow`.
+* `KeyboardCalloutContext` has been renamed to `CalloutContext`.
+* `KeyboardCalloutContext.action` has been renamed to `actionContext`.
+* `KeyboardCalloutContext.input` has been renamed to `inputContext`.
+* `KeyboardCalloutStyle` has been renamed to `KeyboardStyle.Callout`.
+* `KeyboardCase` has been renamed to `Keyboard.Case`.
+* `KeyboardCase.standardButtonImage` has been deprecated.
+* `KeyboardCaseAdjustable` has been deprecated.
+* `KeyboardEnabledState` has been renamed to `KeyboardEnabledContext`.
+* `KeyboardHostingController` has been soft deprecated.
+* `KeyboardFontType` has been renamed to `KeyboardFont.FontType`.
+* `KeyboardFontWeight` has been renamed to `KeyboardFont.FontWeight`.
+* `KeyboardInputCalloutStyle` has been renamed to `KeyboardStyle.InputCallout`.
+* `KeyboardInputViewController` `keyboardAppearance` has been renamed to `keyboardStyleProvider`.
+* `KeyboardReturnKeyType` has been renamed to `Keyboard.ReturnKeyType`.
+* `KeyboardType` has been renamed to `Keyboard.KeyboardType`.
+* `NumericInputSet.english` has been renamed to `englishNumeric`.
+* `NumericInputSet.standard` has been renamed to `standardNumeric`.
+* `DisabledAudioFeedbackEngine` has been deprecated.
+* `DisabledHapticFeedbackEngine` has been deprecated.
+* `HapticFeedbackConfiguration.tap` has been replaced by `press` and `release`.
+* `KeyboardActions` has been renamed to `KeyboardAction.Row`.
+* `KeyboardActions` image initializer has been deprecated.
+* `KeyboardActionRows` has been renamed to `KeyboardAction.Rows`.
+* `KeyboardLayoutItemRow` has been renamed to `KeyboardLayoutItem.Row`.
+* `KeyboardLayoutItemRows` has been renamed to `KeyboardLayoutItem.Rows`.
+* `KeyboardLayoutItemSize` has been renamed to `KeyboardLayoutItem.Size`.
+* `KeyboardLayoutItemWidth` has been renamed to `KeyboardLayoutItem.Width`.
+* `KeyboardFeedbackHandler` has been deprecated.
+* `LocalizedCalloutActionProvider` has been deprecated.
+* `LocalizedKeyboardLayoutProvider` has been deprecated.
+* `PrefersAutocompleteResolver` has been deprecated.
+* `PreviewKeyboardActionHandler` has been renamed to `KeyboardPreviews.ActionHandler`
+* `PreviewKeyboardAppearance` has been renamed to `KeyboardPreviews.StyleProvider`.
+* `PreviewKeyboardInputViewController` has been renamed to `KeyboardPreviews.InputViewController`
+* `PreviewKeyboardLayoutProvider` has been renamed to `KeyboardPreviews.LayoutProvider`
+* `PreviewKeyboardStyleProvider` has been renamed to `KeyboardPreviews.StyleProvider`
+* `PreviewTextDocumentProxy` has been renamed to `KeyboardPreviews.TextDocumentProxy`
+* `StandardAudioFeedbackEngine` has been deprecated.
+* `StandardHapticFeedbackEngine` has been deprecated.
+* `StandardKeyboardAppearance` has been renamed to `StandardKeyboardStyleProvider`.
+* `StandardKeyboardFeedbackHandler` has been deprecated.
+* `StaticKeyboardBehavior` has been deprecated.
+* `SymbolicInputSet.english` has been renamed to `englishSymbolic`.
+* `SymbolicInputSet.standard` has been renamed to `standardSymbolic`.
+* `SystemKeyboardLayoutProvider` utility extensions have been deprecated.
+
+### 💥 Breaking changes 
+
+* `EnglishKeyboardLayoutProvider` no longer has an open layout provider function.
+* `StandardKeyboardActionHandler` no longer uses a feedback handler.
+
+
+
 ## 7.8
 
 ### ✨ New Features

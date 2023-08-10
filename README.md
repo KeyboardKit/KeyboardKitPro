@@ -7,25 +7,27 @@
     <img src="https://img.shields.io/badge/swift-5.6-orange.svg" alt="Swift 5.6" />
     <img src="https://img.shields.io/badge/platform-SwiftUI-blue.svg" alt="Swift UI" title="Swift UI" />
     <img src="https://img.shields.io/github/license/danielsaidi/DeckKit" alt="MIT License" />
-    <img src="https://img.shields.io/twitter/url?label=Twitter&style=social&url=https%3A%2F%2Ftwitter.com%2Fgetkeyboardkit" alt="Twitter: @@getkeyboardkit" title="Twitter: @getkeyboardkit" />
-    <img src="https://img.shields.io/mastodon/follow/109340839247880048?domain=https%3A%2F%2Ftechhub.social&style=social" alt="Mastodon: @keyboardkit@techhub.social" title="Mastodon: @danielsaidi@mastodon.social" />
+        <a href="https://twitter.com/getkeyboardkit">
+        <img src="https://img.shields.io/twitter/url?label=Twitter&style=social&url=https%3A%2F%2Ftwitter.com%2Fgetkeyboardkit" alt="Twitter: @@getkeyboardkit" title="Twitter: @getkeyboardkit" />
+    </a>
+    <a href="https://techhub.social/@keyboardkit">
+        <img src="https://img.shields.io/mastodon/follow/109340839247880048?domain=https%3A%2F%2Ftechhub.social&style=social" alt="Mastodon: @keyboardkit@techhub.social" title="Mastodon: @keyboardkit@mastodon.social" />
+    </a>
 </p>
 
 
 
 ## About KeyboardKit Pro
 
-[KeyboardKit][KeyboardKit] helps you build custom keyboard extensions for iOS and iPadOS, using Swift and SwiftUI. It extends the native keyboard APIs and provides you with more functionality than is otherwise available.
+[KeyboardKit][KeyboardKit] helps you create custom keyboards for iOS and iPadOS, using Swift and SwiftUI. It extends Apple's native keyboard APIs and provides you with more functionality.
 
-KeyboardKit lets you create keyboards that mimic the native iOS keyboards in a few lines of code. These keyboards can be customized to great extent to change input keys, keyboard layout, design, behavior etc.
+KeyboardKit Pro extends KeyboardKit with pro features, such as localized input sets, layouts and callout actions, autocomplete, dictation, proxy extensions, emoji skintone and version info, etc. It supercharges your keyboard and lets you create amazing and fully custom keyboards.
 
 <p align="center">
-    <img src ="https://github.com/KeyboardKit/KeyboardKit/blob/master/Resources/Demo.gif?raw=true" width="300" />
+    <img src ="Resources/Demo.gif" width="300" />
 </p>
 
-KeyboardKit Pro extends KeyboardKit with pro features, such as fully localized keyboards and services, autocomplete, dictation, proxy extensions, emoji skintone and version info, additional views etc. It supercharges your keyboard and lets you create localized keyboards in all locales with a few lines of code.
-
-KeyboardKit Pro supports `iOS 14`, `macOS 11`, `tvOS 14` and `watchOS 7`, but the standard distribution is `iOS` only. Please reach out if you need to use KeyboardKit Pro on multiple platforms.
+KeyboardKit supports `iOS 14`, `macOS 11`, `tvOS 14` and `watchOS 7`.
  
 
 
@@ -43,13 +45,13 @@ KeyboardKit Pro can be installed with the Swift Package Manager:
 https://github.com/KeyboardKit/KeyboardKitPro.git
 ```
 
-Since KeyboardKit Pro installs as a binary, it only has to be added to the main app target.
+KeyboardKit Pro only has to be added to the main app target.
 
 
 
 ## Supported Locales
 
-KeyboardKit is localized in 61 keyboard-specific locales ([read more][Localization]):
+KeyboardKit is localized in [60+ keyboard-specific locales][Localization]:
 
 🇦🇱 🇦🇪 🇦🇲 🇧🇾 🇧🇬 🇦🇩 🏳️ 🇭🇷 🇨🇿 🇩🇰 <br />
 🇳🇱 🇧🇪 🇺🇸 🇬🇧 🇺🇸 🇪🇪 🇫🇴 🇵🇭 🇫🇮 🇫🇷 <br />
@@ -59,104 +61,76 @@ KeyboardKit is localized in 61 keyboard-specific locales ([read more][Localizati
 🇷🇺 🇷🇸 🇷🇸 🇸🇰 🇸🇮 🇪🇸 🇰🇪 🇸🇪 🇹🇷 🇺🇦 <br />
 🇺🇿 <br />
 
-KeyboardKit Pro can unlock localized input sets, keyboard layouts and callout actions for all locales.  
+KeyboardKit Pro unlocks localized input sets, layouts and callouts for all locales.  
 
 
 
 ## Features
 
-Besides the [core features][KeyboardKit], KeyboardKit Pro extends KeyboardKit with a bunch of pro features:
+KeyboardKit Pro extends KeyboardKit with a bunch of features:
 
-* 🎨 [Appearance][Appearance] - KeyboardKit Pro unlocks a theme-based appearance engine with many pre-defined themes.
 * 💡 [Autocomplete][Autocomplete] - KeyboardKit Pro unlocks a local and a remote autocomplete provider.
-* 🗯 [Callouts][Callouts] - KeyboardKit Pro unlocks locale-specific callout actions for all locales above.
-* 🎤 [Dictation][Dictation] - (BETA) KeyboardKit can perform dictation from the keyboard extension.
-* 😊 [Emojis][Emojis] - KeyboardKit Pro unlocks emoji skin tone variants, secondary actions and verison information. 
-* 🔤 [Input][Input] - KeyboardKit Pro unlocks locale-specific input sets for all locales above.
-* 💱 [Layout][Layout] - KeyboardKit Pro unlocks locale-specific keyboard layouts for all locales above.
-* ➡️ [Proxy][Proxy] - KeyboardKit Pro unlocks `UITextDocumentProxy` extensions for reading all text from the proxy.
-* 🖼 Views - KeyboardKit Pro unlocks additonal views that simplify building great keyboards.
-
-You can find KeyboardKit Pro-specific information at the end of each of these articles.
+* 🗯 [Callouts][Callouts] - KeyboardKit Pro unlocks locale-specific callout actions for all locales.
+* 🎤 [Dictation][Dictation] - (BETA) KeyboardKit unlocks a dictation engine that can perform keyboard dictation.
+* 😊 [Emojis][Emojis] - KeyboardKit Pro unlocks emoji skin tone variants, secondary actions and version information. 
+* 🔣 [Layout][Layout] - KeyboardKit Pro unlocks locale-specific input sets and keyboard layouts for all locales.
+* ➡️ [Proxy Extensions][Proxy] - KeyboardKit Pro unlocks `UITextDocumentProxy` extensions for reading all text from the proxy.
+* 🎨 [Styling][Styling] - KeyboardKit Pro unlocks a theme-based appearance engine with many pre-defined themes.
 
 
 
 ## Getting started
 
-The online documentation has a [getting-started guide][Getting-Started] that will help you get started with the library.
+The online documentation has a [getting-started guide][Getting-Started] that helps you get started.
 
-If you want to setup KeyboardKit Pro without a custom view, you can use `setupPro(withLicenseKey:)`:
+After installing KeyboardKit Pro, just `import KeyboardKitPro` and make your `KeyboardViewController` inherit ``KeyboardInputViewController`` instead of `UIInputViewController`:
+
+```swift
+import KeyboardKitPro
+
+class KeyboardController: KeyboardInputViewController {}
+```
+
+This gives your controller access to additional functionality, such as new lifecycle functions like `viewWillSetupKeyboard()`, observable state like `keyboardContext`, services like `keyboardActionHandler` and much more.
+
+The default ``KeyboardInputViewController`` behavior is to setup an English `SystemKeyboard`. It will then call `viewWillSetupKeyboard()` when the keyboard view should be created or updated.
+
+If you want to use the default system keyboad with the locales and features that your license unlocks, you can just register your license key:
 
 ```swift
 func viewDidLoad() {
     super.viewDidLoad()
     let license = try? setupPro(withLicenseKey: "your-key")
-    // Use the license as needed here
 }
 ```
 
-Since KeyboardKit will use a `SystemKeyboard` as its default view, this alternative is nice if you just want to use a `SystemKeyboard` with the pro features that are included with your license.
-
-The controller will call `viewWillSetupKeyboard()` when the keyboard view should be created or updated. You can override this function and customize the default view or set up a completely custom one.
-
-Since KeyboardKit uses plain SwiftUI, you can use any custom SwiftUI view hierarchy as your keyboard view.
-
-To set up KeyboardKit Pro with a custom view, you can use `setupPro(withLicenseKey:licenseConfiguration:view:)`.
-
-For instance, here we replace the autocomplete toolbar in the default system keyboard with a custom toolbar:
+To set up KeyboardKit Pro with a custom view, you can override `viewWillSetupKeyboard()` and call `setupPro(withLicenseKey:licenseConfiguration:view:)` to customize the `SystemKeyboard` or use a custom view:
 
 ```swift
-override func viewWillSetupKeyboard() {
-    super.viewWillSetupKeyboard()
-    try? setupPro(
-        withLicenseKey: "LICENSE-KEY",
-        licenseConfiguration: { license in
-            // Use the license as needed here
-        },
-        view: { controller in
-            VStack(spacing: 0) {
-                MyCustomToolbar()
-                SystemKeyboard(
-                    controller: controller,
-                    autocompleteToolbar: .none
-                )
+class KeyboardViewController: KeyboardInputViewController {
+
+    override func viewWillSetupKeyboard() {
+        super.viewWillSetupKeyboard()
+        try? setupPro(
+            withLicenseKey: "LICENSE-KEY",
+            licenseConfiguration: { license in
+                // Use the license as needed here
+            },
+            view: { controller in
+                VStack(spacing: 0) {
+                    MyCustomToolbar()
+                    SystemKeyboard(
+                        controller: controller,
+                        autocompleteToolbar: .none
+                    )
+                }
             }
-        }
-    )
-}
-```
-
-and here we use a completely custom view that requires the app-specific controller type:
-
-```swift
-override func viewWillSetupKeyboard() {
-    super.viewWillSetupKeyboard()
-    try? setupPro(
-        withLicenseKey: "LICENSE-KEY",
-        licenseConfiguration: { license in
-            // Use the license as needed here
-        },
-        view: { [unowned self] _ in
-            MyKeyboardView(controller: self)
-        }
-    )
-}
-```
-
-When you use a custom view it's *very important* that it has an `unowned` controller reference:
-
-```swift
-struct MyKeyboardView: View {
-
-    @unowned var controller: KeyboardViewController 
-
-    var body: some View {
-        ... 
+        )
     }
 }
 ```
 
-**IMPORTANT** When you set up a custom view, it's *very* important to use `[unowned self] in`, otherwise the strong `self` reference will cause a memory leak, as well as an `unowned var` within the view! Failing to do so will cause a memory leak.
+The view builder provides an unowned controller reference to avoid reference cycles and memory leaks.
 
 For more information, please see the [online documentation][Documentation] and [getting-started guide][Getting-Started].
 
@@ -172,44 +146,21 @@ The online documentation is currently iOS-specific, which means that some parts 
 
 ## Demo Application
 
-The [main project repository][KeyboardKit] has a `Demo` folder with a demo apps that lets you try out different KeyboardKit features.
+The [main project repository][KeyboardKit] has a demo app that lets you try out KeyboardKit and KeyboardKit Pro.
 
-The demo app has 5 keyboard extensions:
+* The main app shows how to display keyboard state, link to system settings, etc.
+* The `English` keyboard uses KeyboardKit and a `SystemKeyboard` with a standard, English locale.
+* The `Unicode` keyboard uses KeyboardKit and a `SystemKeyboard` with unicode-based input keys.
+* The `Custom` keyboard uses KeyboardKit and a `SystemKeyboard` with custom keys, layouts and styles.
+* The `Pro` keyboard uses KeyboardKit Pro and a `SystemKeyboard` with all LRT locales, autocomplete etc.
 
-* `English` has a `SystemKeyboard` with the standard, English locale.
-* `Unicode` has a `SystemKeyboard` with unicode-based input keys.
-* `Custom` has a `SystemKeyboard` with custom keys, layout and appearance.
-* `Pro` uses KeyboardKit Pro and has a `SystemKeyboard` with all LRT locales.
-* `ProRtl` uses KeyboardKit Pro and has a `SystemKeyboard` with all RTL locales.
-
-Just open and run the demo app, then enable the keyboards you want to try under System Settings. Note that you need to enable full access to try some features, like audio and haptic feedback.
+Just open and run the demo app in the `Demo` folder, then enable the keyboards you want to try under System Settings. Note that you need to enable full access to try some features, like audio and haptic feedback.
 
 
 
 ## Support
 
-KeyboardKit is trusted and proudly sponsored by the following companies:
-
-<a href="https://www.oribi.se/en">
-    <img src="Resources/sponsors/oribi.png" alt="Oribi Icon" title="Oribi" width=120 />
-</a>
-<a href="https://www.phonetoroam.com">
-    <img src="Resources/sponsors/phonetoroam.png" alt="phonetoroam Icon" title="phonetoroam" width=120 />
-</a>
-<a href="https://vitalisapps.com">
-    <img src="Resources/sponsors/vitalis.png" alt="Vitalis Icon" title="Vitalis" width=120 />
-</a>
-<a href="https://letterkey.eu">
-    <img src="Resources/sponsors/letterkey.png" alt="LetterKey Icon" title="LetterKey" width=120 />
-</a>
-<a href="http://anomaly.net.au">
-    <img src="Resources/sponsors/anomaly.png" alt="Anomaly Software Icon" title="Anomaly Software" width=120 />
-</a>
-<a href="https://www.milocreative.com">
-    <img src="Resources/sponsors/milo.png" alt="Milo Creative Icon" title="Milo Creative" width=120 />
-</a>
-
-KeyboardKit is open-source and completely free, but you can sponsor this project on [GitHub Sponsors][Sponsors], upgrade to KeyboardKit Pro or get in touch for paid support.
+KeyboardKit is open-source and completely free, but you can sponsor this project on [GitHub Sponsors][Sponsors], upgrade to [KeyboardKit Pro][Pro] or [get in touch][Email] for freelance work, paid support etc.
 
 
 
@@ -220,7 +171,7 @@ Feel free to reach out if you have questions or if you want to contribute in any
 * Website: [keyboardkit.com][Website]
 * Mastodon: [@keyboardkit@techhub.social][Mastodon]
 * Twitter: [@getkeyboardkit][Twitter]
-* E-mail: [info@getkeyboardkit.com][Email]
+* E-mail: [info@keyboardkit.com][Email]
 
 
 
@@ -243,7 +194,6 @@ KeyboardKit Pro is closed source. See the [LICENSE][License] file for more info.
 [Getting-Started]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkitpro/getting-started-with-keyboardkit-pro
 
 [Actions]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkitpro/actions
-[Appearance]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkitpro/appearance
 [Autocomplete]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkitpro/autocomplete
 [Callouts]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkitpro/callouts
 [Dictation]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkitpro/dictation
@@ -251,7 +201,6 @@ KeyboardKit Pro is closed source. See the [LICENSE][License] file for more info.
 [External]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkitpro/external-keyboards
 [Feedback]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkitpro/feedback
 [Gestures]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkitpro/gestures
-[Input]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkitpro/input
 [Keyboard]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkitpro/keyboard
 [Layout]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkitpro/layout
 [Localization]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkitpro/localization
@@ -260,6 +209,6 @@ KeyboardKit Pro is closed source. See the [LICENSE][License] file for more info.
 [Routing]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkitpro/routing
 [RTL]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkitpro/rtl
 [Settings]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkitpro/settings
-[Styles]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkitpro/styles
+[Styling]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkitpro/styling
 
 [License]: https://github.com/KeyboardKit/KeyboardKitPro/blob/master/LICENSE
