@@ -21,10 +21,10 @@
 
 [KeyboardKit][KeyboardKit] helps you create custom keyboards for iOS and iPadOS, using Swift and SwiftUI. It extends Apple's native keyboard APIs and provides you with more functionality.
 
-KeyboardKit Pro extends KeyboardKit with pro features, such as localized input sets, layouts and callout actions, autocomplete, dictation, proxy extensions, emoji skintone and version info, etc. It supercharges your keyboard and lets you create amazing and fully custom keyboards.
+KeyboardKit Pro extends KeyboardKit with pro features, such as localized input sets, layouts and callout actions, autocomplete, dictation, proxy extensions, emoji skintone and version info, etc. 
 
 <p align="center">
-    <img src ="Resources/Demo.gif" width="300" />
+    <img src="Resources/Demo.gif" width="300" />
 </p>
 
 KeyboardKit supports `iOS 14`, `macOS 11`, `tvOS 14` and `watchOS 7`.
