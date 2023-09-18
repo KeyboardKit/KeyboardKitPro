@@ -13,6 +13,20 @@ Non-functional releases, such as KeyboardKit Pro license releases, are not liste
 
 
 
+## 7.9.3
+
+### 👑 Pro Adjustments
+
+* `EmojiVersion` adjusts iOS and tvOS versions for emoji v15.
+* `SystemKeyboardPreview.Configuration` no longer applies a color scheme by default.
+
+### 🗑️ Deprecations
+
+* `EmojiKeyboardButton` has been deprecated.
+* `EnglishCalloutActionProvider` has been soft deprecated.
+
+
+
 ## 7.9
 
 This release prepares the library for the upcoming major version bump, which will clean up the library and make it easier to use.
