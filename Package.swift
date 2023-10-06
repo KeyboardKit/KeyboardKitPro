@@ -1,4 +1,4 @@
-// swift-tools-version:5.6
+// swift-tools-version:5.7
 
 import PackageDescription
 
@@ -18,8 +18,8 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "KeyboardKitPro",
-            url: "https://github.com/KeyboardKit/KeyboardKit/releases/download/7.9.5/KeyboardKitPro.zip",
-            checksum: "07cc4d7b67f551c2cbbc17ba1773cff6da836e0a715b37d8e7135ae2ca3899db"
+            url: "https://github.com/KeyboardKit/KeyboardKit/releases/download/8.0-rc1/KeyboardKitPro.zip",
+            checksum: "19dca82bb5f6f44ea194b0ec6cd78a590322efbaec8c123d4281a02c880d1623"
         )
     ]
 )
