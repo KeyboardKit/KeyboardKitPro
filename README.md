@@ -69,17 +69,20 @@ KeyboardKit Pro unlocks localized input sets, layouts and callouts for all local
 
 KeyboardKit Pro extends [KeyboardKit][KeyboardKit] with pro features:
 
-* 💡 [Autocomplete][Autocomplete] - KeyboardKit Pro unlocks local and a remote autocomplete.
+* ⌨️ [Essentials][Essentials] - KeyboardKit Pro unlocks system keyboard and theme previews that you can use in apps.
+* 💡 [Autocomplete][Autocomplete] - KeyboardKit Pro unlocks local and remote autocomplete.
 * 💥 [Actions][Actions] - KeyboardKit Pro registers and shows the most recently used emojis.
 * 🗯 [Callouts][Callouts] - KeyboardKit Pro unlocks localized callout actions for all locales.
-* 🎤 [Dictation][Dictation] - (BETA) KeyboardKit unlocks dictation support for apps and keyboards.
+* 🎤 [Dictation][Dictation] - (BETA) KeyboardKit Pro unlocks dictation for apps and keyboards.
 * 😀 [Emojis][Emojis] - KeyboardKit Pro unlocks an emoji keyboard, categories, skin tones, version information, and much more.
 * ⌨️ [External Keyboards][External] - KeyboardKit Pro can detect if an external keyboard is connected. 
 * 🔣 [Layout][Layout] - KeyboardKit Pro unlocks localized input sets and layouts for all locales.
+* 🔣 [Localization][Localization] - KeyboardKit Pro unlocks fuly localized keyboards for all 60+ locales.
+<!--* 🗺️ [Navigation][Navigation] - KeyboardKit unlocks a previous app navigator to let navigate back to the keyboard.-->
+* ➡️ [Previews][Previews] - KeyboardKit Pro unlocks powerful system keyboard and theme previews.
 * ➡️ [Proxy Extensions][Proxy] - KeyboardKit Pro makes `UITextDocumentProxy` able to read all content in the current document.
 * 🚏 [Routing][Routing] - KeyboardKit Pro lets you route text to text inputs within the keyboard.
 * 🎨 [Styling][Styling] - KeyboardKit Pro unlocks a theme engine with many pre-defined themes.
-* 🍏 [System][System] - KeyboardKit Pro adds a bunch of system keyboard previews that you can use in your apps.
 
 KeyboardKit Pro also adds more views, toggles, toolbars, etc.
 
@@ -203,6 +206,8 @@ KeyboardKit Pro is closed source. See the [LICENSE][License] file for more info.
 [Documentation]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkitpro/
 [Getting-Started]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkitpro/getting-started-pro
 
+[Essentials]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkitpro/essentials
+
 [Actions]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkitpro/understanding-actions
 [Autocomplete]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkitpro/understanding-autocomplete
 [Buttons]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkitpro/understanding-buttons
@@ -211,7 +216,6 @@ KeyboardKit Pro is closed source. See the [LICENSE][License] file for more info.
 [Device]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkitpro/understanding-device-utilities
 [Dictation]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkitpro/understanding-dictation
 [Emojis]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkitpro/understanding-emojis
-[Essentials]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkitpro/understanding-essentials
 [External]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkitpro/understanding-external-keyboards
 [Feedback]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkitpro/understanding-feedback
 [Gestures]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkitpro/understanding-gestures
@@ -225,6 +229,5 @@ KeyboardKit Pro is closed source. See the [LICENSE][License] file for more info.
 [Settings]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkitpro/understanding-settings
 [State]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkitpro/understanding-state
 [Styling]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkitpro/understanding-styling
-[System]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkitpro/understanding-system-keyboards
 
 [License]: https://github.com/KeyboardKit/KeyboardKitPro/blob/master/LICENSE
