@@ -69,19 +69,20 @@ KeyboardKit Pro unlocks localized input sets, layouts and callouts for all local
 
 KeyboardKit Pro extends [KeyboardKit][KeyboardKit] with pro features:
 
-* ⌨️ [Essentials][Essentials] - KeyboardKit Pro unlocks system keyboard and theme previews that you can use in apps.
-* 💡 [Autocomplete][Autocomplete] - KeyboardKit Pro unlocks local and remote autocomplete.
+* ⌨️ [Essentials][Essentials] - KeyboardKit Pro unlocks system keyboard and theme live previews.
 * 💥 [Actions][Actions] - KeyboardKit Pro registers and shows the most recently used emojis.
+* 🤖 [AI Support][AI] - KeyboardKit Pro unlocks capabilities that are needed for AI.
+* 💡 [Autocomplete][Autocomplete] - KeyboardKit Pro unlocks local and remote autocomplete.
 * 🗯 [Callouts][Callouts] - KeyboardKit Pro unlocks localized callout actions for all locales.
 * 🎤 [Dictation][Dictation] - (BETA) KeyboardKit Pro unlocks dictation for apps and keyboards.
-* 😀 [Emojis][Emojis] - KeyboardKit Pro unlocks an emoji keyboard, categories, skin tones, version information, and much more.
+* 😀 [Emojis][Emojis] - KeyboardKit Pro unlocks an emoji keyboard and more emoji information.
 * ⌨️ [External Keyboards][External] - KeyboardKit Pro can detect if an external keyboard is connected. 
 * 🔣 [Layout][Layout] - KeyboardKit Pro unlocks localized input sets and layouts for all locales.
-* 🔣 [Localization][Localization] - KeyboardKit Pro unlocks fuly localized keyboards for all 60+ locales.
+* 🔣 [Localization][Localization] - KeyboardKit Pro unlocks fully localized keyboards for all 60+ locales.
 <!--* 🗺️ [Navigation][Navigation] - KeyboardKit unlocks a previous app navigator to let navigate back to the keyboard.-->
 * ➡️ [Previews][Previews] - KeyboardKit Pro unlocks powerful system keyboard and theme previews.
 * ➡️ [Proxy Extensions][Proxy] - KeyboardKit Pro makes `UITextDocumentProxy` able to read all content in the current document.
-* 🚏 [Routing][Routing] - KeyboardKit Pro lets you route text to text inputs within the keyboard.
+* 🚏 [Text Routing][Text-Routing] - KeyboardKit Pro lets you route text to text inputs within the keyboard.
 * 🎨 [Styling][Styling] - KeyboardKit Pro unlocks a theme engine with many pre-defined themes.
 
 KeyboardKit Pro also adds more views, toggles, toolbars, etc.
@@ -209,6 +210,7 @@ KeyboardKit Pro is closed source. See the [LICENSE][License] file for more info.
 [Essentials]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkitpro/essentials
 
 [Actions]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkitpro/understanding-actions
+[AI]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkitpro/understanding-ai-support
 [Autocomplete]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkitpro/understanding-autocomplete
 [Buttons]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkitpro/understanding-buttons
 [Callouts]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkitpro/understanding-callouts
@@ -225,9 +227,9 @@ KeyboardKit Pro is closed source. See the [LICENSE][License] file for more info.
 [Navigation]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkitpro/understanding-navigation
 [Previews]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkitpro/understanding-previews
 [Proxy]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkitpro/understanding-proxy-utilities
-[Routing]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkitpro/understanding-routing
 [Settings]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkitpro/understanding-settings
 [State]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkitpro/understanding-state
 [Styling]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkitpro/understanding-styling
+[Text-Routing]: https://keyboardkit.github.io/KeyboardKit/documentation/keyboardkit/understanding-text-routing
 
 [License]: https://github.com/KeyboardKit/KeyboardKitPro/blob/master/LICENSE
