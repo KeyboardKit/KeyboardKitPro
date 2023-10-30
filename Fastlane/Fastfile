@@ -4,25 +4,6 @@ default_platform :ios
 
 platform :ios do
 
-
-  # KeyboardKit ================
-
-  desc "Remove KeyboardKit Demo"
-  lane :demoremove do
-    ensure_git_status_clean
-    sh('rm -rf ../Demo')
-  end
-
-  desc "Update KeyboardKit Demo"
-  lane :demoupdate do
-    demoremove
-    sh('cp -r ../../keyboardkit/Demo/ProDemo ../Demo')
-    git_commit(path: "*", message: "Update KeyboardKit Demo")
-  end
-
-
-  # Version ====================
-
   desc "Create a new version"
   lane :version do |options|
     ensure_git_status_clean
@@ -33,7 +14,7 @@ platform :ios do
       bump_type = "patch"
     end
     
-    version = version_bump_podspec(path: "KeyboardKitPro.podspec", bump_type: bump_type)
+    version = version_bump_podspec(path: "Version", bump_type: bump_type)
   
     git_commit(path: "*", message: "Bump to #{version}")
   
