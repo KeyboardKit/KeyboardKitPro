@@ -79,9 +79,8 @@ KeyboardKit Pro extends [KeyboardKit][KeyboardKit] with pro features:
 * ⌨️ [External Keyboards][External] - KeyboardKit Pro can detect if an external keyboard is connected. 
 * 🔣 [Layout][Layout] - KeyboardKit Pro unlocks localized input sets and layouts for all locales.
 * 🔣 [Localization][Localization] - KeyboardKit Pro unlocks fully localized keyboards for all 60+ locales.
-<!--* 🗺️ [Navigation][Navigation] - KeyboardKit unlocks a previous app navigator to let navigate back to the keyboard.-->
 * ➡️ [Previews][Previews] - KeyboardKit Pro unlocks powerful system keyboard and theme previews.
-* ➡️ [Proxy Extensions][Proxy] - KeyboardKit Pro makes `UITextDocumentProxy` able to read all content in the current document.
+* ➡️ [Proxy Extensions][Proxy] - KeyboardKit Pro makes `UITextDocumentProxy` able to read all content in a document.
 * 🚏 [Text Routing][Text-Routing] - KeyboardKit Pro lets you route text to text inputs within the keyboard.
 * 🎨 [Styling][Styling] - KeyboardKit Pro unlocks a theme engine with many pre-defined themes.
 
@@ -201,6 +200,7 @@ KeyboardKit Pro is closed source. See the [LICENSE][License] file for more info.
 [Mastodon]: https://techhub.social/@keyboardkit
 [Sponsors]: https://github.com/sponsors/danielsaidi
 
+[KeyboardKit]: https://github.com/KeyboardKit/KeyboardKit
 [Pro]: https://github.com/KeyboardKit/KeyboardKitPro
 [Gumroad]: https://kankoda.gumroad.com
 
