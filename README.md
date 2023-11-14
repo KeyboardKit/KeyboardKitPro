@@ -78,11 +78,11 @@ KeyboardKit Pro extends [KeyboardKit][KeyboardKit] with pro features:
 * 😀 [Emojis][Emojis] - KeyboardKit Pro unlocks an emoji keyboard and more emoji information.
 * ⌨️ [External Keyboards][External] - KeyboardKit Pro can detect if an external keyboard is connected. 
 * 🔣 [Layout][Layout] - KeyboardKit Pro unlocks localized input sets and layouts for all locales.
-* 🔣 [Localization][Localization] - KeyboardKit Pro unlocks fully localized keyboards for all 60+ locales.
-* ➡️ [Previews][Previews] - KeyboardKit Pro unlocks powerful system keyboard and theme previews.
+* 🌐 [Localization][Localization] - KeyboardKit Pro unlocks fully localized keyboards for all 60+ locales.
+* 👁️ [Previews][Previews] - KeyboardKit Pro unlocks powerful system keyboard and theme previews.
 * ➡️ [Proxy Extensions][Proxy] - KeyboardKit Pro makes `UITextDocumentProxy` able to read all content in a document.
-* 🚏 [Text Routing][Text-Routing] - KeyboardKit Pro lets you route text to text inputs within the keyboard.
 * 🎨 [Styling][Styling] - KeyboardKit Pro unlocks a theme engine with many pre-defined themes.
+* 🚏 [Text Routing][Text-Routing] - KeyboardKit Pro lets you route text to text inputs within the keyboard.
 
 KeyboardKit Pro also adds more views, toggles, toolbars, etc.
 
