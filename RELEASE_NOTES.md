@@ -11,6 +11,27 @@ These release notes will only contain the current version. Just check out an old
 
 
 
+## 8.0.2
+
+This patch tweaks some migration guides before removing them in 8.1.
+
+This patch moves emoji features from `Emojis` (which was introduced in 8.0) to `Emoji` after developer feedback that `Emojis` was a strange prefix.
+
+This patch makes some Pro views throwing instead of rendering empty content, since this was confusing. If you run into problems with this, just prefix your call with `try?`.
+
+### 🐛 Bug fixes
+
+* KeyboardKit Pro's text routing views no longer crashes in iOS 17 when full access is disabled.
+
+### 💥 Breaking changes 
+
+* `EmojiCategory` initializers are now throwing.
+* `Emoji` skin tones are now throwing.
+* `Emoji.Version` functionality is now throwing.
+* `Emojis` is deprecated since all functionality is moved into `Emoji`.
+
+
+
 ## 8.0
 
 Welcome to KeyboardKit 8.0 - a massive update to the KeyboardKit SDK!
