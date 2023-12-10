@@ -3,11 +3,50 @@
 KeyboardKit tries to honor semantic versioning:
 
 * Deprecations can happen at any time.
-* Deprecated code will only be removed in `major` versions.
+* Deprecations should only be removed in `major` versions.
 * Breaking changes should not occur in `minor` and `patch` updates.
-* Breaking changes can still occur in `minor` and `patch` updates, if needed for critical fixes or improvements.
+* Breaking changes can occur in `minor` and `patch` updates, if needed for critical fixes.
 
 These release notes only cover the current major version. 
+
+
+
+## 8.1
+
+This version improves autocomplete and localized provider capabilities.
+
+### 🚨 Important Information
+
+This version removes the temporary migration types that were added in 8.0. To upgrade to this or any later version, first update to 8.0 and follow the migration guides. This will remove any breaking changes when upgrading to this version.
+
+### ✨ New Features
+
+* `Autocomplete` has a new `AutocorrectionDisabledToContextModifer` modifier.
+* `AutocompleteContext` has a new `isAutocorrectDisabled` property.
+* `LocaleDictionary` has new getters and setters.
+* `StandardCalloutActionProvider` has a new `registerLocalizedProvider` function.
+* `StandardKeyboardLayoutProvider` has a new `registerLocalizedProvider` function.
+* `View` has a new `autocorrectionDisabled(with:)` modifier.
+
+### 💡 Adjustments
+
+* `SystemKeyboard` now automatically honors any `.autocorrectionDisabled()` that is applied above it.
+
+### 👑 Pro Adjustments
+
+* `LocalAutocompleteProvider` `maxCount` is now `public` and mutable.
+* `LocalAutocompleteProvider` removes autocorrect suggestions if the context has autocorrect disabled.
+* `RemoteAutocompleteProvider` `autocompleteSuggestions` is now `open`.
+* `RemoteAutocompleteProvider` properties are now `public` and mutable.
+* `RemoteAutocompleteProvider` removes autocorrect suggestions if the context has autocorrect disabled.
+
+### 🐛 Bug fixes
+
+* `KeyboardLocale.kurdish_sorani_pc` now displays its localized name properly in iOS 17.
+
+### 🗑️ Deprecations
+
+* `AutocompleteContext` `isEnabled` is renamed to `isAutocompleteEnabled`.
 
 
 
@@ -61,7 +100,7 @@ The demo app has been improved to persist the typed text and to show more pro fe
 * `ToggleToolbar` now uses the same default `.slideUp` animation for all initializers.
 * `ToggleToolbar` now applies a content shape to the default toggle to improve tap area.
 
-### 💥 Deprecations
+### 🗑️ Deprecations
 
 * `ToggleToolbar` deprecates the `toggleView` initializer in favor for the shorter `toggle` one.
 
