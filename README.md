@@ -45,15 +45,15 @@ KeyboardKit Pro only has to be added to the main app target.
 
 ## Supported Locales
 
-KeyboardKit is localized in [60+ keyboard-specific locales][Localization]:
+KeyboardKit supports [63 keyboard-specific locales][Localization]:
 
 🇦🇱 🇦🇪 🇦🇲 🇧🇾 🇧🇬 🇦🇩 🏳️ 🇭🇷 🇨🇿 🇩🇰 <br />
 🇳🇱 🇧🇪 🇺🇸 🇬🇧 🇺🇸 🇪🇪 🇫🇴 🇵🇭 🇫🇮 🇫🇷 <br />
 🇧🇪 🇨🇭 🇬🇪 🇩🇪 🇦🇹 🇨🇭 🇬🇷 🇺🇸 🇮🇱 🇭🇺 <br />
-🇮🇸 🇮🇩 🇮🇪 🇮🇹 🇰🇿 🇹🇯 🇹🇯 🇹🇯 🇱🇻 🇱🇹 <br />
-🇲🇰 🇲🇾 🇲🇹 🇲🇳 🇳🇴 🇮🇷 🇵🇱 🇵🇹 🇧🇷 🇷🇴 <br />
-🇷🇺 🇷🇸 🇷🇸 🇸🇰 🇸🇮 🇪🇸 🇰🇪 🇸🇪 🇹🇷 🇺🇦 <br />
-🇺🇿 <br />
+🇮🇸 🏳️ 🇮🇩 🇮🇪 🇮🇹 🇰🇿 🇹🇯 🇹🇯 🇹🇯 🇱🇻 <br />
+🇱🇹 🇲🇰 🇲🇾 🇲🇹 🇲🇳 🇳🇴 🏳️ 🇮🇷 🇵🇱 🇵🇹 <br />
+🇧🇷 🇷🇴 🇷🇺 🇷🇸 🇷🇸 🇸🇰 🇸🇮 🇪🇸 🇰🇪 🇸🇪 <br />
+🇹🇷 🇺🇦 🇺🇿 <br />
 
 [KeyboardKit][KeyboardKit] provides basic input sets, keyboard layouts and callout actions, while KeyboardKit Pro provides localized variants for all supported locales.
 
@@ -72,7 +72,7 @@ KeyboardKit Pro extends [KeyboardKit][KeyboardKit] with pro features:
 * 😀 [Emojis][Emojis] - KeyboardKit Pro unlocks an emoji keyboard and more emoji information.
 * ⌨️ [External Keyboards][External] - KeyboardKit Pro can detect if an external keyboard is connected. 
 * 🔣 [Layout][Layout] - KeyboardKit Pro unlocks localized input sets and layouts for all locales.
-* 🌐 [Localization][Localization] - KeyboardKit Pro unlocks fully localized keyboards for all 60+ locales.
+* 🌐 [Localization][Localization] - KeyboardKit Pro unlocks fully localized keyboards for all locales.
 * 👁️ [Previews][Previews] - KeyboardKit Pro unlocks powerful system keyboard and theme previews.
 * ➡️ [Proxy Extensions][Proxy] - KeyboardKit Pro makes `UITextDocumentProxy` able to read all content in a document.
 * 🎨 [Styling][Styling] - KeyboardKit Pro unlocks a theme engine with many pre-defined themes.
@@ -145,8 +145,8 @@ The [KeyboardKit repository][KeyboardKit] has a demo app that shows how to displ
 
 The demo app has two keyboards: 
 
-* `Keyboard` uses KeyboardKit and a standard `SystemKeyboard`.
-* `KeyboardPro` uses KeyboardKit Pro and a `SystemKeyboard` with 60+ locales, autocomplete, etc.
+* `Keyboard` uses KeyboardKit and a customized `SystemKeyboard`.
+* `KeyboardPro` uses KeyboardKit Pro and a customized `SystemKeyboard` with all locales, autocomplete, themes etc.
 
 Just open and run the demo app in the `Demo` folder, then enable the keyboards under System Settings. Note that you need to enable full access for some features, like haptic feedback.
 
