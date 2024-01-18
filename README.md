@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-    <img src="https://img.shields.io/github/v/release/KeyboardKit/KeyboardKit?color=%2300550&sort=semver" alt="Version" />
+    <img src="https://img.shields.io/github/v/release/KeyboardKit/KeyboardKitPro?color=%2300550&sort=semver" alt="Version" />
     <img src="https://img.shields.io/badge/swift-5.8-orange.svg" alt="Swift 5.8" />
     <a href="https://twitter.com/getkeyboardkit"><img src="https://img.shields.io/twitter/url?label=Twitter&style=social&url=https%3A%2F%2Ftwitter.com%2Fgetkeyboardkit" alt="Twitter: @getkeyboardkit" title="Twitter: @getkeyboardkit" /></a>
     <a href="https://techhub.social/@keyboardkit"><img src="https://img.shields.io/mastodon/follow/109340839247880048?domain=https%3A%2F%2Ftechhub.social&style=social" alt="Mastodon: @keyboardkit@techhub.social" title="Mastodon: @keyboardkit@techhub.social" /></a>
@@ -15,13 +15,16 @@
 
 [KeyboardKit][KeyboardKit] helps you create custom keyboard extensions with Swift and SwiftUI.
 
-KeyboardKit extends Apple's native APIs and provides you with a lot more functionality. It lets you create custom keyboards that mimic native iOS keyboards with just a few lines of code.
+KeyboardKit extends KeyboardKit with pro features, such as fully localized keyboards, autocomplete, an emoji keyboard, themes, dictation, etc.
 
 <p align="center">
-    <img src="Resources/Demo.gif" width="300" />
+    <img src="Resources/Demo.gif" width="450" />
 </p>
 
-KeyboardKit Pro extends KeyboardKit with pro features, such as localized system keyboards, autocomplete & autocorrect, a full document reader, an emoji keyboard, emoji features, dictation, themes, etc.
+KeyboardKit lets you customize all parts of the keyboard. You can use custom layouts, designs, behavior, etc. and make any key or gesture trigger any action. You can even use completely custom views and just use the underlying functionality.
+
+You can use KeyboardKit in many different ways. Keyboard extensions can use it to create custom keyboards. Apps can use it to check keyboard enabled state, full access, state, provide settings etc. Furthermore, any target can use it to build upon its models and functionality.
+
  
 
 
@@ -39,7 +42,7 @@ KeyboardKit Pro can be installed with the Swift Package Manager:
 https://github.com/KeyboardKit/KeyboardKitPro.git
 ```
 
-KeyboardKit Pro only has to be added to the main app target.
+**Important!** Unlike KeyboardKit, KeyboardKit Pro is a binary target and must only be added to the app target. If you add it to any other target, it may crash at runtime.
 
 
 
@@ -55,7 +58,7 @@ KeyboardKit supports [63 keyboard-specific locales][Localization]:
 🇧🇷 🇷🇴 🇷🇺 🇷🇸 🇷🇸 🇸🇰 🇸🇮 🇪🇸 🇰🇪 🇸🇪 <br />
 🇹🇷 🇺🇦 🇺🇿 <br />
 
-[KeyboardKit][KeyboardKit] provides basic input sets, keyboard layouts and callout actions, while KeyboardKit Pro provides localized variants for all supported locales.
+[KeyboardKit][KeyboardKit] provides a basic keyboard layout and callout actions, while KeyboardKit Pro provides localized layouts, callouts and behaviors for all supported locales.
 
 
 
@@ -84,7 +87,7 @@ KeyboardKit Pro also adds more views, toggles, toolbars, etc.
 
 ## Getting started
 
-After installing KeyboardKit Pro, just import it and make your controller inherit ``KeyboardInputViewController`` instead of `UIInputViewController`:
+After installing KeyboardKit Pro, just make your `KeyboardViewController` inherit ``KeyboardInputViewController`` instead of `UIInputViewController`:
 
 ```swift
 import KeyboardKitPro
@@ -92,17 +95,25 @@ import KeyboardKitPro
 class KeyboardController: KeyboardInputViewController {}
 ```
 
-KeyboardKit Pro will by default use a standard ``SystemKeyboard`` with an ``EmojiKeyboard``. To use this standard view, just call `setupPro` without specifying a custom view:
+This gives your controller access to new lifecycle functions like `viewWillSetupKeyboard`, observable state like `state.keyboardContext`, services like `services.actionHandler`, and much more.
+
+KeyboardKit Pro will use a `SystemKeyboard` with an `EmojiKeyboard` and an autocomplete toolbar as the default keyboard view. 
+
+To use KeyboardKit Pro with the default view, just call `setupPro` without a view in `viewDidLoad`:
 
 ```swift
 func viewDidLoad() {
     super.viewDidLoad()
-    let license = try? setupPro(withLicenseKey: "your-key")
-    // Make any configurations and service adjustments here
+    let license = try? setupPro(
+        withLicenseKey: "your-key",
+        locales: [...], // Define which locales to use 
+    ) { license in
+        // Make any license-based configurations here 
+    }
 }
 ```
 
-You can override `viewWillSetupKeyboard()` and call any of the `setupPro` functions to customize or replace the standard ``SystemKeyboard`` view:
+To use KeyboardKit Pro with a custom keyboard view, override `viewWillSetupKeyboard` and call `setupPro` with any custom view:
 
 ```swift
 class KeyboardViewController: KeyboardInputViewController {
@@ -110,7 +121,8 @@ class KeyboardViewController: KeyboardInputViewController {
     override func viewWillSetupKeyboard() {
         super.viewWillSetupKeyboard()
         try? setupPro(
-            withLicenseKey: "LICENSE-KEY",
+            withLicenseKey: "your-key",
+            locales: [...], // Define which locales to use
             licenseConfiguration: { license in
                 // Make any configurations and service adjustments here
             },
@@ -193,7 +205,7 @@ KeyboardKit Pro is closed source. See the [LICENSE][License] file for more info.
 [App]: https://keyboardkit.com/app
 
 [Documentation]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkitpro/
-[Getting-Started]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkitpro/getting-started-pro
+[Getting-Started]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkitpro/getting-started
 
 [Essentials]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkitpro/essentials
 
