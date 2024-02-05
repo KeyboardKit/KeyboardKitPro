@@ -11,6 +11,75 @@ These release notes only cover the current major version.
 
 
 
+## 8.3
+
+This version adds support for iPad Pro layouts to KeyboardKit Pro, for selected locales.
+
+The documentation has been thoroughly rewritten to be more consistent and to include more images and code samples.
+
+### ✨ Features
+
+* `DeviceType` has a new boolean properties.
+* `Image` has many more keyboard image extensions.
+* `KeyboardAction` has a new `capsLock` action.
+* `Keyboard.Case` has a new `isCapsLocked` property.
+* `Keyboard.KeyboardType` has a new `isAlphabeticCapsLocked` property.
+* `Keyboard.ReturnKeyType` has a new `nativeType` property on `iOS`.
+* `KeyboardLayout.ItemRow` has new `hasKeyboardSwitcher` and `suggestedInputWidth` function.
+* `KeyboardLayout.ItemRows` has new `hasKeyboardSwitcher` and `inputWidth` function.
+* `KeyboardStyleProvider` has a new `buttonContentInsets` function.
+
+### 👑 KeyboardKit Pro
+
+* `iPadProKeyboardLayoutProvider` is a new layout provider for iPad Pro layouts.
+* `ProKeyboardLayoutProvider.spanish` now supports QWERTY, QWERTZ and AZERTY.
+
+### 🔣 Layout Changes
+
+* The new `iPadProKeyboardLayoutProvider` is (so far) used by the following locales:
+- `.english` 
+- `.albanian`
+- `.croatian`
+- `.dutch`
+- `.dutchBelgium`
+- `.estonian`
+- `.filipino`
+- `.french`
+- `.french_belgium`
+- `.french_switzerland`
+- `.hungarian`
+- `.indonesian`
+- `.irish`
+- `.italian`
+- `.latvian`
+- `.lithuanian`
+- `.malay`
+- `.polish`
+- `.portuguese`
+- `.portuguese_brazil`
+- `.romanian`
+- `.serbian_latin`
+- `.spanish`
+- `.slovenian`
+- `.swahili`
+- `.swedish`
+- `.uzbek`
+
+### 🌐 Localization
+
+* `KKL10n` has a new `capsLock` key, which is currently only localized in English.
+
+### 🐛 Bug fixes
+
+* `InputSet.azerty` now displays correctly on iPad.
+
+### 🗑️ Deprecations
+
+* `Image.keyboardLeft` has been renamed to `.keyboardArrowLeft`.
+* `Image.keyboardRight` has been renamed to `.keyboardArrowRight`.
+
+
+
 ## 8.2.1
 
 ### 👑 KeyboardKit Pro
