@@ -11,6 +11,27 @@ These release notes only cover the current major version.
 
 
 
+## 8.3.3
+
+This version optimizes the binary size of the KeyboardKit Pro framework.
+
+### 👑 KeyboardKit Pro
+
+* The framework size is now almost half in size compared to the 8.0 version.
+* The `Color` extension changes in 8.3.1 are now implemented in Pro as well.
+
+
+
+## 8.3.1
+
+This version renames all colors to have more obvious naming.
+
+### 🗑️ Deprecations
+
+* `Color` extensions now use `keyboard` as prefix instead of `standard`.
+
+
+
 ## 8.3
 
 This version adds support for iPad Pro layouts to KeyboardKit Pro, for selected locales.
