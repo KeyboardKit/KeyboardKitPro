@@ -11,6 +11,70 @@ These release notes only cover the current major version.
 
 
 
+## 8.4
+
+This version bumps to Swift 5.9 and adds support for visionOS.
+
+This version renames some views and refactors view styling to be injected with view modifiers instead of with the initializer.
+
+Views that require complex style resolving still use the style provider concept.
+
+### 🚨 Important Information
+
+* Most views are now designed to be styled with view modifiers.
+
+* `.keyboardButtonStyle` only injects style with the environment.
+* `Emoji` types are no longer throwing. If you use them, remove `try`.
+* `Emoji` keyboard views no longer apply the init style. Use the view modifier instead.
+
+### ✨ Features
+
+* `Autocomplete.ToolbarStyle` has support for more styling.
+* `Autocomplete.ToolbarItemStyle` has support for more styling.
+* `DeviceType` defines a new `.vision` device to support visionOS.
+* `Emoji` adds a lot of features without having to use KeyboardKit Pro. 
+* `Keyboard.Background` implements `View` and can be used as a plain view.
+* `Keyboard.Toolbar` is a new view that applies a min height to its content.
+* `Keyboard.ToolbarStyle` is a new style that can be applied with a view modifier.
+* `StandardKeyboardBehavior` modifies some functions to be `open` to modifications.
+
+### 💡 Adjustments
+
+* `AutocompleteToolbar` has been renamed to `Autocomplete.Toolbar`.
+* `InputSet.standardNumeric` has been renamed to `InputSet.numeric`.
+* `InputSet.standardSymbolic` has been renamed to `InputSet.symbolic`.
+* `KeyboardButton.Button` and all related views have been moved to `Keyboard`.  
+* `KeyboardStyle` styles have all been renamed, e.g. `Autocomplete.ToolbarStyle`.
+* `NextKeyboardButton` has been moved and renamed to `Keyboard.NextKeyboardButton`.
+
+### 💡 Renamed View Modifiers
+
+* `.keyboardButtonStyle` has been renamed to `.keyboardButton`.
+* `.withEnvironment(fromState:)` has been renamed to `.keyboardState(_:)`.
+* `.withEnvironment(fromController:)` has been renamed to `.keyboardState(from:)`.
+
+### 👑 KeyboardKit Pro
+
+* Many `Emoji` functions and types are moved to the base library.
+
+* `Dictation.BarVisualizer` now applies more things with its style.
+* `Dictation.BarVisualizer` now applies style with the environment.
+
+### 🐛 Bug fixes
+
+* Some themes have been adjusted to apply correct autocomplete toolbar styles.
+
+### 🗑️ Deprecations
+
+* `Emoji` renames a lof of types & categories, and many things non-throwing.
+* `Emoji.Picker` has been deprecated in favor of the EmojiKit open-source view.
+* `LazyHGrid`/`LazyVGrid` emoji initializers are replaced by the new `Emoji.Grid`.  
+* `KeyboardButton` has been deprecated and all views have been moved to `Keyboard`.
+* `KeyboardStyle.AutocompleteToolbarItemBackground` is replaced by `Autocomplete.ToolbarItem`. 
+* `Autocomplete.ToolbarItem` nested views are replaced by just using `Autocomplete.ToolbarItem`.
+
+    
+
 ## 8.3.3
 
 This version optimizes the binary size of the KeyboardKit Pro framework.
