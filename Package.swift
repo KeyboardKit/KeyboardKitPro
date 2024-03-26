@@ -8,7 +8,8 @@ let package = Package(
         .iOS(.v14),
         .macOS(.v11),
         .tvOS(.v14),
-        .watchOS(.v7)
+        .watchOS(.v7),
+        .visionOS(.v1)
     ],
     products: [
         .library(
@@ -18,8 +19,8 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "KeyboardKitPro",
-            url: "https://github.com/KeyboardKit/KeyboardKit/releases/download/8.4_rc1/KeyboardKitPro.zip",
-            checksum: "8ab23ab2a35c4ac60075fe1548398c19987a2af76d64a0e84081ac779f3e0c26"
+            url: "https://github.com/KeyboardKit/KeyboardKit/releases/download/8.4.0/KeyboardKitPro.zip",
+            checksum: "3a020e4695db6485338fcb2f4d664d3b257acf1c3c1f42714d62e729b5f06bf4"
         )
     ]
 )
