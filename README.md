@@ -22,7 +22,9 @@ KeyboardKit extends Apple's native APIs and provides you with a lot more functio
     <img src="Resources/Demo.gif" width="450" />
 </p>
 
-KeyboardKit Pro extends KeyboardKit with pro features, such as fully localized keyboards and services, autocomplete, an emoji keyboard, AI supporting capabilities, themes, dictation, etc.
+Custom iOS keyboard extensions can be used with all other apps that support text input. It's the only way for your product, brand or technology to directly interact with other apps on iOS. Don't miss out!
+
+KeyboardKit Pro extends KeyboardKit with pro features like fully localized keyboards & services, autocomplete, an emoji keyboard, AI supporting capabilities, themes, dictation, and much more.
 
  
 
@@ -137,7 +139,7 @@ KeyboardKit Pro extends [KeyboardKit][KeyboardKit] with pro features:
 * 🔣 [Layout][Layout] - KeyboardKit Pro unlocks input sets and layouts for every supported locale.
 * 🌐 [Localization][Localization] - KeyboardKit Pro supports all 63 locales.
 * 👁️ [Previews][Previews] - KeyboardKit Pro unlocks system keyboard previews that can be used in the app.
-* ➡️ [Proxy Extensions][Proxy] - KeyboardKit Pro unlocks ways for ``UIKit/UITextDocumentProxy`` to read the full document.
+* ➡️ [Proxy Extensions][Proxy] - KeyboardKit Pro unlocks ways for `UITextDocumentProxy` to read the full document.
 * 🚏 [Text Routing][Text-Routing] - KeyboardKit Pro unlocks views that let you type within the keyboard extension.
 * 🍭 [Themes][Themes] - KeyboardKit Pro unlocks a theme engine with many pre-defined themes.
 
