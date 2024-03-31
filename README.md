@@ -128,7 +128,7 @@ KeyboardKit supports [63 keyboard-specific locales][Localization]:
 KeyboardKit Pro extends [KeyboardKit][KeyboardKit] with pro features:
 
 * ⌨️ [Essentials][Essentials] - KeyboardKit Pro unlocks more essential tools, system keyboard previews, etc.
-* 💥 [Actions][Actions] - KeyboardKit Pro registers emoji actions to keep the ``EmojiCategory/frequent`` category in sync.
+* 💥 [Actions][Actions] - KeyboardKit Pro keeps the `.frequent` emoji category in sync.
 * 🤖 [AI Support][AI] - KeyboardKit Pro unlocks tools that are required for AI-based features.
 * 💡 [Autocomplete][Autocomplete] - KeyboardKit Pro unlocks a local and a remote autocomplete.
 * 🗯 [Callouts][Callouts] - KeyboardKit Pro unlocks callout actions for every supported locale.
@@ -139,8 +139,8 @@ KeyboardKit Pro extends [KeyboardKit][KeyboardKit] with pro features:
 * 🔣 [Layout][Layout] - KeyboardKit Pro unlocks input sets and layouts for every supported locale.
 * 🌐 [Localization][Localization] - KeyboardKit Pro supports all 63 locales.
 * 👁️ [Previews][Previews] - KeyboardKit Pro unlocks system keyboard previews that can be used in the app.
-* ➡️ [Proxy Extensions][Proxy] - KeyboardKit Pro unlocks ways for `UITextDocumentProxy` to read the full document.
-* 🚏 [Text Routing][Text-Routing] - KeyboardKit Pro unlocks views that let you type within the keyboard extension.
+* ➡️ [Proxy Extensions][Proxy] - KeyboardKit Pro unlocks ways to read the full document.
+* 🚏 [Text Routing][Text-Routing] - KeyboardKit Pro unlocks views that let you type within the keyboard.
 * 🍭 [Themes][Themes] - KeyboardKit Pro unlocks a theme engine with many pre-defined themes.
 
 
