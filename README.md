@@ -129,6 +129,7 @@ KeyboardKit Pro extends [KeyboardKit][KeyboardKit] with pro features:
 
 * ⌨️ [Essentials][Essentials] - KeyboardKit Pro unlocks more essential tools, system keyboard previews, etc.
 * 💥 [Actions][Actions] - KeyboardKit Pro keeps the `.frequent` emoji category in sync.
+* 📱 [App Utilities][App] - KeyboardKit Pro unlocks keyboard app-specific view.
 * 🤖 [AI Support][AI] - KeyboardKit Pro unlocks tools that are required for AI-based features.
 * 💡 [Autocomplete][Autocomplete] - KeyboardKit Pro unlocks a local and a remote autocomplete.
 * 🗯 [Callouts][Callouts] - KeyboardKit Pro unlocks callout actions for every supported locale.
@@ -204,6 +205,7 @@ Commercial licenses can be purchased from the [website][Website] or from [Gumroa
 
 [Actions]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkitpro/actions-article
 [AI]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkitpro/ai-article
+[App]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkitpro/app-article
 [Autocomplete]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkitpro/autocomplete-article
 [Buttons]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkitpro/buttons-article
 [Callouts]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkitpro/callouts-article

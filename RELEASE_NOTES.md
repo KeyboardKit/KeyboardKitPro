@@ -11,6 +11,49 @@ These release notes only cover the current major version.
 
 
 
+## 8.5
+
+This version moves may types into namespaces, to make the SDK smaller and easier to overview. Since this involves many renamings, the `Deprecations` section only lists deprecated types. The library has deprecation types to help you migrate to the new type names.
+
+The `KeyboardState` namespace is renamed to `KeyboardStatus`, since it was often confused with `Keyboard.KeyboardState`. `Keyboard.KeyboardState` & `Keyboard.KeyboardServices` are also renamed to the shorter `Keyboard.State` and `Keyboard.Services`.
+
+KeyboardKit Pro makes more locales use the iPad Pro layout, and has a new `KeyboardApp.HomeScreen` that can be used as a keyboard app home screen. There is also a new URL-support for audio feedback. Only your imagination can now stop you from creating crazy sound boards.
+
+### 🚨 Important Information 
+
+* Many types are moved into their related namespaces.
+* The `EmojiKeyboard` sub-components are now throwing as well.
+* The `KeyboardStatus.Label` now uses its style to change icons.
+* Renamed types use `@available` deprecations to help adjust your code.
+
+### ✨ Features
+
+* `Feedback.Audio` has a new `customUrl` that can play URL-based audio.
+* `Feedback.AudioConfiguration` has new ways to register custom feedback.
+* `Feedback.HapticConfiguration` has new ways to register custom feedback.
+
+### 💡 Adjustments
+
+* `KeyboardApp` is a new namespace for app-related types.
+* `KeyboardApp.HomeScreen` is a new app home screen view template.
+* `KeyboardFeedback` is a new namespace for feedback-related types.
+* `KeyboardSettings` is a new namespace for settings-related types.
+* `KeyboardStatus.Label` now uses filled icon variants, by default.
+* `KeyboardStyle.StandardProvider` now applies a light weight to backspace.
+
+### 👑 KeyboardKit Pro
+
+* There is a new `KeyboardApp.HomeScreen` screen template view.  
+* The iPad Pro keyboard layout has been tweaked to look better.
+* The iPad Pro keyboard layout is now used by the following locales: 
+* `Catalan`, `Czech`, `Danish`, `Faroese`, `Finnish`, `Georgian`, `German`, `German (Austria)`, `German (Switzerland)`, `Greek`, `Hawaiian`, `Icelandic`, `Inari Sámi`, `Macedonian`, `Maltese`, `Mongolian`, `Northern Sámi`, `Norwegian`, `Russian`, `Serbian`, `Slovak`, `Turkish`, `Ukrainian`.
+
+### 🗑️ Deprecations
+
+* `Emoji.Grid` has been moved to `EmojiKit`.
+
+
+
 ## 8.4
 
 This version bumps to Swift 5.9 and adds support for visionOS.
