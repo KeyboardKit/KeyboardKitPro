@@ -31,6 +31,7 @@ KeyboardKit Pro makes more locales use the iPad Pro layout, and has a new `Keybo
 * `Feedback.Audio` has a new `customUrl` that can play URL-based audio.
 * `Feedback.AudioConfiguration` has new ways to register custom feedback.
 * `Feedback.HapticConfiguration` has new ways to register custom feedback.
+* `FeedbackContext` has new ways to register custom audio/haptic feedback.
 * `KeyboardLayout` has a new `copy()` function that creates a mutable copy.
 * `KeyboardLayout` has new functions for using and tweaking the bottom row.
 * `KeyboardLayout` has a new `inputToolbarLayout()` value builder function.
@@ -54,11 +55,12 @@ KeyboardKit Pro makes more locales use the iPad Pro layout, and has a new `Keybo
 
 ### 👑 KeyboardKit Pro
 
-* There is a new `KeyboardApp.HomeScreen` screen template view.  
-* The iPad Pro keyboard layout has been tweaked to look better.
-* The iPad Pro keyboard layout is now used by the following locales: 
-* `Catalan`, `Czech`, `Danish`, `Faroese`, `Finnish`, `Georgian`, `German`, `German (Austria)`, `German (Switzerland)`, `Greek`, `Hawaiian`, `Icelandic`, `Inari Sámi`, `Macedonian`, `Maltese`, `Mongolian`, `Northern Sámi`, `Norwegian`, `Russian`, `Serbian`, `Slovak`, `Turkish`, `Ukrainian`.
+* `KeyboardApp.HomeScreen` is a new app-specific home screen template.
+* `KeyboardStatus` has a new `Section` view that can display keyboard statuses.
+* `KeyboardTextField` and `KeyboardTextView` can now trigger a custom `onSubmit` function.
 * `SystemKeyboard` now has an `addNumberToolbar` parameter to add a number toolbar in KeyboardKit Pro.
+* The iPad Pro layout has been tweaked to look more native, and is now used by all these locales as well:
+* `Catalan`, `Czech`, `Danish`, `Faroese`, `Finnish`, `Georgian`, `German`, `German (Austria)`, `German (Switzerland)`, `Greek`, `Hawaiian`, `Icelandic`, `Inari Sámi`, `Macedonian`, `Maltese`, `Mongolian`, `Northern Sámi`, `Norwegian`, `Russian`, `Serbian`, `Slovak`, `Turkish`, `Ukrainian`.
 
 ### 🗑️ Deprecations
 
