@@ -127,17 +127,21 @@ KeyboardKit supports [63 keyboard-specific locales][Localization]:
 
 KeyboardKit Pro extends [KeyboardKit][KeyboardKit] with pro features:
 
-* ⌨️ [Essentials][Essentials] KeyboardKit Pro unlocks more essential tools, system keyboard previews, etc.
-* 🤖 [AI][AI] - KeyboardKit Pro unlocks tools that are required for AI-based features.
-* 📱 [App][App] - KeyboardKit Pro unlocks app-specific screens and views.
-* 💡 [Autocomplete][Autocomplete] - KeyboardKit Pro unlocks on-device and remote autocomplete.
-* 🎤 [Dictation][Dictation] - KeyboardKit Pro unlocks dictation services and a speech recognizer.
+* ⌨️ [Essentials][Essentials] - KeyboardKit Pro unlocks more essential tools, system keyboard previews, etc.
+* 💥 [Actions][Actions] - KeyboardKit Pro auto-registers the most recently used emojis.
+* 🤖 [AI][AI] - KeyboardKit Pro unlocks features that are needed for AI.
+* 📱 [App][App] - KeyboardKit Pro unlocks app-specific screens & views.
+* 💡 [Autocomplete][Autocomplete] - KeyboardKit Pro unlocks on-device & remote autocomplete.
+* 🗯 [Callouts][Callouts] - KeyboardKit Pro unlocks localized callouts for all locales.
+* 🎤 [Dictation][Dictation] - KeyboardKit Pro can perform dictation from the keyboard.
 * 😀 [Emojis][Emojis] - KeyboardKit Pro unlocks a powerful emoji keyboard.
-* ⌨️ [External][External] - KeyboardKit Pro unlocks ways to detect and handle external keyboards.
-* 🔉 [Feedback][Feedback] - KeyboardKit Pro unlocks components for toogling feedback on & off.
+* ⌨️ [External][External] - KeyboardKit Pro can detect if an external keyboard is connected. 
+* 🔉 [Feedback][Feedback] - KeyboardKit Pro unlocks tools for toogling feedback on & off.
+* 🔣 [Layout][Layout] - KeyboardKit Pro unlocks localized layouts for all locales.
 * 🌐 [Localization][Localization] - KeyboardKit Pro unlocks **63** locale-specific services and system keyboards.
+* 👁 [Previews][Previews] - KeyboardKit Pro unlocks system keyboard and theme previews.
 * ➡️ [Proxy][Proxy] - KeyboardKit Pro unlocks ways for ``UIKit/UITextDocumentProxy`` to read the full document.
-* 🚏 [Text][Text-Input] - KeyboardKit Pro unlocks text input views that let you type within a keyboard extension.
+* 📝 [Text][Text-Input] - KeyboardKit Pro unlocks tools to let you type within the keyboard.
 * 🍭 [Themes][Themes] - KeyboardKit Pro unlocks a theme engine with many pre-defined themes.
 
 Every article in the [documentation][Documentation] describes in detail what KeyboardKit Pro unlocks for that part of the SDK. 
