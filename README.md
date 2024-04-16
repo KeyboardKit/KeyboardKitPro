@@ -61,7 +61,7 @@ class KeyboardController: KeyboardInputViewController {}
 
 This gives your controller access to new lifecycle functions like `viewWillSetupKeyboard`, observable state like `state.keyboardContext`, services like `services.actionHandler`, and much more.
 
-If you just want to use the default `SystemKeyboard` view, which mimics a native iOS keyboard and updates when the observable state changes, you only have to register your license key:
+If you just want to use the default `SystemKeyboard` view, which mimics a native iOS keyboard, you only have to register your license key on launch:
 
 ```swift
 func viewDidLoad() {
@@ -75,7 +75,7 @@ func viewDidLoad() {
 }
 ```
 
-To replace or customize the default `SystemKeyboard`, just override `viewWillSetupKeyboard` and call `setupPro`:
+To replace or customize the default `SystemKeyboard`, just override `viewWillSetupKeyboard` and call `setupPro` with a `view` builder:
 
 ```swift
 class KeyboardViewController: KeyboardInputViewController {
@@ -88,7 +88,7 @@ class KeyboardViewController: KeyboardInputViewController {
             licenseConfiguration: { license in
                 // Make any configurations and service adjustments here
             },
-            view: { controller in
+            view: { [weak self] controller in // <-- Use [weak self] or [unowned self] if you need self here.  
                 SystemKeyboard(
                     state: controller.state,
                     services: controller.services,
@@ -127,22 +127,20 @@ KeyboardKit supports [63 keyboard-specific locales][Localization]:
 
 KeyboardKit Pro extends [KeyboardKit][KeyboardKit] with pro features:
 
-* ⌨️ [Essentials][Essentials] - KeyboardKit Pro unlocks more essential tools, system keyboard previews, etc.
-* 💥 [Actions][Actions] - KeyboardKit Pro keeps the `.frequent` emoji category in sync.
-* 📱 [App Utilities][App] - KeyboardKit Pro unlocks keyboard app-specific view.
-* 🤖 [AI Support][AI] - KeyboardKit Pro unlocks tools that are required for AI-based features.
-* 💡 [Autocomplete][Autocomplete] - KeyboardKit Pro unlocks a local and a remote autocomplete.
-* 🗯 [Callouts][Callouts] - KeyboardKit Pro unlocks callout actions for every supported locale.
-* 🎤 [Dictation][Dictation] - KeyboardKit Pro unlocks pre-defined dictation services and a speech recognizer.
+* ⌨️ [Essentials][Essentials] KeyboardKit Pro unlocks more essential tools, system keyboard previews, etc.
+* 🤖 [AI][AI] - KeyboardKit Pro unlocks tools that are required for AI-based features.
+* 📱 [App][App] - KeyboardKit Pro unlocks app-specific screens and views.
+* 💡 [Autocomplete][Autocomplete] - KeyboardKit Pro unlocks on-device and remote autocomplete.
+* 🎤 [Dictation][Dictation] - KeyboardKit Pro unlocks dictation services and a speech recognizer.
 * 😀 [Emojis][Emojis] - KeyboardKit Pro unlocks a powerful emoji keyboard.
-* ⌨️ [External Keyboards][External] - KeyboardKit Pro unlocks ways to detect and react to external keyboards.
-* 🔉 [Feedback][Feedback] - KeyboardKit Pro unlocks components for toogling feedback on & off. 
-* 🔣 [Layout][Layout] - KeyboardKit Pro unlocks input sets and layouts for every supported locale.
-* 🌐 [Localization][Localization] - KeyboardKit Pro supports all 63 locales.
-* 👁️ [Previews][Previews] - KeyboardKit Pro unlocks system keyboard previews that can be used in the app.
-* ➡️ [Proxy Extensions][Proxy] - KeyboardKit Pro unlocks ways to read the full document.
-* 🚏 [Text Routing][Text-Routing] - KeyboardKit Pro unlocks views that let you type within the keyboard.
+* ⌨️ [External][External] - KeyboardKit Pro unlocks ways to detect and handle external keyboards.
+* 🔉 [Feedback][Feedback] - KeyboardKit Pro unlocks components for toogling feedback on & off.
+* 🌐 [Localization][Localization] - KeyboardKit Pro unlocks **63** locale-specific services and system keyboards.
+* ➡️ [Proxy][Proxy] - KeyboardKit Pro unlocks ways for ``UIKit/UITextDocumentProxy`` to read the full document.
+* 🚏 [Text][Text-Input] - KeyboardKit Pro unlocks text input views that let you type within a keyboard extension.
 * 🍭 [Themes][Themes] - KeyboardKit Pro unlocks a theme engine with many pre-defined themes.
+
+Every article in the [documentation][Documentation] describes in detail what KeyboardKit Pro unlocks for that part of the SDK. 
 
 
 
@@ -200,8 +198,11 @@ Commercial licenses can be purchased from the [website][Website] or from [Gumroa
 [Pro]: https://github.com/KeyboardKit/KeyboardKitPro
 [Gumroad]: https://kankoda.gumroad.com
 [App]: https://keyboardkit.com/app
+[License]: https://github.com/KeyboardKit/KeyboardKitPro/blob/master/LICENSE
 
-[Essentials]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkitpro/essentials
+[Documentation]: https://keyboardkit.github.io/KeyboardKitPro/
+[Getting-Started]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkitPro/getting-started
+[Essentials]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkitPro/essentials
 
 [Actions]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkitpro/actions-article
 [AI]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkitpro/ai-article
@@ -221,14 +222,9 @@ Commercial licenses can be purchased from the [website][Website] or from [Gumroa
 [Localization]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkitpro/localization-article
 [Navigation]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkitpro/navigation-article
 [Previews]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkitpro/previews-article
-[Proxy]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkitpro/proxy-utilities-article
+[Proxy]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkitpro/proxy-article
 [Settings]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkitpro/settings-article
-[State]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkitpro/state-article
+[Status]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkitpro/status-article
 [Styling]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkitpro/styling-article
-[Text-Routing]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkitpro/text-routing-article
+[Text-Input]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkitpro/text-input-article
 [Themes]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkitpro/themes-article
-
-[Documentation]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkitpro/
-[Getting-Started]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkitpro/getting-started
-
-[License]: https://github.com/KeyboardKit/KeyboardKitPro/blob/master/LICENSE
