@@ -11,6 +11,25 @@ These release notes only cover the current major version.
 
 
 
+## 8.5.1
+
+This version adjusts an autocomplete behavior.
+
+### 💡 Adjustments
+
+* `KeyboardInputViewController` no longer hard resets the autocomplet econtext when the text is empty.
+
+### 🐛 Bug fixes
+
+* `KeyboardGesture` has a new `.end` gesture, which is used to fix a bug that could cause space drag to never end.
+
+
+### 👑 KeyboardKit Pro
+
+* KeyboardKit Pro has new ways to allow more flexible feature and tier validation. 
+
+
+
 ## 8.5
 
 This version moves many types into their related namespaces, to make the SDK surface smaller and easier to overview. Since this involves many renamings, the `Deprecations` section below only lists deprecated types. 
