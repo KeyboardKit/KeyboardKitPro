@@ -11,6 +11,14 @@ These release notes only cover the current major version.
 
 
 
+## 8.5.3
+
+This version adds a licenseError parameter to setupPro in KeyboardKit Pro.
+
+Due to this, the setupProError in KeyboardInputViewController is deprecated and no longer used.
+
+
+
 ## 8.5.2
 
 This version adds a new `SystemKeyboardBottomRow` component, adds some new actions and fixes a bug.
