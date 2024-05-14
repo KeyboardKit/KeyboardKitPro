@@ -137,6 +137,7 @@ KeyboardKit Pro extends [KeyboardKit][KeyboardKit] with pro features:
 * 😀 [Emojis][Emojis] - KeyboardKit Pro unlocks a powerful emoji keyboard.
 * ⌨️ [External][External] - KeyboardKit Pro can detect if an external keyboard is connected. 
 * 🔉 [Feedback][Feedback] - KeyboardKit Pro unlocks tools for toogling feedback on & off.
+* 🏠 [Host][Host] - KeyboardKit Pro can identify specific host applications.
 * 🔣 [Layout][Layout] - KeyboardKit Pro unlocks localized layouts for all locales.
 * 🌐 [Localization][Localization] - KeyboardKit Pro unlocks **63** locale-specific services and system keyboards.
 * 👁 [Previews][Previews] - KeyboardKit Pro unlocks system keyboard and theme previews.
@@ -221,6 +222,7 @@ Commercial licenses can be purchased from the [website][Website] or from [Gumroa
 [External]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkitpro/external-keyboards-article
 [Feedback]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkitpro/feedback-article
 [Gestures]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkitpro/gestures-article
+[Host]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkitpro/host-article
 [Images]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkitpro/images-article
 [Layout]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkitpro/layout-article
 [Localization]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkitpro/localization-article

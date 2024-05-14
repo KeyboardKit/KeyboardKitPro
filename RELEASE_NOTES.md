@@ -11,6 +11,21 @@ These release notes only cover the current major version.
 
 
 
+## 8.5.6
+
+This version makes it easier to create a themed style provider, and adds a new `.numberPad` keyboard type.
+
+### ✨ Features
+
+* `Keyboard.KeyboardType` has a new `.numberPad` type.
+* `KeyboardStyleProvider.themed` has new convenience apis.
+
+### 💡 Adjustments
+
+* `KeyboardContext` will now get its initial keyboard type set to the document text proxy's keyboard type.
+
+
+
 ## 8.5.3
 
 This version adds a licenseError parameter to setupPro in KeyboardKit Pro.
