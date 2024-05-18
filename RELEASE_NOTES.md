@@ -11,6 +11,87 @@ These release notes only cover the current major version.
 
 
 
+## 8.6
+
+This version adds support for 5 new locales, support for diacritics, and makes it easier to identify the host application. It also improves many of the localized system keyboards that are provided by Pro.
+
+This version also changes the default autocomplete behavior, by making `KeyboardInputViewController` only use the pre-cursor part of the current word for autocomplete, which is how the native keyboard behaves. 
+
+This version also makes KeyboardKit Pro no longer overwrite custom services that are set before registering a license. This means that you can now apply custom services at any time, without it being overwritten. 
+
+This version also reduces load times and memory usage in KeyboardKit Pro, by lazily resolving localized callout action providers and layout providers, and makes all supported locales use the iPad Pro layout.
+
+### ✨ Features
+
+* `Keyboard.Accent` is a new typealias for diacritics.
+* `Keyboard.Diacritic` is a new type that lets you model diacritics.
+* `KeyboardAction.accent` is a new typealias for the `.diacritic` action.
+* `KeyboardAction.diacritic` is a new action that lets you insert diacritics.
+* `KeyboardController` has a new `insertDiacritic(_:)` function.
+* `KeyboardLayout` and its `Item` has much new functionality.
+* `KeyboardLocale` has new locale-based initializers and matching functions.
+* `UITextDocumentProxy` has a new `insertDiacritic(_:)` function.
+
+### 💡 Adjustments
+
+* `KeyboardInputViewController` `autocompleteText` now uses the pre-cursor part of the current word, instead of the full word.
+* `KeyboardInputViewController` `hostBundleId` has been renamed to `hostApplicationBundleId`.
+
+### 🌐 New Locales
+
+* French (Canada) - fr_CA
+* Norwegian (Nynorsk) - nn
+* Spanish (Latin America) - es_419
+* Spanish (Mexico) - es_MX
+* Welsh - cy 
+
+### 👑 KeyboardKit Pro
+
+* `Callouts.StandardActionProvider` now allocates license services lazily, on demand.
+* `Keyboard.ToggleToolbar` can now use an external toggle binding.
+* `Keyboard.ToggleToolbar` no longer relies on a standard `AnyView`.
+* `Keyboard.ToggleToolbarToggle` is a new, customizable toolbar toggle.
+* `KeyboardContext` has a new `hostApplication` property.
+* `KeyboardHostApplication` is a new enum with known applications.
+* `KeyboardInputViewController` has a new `hostApplication` property.
+* `KeyboardInputViewController` `setupPro` no longer creates a new callout provider.
+* `KeyboardInputViewController` `setupPro` no longer creates a new layout provider.
+* `KeyboardLayout` has a new `LatinLayoutType` enum.
+* `KeyboardLayout.ProProvider.Czech` now uses proper diacritic keys on iPhone & iPad.
+* `KeyboardLayout.StandardProvider` now allocates license services lazily, on demand.
+* `KeyboardLocale.georgian` no longer uses regular font weight in alphabetic keyboard.
+* `KeyboardLocale.norwegian` has adjusted callout actions.
+
+* These locales now use iPad Pro layout:
+    * Arabic
+    * Belarusian
+    * Bulgarian
+    * Catalan
+    * Cherokee
+    * Hebrew
+    * Kazakh
+    * Kurdish Sorani
+    * Kurdish Sorani - Arabic
+    * Kurdish Sorani - PC
+    * Persian
+    
+* These locales have improved iPad Pro layouts:
+    * French (Switzerland)
+    * Greek
+    * Inari Sami
+    * Macedonian
+    * Mongolian
+    
+* These locales have improved iPhone layouts:
+    * Arabic
+    
+### 🐛 Bug fixes
+
+* `KeyboardAction.tab` now uses an LTR/RTL supporting icon.
+* `KeyboardContext` now matches `keyboardLocale` on language code as well, to work around system bug.
+
+
+
 ## 8.5.6
 
 This version makes it easier to create a themed style provider, and adds a new `.numberPad` keyboard type.
