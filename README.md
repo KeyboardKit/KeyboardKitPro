@@ -24,7 +24,7 @@ KeyboardKit extends Apple's native APIs and provides you with a lot more functio
 
 Custom iOS keyboard extensions can be used with all other apps that support text input. It's the only way for your product, brand or technology to directly interact with other apps on iOS. Don't miss out!
 
-KeyboardKit Pro extends KeyboardKit with pro features like fully localized keyboards & services, autocomplete, an emoji keyboard, AI supporting capabilities, themes, dictation, and much more.
+KeyboardKit Pro extends KeyboardKit with pro features like fully localized keyboards & services, autocomplete & autocorrect, an emoji keyboard, AI supporting capabilities, themes, dictation, and much, much more. Go pro today to take your keyboard to the next level.
 
  
 
@@ -45,7 +45,7 @@ KeyboardKit Pro can be installed with the Swift Package Manager:
 https://github.com/KeyboardKit/KeyboardKitPro.git
 ```
 
-**Important!** Unlike KeyboardKit, KeyboardKit Pro is a binary target and must only be added to the app target. If you add it to any other target, it may crash at runtime.
+Unlike KeyboardKit, KeyboardKit Pro is a binary target and must only be linked to the app target.
 
 
 
@@ -109,23 +109,23 @@ For more information, please see the [getting started guide][Getting-Started].
 
 ## Supported Locales
 
-KeyboardKit supports [63 keyboard-specific locales][Localization]:
+KeyboardKit supports [68 keyboard-specific locales][Localization]:
 
 🇦🇱 🇦🇪 🇦🇲 🇧🇾 🇧🇬 🇦🇩 🏳️ 🇭🇷 🇨🇿 🇩🇰 <br />
 🇳🇱 🇧🇪 🇺🇸 🇬🇧 🇺🇸 🇪🇪 🇫🇴 🇵🇭 🇫🇮 🇫🇷 <br />
-🇧🇪 🇨🇭 🇬🇪 🇩🇪 🇦🇹 🇨🇭 🇬🇷 🇺🇸 🇮🇱 🇭🇺 <br />
-🇮🇸 🏳️ 🇮🇩 🇮🇪 🇮🇹 🇰🇿 🇹🇯 🇹🇯 🇹🇯 🇱🇻 <br />
-🇱🇹 🇲🇰 🇲🇾 🇲🇹 🇲🇳 🇳🇴 🏳️ 🇮🇷 🇵🇱 🇵🇹 <br />
-🇧🇷 🇷🇴 🇷🇺 🇷🇸 🇷🇸 🇸🇰 🇸🇮 🇪🇸 🇰🇪 🇸🇪 <br />
-🇹🇷 🇺🇦 🇺🇿 <br />
+🇨🇦 🇧🇪 🇨🇭 🇬🇪 🇩🇪 🇦🇹 🇨🇭 🇬🇷 🇺🇸 🇮🇱 <br />
+🇭🇺 🇮🇸 🏳️ 🇮🇩 🇮🇪 🇮🇹 🇰🇿 🇹🇯 🇹🇯 🇹🇯 <br />
+🇱🇻 🇱🇹 🇲🇰 🇲🇾 🇲🇹 🇲🇳 🏳️ 🇳🇴 🇳🇴 🇮🇷 <br />
+🇵🇱 🇵🇹 🇧🇷 🇷🇴 🇷🇺 🇷🇸 🇷🇸 🇸🇰 🇸🇮 🇪🇸 <br />
+🇦🇷 🇲🇽 🇰🇪 🇸🇪 🇹🇷 🇺🇦 🇺🇿 🏴󠁧󠁢󠁷󠁬󠁳󠁿 <br />
 
 [KeyboardKit][KeyboardKit] provides a basic keyboard layout and callout actions, while KeyboardKit Pro provides localized layouts, callouts and behaviors for all supported locales.
 
 
 
-## Features
+## Pro Features
 
-KeyboardKit Pro extends [KeyboardKit][KeyboardKit] with pro features:
+KeyboardKit Pro extends [KeyboardKit][KeyboardKit] with Pro features:
 
 * ⌨️ [Essentials][Essentials] - KeyboardKit Pro unlocks more essential tools, system keyboard previews, etc.
 * 💥 [Actions][Actions] - KeyboardKit Pro auto-registers the most recently used emojis.
@@ -139,7 +139,7 @@ KeyboardKit Pro extends [KeyboardKit][KeyboardKit] with pro features:
 * 🔉 [Feedback][Feedback] - KeyboardKit Pro unlocks tools for toogling feedback on & off.
 * 🏠 [Host][Host] - KeyboardKit Pro can identify specific host applications.
 * 🔣 [Layout][Layout] - KeyboardKit Pro unlocks localized layouts for all locales.
-* 🌐 [Localization][Localization] - KeyboardKit Pro unlocks **63** locale-specific services and system keyboards.
+* 🌐 [Localization][Localization] - KeyboardKit Pro unlocks **68** locale-specific services and system keyboards.
 * 👁 [Previews][Previews] - KeyboardKit Pro unlocks system keyboard and theme previews.
 * ➡️ [Proxy][Proxy] - KeyboardKit Pro unlocks ways for ``UIKit/UITextDocumentProxy`` to read the full document.
 * 📝 [Text][Text-Input] - KeyboardKit Pro unlocks tools to let you type within the keyboard.
@@ -193,7 +193,7 @@ Commercial licenses can be purchased from the [website][Website] or from [Gumroa
 
 
 
-[Email]: mailto:info@getkeyboardkit.com
+[Email]: mailto:info@keyboardkit.com
 [Website]: https://keyboardkit.com
 [Twitter]: http://twitter.com/getkeyboardkit
 [Mastodon]: https://techhub.social/@keyboardkit
@@ -206,8 +206,8 @@ Commercial licenses can be purchased from the [website][Website] or from [Gumroa
 [License]: https://github.com/KeyboardKit/KeyboardKitPro/blob/master/LICENSE
 
 [Documentation]: https://keyboardkit.github.io/KeyboardKitPro/
-[Getting-Started]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkitPro/getting-started
-[Essentials]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkitPro/essentials
+[Getting-Started]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkitpro/getting-started
+[Essentials]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkitpro/essentials
 
 [Actions]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkitpro/actions-article
 [AI]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkitpro/ai-article
