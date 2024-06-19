@@ -11,6 +11,91 @@ These release notes only cover the current major version.
 
 
 
+## 8.7
+
+This version improves the overall autocomplete behavior.
+
+The local autocomplete service will now return proper unknown statuses and suggest any lexicon matches as autocorrections. The standard action handler will automatically ask the autocomplete provider to learn any applied unknown suggestions, if `isAutoLearnEnabled` is `true`.
+
+This way to learn unknown suggestions will hopefully solve many frustrations involved with autocomplete, where the provider will behave better over time. Please provide feedback if these adjustments don't behave as expected.
+
+The local autocomplete service can also perform next character prediction, by providing it with the typed text and a list of suggestions. This will be merged with the autocomplete operation in version 9.0.
+
+The autocomplete context also has new ways of registering your own custom autocorrections for any locale, in case you find the default behavior to be lacking in some areas.
+
+Furthermore, this version adds new persistent settings types, adds a `KeyboardLocaleInfo` protocol to make `KeyboardLocale` and `Locale` share many properties, and makes it possible to define which text to use when ending the current sentence. 
+
+### 🚨 Important Information
+
+* `AutocompleteService` and all implementations have been renamed to use the new `Service` name.
+* `Autocomplete.LocalService` no longer caps suggestions by default. That responsibility is moved to the context.
+* `Autocomplete.ToolbarItem` no longer adds quotations around unknown suggestions. That responsibility is moved to `AutocompleteService`. 
+* `KeyboardInputViewController` now checks more things before performing autocomplete, for instance the keyboard context `prefersAutocomplete`.
+* `KeyboardStyleProvider` and `Keyboard.ButtonStyle` now supports native `Font`s. This may cause some breaking changes that should be easy to fix.
+
+### 🆕 New Settings Types
+ 
+* `AutocompleteSettings` is a new observable settings type.
+* `DictationSettings` is a new observable settings type.
+* `FeedbackSettings` is a new observable settings type.
+* `Keyboard.Settings` is a new settings wrapper.
+
+### ✨ Features
+
+* `Autocomplete.Suggestion` has new functions.
+* `Autocomplete.TextReplacementDictionary` is new type.
+* `AutocompleteContext` has a new `autocorrectDictionary` value.
+* `AutocompleteContext` has a new `isAutoLearnEnabled` property.
+* `AutocompleteContext` has a new `suggestionDisplayCount` property.
+* `AutocompleteContext` has a new `suggestionsFromService` property.
+* `AutocompleteService` has a new `nextCharacterPredictions` function.
+* `AutocompleteService` has new `ignoreWords(_:)` and suggestion functions.
+* `KeyboardBehavior` and its implementations have a new `endSentenceText` property.
+* `KeyboardAction.StandardProvider` can now automatically learn unknown suggestions.
+* `KeyboardContext` has a new `syncKeyboardType(with:)` to sync type with the proxy.
+* `KeyboardController` has a new `endSentence(withText:)` function to end sentences.
+* `KeyboardInputViewController` has a new `settings` property for setting instances.
+* `KeyboardInputViewController` has a new `viewWillSetupInitialKeyboardType` method.
+* `KeyboardLocaleInfo` is a new protocol that is shared by KeyboardLocale and Locale.
+* `KeyboardSettings` has new ways to register a custom store and settings key prefix.
+* `KeyboardStyleProvioder` has new ways to register a custom store and settings key prefix.
+* `UserDefaults` has a new `.keyboardSettings` value that can be used to persist data.
+
+### 💡 Adjustments
+
+* `Autocomplete.Toolbar` no longer needs an injected locale.
+* `Autocomplete.ToolbarItem` no longer needs an injected locale.
+* `Autocomplete.ToolbarItem` no longer adds quotations to unknown suggestions.
+* `KeyboardContex` `prefersAutocomplete` is now computed and no longer synced.
+* `KeyboardInputViewController` now checks `KeyboardContext.prefersAutocomplete`.
+* `KeyboardLayout.iPhoneProvider` now handles more keyboard types in a better way.
+* `KeyboardSettings` have been converted from a namespace to being a part of `Keyboard`.
+* `KeyboardStyle.StandardProvider` now sets a smaller font size for the `.text` action type.
+ 
+### 👑 KeyboardKit Pro
+
+* `Autocomplete.LocalService` no longer takes a `maxCount` parameter.
+* `Autocomplete.LocalService` will now return lexicon matches as autocorrections.
+* `Autocomplete.LocalService` will now return proper unknown state for suggestions.
+* `Dictation.ProKeyboardService` uses an action handler to open app and navigate back.
+* `Emoji.KeyboardMenu` will now trigger haptic feedback when tapping an emoji category.
+* `KeyboardHostApplication` now implements `Identifiable` and has a new `name` property.
+* `KeyboardHostApplication` now defines even more applications and has a `url` property.
+* `KeyboardHostApplicationProvider` is a new protocol that is implemented by some types.
+
+### 🐛 Bug fixes
+
+* `KeyboardAction.text` now properly renders its texts.
+* `KeyboardInputViewController` now sets the initial keyboard type when the native type is ready.
+* `KeyboardLayout.iPhoneProvider` no longer inserts two . keys for email keyboards with a go key.
+* `UITextDocumentProxy` now proceeds inserting a word replacement even if there's no current word.
+
+### 🗑️ Deprecations
+
+* `Keyboard.ReturnKeyType` `prefersAutocomplete` has been deprecated, since the keyboard type should determine this.
+
+
+
 ## 8.6
 
 This version adds support for 5 new locales, support for diacritics, and makes it easier to identify the host application. It also improves many of the localized system keyboards that are provided by Pro.
