@@ -11,6 +11,35 @@ These release notes only cover the current major version.
 
 
 
+## 8.7.2
+
+This patch defers some heavy memory allocations that is unintentionally caused by the emoji keyboard, by only loading the keyboard when it's requested.
+
+While the emoji keyboard may still cause memory pressure in keyboard extensions that load other heavy components into memory, it will not affect these keyboards on load.
+
+The memory issues are described in a GitHub issue, and seems to be caused by SwiftUI. You can reproduce it by just adding the emoji keyboard to the extension and scroll through the categories.
+
+This memory issue is a top priority, that must be fixed in the upcoming 8.8.
+
+### ✨ Features
+
+* `Callouts.DisabledActionProvider` is a new, disabled action provider.
+* `KeyboardLayout.DisabledProvider` is a new, disabled layout provider.
+
+### 🌐 Localization
+
+* Hebrew now uses a newline arrow instead of text.
+
+### 💡 Adjustments
+
+* `SystemKeyboard` only loads the emoji keyboard when the keyboard type is `.emojis`.
+
+### 🐛 Bug fixes
+
+* `Keyboard.Services` now properly applies an inverse offset for RTL locales.
+
+
+
 ## 8.7
 
 This version improves the overall autocomplete behavior.
@@ -194,9 +223,9 @@ This version makes it easier to create a themed style provider, and adds a new `
 
 ## 8.5.3
 
-This version adds a licenseError parameter to setupPro in KeyboardKit Pro.
+This version adds a `licenseError` parameter to `setupPro`.
 
-Due to this, the setupProError in KeyboardInputViewController is deprecated and no longer used.
+As such, the `setupProError` in `KeyboardInputViewController` is deprecated and no longer used.
 
 
 
