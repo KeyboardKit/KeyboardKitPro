@@ -10,6 +10,110 @@ KeyboardKit tries to honor semantic versioning:
 These release notes only cover the current major version. 
 
 
+### ‼️ Important information
+
+KeyboardKit 8.8 currently has a lot of deprecations, since the structure is being changed and types being renamed to make the upcoming 9.0 a lot cleaner.
+
+These changes don't affect `KeyboardActionHandler` (where handler is a better name than service) and `KeyboardStyleProvider` which is most probably removed in 9.0. 
+
+KeyboardKit 9 is planned to be released shortly after the public release of iOS 18 and all corresponding OS versions. It will also bump the deployment target to iOS 15.
+
+
+
+## 8.8
+
+This version continues to rename types to make things better in the upcoming 9.0 release. This means that there are currently many deprecated names (which may be confusing), but it's all in service for a clean 9.0.
+
+This version deprecates the recently added settings types, and replaces them with adding persistency to the various context properties instead. This avoids having to keep the contexts in sync with the settings.
+
+To avoid compile-time warnings, these deprecated settings are currently only soft deprecated with a code comment. They will however be completely removed in KeyboardKit 9.0, so make sure to start using the contexts instead.
+
+This version adds support for Emoji 15.1, which adds a bunch of new emojis, and also adds memory optimized emoji keyboard styles, which make the emoji keyboard consume a LOT less memory, by rendering lower resolution grid items. 
+
+This version also tweaks the emoji keyboard configuration for all device types, to make the emoji keyboard look a lot closer to the native emoji keyboard on all device types, including larger iPads in both portrait and landscape.
+
+KeyboardKit Pro adds new settings screens, like `KeyboardApp.SettingsScreen` and `KeyboardApp.LanguageSettingsScreen`, which makes it a lot easier than before to add keyboard settings to the main app target, as well as to the keyboard.
+
+### ✨ Features
+
+* `AutocompleteContext` has new settings that replace ``AutocompleteSettings``.
+* `Autocomplete.Suggestion` has a new `type` property which replaces the bools.
+* `Autocomplete.Suggestion` has a new `source` property to indicate its source.
+* `Bundle` has an `isExtension` to help you check if code runs in an extension. 
+* `DictationContext` has new setting values that replace ``DictationSettings``.
+* `FeedbackContext` has new settings that replace the ``FeedbackSettings`` type.
+* `FeedbackService` is a new service type that can trigger audio and haptic feedback.
+* `Image` has many new utility functions to make it easier to resolve keyboard icons.
+* `Keyboard.BottomRow` is no longer a Pro feature, but is available in the core library.
+* `Keyboard.Services` has a new `frequentEmojiProvider` and removes the static instance.
+* `Keyboard.StorageValue` is a new type that is used to persist codable types in storage.
+* `KeyboardAction.StandardHandler` uses an emoji provider instead of an injected handler.
+* `KeyboardAction.StandardHandler` has new functions to trigger audio and haptic feedback.
+* `KeyboardContext` has a computed `returnKeyType` property, which can also be overridden.
+* `KeyboardContext` has new settings that replace the ``KeyboardSettings`` settings properties.
+* `KeyboardContext` has a new `returnKeyTypeOverride` that can override which return key to use.
+* `KeyboardContext` has a new ``addedLocales`` settings that can be used to "activate" certain locales.
+* `KeyboardContext` now persists the `keyboardLocaleIdentifier` and restores the locale on next launch.
+* `KeyboardContext` now has even more `KeyboardLocale`-based versions of some `Locale`-based functions.
+* `KeyboardLocale` has new `ListItem` & `ListDragHandle` views to simplify building locale-based lists.
+* `KeyboardLocale.ContextMenu` now supports providing custom locales instead of using the context ones.
+* `KeyboardLocaleInfo` has new `matches(query:in:)` functionality to match locales on free-text queries.
+
+### 😀 Emojis
+
+* `EmojiKeyboard` now renders better on 13" iPad devices.
+* `EmojiKeyboard` now displays a dismiss button on iPad devices.
+* `EmojiKeyboard` now adds an extra row if an input toolbar is used.
+* `EmojiKeyboardStyle` has memory `.optimized` emoji keyboard styles.
+* `EmojiKeyboardStyle` now uses the new `.optimized` styles by default.
+* `EmojiKeyboardStyle` has been adjusted to conform to new capabilities.
+* `EmojiVersion` supports Emoji 15.1 and adds new emojis to the keyboard.
+
+### 💡 Adjustments
+
+* `AutocompleteContext` now stores many properties.
+* `Feedback.HapticConfiguration.disabled` now triggers `.longPressOnSpace`.
+* `FeedbackContext` has changed the way it calculates its feedback configs.
+* `Keyboard.Services` `layoutService` will now refresh the keyboard when set.
+* `KeyboardLayout.Configuration` uses a marginally taller input toolbar height.
+* `KeyboardInputViewController` now checks if self is nil when setting up a view.
+* `KeyboardView` now renders better on 13" iPad devices, due to more size tolerance.
+* `SystemKeyboard` will by default show a numeric input toolbar on large iPad devices.
+
+### 👑 KeyboardKit Pro
+
+* `Autocomplete.LocalService` now applies a source to its suggestions.
+* `Autocomplete.LocalService` now is now less aggressive with autocorrect.
+* `Autocomplete.LocalService` now lets you override next character prediction.
+* `Autocomplete.RemoteService` can now also perform next character prediction.
+* `KeyboardApp.HomeScreen` can now be configured to display a keyboard section.
+* `KeyboardApp.HomeScreen` has several new visibility and style configurations.
+* `KeyboardApp.SettingsScreen` is a new screen view that can manage various settings.
+
+### 🐛 Bug fixes
+
+* `Autocomplete.LocalProvider` is now a typealias.
+* `Autocomplete.RemoteProvider` is now a typealias.
+* `CGSize.isScreenSize` now uses 50 points tolerance. 
+* `View+KeyboardButton` explicitly applies an interactable background color.
+
+### 🗑️ Deprecations & Renamings
+
+* Most service types are renamed to `*Service` for a more consistent naming.
+* All `*Settings` types are deprecated since settings have moved to contexts.
+
+* `SystemKeyboard` has been renamed to the shorter `KeyboardView`.
+* `SystemKeyboardBottomRow` has been renamed to `Keyboard.BottomRow`.
+* `SystemKeyboardButtonPreview` has been renamed to `Keyboard.ButtonPreview`.
+
+* `Feedback.HapticConfiguration.minimal` has been replaced by `.disabled`.
+* `Gestures.KeyboardGesture` has been moved & renamed to `Keyboard.Gesture.`
+* `Keyboard.SettingsLink` has been deprecated, since a `Link` works as well.
+* `Keyboard.State`'s `dictationConfig` is now defined within the `dictationContext`.
+* `KeyboardAppearanceViewModifier` has been deprecated, since it didn't behave well.
+* `KeyboardSettings` settings properties have been deprecated and moved to the context.
+
+
 
 ## 8.7.2
 
