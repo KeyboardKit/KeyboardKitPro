@@ -20,6 +20,67 @@ KeyboardKit 9 is planned to be released shortly after the public release of iOS 
 
 
 
+## 8.8.7
+
+This version re-adds the old way of opening URLs, but makes it work with iOS 18. This means that url actions are once again rendered as full-gesture buttons.
+
+This version makes the dictation service use an `OpenURLAction` to return to the previous app, since a keyboard action handler can't resolve a proper controller within the main app.
+
+This version also adds support to the standard action handler and autocomplete context, for auto-ignoring words that have an autocorrection when pressing backspace. This will improve the typing experience a great deal.
+
+The `Keyboard.NextKeyboardButton` has two new experimental modes, that will hopefully remove the need to pass in a controller or use the shared one, and also keep the switcher working when typing within the keyboard.
+
+### 🧪 Experimental
+
+`Keyboard.NextKeyboardButtonControllerMode` is a temporary type that lets us test if we can create a next keyboard button without having to pass in a controller.
+
+Set `.current` to any of these values to try them out:
+
+* `.classic` is the current mode that requires us to pass in a controller or use the shared one.
+* `.experimental` is a new test mode that makes the button create an internal controller instead.
+* `.experimentalNilTarget` is a new test mode that makes the button use `nil` as the action target.
+
+`NextKeyboardButtonProxyMode` is a temporary type that lets us test if we can unregister an active `textInputProxy` to let the user switch keyboard while typing in a text field within the keyboard.
+
+Set `.current` to any of these values to try them out:
+
+* `.classic` doesn't reset the input controller and therefore doesn't let you switch keyboard while editing.
+* `.experimental` is a new test more that temporarily disables the text input proxy, which makes the switcher work.
+
+Make sure to test these experimental features and report any findings in the KeyboardKit issue tracker. 
+
+### ✨ Features
+
+* `AutocompleteContext` has a new `isAutoIgnoreEnabled` property.
+* `KeyboardAction.StandardHandler` has many more functions for more granular control.
+* `KeyboardAction.StandardHandler` can now autocomplete ignore words when pressing backspace.
+* `UrlOpener` is a new protocol with a new default way to open a URL that also works in iOS 18.
+
+### 💡 Adjustments
+
+* `KeyboardAction.url` will once again render as full gesture views.
+* `KeyboardContext.textInputProxy` is now a regular `UITextDocumentProxy`.
+* `KeyboardInputViewController.textInputProxy` is now a regular `UITextDocumentProxy`.
+
+### 👑 KeyboardKit Pro
+
+* `Dictation+ProKeyboardService` now logs when the App Group configuration seems wrong.
+* `Dictation+ProKeyboardService` now lets you provide a `OpenURLAction` in the main app.
+* `KeyboardHostApplicationProvider` has a new `hostApplicationBundleIdIsKnown` property.
+* `View+Dictation` now lets provide a `OpenURLAction` to use to return to the previous app.
+
+### 🐛 Bug fixes
+
+* `Dictation.ProKeyboardService` now corrently returns to any known host app.
+* `Dictation.ProKeyboardService` has now sets the dictation locale more reliably.
+* `Dictation.ProKeyboardService` has now handle background thread state updates better. 
+
+### 🗑️ Deprecations
+
+* `TextInputProxy` is no longer needed and has been deprecated.
+
+
+
 ## 8.8.6
 
 This version fixes things that break in Xcode 16 and iOS 18.
