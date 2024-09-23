@@ -48,7 +48,7 @@ https://github.com/KeyboardKit/KeyboardKitPro.git
 
 ## Getting started
 
-To use KeyboardKit in a keyboard extension, just import KeyboardKit Pro and let your controller inherit ``KeyboardInputViewController`` instead of `UIInputViewController`:
+To use KeyboardKit in a keyboard extension, just import `KeyboardKitPro` and let your `KeyboardViewController` inherit ``KeyboardInputViewController`` instead of `UIInputViewController`:
 
 ```swift
 import KeyboardKitPro
@@ -238,7 +238,7 @@ KeyboardKit Pro requires a license to be used. You can sign up on the [KeyboardK
 [Gumroad]: https://kankoda.gumroad.com
 [License]: https://github.com/KeyboardKit/KeyboardKitPro/blob/master/LICENSE
 
-[Documentation]: https://keyboardkit.github.io/KeyboardKitPro/
+[Documentation]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkitpro/
 [Getting-Started]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkitpro/getting-started-article
 [Essentials]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkitpro/essentials-article
 
