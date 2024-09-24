@@ -12,11 +12,112 @@ These release notes only cover the current major version.
 
 ### ‼️ Important information
 
-KeyboardKit 8.8 currently has a lot of deprecations, since the structure is being changed and types being renamed to make the upcoming 9.0 a lot cleaner.
-
-These changes don't affect `KeyboardActionHandler` (where handler is a better name than service) and `KeyboardStyleProvider` which is most probably removed in 9.0. 
+KeyboardKit 8.9 currently has a lot of deprecations, since the structure is being changed and types renamed to make the upcoming 9.0 cleaner.
 
 KeyboardKit 9 is planned to be released shortly after the public release of iOS 18 and all corresponding OS versions. It will also bump the deployment target to iOS 15.
+
+
+
+## 8.9
+
+This version continues to rename types to make things more consistent. This means that are now many deprecations, which is all in service for a clean 9.0 transition.
+
+This version now lets you set up your keyboard extension with a `KeyboardApp`, and separates setting up the keyboard from setting up the keyboard view. Read more below.
+
+This version adds a new `Keyboard.NumberPad` view, prediction-based tap area sizes for keyboard input keys, and a new `KeyboardThemeContext` to let you easily persist themes. 
+
+This version also adds service shorthands that make it easier to refer to services. For instance, instead of `KeyboardAction.StandardHandler(...)`, you can just type `.standard(...)`.
+
+### ‼️ Set up changes
+
+This version lets you use a `KeyboardApp` to set up your keyboard extension, and separates setting up the keyboard from setting up the keyboard view.
+
+You can now call `setup(for:)` (or `setupPro(for:completion:)` for KeyboardKit Pro) in `viewDidLoad()` to set up things like App Group syncing, register your KeyboardKit Pro license key, etc. with a `KeyboardApp` value, then use the new `setupKeyboardView(_:)` to set up a custom keyboard view in both KeyboardKit or KeyboardKit Pro. 
+
+### ✨ Features
+
+* `AutocompleteContext` has new `nextCharacterPrediction(for:)` functions.
+* `DictationContext` can now be set up for a `KeyboardApp`.
+* `Image` has a new `keyboardTheme` image value.
+* `Keyboard.NumberPad` is a new number pad component.
+* `Keyboard.State` has a new `themeContext` property.
+* `Keyboard.Services` has a new `tryRegisterLocalizedCalloutService` function.
+* `Keyboard.Services` has a new `tryRegisterLocalizedLayoutService` function.
+* `KeyboardApp` has new `deepLinks` and `keyboardBundleId` properties.
+* `KeyboardCalloutService` has a new `tryRegisterLocalizedService` function.
+* `KeyboardController` has a new `setup(for:)` to setup the keyboad for a `KeyboardApp`.
+* `KeyboardInputController` can now be set up for a `KeyboardApp`.
+* `KeyboardLayoutService` has a new `tryRegisterLocalizedService` function.
+* `KeyboardSettings` can now be set up for a `KeyboardApp`.
+* `KeyboardView` now applies next character probabilities to its items.
+* `KeyboardThemeContext` is a new context type for theme-related state. 
+* `View+KeyboardButton` now supports applying extended tap areas to more probable keys.
+
+### 👑 Pro Features
+
+* `KeyboardApp.HomeScreen` can now opt-in to link to the themes screen.
+* `KeyboardApp.ThemeScreen` is a new screen that can be used as a theme picker.
+
+### 💡 Adjustments
+
+* `Color` and `Image` extensions have been moved to the `Styling` namespace.
+* `KeyboardAction.StandardHandler` improves auto-ignore to behave better.
+* `KeyboardApp` marks the old initializer as `@_disfavoredOverload`.
+* `KeyboardContext` no longer syncs keyboard type for the same value.
+* `KeyboardContext` now starts with `KeyboardType.alphabetic(.auto)`.
+* `KeyboardInputViewController.host` now handles the host bundle ID within the main app.
+* `KeyboardView` will show a `Keyboard.NumberPad` if the `.keyboardStyle` is `.numberPad`.
+
+### ⚡️ Shorthands
+
+* `Autocomplete.DisabledService` can be resolved with `.disabled(...)`.
+* `Callouts.DisabledService` can be resolved with `.disabled`.
+* `Callouts.StandardService` can be resolved with `.standard(...)`.
+* `Dictation.DisabledService` can be resolved with `.disabled`.
+* `Dictation.DisabledKeyboardService` can be resolved with `.disabled(...)`.
+* `Feedback.DisabledService` can be resolved with `.disabled`.
+* `Feedback.StandardService` can be resolved with `.standard`.
+* `Gestures.SpaceDragGestureHandler` can be resolved with `.spaceDrag`.
+* `KeyboardAction.StandardHandler` can be resolved with `.standard(...)`.
+* `KeyboardLayout.DisabledService` can be resolved with `.disabled`.
+* `KeyboardLayout.StandardService` can be resolved with `.standard(...)`.
+* `KeyboardStyle.StandardService` can be resolved with `.standard(...)`.
+
+### ⚡️ Shorthands (KeyboardKit Pro)
+
+* `Autocomplete.LocalService` can be resolved with `.local(...)`.
+* `Autocomplete.RemoteService` can be resolved with `.remote(...)`.
+* `Callouts.ProService.<Locale>` can be resolved with `.<locale>`.
+* `Dictation.ProService` can be resolved with `.pro(...)`.
+* `Dictation.ProKeyboardService` can be resolved with `.proInKeyboard(...)` and `.proInApp(...)`.
+* `KeyboardLayout.ProService.<Locale>` can be resolved with `.<locale>(...)`.
+* `KeyboardStyleService.ThemeBased` can be resolved with `.themeBased(...)`.
+
+### 📖 Documentation
+
+* The documentation has been adjusted for Xcode 16.
+
+### 🐛 Bug Fixes
+
+* This protect against an undefined key error when instantiating a KeyboardInputViewController in an app.
+
+### 🗑️ Deprecations & Renamings
+
+* `KeyboardController` `setup(with:)` has been renamed to `setupKeyboardView(_:)`.
+* `KeyboardController` `viewWillSetupKeyboard()` has been renamed to `viewWillSetupKeyboardView()`.
+* `KeyboardStyleProvider` and its related types are renamed to `KeyboardStyleService`.
+
+
+
+## 8.8.9
+
+This version builds KeyboardKit Pro with Xcode 16 and Swift 6, to make the EmojiKeyboard scrolling work in iOS 18.
+
+
+
+## 8.8.8
+
+This version makes `Keyboard.Services` sync service changes to the action handler, if possible. 
 
 
 
@@ -44,8 +145,8 @@ Set `.current` to any of these values to try them out:
 
 Set `.current` to any of these values to try them out:
 
-* `.classic` doesn't reset the input controller and therefore doesn't let you switch keyboard while editing.
-* `.experimental` is a new test more that temporarily disables the text input proxy, which makes the switcher work.
+* `.classic` doesn't reset the proxy and therefore doesn't let you switch keyboard while editing.
+* `.experimental` is a new test mode that temporarily disables the proxy, which makes the switcher work.
 
 Make sure to test these experimental features and report any findings in the KeyboardKit issue tracker. 
 
@@ -78,6 +179,7 @@ Make sure to test these experimental features and report any findings in the Key
 ### 🗑️ Deprecations
 
 * `TextInputProxy` is no longer needed and has been deprecated.
+* `URL.keyboardSettings` has been renamed to `URL.systemSettings`.
 
 
 
