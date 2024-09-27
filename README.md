@@ -1,5 +1,5 @@
 <p align="center">
-    <img src ="Resources/Logo_GitHub.png" alt="KeyboardKit Logo" title="KeyboardKit" />
+    <img src ="Resources/Logo_GitHub.png" alt="KeyboardKit Pro Logo" title="KeyboardKit Pro" />
 </p>
 
 <p align="center">
@@ -89,7 +89,7 @@ class KeyboardViewController: KeyboardInputViewController {
 }
 ```
 
-This will make `KeyboardSettings` sync data between the main app and its keyboard if an ``appGroupId`` is defined, register a KeyboardKit Pro license if a ``licenseKey`` is defined, and also set up dictation, deep links, etc.
+This will make `KeyboardSettings` sync data between the main app and its keyboard if an ``appGroupId`` is defined, register a KeyboardKit Pro license if a ``licenseKey`` is defined, set up dictation, deep links, etc.
 
 To replace or customize the standard, English `KeyboardView`, just override `viewWillSetupKeyboardView` and call `setupKeyboardView` with the view you want to use:
 
@@ -131,14 +131,14 @@ struct MyApp: App {
 }
 ```
 
-This will make `KeyboardSettings` sync data between the main app and its keyboard if an ``appGroupId`` is defined, register a KeyboardKit Pro license if a ``licenseKey`` is defined, and also set up dictation, deep links, etc.
+This will make `KeyboardSettings` sync data between the main app and its keyboard if an ``appGroupId`` is defined, register a KeyboardKit Pro license if a ``licenseKey`` is defined, set up dictation, deep links, etc.
 
 For more information, please see the [getting started guide][Getting-Started].
 
 
 
 
-## Supported Locales
+## Localization
 
 KeyboardKit supports [68 keyboard-specific locales][Localization]:
 
@@ -184,20 +184,18 @@ KeyboardKit Pro extends [KeyboardKit][KeyboardKit] with Pro features:
 
 ## Documentation
 
-The [online documentation][Documentation] has more information, articles, code examples, etc.
-
-> [!NOTE]  
-> The documentation is updated for KeyboardKit 8.9. This also adjusts it for Xcode 16, which makes native type extension links fail to resolve for GitHub Actions, which currently uses Xcode 15.
+The [online documentation][Documentation] has more information, getting-started guides, articles, code examples, etc.
 
 
 
 ## Demo App
 
-The [main repository][KeyboardKit] has a demo app that shows you how to customize the keyboard, show keyboard state, provide in-app settings in the main app, link to system settings, apply custom styles, etc.
+The [main repository][KeyboardKit] has a demo app that shows how to set up the main keyboard app, show keyboard status, provide in-app settings, link to system settings, apply custom styles, etc.
 
-The app has two keyboards - a `Keyboard` that uses KeyboardKit and a `KeyboardPro` that uses KeyboardKit Pro.
+The app has two keyboards - a `Keyboard` that uses KeyboardKit and a `KeyboardPro` that uses KeyboardKit Pro. Note that you need to enable Full Access for some features to work, like haptic feedback.
 
-Just open and run the demo app in the `Demo` folder, then enable the keyboards under System Settings. Note that you need to enable Full Access for some features to work, like haptic feedback.
+> [!IMPORTANT]
+> The demo isn't code signed, and can therefore not sync settings between the app and its keyboards. As such, the `KeyboardPro` keyboard has the same settings screens to provide in-keyboard settings.
 
 
 
