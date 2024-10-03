@@ -18,6 +18,17 @@ KeyboardKit 9 is planned to be released shortly after the public release of iOS 
 
 
 
+## 8.9.3
+
+This version adjusts the access scope for Pro callout and layout services.
+
+### 🐛 Bug Fixes
+
+* `CalloutService.ProService` and all localized services are now properly open to inheritance.
+* `KeyboardLayoutService.ProService` and all localized services are now properly open to inheritance.
+
+
+
 ## 8.9.2
 
 This version adds more KeyboardKit Pro shorthands, to make it even easier to initialize Pro services.
