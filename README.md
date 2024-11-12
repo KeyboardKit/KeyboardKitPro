@@ -176,7 +176,7 @@ KeyboardKit Pro unlocks localized keyboards, layouts, callouts and behaviors for
 * 🔣 [Layout][Layout] - Localized layouts for all locales.
 * 🌐 [Localization][Localization] - Services & views for all locales.
 * 👁 [Previews][Previews] - Keyboard & theme previews for in-app use.
-* ➡️ [Proxy][Proxy] - Let `UITextDocumentProxy` read the full document.
+* 📄 [Proxy][Proxy] - Let `UITextDocumentProxy` read the full document.
 * 📝 [Text][Text-Input] - Let users type within the keyboard.
 * 🍭 [Themes][Themes] - A theme engine with many pre-defined themes.
 
@@ -187,7 +187,7 @@ KeyboardKit Pro unlocks localized keyboards, layouts, callouts and behaviors for
 The [online documentation][Documentation] has a detailed article for each feature, a thorough getting-started guide, code samples, etc. You can also build it from the source code to get better formatting.
 
 > [!NOTE]
-> The online documentation is updated for KeyboardKit 9.0 RC 1. Documentation for KeyboardKit 8 can be built from the source code.
+> The online documentation is updated for KeyboardKit 9.0 RC 2. Documentation for KeyboardKit 8 can be built from the source code.
 
 
 
