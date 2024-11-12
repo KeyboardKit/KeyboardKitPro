@@ -5,8 +5,8 @@
 <p align="center">
     <img src="https://img.shields.io/github/v/release/KeyboardKit/KeyboardKitPro?color=forestgreen&sort=semver" alt="Version" />
     <img src="https://img.shields.io/badge/swift-5.9-orange.svg" alt="Swift 5.9" />
-    <img src="https://img.shields.io/github/license/KeyboardKit/KeyboardKitPro" alt="MIT License" />
-    <a href="https://keyboardkit.github.io/KeyboardKit"><img src="https://img.shields.io/badge/docs-6.x-blue.svg" alt="Documentation" /></a>
+    <img src="https://img.shields.io/badge/license-commercial-yellow.svg" alt="Documentation" />
+    <a href="https://keyboardkit.github.io/KeyboardKit"><img src="https://img.shields.io/badge/docs-9.0-blue.svg" alt="Documentation" /></a>
 </p>
 
 
