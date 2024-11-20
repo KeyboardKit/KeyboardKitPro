@@ -10,15 +10,15 @@ KeyboardKit tries to honor semantic versioning:
 These release notes cover the current major version. Check out version tags for older release notes.  
 
 
-## 💡 KeyboardKit 9.0 Migration Guide
+## 💡 KeyboardKit 9 Migration Guide
 
-When migrating from KeyboardKit 8.x to 9.x, first upgrade to the last 8.9 version and fix all the deprecation warnings that it provides you with. This will help you prepare for KeyboardKit 9.0.
+When migrating from KeyboardKit 8 to 9, first upgrade to the last 8 version and fix all the deprecation warnings that it provides. This helps you prepare for KeyboardKit 9.
 
-When you have fixed all deprecation warnings, you should first upgrade to KeyboardKit 9.0. It will provide you with migration deprecations that help you migrate to its many architectural changes.
+When you have fixed all warnings, first upgrade to KeyboardKit 9.0. It will provide you with migration deprecations that help you migrate to its many architectural changes.
 
-Once you have fixes all migration deprecations, you are ready to start using KeyboardKit 9.0. You can now configure SPM to use the latest major version number, which will make it use the latest 9.x version.
+Once you have fixes all migration deprecations, you can start using KeyboardKit 9. You can now configure SPM to use the latest major version number, i.e. the latest 9.x version.
 
-Note that the legacy migrations will be removed in 9.1, so make sure that you always first upgrade to 9.0 when you upgrade from KeyboardKit 8. If you're on KeyboardKit 7, you should first follow the same procedure to update to 8.0.
+The legacy migrations will be removed in 9.1, so make sure to first upgrade to 9.0 when migrating from KeyboardKit 8. If you're on KeyboardKit 7, first repeat these steps for 8.0.
 
 
 
@@ -33,6 +33,12 @@ This version also moves a lot of non-essential views and utilities from Keyboard
 You may still run into a few breaking changes, where migrations were not possible due to architectural changes. For such breaking changes, see the changes & comments below.
 
 Migration-based changes that are not listed under "Breaking Changes" will become breaking if you don't address any such warnings before upgrading to KeyboardKit 9.1 and later.
+
+### 👑 Pro
+
+KeyboardKit Pro can now be used by multiple targets in the same app, using a single app bundle ID.
+
+KeyboardKit Pro can now activate yearly Gold & Enterprise licenses with a standalone license file. 
 
 ### 🧪 Experiments
 
@@ -56,13 +62,31 @@ The `KeyboardView` now has a `collapsedView` that will be displayed when the key
 
 `Keyboard.CollapsedView` is a new standard view that can be displayed when the keyboard context `isKeyboardCollapsed` is true.
 
+### ⚙️ Services
+
+The service name changes and refactoring have been a great adjustment, but went a little too far.
+
+Developers have provided feedback that it's hard to tell services apart since there are now many `StandardService`.
+
+As such, this version takes one step back and adds the service type to the class name. The shorthands stay the same.
+
+This means that the adjusted name for e.g. `KeyboardLayout.StandardService` will be `KeyboardLayout.StandardLayoutService`.
+
+This name change will hopefully make it easier to distinguish between various services when searching and debugging the SDK.  
+
 ### 💥 Actions
 
-The `KeyboardAction.StandardHandler` now implements `KeyboardBehavior`.
+The `KeyboardAction.StandardActionHandler` now implements `KeyboardBehavior`.
+
+### 📱 App
+
+The `KeyboardApp` now lets you register a custom next word prediction request.
 
 ### 💡 Autocomplete
 
 The `AutocompleteService` now returns a `Autocomplete.ServiceResult` instead of just a list of suggestions.
+
+The `Autocomplete.NextWordPredictionRequest` is a new type with `Claude` and `OpenAI` integration requests.
 
 The `Autocomplete.Suggestion` type now implements `Codable` and `Equatable`. This required additional info changes.
 
@@ -100,13 +124,21 @@ The standard emoji styles no longer take an input toolbar display mode. You can 
 
 The KeyboardKit Pro `EmojiKeyboard` has been rebuilt from scratch, and now behaves more like a native keyboard, by scrolling through all categories and supporting search.
 
+### 🧩 Extensions
+
+The `String` `.lastSentence` property now includes the last sentence even if it's not ended.
+
 ### ⌨️ External Keyboard
 
 The `ExternalKeyboardContext` has been moved to the open-source library and added to `Keyboard.State`.
 
 ### 🔉 Feedback
 
+The `Feedback` namespace has been renamed to `KeyboardFeedback` and simplified quite a bit.
+
 The haptic feedback has been adjusted to be lighter when typing, to make the typing not feel as heavy.
+
+The `FeedbackContext` no longer has enabled configs, since its `settings` is now used to toggle feedback.
 
 ### 🇸🇪 Localization
 
@@ -136,11 +168,11 @@ Persistent settings have moved from the various contexts to nested `settings` ty
 
 The `KeyboardContext` is now responsible for the `textInputProxy`. The controller refers to this proxy, but the context owns it.
 
-The KeyboardKit Pro input text components can therefore be setup with a `KeyboardContext`, and no longer need a controller instance. 
+The KeyboardKit Pro input text components can therefore be setup with a `KeyboardContext`, and no longer need a controller instance.
 
-### 👑 Pro
+### 🍭 Themes
 
-KeyboardKit Pro can now be activated with a license file. License files will be provided to all yearly Gold and Enterprise customers. 
+The `KeyboardStyle.ThemeBasedStyleService` can now be created with a theme context, which makes it auto-update when the theme is changed.
 
 ### 🚨 Breaking Changes
 
@@ -154,10 +186,10 @@ Some things that are not covered by migration deprecations are:
 * All previously mutable styles and configs are now computed.
 * The dictation changes can't be migrated since the services are merged.
 * `Autocomplete.Suggestion` implements protocols that required info constraints.
-* `Autocomplete.LocalService` now requires a keyboard context for contextual info.
+* `Autocomplete.LocalAutocompleteService` now requires a keyboard context for contextual info.
 * `InputSet` no longer implements the removed `KeyboardLayoutIdentifiable` protocol.
 * `KeyboardLayout` is now a struct, and must now be a `var` for you to customize it.
 * `KeyboardStyleService` and callout style view modifiers now only use the base style.
 * `StandardSpeechRecognizer` has been refactored, and must be updated for you to use it.
 
-A problem that you may run into, is that the `KeyboardInputViewController` `setupKeyboardView(_ view: @autoclosure @escaping () -> Content)` has been renamed to `setupKeyboardView(with:)` to remove DocC ambiguity with the controller-based function. If you use this variant, just add an `with:` parameter name.
+A problem you may face, is that `KeyboardInputViewController.setupKeyboardView(_ view: @autoclosure @escaping () -> Content)` has been renamed to `setupKeyboardView(with:)` to remove DocC ambiguity. If you do, just add `with:`.
