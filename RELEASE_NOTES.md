@@ -137,6 +137,14 @@ The haptic feedback has been adjusted to be lighter when typing, to make the typ
 
 The `FeedbackContext` no longer has enabled configs, since its `settings` is now used to toggle feedback.
 
+### 🏠 Host
+
+The `Host` informaton has been moved to KeyboardKit Pro.
+
+The `KeyboardHostApplication` struct has more information and even more pre-defined apps.
+
+The `KeyboardAction` has a new `.openHost` action that can be used to open a certain app. 
+
 ### 🇸🇪 Localization
 
 The `KeyboardLocale` enum has been replaced with using the native `Locale` everywhere.
@@ -160,6 +168,12 @@ KeyboardKit Pro adds layout item mutations to the `KeyboardLayout` itself, which
 ### 🎛️ Settings
 
 Persistent settings have moved from the various contexts to nested `settings` types, to separate properties from settings.
+
+### 🩺 Status
+
+The `KeyboardStatusInspector` has been made internal to avoid using it in incorrect ways.
+
+Use the `KeyboardStatusContext` instead, which manages status information in a better way. 
 
 ### 📝 Text Input
 

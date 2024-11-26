@@ -24,7 +24,7 @@ KeyboardKit Pro extends [KeyboardKit][KeyboardKit] with features like autocomple
 Keyboard extensions can be used within all other apps on iOS, where text input is supported. It's the only way for your product or brand to directly interact with other apps on iOS. Don't miss out!
 
 > [!NOTE]
-> KeyboardKit 9 is soon out! Give it a try by using the `9.0.0-rc.4` tag. The [online docs][Documentation] are updated for this major update. See [the GitHub roadmap](https://github.com/KeyboardKit/KeyboardKit/milestone/100) for remaining and closed issues.
+> KeyboardKit 9 is soon out! Give it a try by using the `9.0.0-rc.6` tag. The [online docs][Documentation] are updated for this major update. See [the GitHub roadmap](https://github.com/KeyboardKit/KeyboardKit/milestone/100) for remaining and closed issues.
  
 
 
