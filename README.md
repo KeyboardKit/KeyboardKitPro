@@ -22,9 +22,6 @@ KeyboardKit Pro extends [KeyboardKit][KeyboardKit] with features like autocomple
 </p>
 
 Keyboard extensions can be used within all other apps on iOS, where text input is supported. It's the only way for your product or brand to directly interact with other apps on iOS. Don't miss out!
-
-> [!NOTE]
-> KeyboardKit 9 is soon out! Give it a try by using the `9.0.0-rc.6` tag. The [online docs][Documentation] are updated for this major update. See [the GitHub roadmap](https://github.com/KeyboardKit/KeyboardKit/milestone/100) for remaining and closed issues.
  
 
 
@@ -188,9 +185,6 @@ KeyboardKit Pro unlocks localized keyboards, layouts, callouts and behaviors for
 
 The [online documentation][Documentation] has a detailed article for each feature, a thorough getting-started guide, code samples, etc. You can also build it from the source code to get better formatting.
 
-> [!NOTE]
-> The online documentation is updated for KeyboardKit 9.0 RC 2. Documentation for KeyboardKit 8 can be built from the source code.
-
 
 
 ## Demo App
@@ -200,7 +194,7 @@ The [main repository][KeyboardKit] has a demo app that shows how to set up the m
 The app has two keyboards - a `Keyboard` that uses KeyboardKit and a `KeyboardPro` that uses KeyboardKit Pro. Note that you need to enable Full Access for some features to work, like haptic feedback.
 
 > [!IMPORTANT]
-> The demo isn't code signed and can therefore not use an App Group to sync settings between the app and its keyboards. As such, the `KeyboardPro` keyboard has settings screens in the keyboard as well. You can try out the [KeyboardKit app][KeyboardKit-App] from the App Store to see how settings sync when you use a signed app.
+> The demo isn't code signed and can therefore not use an App Group to sync settings between the app and its keyboards. As such, the `KeyboardPro` keyboard has settings screens in the keyboard as well.
 
 
 
