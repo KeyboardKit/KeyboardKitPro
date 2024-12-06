@@ -21,7 +21,31 @@ Once you've fixed all warnings, you can start using KeyboardKit 9. You can now s
 The legacy migrations will be removed in 9.1, so make sure to first upgrade to 9.0 when migrating from KeyboardKit 8, before you upgrade to any later versions.
 
 
-## KeyboardKit 9.0
+
+## 9.0.1
+
+This version adds more next word prediction utilities.
+
+### 📱 App
+
+`KeyboardApp.SettingsScreen` can now show a next word prediction section, to let users set their own request.
+
+### 💡 Autocomplete
+
+`Autocomplete.NextWordPredictionRequestType` is a new enum that can be used to let users pick a request type.
+`Autocomplete.Settings` has new properties to let users pick which next word request type and API key to use.
+
+### 🎛️ Settings
+
+The various settings types have been moved from the context to the namespace, for instance:
+
+* `AutocompleteContext.Settings` is now named `Autocomplete.Settings`.
+
+The context classes however still have `Settings` typealiases to keep the public APIs unchanged. 
+
+
+
+## 9.0
 
 This version targets `iOS 15`, `macOS 12`, `tvOS 15`, `watchOS 8`, and `visionOS 1`, removes all deprecated code, and simplifies many concepts.
 
