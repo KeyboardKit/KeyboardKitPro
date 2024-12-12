@@ -22,6 +22,20 @@ The legacy migrations will be removed in 9.1, so make sure to first upgrade to 9
 
 
 
+## 9.0.3
+
+This version adds emoji category texts to all localized string files to fix bugs in some locales.
+
+### 🌐 Localization
+
+* `EmojiCategory` is now localized in German.
+
+### 👑 Pro
+
+* `Autocomplete.NextWordPredictionRequest.claude` now uses latest Sonnet 3.5 model by default.
+
+
+
 ## 9.0.2
 
 This version adds more next word prediction and settings utilities.
