@@ -22,6 +22,25 @@ The legacy migrations will be removed in 9.1, so make sure to first upgrade to 9
 
 
 
+## 9.0.4
+
+This version adds support for Chuvash and fixes two bugs.
+
+### 🌐 Localization
+
+This version adds support for 🏳️ Chuvash, bringing the number locales up to `71`.
+
+### 👑 Pro
+
+This version switches smarter between the package module bundle and a resolved distribution bundle. 
+
+### 🐛 Bug Fixes
+
+* `Keyboard+ButtonContent` now properly updates when changing locale.
+* `Keyboard+Diacritics` adds missing accents and carons.
+
+
+
 ## 9.0.3
 
 This version adds emoji category texts to all localized string files to fix bugs in some locales.
