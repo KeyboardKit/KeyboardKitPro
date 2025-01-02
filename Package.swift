@@ -20,8 +20,8 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "KeyboardKitPro",
-            url: "https://github.com/KeyboardKit/KeyboardKit/releases/download/9.0.4/KeyboardKitPro.zip",
-            checksum: "6d721d477f0af121629b1d894026009de974ce6dd0e4701553b1d9777d316c36"
+            url: "https://github.com/KeyboardKit/KeyboardKit/releases/download/9.0.5/KeyboardKitPro.zip",
+            checksum: "6a6a41dbd84eb6fd0f06fa763c13cba0c08e69c0340206793a63e9c896f2e251"
         )
     ]
 )
