@@ -4,8 +4,6 @@
 # This script creates a new version tag for the project.
 
 NAME="KeyboardKitPro"
-DEFAULT_BRANCH="master"
-BRANCH=${1:-$DEFAULT_BRANCH}
-SCRIPT="scripts/version.sh"
+SCRIPT="scripts/version_bump.sh"
 chmod +x $SCRIPT
-bash $SCRIPT $NAME $BRANCH
+bash $SCRIPT
