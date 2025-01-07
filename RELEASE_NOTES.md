@@ -22,6 +22,25 @@ The legacy migrations will be removed in 9.1, so make sure to first upgrade to 9
 
 
 
+## 9.0.6
+
+This version provides some minor bug fixes and improvements.
+
+### 💡 Adjustments
+
+* `Keryboard.Settings` now enables haptic feedback by default, since it's much better.
+* `Locale.ContextMenu` now sorts the listed locales in the locale presentation locale.
+
+### 👑 Pro
+
+Fixed outdated platform version information in the distribution package manifest file.  
+
+### 🐛 Bug Fixes
+
+* `Keyboard.Settings` had accidentally marked utilities for added locales as internal.
+
+
+
 ## 9.0.4
 
 This version adds support for Chuvash and fixes two bugs.
@@ -32,18 +51,18 @@ This version adds support for 🏳️ Chuvash, bringing the number locales up to
 
 ### 👑 Pro
 
-This version switches smarter between the package module bundle and a resolved distribution bundle. 
+This version switches smarter between the module bundle and distribution bundles. 
 
 ### 🐛 Bug Fixes
 
-* `Keyboard+ButtonContent` now properly updates when changing locale.
-* `Keyboard+Diacritics` adds missing accents and carons.
+* `Keyboard+ButtonContent` now properly updates the content when changing locale.
+* `Keyboard+Diacritics` adds missing accents and carons for all affected locales.
 
 
 
 ## 9.0.3
 
-This version adds emoji category texts to all localized string files to fix bugs in some locales.
+This version adds emoji category texts to all localized files, to fix emoji localization bugs.
 
 ### 🌐 Localization
 

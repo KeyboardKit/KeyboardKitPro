@@ -5,10 +5,10 @@ import PackageDescription
 let package = Package(
     name: "KeyboardKitPro",
     platforms: [
-        .iOS(.v14),
-        .macOS(.v11),
-        .tvOS(.v14),
-        .watchOS(.v7),
+        .iOS(.v15),
+        .macOS(.v12),
+        .tvOS(.v15),
+        .watchOS(.v8),
         .visionOS(.v1)
     ],
     products: [
@@ -20,8 +20,8 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "KeyboardKitPro",
-            url: "https://github.com/KeyboardKit/KeyboardKit/releases/download/9.0.5/KeyboardKitPro.zip",
-            checksum: "6a6a41dbd84eb6fd0f06fa763c13cba0c08e69c0340206793a63e9c896f2e251"
+            url: "https://github.com/KeyboardKit/KeyboardKit/releases/download/9.0.6/KeyboardKitPro.zip",
+            checksum: "04928e25c0459d51c0b7c606c669db990a0f128a56a5e4440cc49d4841454eeb"
         )
     ]
 )
