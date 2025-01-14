@@ -33,7 +33,7 @@ This version provides some minor bug fixes and improvements.
 
 ### 👑 Pro
 
-Fixed outdated platform version information in the distribution package manifest file.  
+* Fixed outdated platform version information in the distribution package manifest file.  
 
 ### 🐛 Bug Fixes
 

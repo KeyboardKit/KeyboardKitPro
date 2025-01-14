@@ -5,5 +5,4 @@
 
 NAME="KeyboardKitPro"
 SCRIPT="scripts/version_bump.sh"
-chmod +x $SCRIPT
-bash $SCRIPT
+chmod +x $SCRIPT && bash $SCRIPT
