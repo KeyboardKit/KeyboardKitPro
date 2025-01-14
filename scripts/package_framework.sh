@@ -2,7 +2,7 @@
 
 # Documentation:
 # This script generates an XCFramework for `Package.swift`.
-# The script targets iOS by default, but you can pass in custom PLATFORMS.
+# This script targets iOS by default, but you can pass in custom <PLATFORMS>.
 
 # Usage:
 # package_framework.sh [<PLATFORMS> default:iOS]

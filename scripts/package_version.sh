@@ -2,7 +2,7 @@
 
 # Documentation:
 # This script creates a new version for `Package.swift`.
-# You can pass in a custom BRANCH to make the non-main branch pass validation.
+# You can pass in a <BRANCH> to validate any non-main branch.
 
 # Usage:
 # package_version.sh <BRANCH default:main>

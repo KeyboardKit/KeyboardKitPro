@@ -1,7 +1,9 @@
 #!/bin/bash
 
 # Documentation:
-# This script builds DocC for a <TARGET> for all provided <PLATFORMS>.
+# This script builds DocC for a <TARGET> and certain <PLATFORMS>.
+# This script targets iOS, macOS, tvOS, watchOS, and xrOS by default.
+# You can pass in a list of <PLATFORMS> if you want to customize the build.
 # The documentation ends up in to .build/docs-<PLATFORM>.
 
 # Usage:
