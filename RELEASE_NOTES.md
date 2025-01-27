@@ -7,18 +7,63 @@ KeyboardKit tries to honor semantic versioning:
 * Breaking changes should not occur in `minor` and `patch` updates.
 * Breaking changes *can* occur in `minor` and `patch` updates, if needed.
 
-These release notes cover the current major version. Check out version tags for older release notes.  
+These release notes cover the current major version. Check out version tags for older release notes. 
 
 
-## 💡 KeyboardKit 9 Migration Guide
 
-When migrating from KeyboardKit 8 to 9, first upgrade to the last 8 version and fix all deprecation warnings. This helps you prepare for KeyboardKit 9. 
+## 9.1
 
-When you have fixed all migration warnings, upgrade to KeyboardKit 9.0 and fix any migration deprecations to conform to its many architectural changes.
+> [!IMPORTANT]
+> This version removes the KeyboardKit 8 migration support! Migrate to the last 9.0 version before updating to 9.1 or later.
 
-Once you've fixed all warnings, you can start using KeyboardKit 9. You can now setup SPM to use the latest major version number, i.e. the latest 9.x version. 
+This version makes it easier to set up a custom `KeyboardApp`, by removing the need to specify the application `bundleId`. 
 
-The legacy migrations will be removed in 9.1, so make sure to first upgrade to 9.0 when migrating from KeyboardKit 8, before you upgrade to any later versions.
+This version makes it possible to dock the keyboard to the leading or trailing edge, to simplify one handed typing on iPhone.
+
+This version makes it possible to add a locale context menu directly to the spacebar, instead of using an extra keyboard key.  
+
+### ✨ Features
+
+* `Keyboard.DockEdge` is a new enum that can be used to enable keyboard docking.
+* `Keyboard.Settings` has a new `keyboardDockEdge` that enables keyboard docking.
+* `Keyboard.SpaceLongPressBehavior` has a new `.moveInputCursorWithLocaleSwitcher`.
+* `KeyboardContext` has new `enabledLocales` that usess `addedLocales` or `locales`.
+* `KeyboardView` can now docks to any horizontal edge, if `keyboardDockEdge` is set.
+* `KeyboardView` now automatically augments emoji keyboard styles for input toolbars.
+* `Locale` has a new `shortDisplayName` that returns the language code or identifier.
+* `View` has a new `.keyboardDockEdge(...)` modifier, which can apply a custom value.
+
+### 👑 Pro
+
+* `EmojiKeyboard` now renders a lot better for more device types.
+* `Emoji.KeyboardMenu` now gets a style builder from the environment.
+* `iPadProLayoutService` now renders URL and email keyboard keys better.
+
+### 💡 Adjustment
+
+* Many types now conform to `Codable`, `Sendable` and other essential protocols.
+* Upper-case shift and caps-lock has adjusted, default idle colors in dark mode.
+* `KeyboardApp` no longer needs you to define `bundleId` and `keyboardBundleId`.
+* `KeyboardLayout` & `BaseLayoutService` removes `number` from input toolbar naming.
+
+### 🇪🇸 Localization
+
+* All emojis and emoji catetegories have been localized in Spanish.
+
+### 🐛 Bug Fixes
+
+* `Keyboard.KeyboardType.URL` now renders input keys and bottom actions correctly.
+* `KeyboardView` doesn't remove the emoji key if a custom `emojiKeyboard` is used.
+
+### 📄 Documentation
+
+* The documentation has been updated with more information and examples.
+
+### 🗑️ Deprecations
+
+* All migration deprecations have been removed.
+* `Gestures` space models have been moved to `Keyboard`.
+* `KeyboardLayout.ipadProLayout` has been renamed to `isIpadProLayout`.
 
 
 
@@ -28,12 +73,12 @@ This version provides some minor bug fixes and improvements.
 
 ### 💡 Adjustments
 
-* `Keryboard.Settings` now enables haptic feedback by default, since it's much better.
+* `Keyboard.Settings` now enables haptic feedback by default, since it's much better.
 * `Locale.ContextMenu` now sorts the listed locales in the locale presentation locale.
 
 ### 👑 Pro
 
-* Fixed outdated platform version information in the distribution package manifest file.  
+Fixed outdated platform version information in the distribution package manifest file.  
 
 ### 🐛 Bug Fixes
 
