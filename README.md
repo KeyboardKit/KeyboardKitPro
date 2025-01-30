@@ -13,15 +13,13 @@
 
 ## About KeyboardKit Pro
 
-[KeyboardKit][KeyboardKit] is a SwiftUI SDK that lets you create fully customizable [keyboard extensions][About] with a few lines of code.
-
-KeyboardKit Pro extends [KeyboardKit][KeyboardKit] with features like autocomplete & autocorrect, AI support, a powerful emoji keyboard, dictation, themes, app templates, and much more.
+[KeyboardKit][KeyboardKit] lets you create amazing [custom keyboards][About] with a few lines of code, using Swift & SwiftUI.
 
 <p align="center">
     <img src="Resources/Demo.gif" width="450" />
 </p>
 
-Keyboard extensions can be used within all other apps on iOS, where text input is supported. It's the only way for your product or brand to directly interact with other apps on iOS. Don't miss out!
+KeyboardKit extends Apple's limited keyboard APIs with more capabilities. KeyboardKit Pro extends further by unlocking localized keyboards, autocomplete, an emoji keyboard, AI support, themes, and much more.
  
 
 
@@ -69,14 +67,12 @@ extension KeyboardApp {
 Next, let your `KeyboardController` inherit ``KeyboardInputViewController`` instead of `UIInputViewController`:
 
 ```swift
-import KeyboardKit
-
 class KeyboardController: KeyboardInputViewController {}
 ```
 
 This unlocks additional functions and capabilities, and injects `services` and observable `state` to the controller. 
 
-Next, override `viewDidLoad` and call `setup(for:)` with your app value, or `setupPro(for:...)` if you use KeyboardKit Pro:
+Next, override `viewDidLoad()` and call `setupPro(for:)` with your app value:
 
 ```swift
 class KeyboardViewController: KeyboardInputViewController {
@@ -84,10 +80,6 @@ class KeyboardViewController: KeyboardInputViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // KeyboardKit
-        setup(for: .keyboardKitDemo)
-        
-        // 👑 KeyboardKit Pro
         setup(for: .keyboardKitDemo) { result in
             // If result is successful, KeyboardKit Pro is now active
             // You can now customize your keyboard and tweak features 
@@ -96,7 +88,7 @@ class KeyboardViewController: KeyboardInputViewController {
 }
 ```
 
-To replace or customize the standard `KeyboardView` keyboard view, just override `viewWillSetupKeyboardView` and call `setupKeyboardView` with the view you want to use:
+To replace or customize the standard `KeyboardView` view, just override `viewWillSetupKeyboardView()` and call `setupKeyboardView(with:)` with the view that you want to use:
 
 ```swift
 class KeyboardViewController: KeyboardInputViewController {
@@ -117,14 +109,9 @@ class KeyboardViewController: KeyboardInputViewController {
 }
 ```
 
-You can return `$0.view` to use the standard view, or return any custom view you like for the provided parameters.
-
 To set up your main app with the same keyboard configuration, just wrap the content view in a `KeyboardAppView`:
 
 ```swift
-import SwiftUI
-import KeyboardKit
-
 @main
 struct MyApp: App {
 
@@ -138,9 +125,7 @@ struct MyApp: App {
 }
 ```
 
-Setting up your app and keyboard with a `KeyboardApp` will make settings sync between the two if an ``appGroupId`` is defined, register your KeyboardKit Pro license if a ``licenseKey`` is defined, set up dictation, deep links, etc.
-
-For more information, see the [getting started guide][Getting-Started].
+For more information, see the [getting started guide][Getting-Started] and [essentials][Essentials] articles.
 
 
 
@@ -162,17 +147,35 @@ KeyboardKit only includes localized strings, while KeyboardKit Pro unlocks loca
 
 
 
-## Open-Source Features
+## Features
 
-[KeyboardKit][KeyboardKit] has open-source features that help you build great keyboards: 
+[KeyboardKit][KeyboardKit] provides a free, open-source keyboard engine. KeyboardKit Pro unlocks more powerful pro features.
 
+### Open-Source
 
+* 🌱 [Essentials][Essentials] - Essential keyboard utilities, models, services & views.
+* ⌨️ [Essentials-KeyboardView][Essentials-KeyboardView] - Render a native-looking, customizable iOS keyboard.
+* 💥 [Actions][Actions] - Trigger & handle keyboard-related actions.
+* 📱 [App][App] - Define and set up your app, settings, etc.
+* 💡 [Autocomplete][Autocomplete] - Perform autocomplete as the user types.
+* 🗯 [Callouts][Callouts] - Show input & secondary action callouts.
+* 🖥️ [Device][Device] - Identify device type, device capabilities, etc.
+* 😀 [Emojis][Emojis] - Emojis, categories, versions, skin tones, etc.
+* 🔉 [Feedback][Feedback] - Trigger audio & haptic feedback with ease.
+* 👆 [Gestures][Gestures] - Handle a rich set of gestures on any key.
+* 🔣 [Layout][Layout] - Define and customize dynamic keyboard layouts.
+* 🌐 [Localization][Localization] - Localize your keyboard in **71 locales**.
+* 🗺️ [Navigation][Navigation] - Open urls and other apps from the keyboard.
+* 👁 [Previews][Previews] - Extensive SwiftUI preview support.
+* 📄 [Proxy][Proxy] - Extend the text document proxy with more capabilities.
+* ⚙️ [Settings][Settings] - Provide keyboard settings & link to System Settings.
+* 🩺 [Status][Status] - Detect if a keyboard is enabled, has full access, etc.
+* 🎨 [Styling][Styling] - Style your keyboard to great extent.
 
-## 👑 Pro Features
+### KeyboardKit Pro
 
-[KeyboardKit Pro][Pro] extends KeyboardKit with Pro features that take your keyboard further:
-
-* ⌨️ [Essentials][Essentials] - More essential tools, previews, toolbars, etc.
+* 🌱 [Essentials][Essentials] - More essential tools, previews, toolbars, etc.
+* ⌨️ [Essentials-KeyboardView][Essentials-KeyboardView] - Make the keyboard view do a lot more.
 * 🤖 [AI][AI] - Features that are needed for AI.
 * 📱 [App][App] - App-specific screens & views.
 * 💡 [Autocomplete][Autocomplete] - Local & remote autocomplete, next word prediction, etc.
@@ -200,10 +203,10 @@ The [online documentation][Documentation] has a thorough getting-started guide, 
 
 The [main repository][KeyboardKit] has a demo app that shows how to set up the main keyboard app, show keyboard status, provide in-app settings, link to system settings, apply custom styles, etc.
 
-The app has two keyboards - a `Keyboard` that uses KeyboardKit and a `KeyboardPro` that uses KeyboardKit Pro. Note that you need to enable Full Access for some features to work.
+The app has two keyboards - a `Keyboard` that uses KeyboardKit and a `KeyboardPro` that uses KeyboardKit Pro.
 
 > [!IMPORTANT]
-> The demo isn't code signed and can therefore not use an App Group to sync settings between the app and its keyboards. As such, the `KeyboardPro` keyboard has settings screens in the keyboard as well.
+> The demo isn't code signed and can therefore not use an App Group to sync settings between the app and its keyboards. As such, the `KeyboardPro` keyboard has keyboard settings in the keyboard as well.
 
 
 
@@ -218,9 +221,9 @@ If you want to try KeyboardKit without having to write any code or build the dem
 Feel free to reach out if you have questions or if you want to contribute in any way:
 
 * Website: [keyboardkit.com][Website]
-* Mastodon: [@keyboardkit@techhub.social][Mastodon]
-* Twitter: [@getkeyboardkit][Twitter]
 * E-mail: [info@keyboardkit.com][Email]
+* Bluesky: [@keyboardkit.bsky.social][Bluesky]
+* Mastodon: [@keyboardkit@techhub.social][Mastodon]
 
 
 
@@ -232,7 +235,7 @@ KeyboardKit Pro requires a license to be used. You can sign up on the [KeyboardK
 
 [Email]: mailto:info@keyboardkit.com
 [Website]: https://keyboardkit.com
-[Twitter]: http://twitter.com/getkeyboardkit
+[Bluesky]: https://bsky.app/profile/keyboardkit.bsky.social
 [Mastodon]: https://techhub.social/@keyboardkit
 [Sponsors]: https://github.com/sponsors/danielsaidi
 
@@ -246,8 +249,10 @@ KeyboardKit Pro requires a license to be used. You can sign up on the [KeyboardK
 
 [Documentation]: https://keyboardkit.github.io/KeyboardKitPro/
 
-[Getting-Started]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkitpro/getting-started-guide
-[Memory-Management]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkitpro/memory-management-guide
+[Getting-Started]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkitpro/getting-started
+[Essentials]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkitpro/essentials
+[Essentials-KeyboardView]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkitpro/essentials-keyboardview
+[Essentials-Memory-Management]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkitpro/essentials-memory-management
 
 [Actions]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkitpro/actions-article
 [AI]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkitpro/ai-article
