@@ -4,10 +4,83 @@ KeyboardKit tries to honor semantic versioning:
 
 * Deprecations can happen at any time.
 * Deprecations should only be removed in `major` updates.
-* Breaking changes should not occur in `minor` and `patch` updates.
-* Breaking changes *can* occur in `minor` and `patch` updates, if needed.
+* Breaking should only occur in `major` updates, but *can* occur in `minor` and `patch` updates.
 
-These release notes cover the current major version. Check out version tags for older release notes. 
+These release notes cover the current major version. See older versions for older release notes. 
+
+
+
+## 9.2
+
+This version adds a bunch of new settings and environment properties.
+
+For instance, it adds settings for the space long press behavior and an optional trailing space action.
+
+This version also makes it possible to add the same language multiple times, using different keyboard layouts.
+
+This means that you can let users enable many English keyboards, using QWERTY, AZERTY, QWERTZ & Colemak layouts.
+
+This is used by `Locale.ContextMenu` and `KeyboardApp.LocaleScreen`, which means that it's supported by default.
+
+This required new types, like `Keyboard.LayoutType` & `Keyboard.AddedLocale`, and new context & settings features.
+
+KeyboardKit Pro adds layout type support to `Locale`, and makes its layout services honor the selected layout type.  
+
+This version also makes the `hostApplicationBundleId` auto-persisted, so that it can be read from the main app target.
+
+### ✨ Features
+
+* `Image` has new keyboard picker-specific images.
+* `Keyboard.AddedLocale` is a new type for added locales.
+* `Keyboard.InputToolbarDisplayMode` has new value builders.
+* `Keyboard.LayoutType` is a new, abstract layout type enum.
+* `Keyboard.SpaceAction` is an enum for extra space actions.
+* `Keyboard.SpaceLongPressBehavior` has a new view modifier.
+* `KeyboardContext` has new ways to select & switch locales.
+* `KeyboardContext` has new ways get the locales datasource.
+* `KeyboardContext` auto-persists `hostApplicationBundleId`.
+* `KeyboardContext` has new `hostApplication` date properties.
+* `KeyboardSettings` has new input toolbar types and settings.
+* `KeyboardSettings` has a new `.spaceTrailingAction` setting.
+* `KeyboardSettings` has a new `.spaceLongPressBehavior` setting.
+* `KeyboardSettings` has new added locale capabilites and functions.
+* `Locale.ListItem` can now display an optional layout type description.
+
+### 💡 Adjustment
+
+* More types implement the `KeyboardModel` aggregate protocol.
+* The `.keyboardInputToolbarDisplayMode` environment value is now optional.
+
+* `KeyboardAppView` now injects a `KeyboardStatusContext` environment object.
+* `KeyboardContext` now auto-persists the `hostApplicationBundleId` property.
+* `KeyboardContext` now uses key paths to minimize the controller sync logic.
+* `KeyboardHostApplication` now uses a case-insensitive bundle ID init match.
+* `KeyboardView` uses the new environment values, if any, else the keyboard settings.
+* `KeyboardLocale.ProLayoutService` now uses the context layout type, if this is set.
+
+### 👑 Pro
+
+* `InputSet.colemak` is a new Colemak input set.
+* `Keyboard.LayoutType` is a new layout type enum.
+* `KeyboardApp.LocaleScreen` has new keyboard settings.
+* `KeyboardApp.LocaleScreen` has new visibility settings.
+* `KeyboardApp.SettingsScreen` has new keyboard settings.
+* `Locale` has a new `.supportedLayoutType` for alternate layouts. 
+
+### 🗑️ Deprecations
+
+* `Keyboard.InputToolbarDisplayMode.hidden` is renamed to `.none`.
+* `Keyboard.InputToolbarDisplayMode.inputs` is renamed to `.characters`.
+* `Keyboard.SpaceLongPressBehavior` deprecates the locale switcher case.
+* `Keyboard.SpaceLongPressBehavior` deprecates various should properties. 
+* `KeyboardContext.spaceLongPressBehavior` is moved to `KeyboardSettings`.
+* `KeyboardSettings` and all other settings types are now top level types.
+* `KeyboardSettings.addedLocaleIdentifiers` is replaced by `.addedLocales`.
+* `KeyboardTheme` renames `allPredefined` themes and styles to `predefined`.
+
+### 🚨 Breaking Changes
+
+* `Locale.ContextMenu` now passes in a layout type in the view builder.
 
 
 
