@@ -4,28 +4,22 @@
 
 <p align="center">
     <img src="https://img.shields.io/github/v/release/KeyboardKit/KeyboardKitPro?color=forestgreen&sort=semver" alt="Version" />
+    <a href="https://keyboardkit.github.io/KeyboardKit"><img src="https://img.shields.io/badge/documentation-read-blue.svg" alt="Documentation" /></a>
     <img src="https://img.shields.io/badge/swift-5.9-orange.svg" alt="Swift 5.9" />
     <img src="https://img.shields.io/badge/license-commercial-yellow.svg" alt="Documentation" />
-    <a href="https://keyboardkit.github.io/KeyboardKit"><img src="https://img.shields.io/badge/docs-9.1-blue.svg" alt="Documentation" /></a>
 </p>
 
 
 
-## About KeyboardKit Pro
+# KeyboardKit Pro
 
-[KeyboardKit][KeyboardKit] lets you create amazing [custom keyboards][About] with a few lines of code, using Swift & SwiftUI.
+[KeyboardKit][KeyboardKit] lets you create amazing [custom keyboard extensions][About] with a few lines of code, using Swift & SwiftUI.
 
 <p align="center">
-    <img src="Resources/Demo.gif" width="450" />
+    <img src="Resources/Demo.gif" width="350" />
 </p>
 
 KeyboardKit extends Apple's limited keyboard APIs with more capabilities. KeyboardKit Pro extends further by unlocking localized keyboards, autocomplete, an emoji keyboard, AI support, themes, and much more.
- 
-
-
-## Commercial License
-
-KeyboardKit Pro requires a license to be used. You can sign up on the [KeyboardKit website][Website] or the [Gumroad store][Gumroad].
 
 
 
@@ -36,6 +30,8 @@ KeyboardKit Pro can be installed with the Swift Package Manager:
 ```
 https://github.com/KeyboardKit/KeyboardKitPro.git
 ```
+
+KeyboardKit Pro requires a license to be used. You can sign up on the [KeyboardKit website][Website] or the [Gumroad store][Gumroad].
 
 > [!IMPORTANT]  
 > Unlike KeyboardKit, KeyboardKit Pro is a binary target and must only be linked to the app target.
