@@ -5,8 +5,75 @@ KeyboardKit tries to honor semantic versioning:
 * Deprecations can happen at any time.
 * Deprecations should only be removed in `major` updates.
 * Breaking should only occur in `major` updates, but *can* occur in `minor` and `patch` updates.
+* Breaking should only occur in `major` updates, but *can* occur in `minor` and `patch` updates.
 
 These release notes cover the current major version. See older versions for older release notes. 
+
+
+
+## 9.3
+
+This version adds support for Vietnamese TELEX, VIQR, and VNI (Beta), and adds Dvorak support to these locales:
+
+Catalan, Croatian, Dutch, Dutch (Belgium), English (All), 
+Estonian, Filipino, Hungarian, Indonesian, Irish, Italian, 
+Latvian, Malay,  Polish, Portuguese, Portuguese (Brazil), 
+Romanian, Serbian (Latin), Slovenian, Swahili, Uzbek, Welsh
+
+This version also adds support for emoji colon search to settings and KeyboardKit Pro's local autocomplete service.
+
+This version improves the action callout by requiring less swiping and making items smaller when too many are shown.
+
+To avoid confusion, this version makes both KeyboardKit and KeyboardKit Pro use a `setup(for:completion:)` function. 
+
+This version also moves back all theme-related types to KeyboardKit Pro, since they can only be used in KeyboardKit Pro.
+
+### ✨ Features
+
+* `Autocomplete.ServiceResult` has a new `emojiCompletions` property.
+* `Autocomplete.Settings` has a new `isEmojiColonSearchEnabled` property.
+* `AutocompleteContext` has a new, observable `emojiCompletions` property.
+* `Keyboard.Diacritic` has a new `insertionResult(whenAppendedTo:)` function.
+* `Keyboard.LayoutType` has new cases for Dvorak & Vietnamese (Telex, VIQR, VNI).
+* `KeyboardTextInput` is a new namespace for more input support in KeyboardKit Pro.
+
+### 👑 Pro
+
+* `App.KeyboardSettingsScreen` has a new toggle to enable emoji colon search.
+* `Autocomplete.LocalAutocompleteService` uses emoji colon search if enabled.
+* `Emoji.ColonSearch` is a new type for searching emojis with a colon prefix.
+* `InputSet` adds a `.dvorak` input set that is used by Pro-specific layouts.
+* `Keyboard.Diacritic` has new Vietnamese diacritics like the `vietnameseSac`.
+* `KeyboardLayout` adds new Dvorak support to the Pro-specific layout services.
+* `KeyboardSettings` has new functions for handling added locales and layout types.
+* `KeyboardTextInput+Vietnamese` is a new namespace for Vietnamese text input types.
+
+### 🇻🇳 Localization
+
+* This version adds support for Vietnamese TELEX, VIQR, and VNI.
+
+### 💡 Adjustment
+
+* `KeyboardCallout.ActionCallout` now shrinks actions on iPhone if needed.
+* `KeyboardCalloutContext` makes it easier to swipe select callout actions.
+* `KeyboardPreviews.CalloutService` now inherits `KeyboardCallout.BaseCalloutService`.
+* `UITextDocumentProxy.insertDiacritic` now uses the new diacritic insertion result model.
+
+### 🐛 Bug Fixes
+
+* `KeyboardCalloutContext` now properly handles drag gestures on RTL devices.
+* `KeyboardInputViewController` fixes a setup race condition in KeyboardKit Pro.  
+
+### 🗑️ Deprecations
+
+* `KeyboardInputViewController.setup(for:completion:)` is no longer open to inheritance.
+* `KeyboardInputViewController.setup(for:completion:)` is now used in both Pro and non-Pro.
+* `KeyboardInputViewController.setupKeyboardView(_:)` without view builder has been deprecated.
+
+### 🚨 Breaking Changes
+
+* `KeyboardCalloutContext.updateSecondaryActionsSelection` now requires a drag gesture value.
+* `KeyboardTheme` types have been moved back to KeyboardKit Pro to avoid open-source confusion.
 
 
 
