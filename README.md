@@ -1,6 +1,4 @@
-<p align="center">
-    <img src ="Resources/Logo_Readme.png" alt="KeyboardKit Pro Logo" title="KeyboardKit Pro" />
-</p>
+![KeyboardKit Pro Logo](Resources/Logo.png)
 
 <p align="center">
     <img src="https://img.shields.io/github/v/release/KeyboardKit/KeyboardKitPro?color=forestgreen&sort=semver" alt="Version" />
