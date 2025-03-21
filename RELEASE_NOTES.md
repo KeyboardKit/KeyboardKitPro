@@ -14,7 +14,16 @@ These release notes cover the current major version. See older versions for olde
 
 Most new minor versions are preceded by several beta versions, e.g. `9.3-b.1`.
 
-Beta version releases are removed after the subsequent minor or major release. 
+Beta version tags and releases are removed after the next minor or major version. 
+
+
+
+## 9.3.2
+
+### 👑 Pro
+
+* `KeyboardApp` now lets you inject a focus state for the input toolbar picker.
+* `KeyboardLayout` adjusts the input toolbar character casing to fit the layout.
 
 
 
