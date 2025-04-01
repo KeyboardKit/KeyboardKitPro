@@ -18,7 +18,9 @@
     <img src="Resources/Demo.gif" width="350" />
 </p>
 
-KeyboardKit extends Apple's limited keyboard APIs with more capabilities. KeyboardKit Pro extends further by unlocking localized keyboards, autocomplete, an emoji keyboard, AI support, themes, and much more.
+KeyboardKit Pro extends KeyboardKit with Pro features, such as fully localized keyboards, autocomplete, an emoji keyboard, AI support, integrations, themes, and much more. See the [feature table](#pro-features) below.
+
+KeyboardKit Pro requires a license to be used. You can sign up on the [KeyboardKit website][Website] or the [Gumroad store][Gumroad].
 
 
 
@@ -30,10 +32,7 @@ KeyboardKit Pro can be installed with the Swift Package Manager:
 https://github.com/KeyboardKit/KeyboardKitPro.git
 ```
 
-KeyboardKit Pro requires a license to be used. You can sign up on the [KeyboardKit website][Website] or the [Gumroad store][Gumroad].
-
-> [!IMPORTANT]  
-> Unlike KeyboardKit, KeyboardKit Pro is a binary target and must only be linked to the app target.
+KeyboardKit Pro must only be linked to the main app target. A keyboard extension will still be able to use it by just importing KeyboardKitPro where needed.
 
 
 
@@ -42,6 +41,8 @@ KeyboardKit Pro requires a license to be used. You can sign up on the [KeyboardK
 The easiest way to set up KeyboardKit is to first create a `KeyboardApp` value for your app:
 
 ```swift
+import KeyboardKitPro
+
 extension KeyboardApp {
 
         static var keyboardKitDemo: KeyboardApp {
@@ -76,7 +77,7 @@ class KeyboardViewController: KeyboardInputViewController {
         super.viewDidLoad()
         
         setup(for: .keyboardKitDemo) { result in
-            // If the result is `.success`, the setup succeeded.
+            // If `result` is `.success`, the setup did succeed.
             // This is where you can setup custom services, etc.
         }
     }
@@ -85,7 +86,7 @@ class KeyboardViewController: KeyboardInputViewController {
 
 This will make keyboard settings sync data between the main app and its keyboard if the `KeyboardApp` defines an ``appGroupId``, set up KeyboardKit Pro if it defines a ``licenseKey``, set up dictation and deep links, etc.
 
-To replace or customize the default ``KeyboardView`` that will otherwise be used as the standard keyboard view, just override `viewWillSetupKeyboardView()` and call `setupKeyboardView(_:)` with the view that you want to use:
+To replace or customize the standard ``KeyboardView``, just override `viewWillSetupKeyboardView()` and let it call `setupKeyboardView(_:)` with the view that you want to use:
 
 
 ```swift
@@ -130,7 +131,7 @@ For more information, see the [getting started guide][Getting-Started] and [esse
 
 ## Localization
 
-KeyboardKit supports [71 keyboard-specific locales][Localization]:
+KeyboardKit supports [72 locales][Localization]:
 
 🇺🇸 🇦🇱 🇦🇪 🇦🇲 🇧🇾 🇧🇬 🇦🇩 🏳️ 🏳️ 🇭🇷  <br />
 🇨🇿 🇩🇰 🇳🇱 🇧🇪 🇦🇺 🇨🇦 🇬🇧 🇺🇸 🇪🇪 🇫🇴  <br />
@@ -139,37 +140,15 @@ KeyboardKit supports [71 keyboard-specific locales][Localization]:
 🇹🇯 🇹🇯 🇹🇯 🇱🇻 🇱🇹 🇲🇰 🇲🇾 🇲🇹 🇲🇳 🏳️  <br />
 🇳🇴 🇳🇴 🇮🇷 🇵🇱 🇵🇹 🇧🇷 🇷🇴 🇷🇺 🇷🇸 🇷🇸  <br />
 🇸🇰 🇸🇮 🇪🇸 🇦🇷 🇲🇽 🇸🇪 🇰🇪 🇹🇷 🇺🇦 🇺🇿  <br />
-🏴󠁧󠁢󠁷󠁬󠁳󠁿  <br />
+🇻🇳 🏴󠁧󠁢󠁷󠁬󠁳󠁿 <br />
 
 KeyboardKit only includes localized strings, while KeyboardKit Pro unlocks localized keyboards, layouts, callouts and behaviors for all supported locales.
 
 
 
-## Features
+## Pro Features
 
-[KeyboardKit][KeyboardKit] provides a free, open-source keyboard engine. KeyboardKit Pro unlocks more powerful pro features.
-
-### Open-Source
-
-* 🌱 [Essentials][Essentials] - Essential keyboard utilities, models, services & views.
-* ⌨️ [Essentials-KeyboardView][Essentials-KeyboardView] - A native-looking, customizable keyboard.
-* 💥 [Actions][Actions] - Trigger & handle keyboard-related actions.
-* 📱 [App][App] - Set up your app, keyboard, sync settings, etc.
-* 🗯 [Callouts][Callouts] - Show input & secondary action callouts.
-* 🖥️ [Device][Device] - Identify device type, device capabilities, etc.
-* 😀 [Emojis][Emojis] - Emojis, categories, versions, skin tones, etc.
-* 🔉 [Feedback][Feedback] - Trigger audio & haptic feedback.
-* 👆 [Gestures][Gestures] - Handle a rich set of gestures on any key.
-* 🔣 [Layout][Layout] - Define and customize dynamic keyboard layouts.
-* 🌐 [Localization][Localization] - Localize your keyboard in **71 locales**.
-* 🗺️ [Navigation][Navigation] - Open urls and other apps from the keyboard.
-* 👁 [Previews][Previews] - Extensive SwiftUI preview support.
-* 📄 [Proxy][Proxy] - Extend the text document proxy with more capabilities.
-* ⚙️ [Settings][Settings] - Provide keyboard settings & link to System Settings.
-* 🩺 [Status][Status] - Detect if a keyboard is enabled, has full access, etc.
-* 🎨 [Styling][Styling] - Style your keyboard to great extent.
-
-### KeyboardKit Pro
+[KeyboardKit][KeyboardKit] provides a free, open-source keyboard engine. KeyboardKit Pro unlocks more powerful pro features:
 
 * 🌱 [Essentials][Essentials] - More essential tools, previews, toolbars, etc.
 * ⌨️ [Essentials-KeyboardView][Essentials-KeyboardView] - Make the keyboard view do a lot more.
@@ -209,7 +188,7 @@ The app has two keyboards - a `Keyboard` that uses KeyboardKit and a `KeyboardPr
 
 ## KeyboardKit App
 
-If you want to try KeyboardKit without having to write any code or build the demo app from Xcode, the [KeyboardKit app][KeyboardKit-App] lets you try out many features by just downloading it from the App Store.
+Download the [KeyboardKit app][KeyboardKit-App] from the App Store to try KeyboardKit without having to write any code or build the demo app from Xcode.
 
 
 
