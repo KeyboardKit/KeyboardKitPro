@@ -131,7 +131,7 @@ For more information, see the [getting started guide][Getting-Started] and [esse
 
 ## Localization
 
-KeyboardKit supports [72 locales][Localization]:
+KeyboardKit supports [73 locales][Localization]:
 
 🇺🇸 🇦🇱 🇦🇪 🇦🇲 🇧🇾 🇧🇬 🇦🇩 🏳️ 🏳️ 🇭🇷  <br />
 🇨🇿 🇩🇰 🇳🇱 🇧🇪 🇦🇺 🇨🇦 🇬🇧 🇺🇸 🇪🇪 🇫🇴  <br />
@@ -140,7 +140,7 @@ KeyboardKit supports [72 locales][Localization]:
 🇹🇯 🇹🇯 🇹🇯 🇱🇻 🇱🇹 🇲🇰 🇲🇾 🇲🇹 🇲🇳 🏳️  <br />
 🇳🇴 🇳🇴 🇮🇷 🇵🇱 🇵🇹 🇧🇷 🇷🇴 🇷🇺 🇷🇸 🇷🇸  <br />
 🇸🇰 🇸🇮 🇪🇸 🇦🇷 🇲🇽 🇸🇪 🇰🇪 🇹🇷 🇺🇦 🇺🇿  <br />
-🇻🇳 🏴󠁧󠁢󠁷󠁬󠁳󠁿 <br />
+🇺🇿 🇻🇳 🏴󠁧󠁢󠁷󠁬󠁳󠁿 <br />
 
 KeyboardKit only includes localized strings, while KeyboardKit Pro unlocks localized keyboards, layouts, callouts and behaviors for all supported locales.
 
@@ -160,11 +160,11 @@ KeyboardKit only includes localized strings, while KeyboardKit Pro unlocks loca
 * 😀 [Emojis][Emojis] - A powerful emoji keyboard, search, etc.
 * ⌨️ [External][External] - Auto-detect if an external keyboard is connected. 
 * 🏠 [Host][Host] - Identify and open specific host applications.
+* 📝 [Input][Input] - Keyboard input fields, Vietnamese support, etc.
 * 🔣 [Layout][Layout] - More input sets and layouts for all supported locales.
 * 🌐 [Localization][Localization] - Services & views for all supported locales.
 * 👁 [Previews][Previews] - Keyboard & theme previews for in-app use.
 * 📄 [Proxy][Proxy] - Allow `UITextDocumentProxy` to read the full document.
-* 📝 [Text][Text-Input] - Allow users to type within the keyboard.
 * 🍭 [Themes][Themes] - A theme engine with many pre-defined themes.
 
 
@@ -216,17 +216,16 @@ KeyboardKit Pro requires a license to be used. You can sign up on the [KeyboardK
 [Sponsors]: https://github.com/sponsors/danielsaidi
 
 [About]: https://keyboardkit.com/about
+[Gumroad]: https://kankoda.gumroad.com
+[KeyboardKit-App]: https://keyboardkit.com/app
 
 [KeyboardKit]: https://github.com/KeyboardKit/KeyboardKit
-[KeyboardKit-App]: https://keyboardkit.com/app
 [Pro]: https://github.com/KeyboardKit/KeyboardKitPro
-[Gumroad]: https://kankoda.gumroad.com
+[Documentation]: https://keyboardkit.github.io/KeyboardKitPro/
 [License]: https://github.com/KeyboardKit/KeyboardKitPro/blob/master/LICENSE
 
-[Documentation]: https://keyboardkit.github.io/KeyboardKitPro/
-
-[Getting-Started]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkitpro/getting-started
-[Essentials]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkitpro/essentials
+[Getting-Started]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkitpro/getting-started-article
+[Essentials]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkitpro/essentials-article
 [Essentials-KeyboardView]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkitpro/essentials-keyboardview
 [Essentials-Memory-Management]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkitpro/essentials-memory-management
 
@@ -243,6 +242,7 @@ KeyboardKit Pro requires a license to be used. You can sign up on the [KeyboardK
 [Feedback]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkitpro/feedback-article
 [Gestures]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkitpro/gestures-article
 [Host]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkitpro/host-article
+[Input]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkitpro/input-article
 [Layout]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkitpro/layout-article
 [Localization]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkitpro/localization-article
 [Navigation]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkitpro/navigation-article
@@ -251,5 +251,4 @@ KeyboardKit Pro requires a license to be used. You can sign up on the [KeyboardK
 [Settings]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkitpro/settings-article
 [Status]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkitpro/status-article
 [Styling]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkitpro/styling-article
-[Text-Input]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkitpro/text-input-article
 [Themes]: https://keyboardkit.github.io/KeyboardKitPro/documentation/keyboardkitpro/themes-article
