@@ -1,11 +1,11 @@
 # Release notes
 
-KeyboardKit tries to honor semantic versioning:
+KeyboardKit honors semantic versioning, with the following strategy:
 
 * Deprecations can happen at any time.
-* Deprecations should only be removed in `major` updates.
-* Breaking should only occur in `major` updates, but *can* occur in `minor` and `patch` updates.
-* Breaking should only occur in `major` updates, but *can* occur in `minor` and `patch` updates.
+* Deprecations are removed in `major` updates.
+* Breaking changes should only occur in `major` updates.
+* Breaking changes *can* occur in `minor` and `patch` updates, if the alternative is worse.
 
 These release notes cover the current major version. See older versions for older release notes.
 
@@ -15,6 +15,51 @@ These release notes cover the current major version. See older versions for olde
 Most new minor versions are preceded by several beta versions, e.g. `9.3-b.1`.
 
 Beta version tags and releases are removed after the next minor or major version. 
+
+
+
+## 9.4
+
+This version adds new Emojis 16 emojis and localizes emojis in more languages.
+
+This version also improves local autocomplete by extending the additional autocorrect replacement dictionary. This should lead to fewer typing errors when typing in English, since more combines words will now be autocorrected.
+
+This version also aims to improve performance by reducing the number of redraws per keypress, which in turn leads to fewer layout calculations. Initial tests show that this improves the typing experience, since fewer redraws lead to a smoother experience.
+
+### ✨ Features
+
+* The `KeyboardContext` `colorScheme` property is now mutable and available to all platforms.
+* The new `.keyboardButtonGestureConfiguration` view modifier can be used to configure the keyboard button gestures.
+
+🇹🇯 Localization
+
+* This version adds support for 🇹🇯 Pamiri Shughni (Shughni Tajik).
+
+### 😀 Emojis
+
+* This version adds Emojis 16 emojis to iOS 18.4 and aligned versions: 🫩🫆🪾🫜🫟🪉🪏🇨🇶.
+* Emojis are now localized in 🇫🇷 French, 🇮🇹 Italian, 🇧🇷 Portuguese (Brazil) & 🇷🇺 Russian.
+
+### 👑 Pro
+
+* `Autocomplete.TextReplacementDictionary.additionalAutocorrections` has more replacements.
+
+### 💡 Adjustment
+
+* `Autocomplete.TextReplacementDictionary` has been moved to KeyboardKit Pro.
+* `Dictation.DisabledDictationService` no longer needs a context to be initialized.
+* `Keyboard.RootView` no longer observes any contexts that it doesn't need to observe.
+
+### 🐛 Bug Fixes
+
+* `KeyboardInputViewController` now only shows license warning for license errors.
+
+### 🗑️ Deprecations
+
+* `Color` extensions that took a `KeyboardContext` now takes a `ColorScheme` instead.
+* `KeyboardInput` has deprecated Vietnamese input types, which are now moved to the root.  
+* `KeyboardLayout.Configuration` has been renamed to `KeyboardLayout.DeviceConfiguration`.
+* `KKL10n` functions that take a `KeyboardContext` have been deprecated in favor of `Locale`.
 
 
 
