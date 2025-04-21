@@ -75,7 +75,8 @@ class KeyboardViewController: KeyboardInputViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+                
+        // Set up the keyboard with the app we created above
         setup(for: .keyboardKitDemo) { result in
             // If `result` is `.success`, the setup did succeed.
             // This is where you can setup custom services, etc.
@@ -116,6 +117,8 @@ struct MyApp: App {
 
     var body: some Scene {
         WindowGroup {
+        
+            // Here we use the `.keyboardKitDemo` from above
             KeyboardAppView(for: .keyboardKitDemo) {
                 ContentView()
             }
