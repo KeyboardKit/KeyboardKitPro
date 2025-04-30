@@ -4,7 +4,7 @@
 
 <p align="center">
     <img src="https://img.shields.io/github/v/release/KeyboardKit/KeyboardKitPro?color=forestgreen&sort=semver" alt="Version" />
-    <a href="https://keyboardkit.github.io/KeyboardKit"><img src="https://img.shields.io/badge/documentation-read-blue.svg" alt="Documentation" /></a>
+    <a href="https://keyboardkit.github.io/KeyboardKitPro"><img src="https://img.shields.io/badge/documentation-read-blue.svg" alt="Documentation" /></a>
     <img src="https://img.shields.io/badge/swift-5.9-orange.svg" alt="Swift 5.9" />
     <img src="https://img.shields.io/badge/license-commercial-yellow.svg" alt="Documentation" />
 </p>
