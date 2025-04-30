@@ -196,7 +196,7 @@ Download the [KeyboardKit app][KeyboardKit-App] from the App Store to try Keyboa
 
 ## Contact
 
-KeyboardKit Pro is developed by Swedish company Kankoda.
+VietnameseInput is developed by [Kankoda][Kankoda] - a software company in Stockholm, Sweden.
 
 * Website: [keyboardkit.com][Website]
 * E-mail: [info@keyboardkit.com][Email]
@@ -214,6 +214,7 @@ This package requires a license to be used. You can sign up on the [product webs
 
 
 [Email]: mailto:info@keyboardkit.com
+[Kankoda]: https://kankoda.com
 [Website]: https://keyboardkit.com
 [Bluesky]: https://bsky.app/profile/keyboardkit.bsky.social
 [Mastodon]: https://techhub.social/@keyboardkit
