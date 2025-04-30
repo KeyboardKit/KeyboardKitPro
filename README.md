@@ -131,7 +131,6 @@ For more information, see the [getting started guide][Getting-Started] and [esse
 
 
 
-
 ## Localization
 
 KeyboardKit supports [73 locales][Localization]:
@@ -174,7 +173,7 @@ KeyboardKit only includes localized strings, while KeyboardKit Pro unlocks loca
 
 ## Documentation
 
-The [online documentation][Documentation] has a thorough getting-started guide, a detailed article for each feature, code samples, etc. You can also build it from the source code to get better formatting.
+The [online documentation][Documentation] has a thorough getting-started guide, detailed articles, code samples, etc.
 
 
 
