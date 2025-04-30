@@ -4,9 +4,9 @@
 
 <p align="center">
     <img src="https://img.shields.io/github/v/release/KeyboardKit/KeyboardKitPro?color=forestgreen&sort=semver" alt="Version" />
-    <a href="https://keyboardkit.github.io/KeyboardKitPro"><img src="https://img.shields.io/badge/documentation-read-blue.svg" alt="Documentation" /></a>
     <img src="https://img.shields.io/badge/swift-5.9-orange.svg" alt="Swift 5.9" />
-    <img src="https://img.shields.io/badge/license-commercial-yellow.svg" alt="Documentation" />
+    <a href="https://keyboardkit.github.io/KeyboardKitPro"><img src="https://img.shields.io/badge/documentation-read-blue.svg" alt="Documentation" /></a>
+    <img src="https://img.shields.io/badge/license-commercial-yellow.svg" alt="Commercially Licensed" />
 </p>
 
 
@@ -197,18 +197,20 @@ Download the [KeyboardKit app][KeyboardKit-App] from the App Store to try Keyboa
 
 ## Contact
 
-Feel free to reach out if you have questions or if you want to contribute in any way:
+KeyboardKit Pro is developed by Swedish company Kankoda.
 
 * Website: [keyboardkit.com][Website]
 * E-mail: [info@keyboardkit.com][Email]
 * Bluesky: [@keyboardkit.bsky.social][Bluesky]
 * Mastodon: [@keyboardkit@techhub.social][Mastodon]
 
+Feel free to reach out if you have any questions or feedback, or if you need support.
+
 
 
 ## Commercial License
 
-KeyboardKit Pro requires a license to be used. You can sign up on the [KeyboardKit website][Website] or the [Gumroad store][Gumroad].
+This package requires a license to be used. You can sign up on the [product website][Website] or the [Gumroad store][Gumroad].
 
 
 
