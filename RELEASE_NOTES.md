@@ -18,6 +18,14 @@ Beta version tags and releases are removed after the next minor or major version
 
 
 
+## 9.4.1
+
+### 💡 Adjustments
+
+* `InputSet.shughni_tajik` replaces "j" with "ǰ". 
+
+
+
 ## 9.4
 
 This version adds new Emojis 16 emojis and localizes emojis in more languages.
