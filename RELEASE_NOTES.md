@@ -18,11 +18,52 @@ Beta version tags and releases are removed after the next minor or major version
 
 
 
+## 9.5
+
+This version adds ways to customize callout actions and keyboard styles with view modifiers instead of services.
+
+The old callout and style services are used by default, but will be ignored if you apply the new view modifiers.
+
+If these view modifiers prove successful, the services will be deprecated and removed in the next major version.
+
+You still need a style service to customize a button's image and text, or use the KeyboardView's content builder. 
+
+### ✨ Features
+
+* `Keyboard.ButtonStyle` has new standard style builders.
+* `Keyboard.ButtonStyle` has a new `foregroundSecondaryOpacity` property.
+* `KeyboardAction` has many new value extensions with standard button values.
+* `KeyboardCallout.Actions` is a new type used to replace services with values.
+* `KeyboardContext` has a new, temporary `deviceTypeForKeyboardIsIpadPro` value.
+* `KeyboardViewStyle` is a new style type for the `KeyboardView` view component.
+* `View.keyboardButtonStyle(builder:)` can be used to style any keyboard button.
+* `View.keyboardCalloutActions(_:)` can be used to customize the callout actions.
+* `View.keyboardViewStyle(_:)` can be used to style the main keyboard view component.
+
+### 💡 Adjustments
+
+* `KeyboardAction` adds more context checks to its standard text and image logic.
+* `KeyboardAction` improves iPad Pro button styles for more action & context states.
+* `KeyboardStyle.StandardStyleService` uses the new, extended keyboard action logic.
+
+### 👑 Pro
+
+* `KeyboardAction` has a new `keyboardThemeButtonType` property.
+* `KeyboardCallout.Actions` has localized value builders for all supported locales.
+* `KeyboardTheme` has new `keyboardButtonStyle(for:context:isPressed:)` and `keyboardViewStyle` values.
+* `View.keyboardTheme(_:context:)` can be used to apply themes without using a theme-based style service.
+
+### 📦 Packages
+
+* KeyboardKitTests has copied the MockingKit code base to avoid external dependencies.
+
+
+
 ## 9.4.1
 
 ### 💡 Adjustments
 
-* `InputSet.shughni_tajik` replaces "j" with "ǰ". 
+* `InputSet.shughni_tajik` replaces "j" with "ǰ".
 
 
 
@@ -52,7 +93,7 @@ This version also aims to improve performance by reducing the number of redraws 
 
 * `Autocomplete.TextReplacementDictionary.additionalAutocorrections` has more replacements.
 
-### 💡 Adjustment
+### 💡 Adjustments
 
 * `Autocomplete.TextReplacementDictionary` has been moved to KeyboardKit Pro.
 * `Dictation.DisabledDictationService` no longer needs a context to be initialized.
