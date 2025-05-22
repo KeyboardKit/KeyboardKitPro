@@ -18,6 +18,29 @@ Beta version tags and releases are removed after the next minor or major version
 
 
 
+## 9.5.1
+
+This version fixes a few bugs and adds some new features to make the view extension approach work.
+
+### ✨ Features
+
+* `Keyboard.ButtonStyle` has a new font-agnostic `fontWeight` property.
+
+### 💡 Adjustments
+
+* `Keyboard.ButtonStyle` now extends more properties with `extended(with:)`.
+
+### 👑 Pro
+
+* `KeyboardTheme` has a new `buttonPressedOverlayColor`.
+* `KeyboardTheme.ButtonType` now implements `CaseIterable`.
+
+### 🐛 Bug Fixes
+
+* `KeyboardStyle.StandardStyleService` now applies the font weight, if defined.
+
+
+
 ## 9.5
 
 This version adds ways to customize callout actions and keyboard styles with view modifiers instead of services.
