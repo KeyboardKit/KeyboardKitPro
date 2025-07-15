@@ -13,6 +13,36 @@ These release notes cover the current major version. See older versions for olde
 
 
 
+## 9.7.0
+
+After developer feedback, this version reverts some previos deprecations and moves standard values back to the `KeyboardAction` type.
+
+The idea with the initial refactoring was to attach the standard value builders to each value type, to make them easier to find. But since each builder is related to a `KeyboardAction`, it makes more sense to convert them back to action extensions, since this groups them all together.
+
+### ✨ Features
+
+* `EmojiContext` and `EmojiSettings` are two new state types.
+* `EmojiKeyboard` will now show the last selected emoji skin tone.
+* `KeyboardAction.StandardActionHandler` registers the skin tone for selected emojis.
+
+### 💡 Adjustments
+
+* `Autocomplete.ToolbarItem` will automatically wrap itself in a scroll view if needed.
+
+### 🐛 Bug Fixes
+
+* KeyboardKit Pro adds missing localizations for Bengali.
+* `KeyboardAction.shift` now renders correctly for caps lock.
+
+### 🗑️ Deprecations
+
+* `Color+Standard` has been deprecated and now use `KeyboardAction` extensions.
+* `Font+Standard` has been deprecated and now use `KeyboardAction` extensions.
+* `Keyboard.ButtonStyle+Standard` has been deprecated and now use `KeyboardAction` extensions.
+* `KeyboardAction` has reverted its `standard` button color deprecations.
+
+
+
 ## 9.6
 
 This version adds new ways to get standard button styles directly from the style type.
