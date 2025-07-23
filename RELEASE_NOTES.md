@@ -13,6 +13,84 @@ These release notes cover the current major version. See older versions for olde
 
 
 
+## 9.8
+
+With the new view modifier-based callout & style customizations working well, the corresponding services have been soft deprecated.
+
+This mean that they WILL be removed in the next major version, but they are only deprecated with comments and not using attributes.
+
+The reason for this is that they are still used internally. Adding deprecation attributes would trigger a large amount of warnings.
+
+### 🔣 BETA - View Modifier Layout Customizations
+
+This version adds a `.keyboardLayout` view modifier to KeyboardKit Pro, which can be used to customize the current keyboard layout.
+
+This works just like the `.keyboardCalloutActions` and `.keyboardButtonStyle` modifiers that let you inject a custom value builder. 
+
+This view modifier and all new layout values is currently only available in KeyboardKit Pro, but fully available in KeyboardKit 10.
+
+You can use the `KeyboardLayout.standard(for:)` builder to create a standard layout for any keyboard context and its active locale.
+
+KeyboardKit Pro also adds new localized keyboard layout values for all supported locales. They will replace the localized services.
+
+This modifier based-approach will make it a lot easier to customize the keyboard layout. As such, the services are soft deprecated.
+
+### 📃 BETA - Document Change Tracking
+
+This version makes the controller redraw its keyboard when the active text field changes, to properly handle keyboard type changes.
+
+This works by observing the proxy's `.documentIdentifier` property, which will change when the current selected "document" changes. 
+
+The `.documentIdentifier` property is however brittle and will crash the keyboard extension if it's accessed at the incorrect time. 
+
+This feature is therefore disabled by default. You can enable it by calling the controller `enableDocumentChangeTracking` function.
+
+### ✨ Features
+
+* `Callouts.Actions` can now init with actions and chars.
+* `Callouts.Actions.base` now has domain callout actions.
+* `Callouts.ActionCallout` now shows domain callout actions.
+* `InputSet` has brand new default value builder parameters.
+* `Keyboard.KeyboardType` has a new `.webSearch` keyboard type.
+* `KeyboardAction` has brand new standard layout value builders.
+* `KeyboardAction` has a new `.urlDomain` action for domain input.
+* `KeyboardInputViewController` has a new `.isDocumentTrackingEnabled` property.
+* `View` has a new `.keyboardLayout(_:)` view modifier that can inject a custom layout.
+
+### 👑 Pro
+
+* `KeyboardLayout` has new localized value builders for all supported locales.
+* `KeyboardLayout` has new `.setWidth(...)` item mutations.
+* `KeyboardLayout` has a new `.baseLayout(...)` layout builder.
+* `KeyboardLayout` has a new `.iPadLayout(...)` layout builder.
+* `KeyboardLayout` has a new `.iPhoneLayout(...)` layout builder.
+* `KeyboardLayout` has a new `.standard(for:)` layout builder.
+
+### 🔧 Performance Adjustments
+
+* KeyboardKit Pro improves the performance of creating localized input sets. 
+
+### 📦 Renamings
+
+* The `KeyboardCallout` namespace has been renamed to `Callouts`.
+* The `KeyboardCalloutContext` has been renamed to `CalloutContext`.
+
+### 🐛 Bug Fixes
+
+* `KeyboardInputViewController` now reloads when the document changes.
+* `KeyboardAction.keyboardType` will now set the native type for `.alphabetic`.
+
+### 🗑️ Deprecations
+
+* `Color+Standard` has been deprecated. Use `KeyboardAction` extensions.
+* `CalloutService` and all service implementations have been deprecated.
+* `InputSet` has been nested and is renamed to `KeyboardLayout.InputSet`.
+* `KeyboardKitPro.ProLayoutService` and all sub classes have been deprecated.
+* `KeyboardLayoutService` and all service implementations have been deprecated.
+* `KeyboardStyleService` and all service implementations have been deprecated.
+
+
+
 ## 9.7.2
 
 ### ✨ Features
@@ -26,7 +104,7 @@ These release notes cover the current major version. See older versions for olde
 
 
 
-## 9.7.0
+## 9.7
 
 After developer feedback, this version reverts some previos deprecations and moves standard values back to the `KeyboardAction` type.
 
@@ -123,7 +201,7 @@ You still need a style service to customize a button's image and text, or use th
 * `Keyboard.ButtonStyle` has new standard style builders.
 * `Keyboard.ButtonStyle` has a new `foregroundSecondaryOpacity` property.
 * `KeyboardAction` has many new value extensions with standard button values.
-* `KeyboardCallout.Actions` is a new type used to replace services with values.
+* `Callouts.Actions` is a new type used to replace services with values.
 * `KeyboardContext` has a new, temporary `deviceTypeForKeyboardIsIpadPro` value.
 * `KeyboardViewStyle` is a new style type for the `KeyboardView` view component.
 * `View.keyboardButtonStyle(builder:)` can be used to style any keyboard button.
@@ -139,7 +217,7 @@ You still need a style service to customize a button's image and text, or use th
 ### 👑 Pro
 
 * `KeyboardAction` has a new `keyboardThemeButtonType` property.
-* `KeyboardCallout.Actions` has localized value builders for all supported locales.
+* `Callouts.Actions` has localized value builders for all supported locales.
 * `KeyboardTheme` has new `keyboardButtonStyle(for:context:isPressed:)` and `keyboardViewStyle` values.
 * `View.keyboardTheme(_:context:)` can be used to apply themes without using a theme-based style service.
 
@@ -261,14 +339,14 @@ To avoid confusion, this version makes KeyboardKit and KeyboardKit Pro use a `se
 ### 💡 Adjustment
 
 * `Keyboard.Diacritic` is refactored to handle multi-character matching.
-* `KeyboardCallout.ActionCallout` now shrinks actions on iPhone if needed.
-* `KeyboardCalloutContext` makes it easier to swipe select callout actions.
-* `KeyboardPreviews.CalloutService` now inherits `KeyboardCallout.BaseCalloutService`.
+* `Callouts.ActionCallout` now shrinks actions on iPhone if needed.
+* `CalloutContext` makes it easier to swipe select callout actions.
+* `KeyboardPreviews.CalloutService` now inherits `Callouts.BaseCalloutService`.
 * `UITextDocumentProxy.insertDiacritic` now uses the new diacritic insertion result model.
 
 ### 🐛 Bug Fixes
 
-* `KeyboardCalloutContext` now properly handles drag gestures on RTL devices.
+* `CalloutContext` now properly handles drag gestures on RTL devices.
 * `KeyboardInputViewController` fixes a setup race condition in KeyboardKit Pro.  
 
 ### 🗑️ Deprecations
@@ -282,7 +360,7 @@ To avoid confusion, this version makes KeyboardKit and KeyboardKit Pro use a `se
 ### 🚨 Breaking Changes
 
 * `AutocompleteContext.suggestions` is now a computed aggregate and can no longer be set.
-* `KeyboardCalloutContext.updateSecondaryActionsSelection` now requires a drag gesture value.
+* `CalloutContext.updateSecondaryActionsSelection` now requires a drag gesture value.
 * `KeyboardTheme` types have been moved back to KeyboardKit Pro to avoid open-source confusion.
 
 
