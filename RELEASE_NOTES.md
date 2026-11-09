@@ -13,6 +13,18 @@ These release notes cover the current major version. See older versions for olde
 
 
 
+## 9.9.2
+
+This version fixes crashing callout code and removes iOS 27 scroll blur effects from the keyboard.
+
+
+
+## 9.9.1
+
+This version removes crashing host application detection code.
+
+
+
 ## 9.9
 
 This version performs final changes for 9.x and adds support for Liquid Glass.
